@@ -52,29 +52,36 @@
   <div class="container-fluid">
 
     <header>
+      <div class="row">
+        <div class='pull-right'>
+          {%comment%}
+          <form action="/search" method="get" class="search-form" role="search">
+            <input name="q" type="text" id="search-field" placeholder="Search store..." class="hint" />
+            <input type="submit" id="search-submit" value="Search" />
+          </form>
 
-      <div class='pull-right'>
-        <form action="/search" method="get" class="search-form" role="search">
-          <input name="q" type="text" id="search-field" placeholder="Search store..." class="hint" />
-          <input type="submit" id="search-submit" value="Search" />
-        </form>
-
-        {% if shop.customer_accounts_enabled %}
-        <p class="customer-links">
-          {% if customer %}
-            Logged in as <a href="/account">{{ customer.first_name }}</a> · {{ 'Log out' | customer_logout_link }}
-          {% else %}
-            {{ 'Log in' | customer_login_link }}
-            {% if shop.customer_accounts_optional %}
-            or {{ 'Create an account' | customer_register_link }}
+          {% if shop.customer_accounts_enabled %}
+          <p class="customer-links">
+            {% if customer %}
+              Logged in as <a href="/account">{{ customer.first_name }}</a> · {{ 'Log out' | customer_logout_link }}
+            {% else %}
+              {{ 'Log in' | customer_login_link }}
+              {% if shop.customer_accounts_optional %}
+              or {{ 'Create an account' | customer_register_link }}
+              {% endif %}
             {% endif %}
+          </p>
           {% endif %}
-        </p>
-        {% endif %}
-        <p class="checkout-link">
-          <a href="/cart">{{ cart.item_count }} {{ cart.item_count | pluralize: 'item', 'items' }} ({{ cart.total_price | money }})</a>  ·
-          <a href="/cart">Check out</a>
-        </p>
+          <p class="checkout-link">
+            <a href="/cart">{{ cart.item_count }} {{ cart.item_count | pluralize: 'item', 'items' }} ({{ cart.total_price | money }})</a>  ·
+            <a href="/cart">Check out</a>
+          </p>
+          {%endcomment%}
+        </div>
+
+        <div class="pull-left">
+          {{ 'logov1.png' | asset_url | img_tag }}
+        </div>
       </div>
 
       {% include 'nav' %}
