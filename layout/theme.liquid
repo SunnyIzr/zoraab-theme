@@ -25,6 +25,8 @@
   {{ content_for_header }}
 
   {{ 'style.scss.css' | asset_url | stylesheet_tag }}
+  {{ 'bootstrap-theme.css' | asset_url | stylesheet_tag }}
+  {{ 'bootstrap.min.css' | asset_url | stylesheet_tag }}
 
   <!--[if lt IE 9]>
   {{ '//html5shiv.googlecode.com/svn/trunk/html5.js' | script_tag }}
@@ -145,6 +147,7 @@
   </div><!-- end of #container -->
 
   {{ 'shop.js'  | asset_url | script_tag }}
+  {{ 'bootstrap.min.js'  | asset_url | script_tag }}
 
 </body>
 </html>
