@@ -1,41 +1,53 @@
-      <nav role="navigation">
-        <ul class="nav">
-          {% for link in linklists.main-menu.links %}
-          {% assign has_sub_menu = false %}
-          {% assign has_sub_categories = false %}
-          {% assign parent_link_active = false %}
-          {% assign child_list_handle = link.title | handle %}
-          {% if linklists[child_list_handle] and linklists[child_list_handle].links.size > 0 %}
-            {% assign has_sub_menu = true %}
-            {% for l in linklists[child_list_handle].links %}
-              {% if page_title == l.title %}
-                {% assign parent_link_active = true %}
-              {% endif %}
-            {% endfor %}
-          {% elsif link.type == 'collection_link' and link.object.all_tags.size > 0 %}
-            {% assign has_sub_categories = true %}
-          {% endif %}
-          <li class="nav-item{% if forloop.first %} first{% elsif forloop.last %} last{% endif %}{% if link.active or parent_link_active %} active{% endif %}{% if has_sub_menu or has_sub_categories %} has-dropdown{% endif %}">
-            {{ link.title | link_to: link.url }}
-            {% if has_sub_menu or has_sub_categories %}
-            <ul class="sub-nav">
-              <li class="sub-nav-niblet"></li>
-              {% if has_sub_menu %}
-                {% for l in linklists[child_list_handle].links %}
-                <li class="sub-nav-item{% if forloop.first %} first{% elsif forloop.last %} last{% endif %}{% if l.active %} active{% endif %}">
-                  <a class="{% if forloop.first %}first{% elsif forloop.last %}last{% endif %}" href="{{ l.url }}">{{ l.title }}</a>
-                </li>
-                {% endfor %}
-              {% elsif has_sub_categories %}
-                {% for tag in link.object.all_tags %}
-                <li class="sub-nav-item{% if forloop.first %} first{% elsif forloop.last %} last{% endif %}{% if current_tags contains tag %} active{% endif %}">
-                  <a class="{% if forloop.first %}first{% elsif forloop.last %}last{% endif %}" href="{{ link.url }}/{{ tag | handle }}">{{ tag }}</a>
-                </li>
-                {% endfor %}
-              {% endif %}
-            </ul>
-            {% endif %}
-          </li>
-          {% endfor %}
-        </ul>
-      </nav>
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Brand</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
