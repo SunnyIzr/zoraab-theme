@@ -92,20 +92,7 @@
       {{ content_for_layout }}
     </div>
 
-    <footer>
-      {%comment%}
-      {% if linklists.footer.links.size > 0 %}
-      <p role="navigation">
-      {% for link in linklists.footer.links %}
-        <a href="{{ link.url }}" title="{{ link.title }}"{% if link.active %} class="active"{% endif %}>{{ link.title }}</a>
-      {% endfor %}
-      </p>
-      {% endif %}
-
-      <p role="contentinfo">Copyright &copy; {{ "now" | date: "%Y" }} {{ shop.name }}. {{ powered_by_link }}.</p>
-      {%endcomment%}
-
-    </footer>
+    {% include 'footer' %}
 
     <!--[if lt IE 7]>
     <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
