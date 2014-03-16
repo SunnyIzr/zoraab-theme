@@ -94,7 +94,7 @@
     </div>
 
     <footer>
-
+      {%comment%}
       {% if linklists.footer.links.size > 0 %}
       <p role="navigation">
       {% for link in linklists.footer.links %}
@@ -104,6 +104,7 @@
       {% endif %}
 
       <p role="contentinfo">Copyright &copy; {{ "now" | date: "%Y" }} {{ shop.name }}. {{ powered_by_link }}.</p>
+      {%endcomment%}
 
     </footer>
 
