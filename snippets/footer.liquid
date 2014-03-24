@@ -1,11 +1,6 @@
     <footer>
-      {% if linklists.footer.links.size > 0 %}
-      <p role="navigation">
-      {% for link in linklists.footer.links %}
-        <a href="{{ link.url }}" title="{{ link.title }}"{% if link.active %} class="active"{% endif %}>{{ link.title }}</a>
-      {% endfor %}
-      </p>
-      {% endif %}
+
+      <img src="http://dummyimage.com/1280x150/ccc/fff.jpg&text=Footer"class='img-responsive'  >
 
       <p role="contentinfo">Copyright &copy; {{ "now" | date: "%Y" }} {{ shop.name }}. {{ powered_by_link }}.</p>
 
