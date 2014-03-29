@@ -32,5 +32,3 @@ task "dev" do
   File.open('config.yml','w') {|f| f.write file.to_yaml}
   puts "Successfully switched to Development"
 end
-
-test
