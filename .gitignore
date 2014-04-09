@@ -1,4 +1,4 @@
-config.yml
-env.yml
+deploy/config.yml
+deploy/env.yml
 
 .DS_store
