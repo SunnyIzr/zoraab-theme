@@ -1,17 +1,49 @@
-<nav class="navbar navbar-default" role="navigation">
-    <div class="collapse navbar-collapse">
-      <ul class="nav navbar-nav">
-        <li><a href="/collections/all">SHOP</a></li>
-        <li><a href="#">SUBSCRIPTION</a></li>
-        <li><a href="#">WEDDING</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">GIFTS <b class="caret"></b></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">GIFT SETS</a></li>
-            <li><a href="#">GIFT CARDS</a></li>
-          </ul>
-        </li>
-        <li><a href="#">BLOG</a></li>
+<div class="row">
+  <div class='header col-sm-6 col-sm-offset-6'>    
+    <div>
+      <ul class='header-links'>
+        <li><a href='#'> HELP </a></li>
+        <li><a href='/account'> LOG IN </a></li>
+        <li><a href='/cart'> CART (0) </a></li>
       </ul>
     </div>
-</nav>
+    <div class='number'>
+      (800) 973-8247
+    </div>
+    <div class='free-shipping'>
+      Free shipping on all orders!
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <nav class="navbar" role="navigation">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href='/' class='navbar-brand'>
+        {{ 'logov1.png' | asset_url | img_tag }}
+      </a>
+    </div>
+    
+    <div class="collapse navbar-collapse">
+      
+      <ul class="nav navbar-nav">
+        <li><a href="#">SUBSCRIPTION</a></li>
+        <li><a href="/collections/all">SHOP</a></li>
+        <li><a href="#">GIFT CARDS</a></li>
+        <li><a href="#">BLOG</a></li>
+      </ul>
+      
+      <form class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+      </form>
+    </div>
+  </nav>
+</div>

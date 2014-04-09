@@ -1,3 +1,55 @@
+.header {
+  font-size: 13px;
+  z-index: 1;
+  height: 25px;
+  margin-top: 5px;
+  overflow: hidden;
+}
+.header div {
+  float: right;
+  text-align: right;
+  padding-left: 25px;
+}
+.header ul {
+  padding: 0px;
+  list-style: none;
+  border-radius: 0px;
+  text-align: right;
+}
+.header ul li {
+  display: inline-block;
+}
+.header ul li a {
+  cursor: pointer;
+}
+.header ul li + li:before {
+  content: "|\00a0";
+  padding: 0 2px;
+  color: #cccccc;
+}
+
+.navbar {
+  position: relative;
+  margin-top: -25px;
+}
+.navbar a {
+  color: #404041;
+}
+.navbar a:hover {
+  color: #67c5a9;
+  background-color: transparent !important;
+}
+.navbar .form-group {
+  width: 250px;
+  margin: 2rem 0;
+}
+.navbar .form-group input {
+  width: 100%;
+}
+.navbar .form-group input[type=text] {
+  color: #b8b8b8;
+}
+
 /*!
  * Bootstrap v3.1.1 (http://getbootstrap.com)
  * Copyright 2011-2014 Twitter, Inc.
