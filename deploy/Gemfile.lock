@@ -1,0 +1,28 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    addressable (2.3.6)
+    filewatcher (0.3.2)
+      trollop (>= 1.16.2)
+    httparty (0.10.2)
+      multi_json (~> 1.0)
+      multi_xml (>= 0.5.2)
+    json (1.5.5)
+    launchy (2.4.2)
+      addressable (~> 2.3)
+    multi_json (1.9.2)
+    multi_xml (0.5.5)
+    shopify_theme (0.0.16)
+      filewatcher
+      httparty (~> 0.10.0)
+      json (~> 1.5.4)
+      launchy
+      thor (>= 0.14.4)
+    thor (0.19.1)
+    trollop (2.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  shopify_theme

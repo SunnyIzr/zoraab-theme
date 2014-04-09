@@ -1,0 +1,100 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="ie9 no-js"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1' /><![endif]-->
+
+  <title>
+  {{ page_title }}{% if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif %}{% if current_page != 1 %} &ndash; Page {{ current_page }}{% endif %}{% unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless %}
+  </title>
+
+  {% if page_description %}
+  <meta name="description" content="{{ page_description | escape }}" />
+  {% endif %}
+
+  <link rel="canonical" href="{{ canonical_url }}" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  {% include 'open-graph-tags' %}
+
+  {{ content_for_header }}
+
+  {{ 'style.min.css' | asset_url | stylesheet_tag }}
+
+  <!--[if lt IE 9]>
+  {{ '//html5shiv.googlecode.com/svn/trunk/html5.js' | script_tag }}
+  <![endif]-->
+
+  <!--[if lt IE 8]>
+  {{ 'json2.js' | shopify_asset_url | script_tag }}
+  <![endif]-->
+
+  {{ '//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js' | script_tag }}
+
+</head>
+
+<body id="{{ page_title | handle }}" class="{% if customer %}customer-logged-in {% endif %}template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}" >
+
+  <div class="container-fluid">
+
+    <header>
+      <div class="row">
+        <div class='pull-right'>
+          {%comment%}
+          <form action="/search" method="get" class="search-form" role="search">
+            <input name="q" type="text" id="search-field" placeholder="Search store..." class="hint" />
+            <input type="submit" id="search-submit" value="Search" />
+          </form>
+
+          {% if shop.customer_accounts_enabled %}
+          <p class="customer-links">
+            {% if customer %}
+              Logged in as <a href="/account">{{ customer.first_name }}</a> · {{ 'Log out' | customer_logout_link }}
+            {% else %}
+              {{ 'Log in' | customer_login_link }}
+              {% if shop.customer_accounts_optional %}
+              or {{ 'Create an account' | customer_register_link }}
+              {% endif %}
+            {% endif %}
+          </p>
+          {% endif %}
+          <p class="checkout-link">
+            <a href="/cart">{{ cart.item_count }} {{ cart.item_count | pluralize: 'item', 'items' }} ({{ cart.total_price | money }})</a>  ·
+            <a href="/cart">Check out</a>
+          </p>
+          {%endcomment%}
+        </div>
+
+        <div class="col-md-3 col-sm-3 col-xs-12">
+          <a href='/'>
+            {{ 'logov1.png' | asset_url | img_tag }}
+          </a>
+        </div>
+      </div>
+
+      {% include 'nav' %}
+
+
+    </header>
+
+    <div id="main" role="main">
+      {{ content_for_layout }}
+    </div>
+
+    {% include 'footer' %}
+
+    <!--[if lt IE 7]>
+    <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
+
+  </div><!-- end of #container -->
+
+  {{ 'script.min.js'  | asset_url | script_tag }}
+
+</body>
+</html>
