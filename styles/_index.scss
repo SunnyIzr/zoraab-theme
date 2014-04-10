@@ -1,0 +1,39 @@
+.feature-panels{
+  a {
+    color: $primary-color;
+  }
+}
+
+.feature-panel {
+  padding-top: 20px;
+  padding-right: 75px;
+  padding-left: 20px;
+  margin-bottom: 50px;
+  .icon {
+    width:50%;
+    position: relative;
+    float:left;
+    .svg-icon{
+      fill: $faded-color;
+    }
+    .svg-icon:hover{
+      fill: $accent-color;
+    }
+    svg {
+      width:100%;
+    }
+  }
+  .text {
+    width:40%;
+    float:right;
+    font-size:16px
+  }
+  .link {
+    margin-top:35px;
+    text-align:right;
+    float:right;
+    a {
+      font-size:16px;
+    }
+  }
+}

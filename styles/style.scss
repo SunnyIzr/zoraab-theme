@@ -1,5 +1,14 @@
+$primary-color: #404041; 
+$accent-color: #67c5a9;
+$faded-color: #b8b8b8;
+$emphasis-color: #e85c41;
+
+@import 'nav';
+
+@import 'index';
+
+@import 'footer';
+
 @import 'bootstrap-theme';
 
 @import 'bootstrap';
-
-@import 'theme-style';

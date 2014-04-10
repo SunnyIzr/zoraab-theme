@@ -41,58 +41,26 @@
 <body id="{{ page_title | handle }}" class="{% if customer %}customer-logged-in {% endif %}template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}" >
 
   <div class="container-fluid">
-
     <header>
-      <div class="row">
-        <div class='pull-right'>
-          {%comment%}
-          <form action="/search" method="get" class="search-form" role="search">
-            <input name="q" type="text" id="search-field" placeholder="Search store..." class="hint" />
-            <input type="submit" id="search-submit" value="Search" />
-          </form>
-
-          {% if shop.customer_accounts_enabled %}
-          <p class="customer-links">
-            {% if customer %}
-              Logged in as <a href="/account">{{ customer.first_name }}</a> · {{ 'Log out' | customer_logout_link }}
-            {% else %}
-              {{ 'Log in' | customer_login_link }}
-              {% if shop.customer_accounts_optional %}
-              or {{ 'Create an account' | customer_register_link }}
-              {% endif %}
-            {% endif %}
-          </p>
-          {% endif %}
-          <p class="checkout-link">
-            <a href="/cart">{{ cart.item_count }} {{ cart.item_count | pluralize: 'item', 'items' }} ({{ cart.total_price | money }})</a>  ·
-            <a href="/cart">Check out</a>
-          </p>
-          {%endcomment%}
-        </div>
-
-        <div class="col-md-3 col-sm-3 col-xs-12">
-          <a href='/'>
-            {{ 'logov1.png' | asset_url | img_tag }}
-          </a>
-        </div>
-      </div>
-
       {% include 'nav' %}
-
-
     </header>
+  </div>
 
-    <div id="main" role="main">
-      {{ content_for_layout }}
-    </div>
-
-    {% include 'footer' %}
+  <div class="container">
+    {{ content_for_layout }}
+  </div>
+      
+  <div class="container-fluid">
+    <center>
+      {% include 'footer' %}
+    </center>
+  </div>
 
     <!--[if lt IE 7]>
     <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
     <![endif]-->
 
-  </div><!-- end of #container -->
+  <!-- end of #container -->
 
   {{ 'script.min.js'  | asset_url | script_tag }}
 
