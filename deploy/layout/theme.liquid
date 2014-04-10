@@ -41,25 +41,26 @@
 <body id="{{ page_title | handle }}" class="{% if customer %}customer-logged-in {% endif %}template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}" >
 
   <div class="container-fluid">
-
     <header>
-
       {% include 'nav' %}
-
-
     </header>
+  </div>
 
-    <div id="main" role="main">
-      {{ content_for_layout }}
-    </div>
-
-    {% include 'footer' %}
+  <div class="container">
+    {{ content_for_layout }}
+  </div>
+      
+  <div class="container-fluid">
+    <center>
+      {% include 'footer' %}
+    </center>
+  </div>
 
     <!--[if lt IE 7]>
     <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
     <![endif]-->
 
-  </div><!-- end of #container -->
+  <!-- end of #container -->
 
   {{ 'script.min.js'  | asset_url | script_tag }}
 

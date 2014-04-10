@@ -1,9 +1,20 @@
+.header-section {
+  max-width: 1600px;
+}
+
 .header {
-  font-size: 13px;
+  font-size: 12px;
   z-index: 1;
   height: 25px;
   margin-top: 5px;
+  margin-bottom: -10px;
   overflow: hidden;
+}
+.header .cart-icon {
+  fill: #67c5a9;
+}
+.header .free-shipping {
+  font-style: italic;
 }
 .header div {
   float: right;
@@ -28,9 +39,18 @@
   color: #cccccc;
 }
 
+.navbar-default {
+  box-shadow: none !important;
+}
+
 .navbar {
   position: relative;
-  margin-top: -25px;
+  margin-top: 0px;
+  margin-bottom: 0px !important;
+  border: none;
+}
+.navbar .navbar-brand {
+  padding-top: 0px;
 }
 .navbar a {
   color: #404041;
@@ -40,14 +60,89 @@
   background-color: transparent !important;
 }
 .navbar .form-group {
-  width: 250px;
-  margin: 2rem 0;
+  width: 100%;
 }
 .navbar .form-group input {
   width: 100%;
 }
 .navbar .form-group input[type=text] {
   color: #b8b8b8;
+}
+
+.feature-panels a {
+  color: #404041;
+}
+
+.feature-panel {
+  padding-top: 20px;
+  padding-right: 75px;
+  padding-left: 20px;
+  margin-bottom: 50px;
+}
+.feature-panel .icon {
+  width: 50%;
+  position: relative;
+  float: left;
+}
+.feature-panel .icon .svg-icon {
+  fill: #b8b8b8;
+}
+.feature-panel .icon .svg-icon:hover {
+  fill: #67c5a9;
+}
+.feature-panel .icon svg {
+  width: 100%;
+}
+.feature-panel .text {
+  width: 40%;
+  float: right;
+  font-size: 16px;
+}
+.feature-panel .link {
+  margin-top: 35px;
+  text-align: right;
+  float: right;
+}
+.feature-panel .link a {
+  font-size: 16px;
+}
+
+.email-signup {
+  background: #67c5a9;
+  color: white;
+  font-size: 24px;
+  padding: 8px;
+}
+.email-signup .emphasize {
+  color: #e85c41;
+}
+.email-signup .free-shipping {
+  font-style: italic;
+  font-size: 12px;
+}
+
+.press-banner {
+  height: 120px;
+  max-width: 1600px;
+}
+
+.bottom-footer {
+  height: 200px;
+  background-color: #99999f;
+  color: white;
+}
+.bottom-footer .content {
+  max-width: 1600px;
+  text-align: left;
+}
+.bottom-footer ul {
+  padding: 0px;
+  list-style: none;
+  border-radius: 0px;
+  text-align: left;
+}
+.bottom-footer ul li {
+  margin-top: 10px;
 }
 
 /*!
@@ -1340,7 +1435,7 @@ pre code {
 }
 @media (min-width: 1200px) {
   .container {
-    width: 1170px;
+    width: 1200px;
   }
 }
 .container-fluid {
@@ -3076,8 +3171,8 @@ fieldset[disabled] .btn-success.active {
 
 .btn-info {
   color: #ffffff;
-  background-color: #67c5a9;
-  border-color: #55be9f;
+  background-color: #e85c41;
+  border-color: #e85c41;
 }
 
 .btn-info:hover,
@@ -3086,8 +3181,8 @@ fieldset[disabled] .btn-success.active {
 .btn-info.active,
 .open .dropdown-toggle.btn-info {
   color: #ffffff;
-  background-color: #49ba98;
-  border-color: #3b9a7e;
+  background-color: #d8563d;
+  border-color: #d8563d;
 }
 
 .btn-info:active,
@@ -4911,7 +5006,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   position: relative;
   min-height: 50px;
   margin-bottom: 20px;
-  border: 1px solid transparent;
+  border: none;
 }
 
 @media (min-width: 768px) {
@@ -4929,8 +5024,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   overflow-x: visible;
   padding-right: 15px;
   padding-left: 15px;
-  border-top: 1px solid transparent;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  border-top: none;
   -webkit-overflow-scrolling: touch;
 }
 
@@ -4941,7 +5035,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 @media (min-width: 768px) {
   .navbar-collapse {
     width: auto;
-    border-top: 0;
+    border-top: none;
     box-shadow: none;
   }
 
@@ -4998,21 +5092,13 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   z-index: 1030;
 }
 
-@media (min-width: 768px) {
-  .navbar-fixed-top,
-  .navbar-fixed-bottom {
-    border-radius: 0;
-  }
-}
 .navbar-fixed-top {
   top: 0;
-  border-width: 0 0 1px;
 }
 
 .navbar-fixed-bottom {
   bottom: 0;
   margin-bottom: 0;
-  border-width: 1px 0 0;
 }
 
 .navbar-brand {
@@ -5043,8 +5129,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   margin-bottom: 8px;
   background-color: transparent;
   background-image: none;
-  border: 1px solid transparent;
-  border-radius: 0px;
 }
 
 .navbar-toggle:focus {
@@ -5055,7 +5139,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   display: block;
   width: 22px;
   height: 2px;
-  border-radius: 1px;
 }
 
 .navbar-toggle .icon-bar + .icon-bar {
@@ -5136,8 +5219,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   padding: 10px 15px;
   border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
+  -webkit-box-shadow: none;
+  box-shadow: none;
   margin-top: 8px;
   margin-bottom: 8px;
 }
@@ -5248,7 +5331,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-default {
   background-color: #ffffff;
-  border-color: #eeeeee;
+  border: none;
 }
 
 .navbar-default .navbar-brand {
@@ -5290,7 +5373,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-default .navbar-toggle {
-  border-color: #dddddd;
+  border: none;
 }
 
 .navbar-default .navbar-toggle:hover,
@@ -5304,7 +5387,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
-  border-color: #eeeeee;
+  border: none;
 }
 
 .navbar-default .navbar-nav > .open > a,
@@ -5349,7 +5432,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 
 .navbar-inverse {
   background-color: #222222;
-  border-color: #080808;
 }
 
 .navbar-inverse .navbar-brand {
@@ -7440,315 +7522,4 @@ button.close {
   .hidden-print {
     display: none !important;
   }
-}
-/*! normalize.css v3.0.0 | MIT License | git.io/normalize */
-html {
-  font-family: sans-serif;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-}
-
-body {
-  margin: 0;
-}
-
-article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
-  display: block;
-}
-
-audio, canvas, progress, video {
-  display: inline-block;
-  vertical-align: baseline;
-}
-
-audio:not([controls]) {
-  display: none;
-  height: 0;
-}
-
-[hidden], template {
-  display: none;
-}
-
-a {
-  background: transparent;
-}
-
-a:active, a:hover {
-  outline: 0;
-}
-
-abbr[title] {
-  border-bottom: 1px dotted;
-}
-
-b, strong {
-  font-weight: bold;
-}
-
-dfn {
-  font-style: italic;
-}
-
-h1 {
-  font-size: 2em;
-  margin: .67em 0;
-}
-
-mark {
-  background: #ff0;
-  color: #000;
-}
-
-small {
-  font-size: 80%;
-}
-
-sub, sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-
-sup {
-  top: -0.5em;
-}
-
-sub {
-  bottom: -0.25em;
-}
-
-img {
-  border: 0;
-}
-
-svg:not(:root) {
-  overflow: hidden;
-}
-
-figure {
-  margin: 1em 40px;
-}
-
-hr {
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  height: 0;
-}
-
-pre {
-  overflow: auto;
-}
-
-code, kbd, pre, samp {
-  font-family: monospace,monospace;
-  font-size: 1em;
-}
-
-button, input, optgroup, select, textarea {
-  color: inherit;
-  font: inherit;
-  margin: 0;
-}
-
-button {
-  overflow: visible;
-}
-
-button, select {
-  text-transform: none;
-}
-
-button, html input[type="button"], input[type="reset"], input[type="submit"] {
-  -webkit-appearance: button;
-  cursor: pointer;
-}
-
-button[disabled], html input[disabled] {
-  cursor: default;
-}
-
-button::-moz-focus-inner, input::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
-
-input {
-  line-height: normal;
-}
-
-input[type="checkbox"], input[type="radio"] {
-  box-sizing: border-box;
-  padding: 0;
-}
-
-input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
-  height: auto;
-}
-
-input[type="search"] {
-  -webkit-appearance: textfield;
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
-  box-sizing: content-box;
-}
-
-input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: .35em .625em .75em;
-}
-
-legend {
-  border: 0;
-  padding: 0;
-}
-
-textarea {
-  overflow: auto;
-}
-
-optgroup {
-  font-weight: bold;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-td, th {
-  padding: 0;
-}
-
-/* ==========================================================================
-   Additional styles for the Skeleton Theme - Replace that with your own CSS
-   ========================================================================== */
-/* Some variables */
-/* Using border-box makes it easier to work with grids: http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
-*, *:before, *:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-/* Responsive images and videos. */
-img, iframe {
-  max-width: 100%;
-}
-
-/* Control the pages maximum width. */
-.container {
-  margin: 0 auto;
-  max-width: 60rem;
-  width: 90%;
-  background-color: white;
-}
-
-/* Grids of products and collections, menus, buttons */
-.grid, .buttons, .nav, .articles, .product-details > div {
-  margin: 1rem 0;
-  padding: 0;
-}
-
-.grid li, .buttons li, .nav li, .articles li {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.grid li, .articles li {
-  padding: 1rem 0;
-}
-
-.buttons li, .nav li {
-  padding: 0.5rem 0;
-}
-
-.buttons li, .nav li {
-  display: -moz-inline-stack;
-  display: inline-block;
-  zoom: 1;
-  *display: inline;
-}
-
-/* Medium and large screens */
-@media (min-width: 30rem) {
-  .row, .grid, .product {
-    margin-left: -1rem;
-    margin-right: -1rem;
-  }
-
-  .column, .grid li, header, footer, #main, .product-photos, .product-details {
-    float: left;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  .column.full, .grid li.full, header, footer, #main, .full.product-photos, .full.product-details {
-    width: 100%;
-  }
-
-  .column.two-thirds, .grid li.two-thirds, header.two-thirds, footer.two-thirds, .two-thirds#main, .two-thirds.product-photos, .two-thirds.product-details {
-    width: 66.7%;
-  }
-
-  .column.half, .grid li.half, header.half, footer.half, .half#main, .two-per-row, .product-photos, .product-details {
-    width: 50%;
-  }
-
-  .column.third, .grid li.third, header.third, footer.third, .third#main, .three-per-row, .third.product-photos, .third.product-details {
-    width: 33.3%;
-  }
-
-  .column.fourth, .grid li.fourth, header.fourth, footer.fourth, .fourth#main, .four-per-row, .fourth.product-photos, .fourth.product-details {
-    width: 24.95%;
-  }
-
-  .column.flow-opposite, .grid li.flow-opposite, header.flow-opposite, footer.flow-opposite, .flow-opposite#main, .flow-opposite.product-photos, .flow-opposite.product-details {
-    float: right;
-  }
-}
-/* Contain floats: nicolasgallagher.com/micro-clearfix-hack/ */
-.clearfix:before, .clearfix:after {
-  content: "";
-  display: table;
-}
-
-.clearfix:after {
-  clear: both;
-}
-
-.clearfix {
-  zoom: 1;
-}
-
-/* Utility classes: Hidden, float left, float right, etc. */
-.hidden {
-  display: none;
-}
-
-.left {
-  float: left;
-}
-
-.right {
-  float: right;
-}
-
-/* Styling #site-title as it uses h1 on home page and span on other pages. */
-#site-title {
-  font-size: 2em;
-  font-weight: bold;
-  line-height: 1.5;
-}
-
-/* Override to globally-hosted search.css on the /search page */
-#searchresults input {
-  width: auto;
 }

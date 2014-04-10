@@ -1,0 +1,37 @@
+.email-signup {
+  background: $accent-color;
+  color: white;
+  font-size:24px;
+  padding: 8px;
+  .emphasize{
+    color: $emphasis-color;
+  }
+  .free-shipping{
+    font-style: italic;
+    font-size: 12px;
+  }
+}
+
+.press-banner{
+  height:120px;
+  max-width:1600px;
+}
+
+.bottom-footer{
+  height:200px;
+  background-color: #99999f;
+  color:white;
+  .content{
+    max-width:1600px;
+    text-align: left;
+  }
+  ul{
+    padding:0px;
+    list-style: none;
+    border-radius: 0px;
+    text-align:left;
+    li {
+      margin-top:10px;
+    } 
+  }
+}

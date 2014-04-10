@@ -1,10 +1,18 @@
+.header-section{
+  max-width:1600px;
+}
 .header {
-  font-size: 13px;
+  font-size: 12px;
   z-index:1;
   height:25px;
   margin-top: 5px;
+  margin-bottom:-10px;
   overflow:hidden;
+  .cart-icon{
+    fill: $accent-color;
+  }
   .free-shipping {
+    font-style: italic;
   }
   div {
     float:right;
@@ -30,9 +38,20 @@
   }
 }
 
+.navbar-default{
+  box-shadow: none !important;
+}
+
 .navbar{
   position:relative;
-  margin-top: -25px;
+  margin-top: 0px;
+  margin-bottom: 0px !important;
+  border: none;
+  
+  .navbar-brand {
+    padding-top: 0px;
+  }
+  
   a {
     color: $primary-color;
   }
@@ -43,8 +62,7 @@
   }
   
   .form-group {
-    width: 250px;
-    margin: 2rem 0;
+    width: 100%;
     input {
       width: 100%;
     }
