@@ -4,65 +4,75 @@
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!--[if IE 9 ]><html class="ie9 no-js"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
-<head>
-  <meta charset="utf-8" />
-  <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1' /><![endif]-->
+<div class="off-canvas-wrap" data-offcanvas>
+  <div class="inner-wrap">
+    <head>
+      <meta charset="utf-8" />
+      <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1' /><![endif]-->
 
-  <title>
-  {{ page_title }}{% if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif %}{% if current_page != 1 %} &ndash; Page {{ current_page }}{% endif %}{% unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless %}
-  </title>
+      <title>
+      {{ page_title }}{% if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif %}{% if current_page != 1 %} &ndash; Page {{ current_page }}{% endif %}{% unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless %}
+      </title>
 
-  {% if page_description %}
-  <meta name="description" content="{{ page_description | escape }}" />
-  {% endif %}
+      {% if page_description %}
+      <meta name="description" content="{{ page_description | escape }}" />
+      {% endif %}
 
-  <link rel="canonical" href="{{ canonical_url }}" />
+      <link rel="canonical" href="{{ canonical_url }}" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  {% include 'open-graph-tags' %}
+      {% include 'open-graph-tags' %}
 
-  {{ content_for_header }}
+      {{ content_for_header }}
 
-  {{ 'style.min.css' | asset_url | stylesheet_tag }}
+      {{ 'style.min.css' | asset_url | stylesheet_tag }}
 
-  <!--[if lt IE 9]>
-  {{ '//html5shiv.googlecode.com/svn/trunk/html5.js' | script_tag }}
-  <![endif]-->
+      <!--[if lt IE 9]>
+      {{ '//html5shiv.googlecode.com/svn/trunk/html5.js' | script_tag }}
+      <![endif]-->
 
-  <!--[if lt IE 8]>
-  {{ 'json2.js' | shopify_asset_url | script_tag }}
-  <![endif]-->
+      <!--[if lt IE 8]>
+      {{ 'json2.js' | shopify_asset_url | script_tag }}
+      <![endif]-->
 
-  {{ '//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js' | script_tag }}
+      {{ '//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js' | script_tag }}
 
-</head>
+    </head>
 
-<body id="{{ page_title | handle }}" class="{% if customer %}customer-logged-in {% endif %}template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}" >
+    <body id="{{ page_title | handle }}" class="{% if customer %}customer-logged-in {% endif %}template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}" >
 
-  <div class="container-fluid">
-    <header>
-      {% include 'nav' %}
-    </header>
+      <div class="container-fluid">
+        <header>
+          {% include 'nav' %}
+        </header>
+      </div>
+
+      <div class="container">
+        {{ content_for_layout }}
+      </div>
+          
+      <div class="container-fluid">
+        <center>
+          {% include 'footer' %}
+        </center>
+      </div>
+
+      {% include 'cart' %}
+        <!--[if lt IE 7]>
+        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+      <!-- end of #container -->
+
+      {{ 'script.min.js'  | asset_url | script_tag }}
+
+      <script>
+        $(document).foundation();
+      </script>
+
+    </body>
+    </html>
+      <a class="exit-off-canvas"></a>
   </div>
-
-  <div class="container">
-    {{ content_for_layout }}
-  </div>
-      
-  <div class="container-fluid">
-    <center>
-      {% include 'footer' %}
-    </center>
-  </div>
-
-    <!--[if lt IE 7]>
-    <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-    <![endif]-->
-
-  <!-- end of #container -->
-
-  {{ 'script.min.js'  | asset_url | script_tag }}
-
-</body>
-</html>
+</div>

@@ -1,0 +1,7 @@
+grunt watch
+
+deploy/ theme watch
+
+
+
+display cart items
