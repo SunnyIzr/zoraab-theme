@@ -1,4 +1,5 @@
 deploy/config.yml
 deploy/env.yml
+.sass-cache/
 
 .DS_store
