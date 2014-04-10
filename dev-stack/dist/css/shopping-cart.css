@@ -1,0 +1,46 @@
+.display-inline {
+  display: inline-block;
+}
+.pos-relative {
+  position: relative;
+}
+.center {
+  margin: 0 auto;
+}
+.border-box {
+  box-sizing: border-box;
+}
+.wire-box {
+  border: 3px solid black;
+}
+.wire-box-red {
+  border-color: red;
+}
+.wire-box-blue {
+  border-color: blue;
+}
+.green-box {
+  background-color: #5cb85c;
+}
+.blue-box {
+  background-color: #428bca;
+}
+body {
+  height: 100%;
+}
+.sc-wrapper {
+  width: 100%;
+  height: 43.75px;
+}
+.sc-main-container {
+  height: 43.75px;
+  margin-right: -15px;
+}
+.shopping-cart-container {
+  height: 43.75px;
+  margin-left: -15px;
+}
+.container-fluid {
+  padding-left: 0px;
+  padding-right: 0px;
+}

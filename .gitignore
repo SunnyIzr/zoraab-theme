@@ -2,3 +2,5 @@ config.yml
 env.yml
 
 .DS_store
+
+dev-stack/node_modules
