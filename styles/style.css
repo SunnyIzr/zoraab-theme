@@ -123,6 +123,8 @@
 
 .press-banner {
   height: 120px;
+  vertical-align: middle;
+  padding: 0px 50px;
   max-width: 1600px;
 }
 

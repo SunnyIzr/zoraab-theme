@@ -1,39 +1,44 @@
-<div class='email-signup hidden-xs'>
-  SIGN UP FOR OUR NEWSLETTER TO <span class='emphasize'> SAVE 10% </span>
-  <input type='email' placeholder='your@email.com'/>
-  <input type='submit' class='btn btn-info' name='submit' value='SUBMIT'/>
-  <span class='free-shipping hidden-xs hidden-sm'> Free shipping on all orders! </span>
-  
-  
-  {% comment %}
-  <form action="http://zoraab.us4.list-manage.com/subscribe/post?u=fdf8a5ce2518c055fc3be35d7&id=331f9e54ce" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
-    <label for="mce-EMAIL">SIGN UP</label>
-    <input type="email" class="required email" placeholder="EMAIL ADDRESS" value="" id="mce-EMAIL" required name="EMAIL" />
-    <input type="submit" name="subscribe" value="→" />
-  </form>
-      <p role="contentinfo">Copyright &copy; {{ "now" | date: "%Y" }} {{ shop.name }}. {{ powered_by_link }}.</p>
-  {% endcomment %}
-
 </div>
+<div class='row'>
+  <center>
+  <div class='email-signup hidden-xs'>
+    SIGN UP FOR OUR NEWSLETTER TO <span class='emphasize'> SAVE 10% </span>
+    <input type='email' placeholder='your@email.com'/>
+    <input type='submit' class='btn btn-info' name='submit' value='SUBMIT'/>
+    <span class='free-shipping hidden-xs hidden-sm'> Free shipping on all orders! </span>
+    
+    
+    {% comment %}
+    <form action="http://zoraab.us4.list-manage.com/subscribe/post?u=fdf8a5ce2518c055fc3be35d7&id=331f9e54ce" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+      <label for="mce-EMAIL">SIGN UP</label>
+      <input type="email" class="required email" placeholder="EMAIL ADDRESS" value="" id="mce-EMAIL" required name="EMAIL" />
+      <input type="submit" name="subscribe" value="→" />
+    </form>
+        <p role="contentinfo">Copyright &copy; {{ "now" | date: "%Y" }} {{ shop.name }}. {{ powered_by_link }}.</p>
+    {% endcomment %}
 
+  </div>
+  </center>
+<div class='row'>
+  <center>
 <div class='press-banner hidden-xs'>
   <div class='col-sm-2'>
-    <img src="http://dummyimage.com/150x120/fff/ccc.jpg&text=Press"class='img-responsive'>
+    {{ 'press_logo1.png' | asset_url | img_tag }}
   </div>
   <div class='col-sm-2'>
-    <img src="http://dummyimage.com/150x120/fff/ccc.jpg&text=Press"class='img-responsive'>
+    {{ 'press_logo2.png' | asset_url | img_tag }}
   </div>
   <div class='col-sm-2'>
-    <img src="http://dummyimage.com/150x120/fff/ccc.jpg&text=Press"class='img-responsive'>
+    {{ 'press_logo3.png' | asset_url | img_tag }}
   </div>
   <div class='col-sm-2'>
-    <img src="http://dummyimage.com/150x120/fff/ccc.jpg&text=Press"class='img-responsive'>
+    {{ 'press_logo4.jpg' | asset_url | img_tag }}
   </div>
   <div class='col-sm-2'>
-    <img src="http://dummyimage.com/150x120/fff/ccc.jpg&text=Press"class='img-responsive'>
+    {{ 'press_logo5.jpg' | asset_url | img_tag }}
   </div>
   <div class='col-sm-2'>
-    <img src="http://dummyimage.com/150x120/fff/ccc.jpg&text=Press"class='img-responsive'>
+    {{ 'press_logo6.jpg' | asset_url | img_tag }}
   </div>
 </div>
 
