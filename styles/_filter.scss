@@ -1,0 +1,120 @@
+.filter{
+  text-align: left;
+  ul{
+    list-style: none;
+    padding:0px;
+  }
+  label{
+    font-weight: lighter;
+    color: $primary-color;
+  }
+  #filter{
+    border-top:1px solid $faded-color;
+    border-bottom:1px solid $faded-color;
+  }
+  h4{
+    font-weight: lighter;
+  }
+  .style{
+    li{
+      margin-bottom:10px;
+      cursor:pointer;
+    }
+  }
+  .brand{
+    max-width:100%;
+    li{
+      width:50%;
+      display:inline-block;
+      float:left;
+    }
+  }
+  .color{
+    max-width:225px;
+    li{
+      height:35px;
+      max-width: 35px;
+      width:18%;
+      border: 1px solid #fff;
+      display:inline-block;
+      margin-right:5%;
+      margin-bottom:7%;
+    }
+    li.black{background-color:#000}
+    li.gray{background-color: #99999f}
+    li.brown{background-color: #754c24}
+    li.blue{background-color: #0054a6}
+    li.green{background-color:#00a651}
+    li.orange{background-color: #f26522}
+    li.pink{background-color: #f26d7d}
+    li.red{background-color: #ed1c24}
+    li.white{background-color:#fff;border-color: $primary-color}
+    li.yellow{background-color: #fff200}
+    li.purple{background-color: #662d91}
+    li.multi{background-color:#fff;border-color: $primary-color}
+    li.selected{border: 3px solid $accent-color;}
+  }
+  .pattern{
+    max-width:225px;
+    font-size:10px;
+    .selected{border: 3px solid $accent-color;}
+    a{
+      color: $primary-color;
+    }
+    li{
+      text-align:center;
+      height:35px;
+      max-width: 35px;
+      width:20%;
+      display:inline-block;
+      margin-right:5%;
+      margin-bottom:7%;
+    }
+  }
+  .accessory{
+    max-width: 450px;
+    margin: 0 auto;
+    li{
+      text-align: center;
+      height:50px;
+      max-width: 50px;
+      width:25%;
+      display:inline-block;
+      margin-right:4%;
+      vertical-align: middle;
+    }
+    #sock{
+      margin-top:-28%;
+      -moz-transform: scaleX(-1);
+      -o-transform: scaleX(-1);
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1);
+      filter: FlipH;
+      -ms-filter: "FlipH";  
+    }
+    #bowtie{
+      margin-top:-4%;
+      -ms-transform:rotate(90deg); /* IE 9 */
+      -webkit-transform:rotate(90deg); /* Chrome, Safari, Opera */
+      transform:rotate(90deg); /* Standard syntax */
+    }
+    #watch{
+      margin-left:22%;
+    }
+    #tie{
+      margin-top:-31%;
+      margin-left:-53%;
+    }
+    #pocketsquare{
+      margin-left:-63%;
+    }
+    .accessory-icon{
+      fill:$faded-color;
+    }
+    .accessory-icon:hover{
+      fill:$accent-color;
+    }
+  }
+
+  
+}

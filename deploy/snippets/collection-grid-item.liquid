@@ -1,40 +1,29 @@
-{% comment %}If no value is passed to the snippet, we will set the snippet variable to a sensible default.{% endcomment %}
-{% if collection-grid-item == '' %}{% assign collection-grid-item = 'three-per-row' %}{% endif %}
+<div class='collection-item'>
+  <div class='item-desc hidden-xs'>
+    <div class='overlay'>
+    </div>
+    <div class="item-detail">
+      <h4>{{ product.title }}</h4>
+      <a href='#' data-toggle="modal" data-target="#{{product.id}}" ><h6>QUICK VIEW</h6></a>
+      <a class='btn btn-md btn-primary' href='#'> + CART </a>
+    </div>
+  </div>
+  <a href='{{product.url}}'>
+    <img src="{{ product.featured_image.src | product_img_url: 'medium' }}" alt="{{ product.featured_image.alt | escape }}" />
+  </a>
+  <h5>{{ product.price | money | remove: '.00'}}</h5>
+</div>
 
-<li class="{{ collection-grid-item }}{% if collection-grid-item == 'four-per-row' %}{% cycle 'last': '', '', '', ' last-in-row' %}{% elsif collection-grid-item == 'three-per-row' %}{% cycle 'last': '', '', ' last-in-row' %}{% endif %}">
-
-  <div class="coll-image-wrap">  
-    <a href="{{ collection.url }}">
-      {% if collection.image %}
-      <img src="{{ collection.image.src | collection_img_url: 'medium' }}" alt="{{ collection.image.alt | escape }}" />
-      {% else %}
-      <img src="{{ collection.products.first.featured_image.src | product_img_url: 'medium' }}" alt="{{ collection.title | escape }}" />
-      {% endif %}
-    </a>
-  </div><!-- .coll-image-wrap -->
-  
-  <div class="coll-caption">
-      <a class="coll-title" href="{{ collection.url }}">
-        {{ collection.title }}
-      </a>
-      <span class="coll-item-count">
-        {{ collection.all_products_count }} {{ collection.all_products_count | pluralize:'item','items' }}
-      </span>
-  </div><!-- .coll-caption -->
-  
-</li>
-
-{% comment %}
-By all means, you don't need to use a clearing div. Use whatever it is you use to clear
-floated elements. The code that follows just just shows you how to use a cycle element.
-Notice that we named it ( 'clear' ). We need to name it because there's another cycle
-element in this file ( we called that other one 'last' ). If you have more than one
-cycle element in a rendered view, you'll need to name all of them.
-The cycle element is documented here: http://docs.shopify.com/themes/liquid-basics/logic#cycle
-{% endcomment %}
-
-{% if collection-grid-item == 'four-per-row' %}
-{% cycle 'clear': '', '', '', '<div style="clear:both"></div>' %}
-{% elsif collection-grid-item == 'three-per-row' %}
-{% cycle 'clear': '', '', '<div style="clear:both"></div>' %}
-{% endif %}
+<div class="modal fade" id="{{product.id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class='view-all'><a href='{{product.url}}'>VIEW FULL DETAILS</a></p>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      </div>
+      <div class="modal-body">
+        {% include 'product_quickview' %}
+      </div>
+    </div>
+  </div>
+</div>
