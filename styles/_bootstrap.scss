@@ -757,6 +757,7 @@ pre code {
   margin-left: auto;
   padding-left: 10px;
   padding-right: 10px;
+  max-width: 1600px;
 }
 .row {
   margin-left: -10px;
@@ -5108,11 +5109,9 @@ button.close {
 .modal-content {
   position: relative;
   background-color: #ffffff;
-  border: 1px solid #999999;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 1px solid $primary-color;
+  border: 1px solid $primary-color;
   border-radius: 0px;
-  -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
   background-clip: padding-box;
   outline: none;
 }
@@ -5123,19 +5122,18 @@ button.close {
   bottom: 0;
   left: 0;
   z-index: 1040;
-  background-color: #000000;
+  background-color: white;
 }
 .modal-backdrop.fade {
   opacity: 0;
   filter: alpha(opacity=0);
 }
 .modal-backdrop.in {
-  opacity: 0.5;
+  opacity: 0.8;
   filter: alpha(opacity=50);
 }
 .modal-header {
   padding: 15px;
-  border-bottom: 1px solid #e5e5e5;
   min-height: 16.42857143px;
 }
 .modal-header .close {
@@ -5167,18 +5165,20 @@ button.close {
 }
 @media (min-width: 768px) {
   .modal-dialog {
-    width: 600px;
+    width: 725px;
     margin: 30px auto;
   }
   .modal-content {
-    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
   }
   .modal-sm {
     width: 300px;
   }
 }
 @media (min-width: 992px) {
+  .modal-dialog {
+    width: 1000px;
+    margin: 30px auto;
+  }
   .modal-lg {
     width: 900px;
   }
