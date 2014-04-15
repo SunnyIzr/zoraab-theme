@@ -4,7 +4,7 @@
 
 .header {
   font-size: 12px;
-  z-index: 1;
+  z-index: 3;
   height: 25px;
   margin-top: 5px;
   margin-bottom: -10px;
@@ -48,6 +48,7 @@
   margin-top: 0px;
   margin-bottom: 0px !important;
   border: none;
+  z-index: 2;
 }
 .navbar .navbar-brand {
   padding-top: 0px;
@@ -591,6 +592,24 @@ label:before {
   border: 1px solid #b8b8b8;
 }
 
+iframe {
+  position: absolute;
+  top: 14px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding-top: 0px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  iframe {
+    top: 37px;
+  }
+}
 /*!
  * Bootstrap v3.1.1 (http://getbootstrap.com)
  * Copyright 2011-2014 Twitter, Inc.
