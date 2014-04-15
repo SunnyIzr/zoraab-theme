@@ -21,10 +21,20 @@
         <h2>{{ product.title }}</h2>
         <h4>{{product.vendor}}</h4>
         <h3>{{ product.price | money | remove: '.00'}}</h3>
-        <div class='qty'> QTY: <input min="1" type="number" id="quantity" name="quantity" value="1" /> </div>
-        <div class='add-to-cart'>
-          <input type="submit" value="+ ADD TO CART" id="add" class="btn btn-lg btn-info" />
-        </div>
+        <form method="post" action="/cart/add" class="clear">
+        {% if product.available %}
+          {% for variant in product.variants %}
+            <input type="hidden" name="id" value="{{ variant.id }}" />{% endfor %}
+           <div class='qty'>
+              QTY:<input min="1" type="number" id="quantity" name="quantity" value="1" /> 
+            </div>
+            <div class='add-to-cart'>
+              <input type="submit" value="+ ADD TO CART" id="add" class="btn btn-lg btn-info" />
+            </div>
+         {% else %}
+          <p><strong><span style="color:red; font-size:20px;">SOLD OUT</span></strong> <br /> <a href="javascript:history.back();" class="continue_browsing">continue browsing</a></p>
+        {% endif %}
+        </form>
         <div class='description'>
           {{ product.description }}
         </div>
