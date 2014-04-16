@@ -5,19 +5,26 @@ $emphasis-color: #e85c41;
 
 @import 'nav';
 
+@import 'collection';
+
 @import 'index';
 
 @import 'footer';
 
 @import 'product';
 
-@import 'collection';
 
 @import 'filter';
 
 @import 'quickview';
 
 @import 'forms';
+
+@import 'blog';
+
+@import 'account_form';
+
+@import 'account';
 
 @import 'bootstrap-theme';
 

@@ -1,0 +1,25 @@
+
+<h2> FEATURED </h2>
+<h3> Subheader Font </h3>
+<p>
+<strong>Body copy,</strong> ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel feugait nulla facilisi.
+</p>
+
+
+{% assign collection = collections.featured %}
+
+<div class='featured-collection-grid collection-grid'>
+  <ul>
+    {% for product in collection.products %}
+      <li class='col-xs-6 col-sm-6 col-md-4 col-lg-3'>
+        {% include 'collection-grid-item' %}
+      </li>
+    {% else %}
+      
+      <li>There are no products in this view.</li>
+    {% endfor %}
+  </ul>
+  <p class='see-all'><a href='/collections/all'> see full collection> </a></p>
+</div>
+
+

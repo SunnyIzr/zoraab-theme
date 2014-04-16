@@ -1,6 +1,6 @@
 </div>
 <div class='row'>
-  <center>
+
   <div class='email-signup hidden-xs'>
     SIGN UP FOR OUR NEWSLETTER TO <span class='emphasize'> SAVE 10% </span>
     <input type='email' placeholder='your@email.com'/>
@@ -14,37 +14,36 @@
       <input type="email" class="required email" placeholder="EMAIL ADDRESS" value="" id="mce-EMAIL" required name="EMAIL" />
       <input type="submit" name="subscribe" value="→" />
     </form>
-        <p role="contentinfo">Copyright &copy; {{ "now" | date: "%Y" }} {{ shop.name }}. {{ powered_by_link }}.</p>
+
     {% endcomment %}
 
   </div>
-  </center>
+</div>
 <div class='row'>
-  <center>
-<div class='press-banner hidden-xs'>
-  <div class='col-sm-2'>
-    {{ 'press_logo1.png' | asset_url | img_tag }}
-  </div>
-  <div class='col-sm-2'>
-    {{ 'press_logo2.png' | asset_url | img_tag }}
-  </div>
-  <div class='col-sm-2'>
-    {{ 'press_logo3.png' | asset_url | img_tag }}
-  </div>
-  <div class='col-sm-2'>
-    {{ 'press_logo4.jpg' | asset_url | img_tag }}
-  </div>
-  <div class='col-sm-2'>
-    {{ 'press_logo5.jpg' | asset_url | img_tag }}
-  </div>
-  <div class='col-sm-2'>
-    {{ 'press_logo6.jpg' | asset_url | img_tag }}
+  <div class='press-banner hidden-xs'>
+    <div class='col-sm-2'>
+      <img src="{{'press_logo1.png' | asset_url}}" class='img-responsive'>
+    </div>
+    <div class='col-sm-2'>
+      <img src="{{'press_logo2.png' | asset_url}}" class='img-responsive'>
+    </div>
+    <div class='col-sm-2'>
+      <img src="{{'press_logo3.png' | asset_url}}" class='img-responsive'>
+    </div>
+    <div class='col-sm-2'>
+      <img src="{{'press_logo4.png' | asset_url}}" class='img-responsive'>
+    </div>
+    <div class='col-sm-2'>
+      <img src="{{'press_logo5.png' | asset_url}}" class='img-responsive'>
+    </div>
+    <div class='col-sm-2'>
+      <img src="{{'press_logo6.png' | asset_url}}" class='img-responsive'>
+    </div>
   </div>
 </div>
-
 <div class='bottom-footer hidden-xs'>
-  <center>
-    <div class="content">
+  <div class="content">
+    <div class='row'>
       <div class='col-sm-2'>
         <h5>SUBSCRIPTION</h5>
         <p><strong>Body copy,</strong> ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam</p>
@@ -61,16 +60,25 @@
         <h5>BLOG</h5>
         <p><strong>Body copy,</strong> ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam</p>
       </div>
-      <div class='col-sm-2'>
+      <div class='col-sm-2 footer-links'>
         <ul>
-          <li>ACCOUNT</li>
-          <li>RETURNS</li>
-          <li>HELP</li>
+          <li><a href='/account'>ACCOUNT</a></li>
+          <li><a href='/pages/returns'>RETURNS</a></li>
+          <li><a href='/pages/help-faq'>HELP</a></li>
           <li>(800) 973-8247</li>
-          <li>TERMS</li>
+          <li><a href='/pages/terms'>TERMS</a></li>
       </div>
-      <div class='col-sm-2'>
+      <div class='col-sm-2 social-icons'>
+        <ul>
+        <li><a href='http://www.facebook.com/ZoraabNation'><i class="fa fa-facebook"></i></a></li>
+        <li><a href='http://instagram.com/zoraabnation'><i class="fa fa-instagram"></i></a></li>
+        <li><a href='http://twitter.com/zoraab'><i class="fa fa-twitter"></i></a></li>
+        <li><a href='http://twitter.com/zoraab'><i class="fa fa-pinterest"></i></a></li>
+        </ul>        
       </div>
     </div>
-  </center>
+    <div class='row copyright'>
+      <p role="contentinfo">&copy; {{ "now" | date: "%Y" }} Parastone Group. All rights reserved.</p>
+    </div>
+  </div>
 </div>
