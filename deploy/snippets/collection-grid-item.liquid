@@ -9,7 +9,11 @@
     </div>
   </div>
   <a href='{{product.url}}'>
-    <img src="{{ product.featured_image.src | product_img_url: 'medium' }}" alt="{{ product.featured_image.alt | escape }}" />
+    {% if template == 'collection' %}
+      <img src="{{ product.featured_image.src | product_img_url: 'medium' }}" alt="{{ product.featured_image.alt | escape }}" />
+    {% else %}
+      <img src="{{ product.featured_image.src | product_img_url: 'large' }}" alt="{{ product.featured_image.alt | escape }}" />
+    {% endif %}
   </a>
   <h5>{{ product.price | money | remove: '.00'}}</h5>
 </div>

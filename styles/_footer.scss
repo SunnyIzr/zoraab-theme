@@ -3,6 +3,8 @@
   color: white;
   font-size:24px;
   padding: 8px;
+  margin: 0 auto;
+  text-align: center;
   .emphasize{
     color: $emphasis-color;
   }
@@ -10,30 +12,73 @@
     font-style: italic;
     font-size: 12px;
   }
+  input{
+    padding:5px;
+    font-size:15px;
+  }  
 }
 
 .press-banner{
-  height:120px;
+  height:100%;
   vertical-align: middle;
   padding: 0px 50px;
   max-width:1600px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .bottom-footer{
-  height:200px;
+  padding-top:25px;
+  padding-bottom:25px;
+  height:auto;
   background-color: #99999f;
   color:white;
+  padding-left: 5%;
+  padding-right: 5%;
   .content{
     max-width:1600px;
+    margin: 0 auto;
     text-align: left;
+    h5{
+      font-weight: lighter;
+    }
+    p{
+      font-weight: lighter;
+    }
+    a{
+      color: white;
+    }
+    .footer-links{
+      border-left: 1px solid white;
+      border-right: 1px solid white;
+    }
+    .copyright{
+      margin-top:10px;
+    }
   }
   ul{
     padding:0px;
     list-style: none;
     border-radius: 0px;
-    text-align:left;
     li {
       margin-top:10px;
     } 
+  }
+}
+
+.social-icons{
+  ul{
+    margin-left:25px;
+    list-style:none;
+    width:100%;
+    font-size:40px;
+    li{
+      display: inline-block;
+      width: 60px;
+      height: 60px;
+      background-color: $accent-color;
+      text-align: center;
+      border-radius: 30px;
+    }
   }
 }

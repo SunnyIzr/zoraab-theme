@@ -3731,7 +3731,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   margin-bottom: 0;
 }
 .navbar-brand {
-  float: left;
   padding: 15px 15px;
   font-size: 18px;
   line-height: 20px;
@@ -3749,7 +3748,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-toggle {
   position: relative;
-  float: right;
+  float: left;
   margin-right: 15px;
   padding: 9px 10px;
   margin-top: 8px;

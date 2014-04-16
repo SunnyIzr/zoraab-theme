@@ -1,30 +1,84 @@
 <div class="row">
   {%include 'hero'%}
 </div>
-<div class='container'>
 
 
 <div class="row feature-panels">
   <div class="col-md-6 col-sm-6 col-xs-6">
-      {%include 'index_b'%}
+    <a href="/pages/subscription">
+      <div class='feature-panel'>
+        <div class='icon'>
+          {% include 'icon_sub' %}
+        </div>
+        <div class='text'>
+          <h3> SUBSCRIPTION </h3>
+          <p class='hidden-xs hidden-sm'> <strong>Body copy,</strong> ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet equat.</p>
+        </div>
+        <div class='link hidden-xs hidden-sm'>
+          <a href='#'> learn more> </a>
+        </div>
+      </div>
+    </a>
   </div>
-  <div class="col-md-6 col-sm-6 col-xs-6">
-      {%include 'index_c'%}
+  <div class="col-md-6 col-sm-6 col-xs-6 right-panel">
+    <a href="/collections/all">
+      <div class='feature-panel'>
+        <div class='icon'>
+          {% include 'icon_shop' %}
+        </div>
+        <div class='text'>
+          <h3> SHOP </h3>
+          <p class='hidden-xs hidden-sm'> <strong>Body copy,</strong> ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet equat.
+          </p>
+        </div>
+        <div class='link hidden-xs hidden-sm'>
+          <a href='#'> see our collection> </a>
+        </div>
+      </div>
+    </a>
   </div>
 </div>
 
 <div class="row feature-panels">
   <div class="col-md-6 col-sm-6 col-xs-6">
-      {%include 'index_d'%}
+    <a href="/products/gift-card">
+      <div class='feature-panel'>
+        <div class='icon'>
+          {% include 'icon_giftcard' %}
+        </div>
+        <div class='text'>
+          <h3> GIFT CARDS </h3>
+          <p class='hidden-xs hidden-sm'> <strong>Body copy,</strong> ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet equat.
+          </p>
+        </div>
+        <div class='link hidden-xs hidden-sm'>
+          <a href='#'> shop gift cards> </a>
+        </div>
+      </div>
+    </a>
   </div>
-  <div class="col-md-6 col-sm-6 col-xs-6">
-      {%include 'index_e'%}
+  <div class="col-md-6 col-sm-6 col-xs-6 right-panel">
+    <a href="/pages/blog">
+      <div class='feature-panel'>
+        <div class='icon'>
+          {% include 'icon_blog' %}
+        </div>
+        <div class='text'>
+          <h3> BLOG </h3>
+          <p class='hidden-xs hidden-sm'> <strong>Body copy,</strong> ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet equat.
+          </p>
+        </div>
+        <div class='link hidden-xs hidden-sm'>
+          <a href='#'> see our collection> </a>
+        </div>
+      </div>
+    </a>
   </div>
 </div>
 
 <div class="row">
-  <div class='col-md-12'>
-    {%include 'index_featured_products'%}
+  <div class='featured-products col-md-12 hidden-xs'>
+    {%include 'featured_products'%}
   </div>
 </div>
 
