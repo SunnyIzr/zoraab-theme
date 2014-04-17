@@ -2,21 +2,18 @@ grunt watch
 
 deploy/ theme watch
 
+grunt build - recomplile
 
 DONE right now, the keep shopping button refreshes the page- change that
 
 when you add item to cart, instead of directing to cart page it should open the cart
 
-add new js file - compile?
-
 width aspect for cart- where can i change this
 
 clicking remove shouldn't redirect to cart page. nothing should go to that page- it is no longer needed. this can be done once i can access cart model/objects
 
-display "shoe size" and any other info needed. - need access to the product object and the data stored within it
+add arrow images from bootstrap/components to boxes- http://css-tricks.com/examples/ButtonMaker/
 
-add arrow images to boxes- http://css-tricks.com/examples/ButtonMaker/
-
-replace remove with "x" button
+replace remove with "x" button from bootstrap/components
 
 quantity like bonobos or still manual enter?
