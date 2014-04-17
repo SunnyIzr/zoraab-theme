@@ -394,6 +394,10 @@
   font-size: 15px;
 }
 
+.product-social {
+  float: right;
+}
+
 .filter {
   text-align: left;
 }
