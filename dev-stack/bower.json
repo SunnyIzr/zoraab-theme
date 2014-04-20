@@ -1,0 +1,10 @@
+{
+  "name": "app-name",
+  "version": "0.0.1",
+  "dependencies": {
+  	"sidr": "~1.2.1",
+    "modernizr": "~2.6.2",
+    "jquery": "~1.10.2"
+  },
+  "private": true
+}
