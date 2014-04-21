@@ -44,12 +44,34 @@
       </div>
     </div>
 
+    <div class="container-fluid sc-wrapper">
+      <div class="shopping-container">
+        <button id="AddToCart" class="btn btn-action">Add to Cart</button>
+      </div>
+
+      <div id="cart-pop-out" class="js-cart-side-panel-hidden">
+        <div class="shopping-cart-sidepanel-container">
+          <button id="HideCartSidePanel" class="btn">Hide Cart</button>
+          <h3>Shopping Cart</h3>
+          <ul>
+            <li><a href="#">List 1</a></li>
+            <li class="active"><a href="#">List 2</a></li>
+            <li><a href="#">List 3</a></li>
+          </ul>
+          <p>Extra Info</p>
+        </div>
+      </div>
+    </div>
 
 
     <!-- *** SCRIPTS *** -->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="../bower_components/sidr/jquery.sidr.min.js"></script>
+
+    <script src="../scripts/shoppingcart-sidepanel.js"></script>
+
+    <script src="../bower_components/sidr/jquery.sidr.min.js">
+    </script>
 
     <!-- All compiled plugins, or include individual files as needed -->
     <!-- DEVNOTE: remove unused javascript plugin files, recompile, and reminify (if not all javascript libraries included in bootstrap, are utilized) -->

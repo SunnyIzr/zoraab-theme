@@ -40,8 +40,15 @@ body {
   height: 43.75px;
   margin-left: -15px;
 }
+.shopping-container {
+  background-color: #428bca;
+}
+.shopping-cart-sidepanel-container {
+  background-color: #5cb85c;
+}
 .js-cart-side-panel-hidden {
   display: none;
+  width: 0%;
 }
 .js-cart-side-panel-visible {
   display: block;
