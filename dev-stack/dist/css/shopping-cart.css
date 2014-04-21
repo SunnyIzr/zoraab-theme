@@ -40,7 +40,16 @@ body {
   height: 43.75px;
   margin-left: -15px;
 }
+.js-cart-side-panel-hidden {
+  display: none;
+}
+.js-cart-side-panel-visible {
+  display: block;
+}
 .container-fluid {
   padding-left: 0px;
   padding-right: 0px;
+}
+.btn-action {
+  background-color: #e65d47;
 }
