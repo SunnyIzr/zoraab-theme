@@ -6,14 +6,59 @@ grunt build - recomplile
 
 DONE right now, the keep shopping button refreshes the page- change that
 
-when you add item to cart, instead of directing to cart page it should open the cart
+DONE when you add item to cart, instead of directing to cart page it should open the cart
 
-width aspect for cart- where can i change this
+DONE width aspect for cart- lines 2301-2307 sass & 2276 2324
 
-clicking remove shouldn't redirect to cart page. nothing should go to that page- it is no longer needed. this can be done once i can access cart model/objects
+DONE add arrow images from bootstrap/components to boxes- http://css-tricks.com/examples/ButtonMaker/
+<i class="fa fa-angle-left"></i> fa-angle-left
+<i class="fa fa-angle-right"></i> fa-angle-right
 
-add arrow images from bootstrap/components to boxes- http://css-tricks.com/examples/ButtonMaker/
+DONE replace remove with "x" button from bootstrap/components
+<span class="glyphicon glyphicon-remove"></span>
 
-replace remove with "x" button from bootstrap/components
+AJAX ITEMS INTO CART - pair?
 
-quantity like bonobos or still manual enter?
+clicking remove shouldn't redirect to cart page. nothing should go to that page- it is no longer needed. this can be done once i can access cart model/objects - sunny
+
+update quantity - sunny/ what should i use?
+
+cart # should be changed - sunny
+
+checkout greyed out when cart empty
+
+change table width in cart liquid head.pricing
+
+add right arrow properly
+
+change fonts, styles, and caps/non-caps
+
+removed vendor - <span id="vendor">{{ item.vendor }}</span> 
+
+removed "line item properties":{% comment %}
+              Line Item Properties
+              {% endcomment %}
+              {% if item.properties.size > 0 %}
+              <p>
+                {% for p in item.properties %}
+                  {% unless p.last == blank %}
+                    {{ p.first }}:
+                    {% if p.last contains '/uploads/' %}
+                      <a href="{{ p.last }}">{{ p.last | split: '/' | last }}</a>
+                    {% else %}
+                      {{ p.last }}
+                    {% endif %}
+                    <br />
+                  {% endunless %}
+                {% endfor %}
+              </p>
+              {% endif %}
+
+removed "special instructions":{% comment %}
+          For the special instructions to be submitted with order,
+          they need to use a name attribute set to 'note'. That's case-sensitive.
+          {% endcomment %}
+          <div>
+            <p>Special instructions for seller</p>
+            <textarea name="note">{{ cart.note }}</textarea>
+          </div>

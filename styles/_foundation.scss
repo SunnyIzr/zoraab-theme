@@ -2232,12 +2232,12 @@ meta.foundation-mq-topbar {
 
 .right-off-canvas-menu {
   -webkit-backface-visibility: hidden;
-  width: 15.625rem;
+  width: 22.50rem;
   top: 0;
   bottom: 0;
   position: absolute;
   overflow-y: auto;
-  background: #333333;
+  background: white;
   z-index: 1001;
   box-sizing: content-box;
   -webkit-overflow-scrolling: touch;
@@ -2252,6 +2252,7 @@ meta.foundation-mq-topbar {
     -webkit-backface-visibility: hidden; }
 
 ul.off-canvas-list {
+  background: white;
   list-style-type: none;
   padding: 0;
   margin: 0; }
@@ -2299,12 +2300,12 @@ ul.off-canvas-list {
       background: rgba(255, 255, 255, 0.05); } }
 
 .move-left > .inner-wrap {
-  -ms-transform: translate(-15.625rem, 0);
-  -webkit-transform: translate3d(-15.625rem, 0, 0);
-  -moz-transform: translate3d(-15.625rem, 0, 0);
-  -ms-transform: translate3d(-15.625rem, 0, 0);
-  -o-transform: translate3d(-15.625rem, 0, 0);
-  transform: translate3d(-15.625rem, 0, 0); }
+  -ms-transform: translate(-22.50rem, 0);
+  -webkit-transform: translate3d(-22.50rem, 0, 0);
+  -moz-transform: translate3d(-22.50rem, 0, 0);
+  -ms-transform: translate3d(-22.50rem, 0, 0);
+  -o-transform: translate3d(-22.50rem, 0, 0);
+  transform: translate3d(-22.50rem, 0, 0); }
 .move-left .exit-off-canvas {
   -webkit-backface-visibility: hidden;
   transition: background 300ms ease;
