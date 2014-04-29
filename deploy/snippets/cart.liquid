@@ -1,6 +1,6 @@
 <aside class="right-off-canvas-menu">
   <ul class="off-canvas-list">
-      <form action="/cart" method="post">
+      <form id="cart-form" action="/cart" method="post">
           <div id="head"> 
               <div id="button-container">
                 <a class="button-ks"><i class="fa fa-angle-left"></i> KEEP SHOPPING</a>
@@ -35,16 +35,17 @@
               {% assign collection_url = item.product.collections.first.url %}
               {% if collection_url == '/collections/frontpage' or collection_url == '' %}{% assign collection_url = '/collections/all' %}{% endif %}
             {% endif %}
-            <div>
-              <a href="/cart/change?line={{ forloop.index }}&quantity=0"><span class="remove-button glyphicon glyphicon-remove" style="color: #8E9292;display: block;float: right;"></span></a>
-              <a href="{{ item.product.url | within: collections.all }}">  
-                <img id="prod-img" src="{{ item.product.featured_image.src | product_img_url: 'compact' }}" alt="{{ item.title | escape }}" />
-              </a>
-              <span id="qty">QTY {{ item.quantity }}<span>
-              <a id="prod-title" href="{{ item.product.url | within: collections.all }}"> {{ item.title }}</a>
-              <span id="item-price">{{ item.price | money }}</span>
+            <div id="container">
+              <div class="line-items">
+                <a href="/cart/change?line={{ forloop.index }}&quantity=0"><span class="remove-button glyphicon glyphicon-remove" style="color: #8E9292;display: block;float: right;"></span></a>
+                <a href="{{ item.product.url | within: collections.all }}">  
+                  <img id="prod-img" src="{{ item.product.featured_image.src | product_img_url: 'compact' }}" alt="{{ item.title | escape }}" />
+                </a>
+                <span class="qty">QTY {{ item.quantity }}<span>
+                <a class="prod-title" href="{{ item.product.url | within: collections.all }}"> {{ item.title }}</a>
+                <span class="item-price">{{ item.price | money }}</span>
+              </div>
             </div>
-            
             <input type="number" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" />
 
           {% endfor %}
@@ -71,7 +72,8 @@
       </form>
 
     {% if cart.item_count == 0 %}
-
+       <div id="container">
+       </div>
         <div>
           <h2 class="empty-cart-message">Your cart is empty</h2>
         </div>
