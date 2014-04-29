@@ -1,0 +1,162 @@
+<div class="row">
+  {%include 'sub_hero'%}
+</div>
+
+</div>
+<div class='container'>
+  <div class='subscription'>
+    
+    <div class='row'>
+      <div class='col-xs-10 col-xs-push-1'>
+        <p class='copy'>
+          Cancel anytime. Give or get your monthly kit of sock swagger.  Accessories coming soon. Customize to your hearts content.
+        </p>
+      </div>
+    </div>
+    
+    <div class='row'>
+      <form>
+        <div class='sub-form'>
+          <div class='col-sm-10 col-sm-push-1 col-xs-12'>
+            <div class="panel-group" id="accordion">
+              
+              <div class="panel panel-default">
+                <div class="heading">
+                  <div class='step'>
+                    STEP 1:
+                  </div>
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#stepOne">
+                      Pick out a recipient.
+                    </a>
+                  </h4>
+                  <div class='status'>
+                  </div>
+                </div>
+                <div id="stepOne" class="panel-collapse collapse in">
+                  <div class="panel-body">
+                    <div data-toggle="buttons">
+                      <label class="btn">
+                        <input type="radio" name="options" id="option1"> ME!
+                      </label>
+                      <label class="btn">
+                        <input type="radio" name="options" id="option2"> GIFT
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="panel panel-default">
+                <div class="heading">
+                  <div class='step'>
+                    STEP 2:
+                  </div>
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#stepTwo">
+                      Your Style Profile.
+                    </a>
+                  </h4>
+                  <div class='status'>
+                  </div>                  
+                </div>
+                <div id="stepTwo" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    <div class='instructions'>
+                      Check all that apply.
+                    </div>
+                    <div class="btn-group" data-toggle="buttons">
+                      <label class="btn">
+                        <input type="checkbox">
+                        {{ 'sub_casual.jpg' | asset_url | img_tag }}
+                      </label>
+                      <label class="btn">
+                        <input type="checkbox">
+                        {{ 'sub_business.jpg' | asset_url | img_tag }}
+                      </label>
+                      <label class="btn">
+                        <input type="checkbox">
+                        {{ 'sub_fashion.jpg' | asset_url | img_tag }}
+                      </label>
+                      <label class="btn">
+                        <input type="checkbox">
+                        {{ 'sub_wild.jpg' | asset_url | img_tag }}
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="panel panel-default">
+                <div class="heading">
+                  <div class='step'>
+                    STEP 3:
+                  </div>
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#stepThree">
+                      Number of socks per month.
+                    </a>
+                  </h4>
+                  <div class='status'>
+                  </div>                  
+                </div>
+                <div id="stepThree" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    <div data-toggle="buttons">
+                      <label class="btn">
+                        <input type="radio" name="options" id="option1"> 
+                        <p class='main-plan'>TWO</p>
+                        <p class='pricing'>$20 / month</p>
+                      </label>
+                      <label class="btn">
+                        <input type="radio" name="options" id="option2">
+                        <p class='main-plan'>THREE</p>
+                        <p class='pricing'>$29 / month</p>
+                      </label>
+                      <label class="btn">
+                        <input type="radio" name="options" id="option2">
+                        <p class='main-plan'>FIVE</p>
+                        <p class='pricing'>$45 / month</p>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="panel panel-default">
+                <div class="heading">
+                  <div class='step'>
+                    STEP 4:
+                  </div>
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#stepFour">
+                      Payment options.
+                    </a>
+                  </h4>
+                  <div class='status'>
+                  </div>                  
+                </div>
+                <div id="stepFour" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    <div data-toggle="buttons">
+                      <label class="btn">
+                        <input type="radio" name="options" id="option1"> MONTHLY
+                      </label>
+                      <label class="btn">
+                        <input type="radio" name="options" id="option2"> ONCE
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            <div class='submit-section'>
+              <input type='submit' value='Checkout' class='btn submit' />
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

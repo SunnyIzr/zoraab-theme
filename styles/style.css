@@ -605,18 +605,16 @@
     font-size: 14px;
   }
 }
-input[type=radio] {
+#filter input[type=radio] {
   display: none;
 }
-
-label {
+#filter label {
   display: inline-block;
   cursor: pointer;
   position: relative;
   padding-left: 12px;
 }
-
-input[type=radio]:checked + label:before {
+#filter input[type=radio]:checked + label:before {
   content: "";
   display: inline-block;
   width: 16px;
@@ -629,8 +627,7 @@ input[type=radio]:checked + label:before {
   border: 1px solid #b8b8b8;
   background-color: #67c5a9;
 }
-
-label.checked:before {
+#filter label.checked:before {
   display: none;
   content: "";
   display: inline-block;
@@ -644,8 +641,7 @@ label.checked:before {
   border: 1px solid #b8b8b8;
   background-color: #67c5a9 !important;
 }
-
-label:before {
+#filter label:before {
   content: "";
   display: inline-block;
   width: 16px;
@@ -8498,4 +8494,110 @@ button.close {
   .hidden-print {
     display: none !important;
   }
+}
+.subscription {
+  text-align: center;
+}
+.subscription .copy {
+  font-size: 25px;
+  color: #b8b8b8;
+  margin: 30px 0;
+}
+.subscription .sub-form .step {
+  text-align: left;
+  float: left;
+  position: absolute;
+  font-size: 22px;
+  color: white;
+  margin-left: 5px;
+}
+.subscription .sub-form .status {
+  text-align: right;
+  right: 24px;
+  margin-top: -34px;
+  float: right;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background-color: white;
+}
+.subscription .sub-form h4 {
+  font-size: 28px;
+  color: white;
+  font-weight: 100;
+  letter-spacing: 1px;
+}
+.subscription .sub-form .heading {
+  background-color: #67c5a9;
+  border: none;
+  padding: 10px 0;
+}
+.subscription .sub-form .heading a:hover {
+  text-decoration: none;
+}
+.subscription .sub-form .btn {
+  font-size: 20px;
+  padding: 10px 40px;
+  margin: 0 25px;
+  background-color: white;
+  border: 1px solid #b8b8b8;
+  color: #67c5a9;
+}
+.subscription .sub-form .btn.active {
+  background-color: #e85c41;
+  color: white;
+  border: 1px solid #e85c41;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.subscription .sub-form .btn.active .pricing {
+  color: white;
+}
+.subscription .sub-form .btn.active .main-plan {
+  border-bottom-color: white;
+}
+.subscription .sub-form #stepTwo .instructions {
+  color: #b8b8b8;
+  margin-top: -13px;
+  margin-bottom: 10px;
+}
+.subscription .sub-form #stepTwo .btn {
+  padding: 5px;
+  margin-bottom: 30px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+.subscription .sub-form #stepTwo label:before {
+  font-family: FontAwesome;
+  content: "\f096";
+  color: #b8b8b8;
+  display: inline-block;
+  position: absolute;
+  bottom: -27px;
+  margin-left: 42px;
+  text-align: center;
+}
+.subscription .sub-form #stepTwo label.active:before {
+  font-family: FontAwesome;
+  content: "\f046";
+  color: #e85c41;
+}
+.subscription .sub-form .main-plan {
+  border-bottom: 1px #b8b8b8 solid;
+  padding-bottom: 8px;
+  margin-bottom: 11px;
+}
+.subscription .sub-form .pricing {
+  color: #404041;
+  font-style: italic;
+  font-size: 16px;
+}
+.subscription .sub-form .submit {
+  background-color: #e85c41;
+  color: white;
+  border: none;
+}
+.subscription .sub-form .submit-section {
+  margin-bottom: 100px;
 }
