@@ -10613,19 +10613,14 @@ ul.off-canvas-list li a:hover {
 .button-ks {
   text-decoration: none;
   background: #606060;
-  padding: 15px 26px;
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
-  border-radius: 0px;
-  -webkit-box-shadow: black 0 1px 0;
-  -moz-box-shadow: black 0 1px 0;
-  box-shadow: black 0 1px 0;
+  padding: 16px 28px;
   text-shadow: rgba(0, 0, 0, 0.4) 0 1px 0;
   color: white;
   font-size: 16px;
   font-family: Georgia, serif;
   text-decoration: none;
   vertical-align: middle;
+  border-color: #606060;
 }
 
 .button-ks:hover {
@@ -10637,16 +10632,14 @@ ul.off-canvas-list li a:hover {
 .button-co {
   text-decoration: none;
   background: #67C5A9;
-  padding: 10px 31px;
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
-  border-radius: 0px;
+  padding: 10px 32px;
   text-shadow: rgba(0, 0, 0, 0.4) 0 1px 0;
   color: white;
   font-size: 16px;
   font-family: Georgia, serif;
   text-decoration: none;
   vertical-align: middle;
+  border-color: #67C5A9;
 }
 
 .button-co:hover {
@@ -10702,4 +10695,28 @@ ul.off-canvas-list li a:hover {
   margin-top: 68px;
   width: 200px;
   font-size: 14px;
+}
+
+.empty-cart {
+  text-decoration: none;
+  padding: 10px 32px;
+  text-shadow: rgba(0, 0, 0, 0.4) 0 1px 0;
+  font-size: 16px;
+  font-family: Georgia, serif;
+  vertical-align: middle;
+  background: #3d3d3d;
+  color: #666666;
+  border-color: #3d3d3d;
+}
+
+.empty-cart-message {
+  text-align: center;
+}
+
+#button-container {
+  font-size: 0;
+}
+
+#co {
+  font-family: FontAwesome;
 }

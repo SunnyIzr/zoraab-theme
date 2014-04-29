@@ -1,79 +1,79 @@
 <aside class="right-off-canvas-menu">
   <ul class="off-canvas-list">
-    {% if cart.item_count > 0 %}
-        <form action="/cart" method="post">
-            <div id="head">
-              <a class="button-ks"><i class="fa fa-angle-left"></i> KEEP SHOPPING</a>
-              <input type="submit" name="checkout" value="CHECKOUT >" class="button-co" />
-              <div id="pricing">
-                <table style="width:300px">
-                  <tr>
-                    <td class="spacing-left">TOTAL </td>
-                    <td class="spacing-right">{{ cart.total_price | money }}</td> 
-                  </tr>
-                  <tr>
-                    <td class="spacing-left">{{ cart.item_count | items }} ITEMS</td>
-                  </tr>
-                  <tr>  
-                    <td class="spacing-left">SHIPPING | FREE</td> 
-                    <td class="spacing-right">FREE</td>
-                  </tr>
-                </table>
+      <form action="/cart" method="post">
+          <div id="head"> 
+              <div id="button-container">
+                <a class="button-ks"><i class="fa fa-angle-left"></i> KEEP SHOPPING</a>
+                <input type="submit" id="co" name="checkout" value="CHECKOUT &#xf105;" class="button-co" />
               </div>
-              <h3 id="ship">Free shipping in the US.</h3>
-            </div>
-            {% for item in cart.items %}    
-        
-              {% comment %}
-              Determining the handle of the collection that was last seen for the 'continue shopping' link.
-              {% endcomment %}
-          
-              {% if forloop.first %}
-                {% assign collection_url = item.product.collections.first.url %}
-                {% if collection_url == '/collections/frontpage' or collection_url == '' %}{% assign collection_url = '/collections/all' %}{% endif %}
-              {% endif %}
-              <div>
-                <a href="/cart/change?line={{ forloop.index }}&quantity=0"><span class="glyphicon glyphicon-remove" style="color: #8E9292;display: block;float: right;"></span></a>
-                <a href="{{ item.product.url | within: collections.all }}">  
-                  <img id="prod-img" src="{{ item.product.featured_image.src | product_img_url: 'compact' }}" alt="{{ item.title | escape }}" />
-                </a>
-                <span id="qty">QTY {{ item.quantity }}<span>
-                <a id="prod-title" href="{{ item.product.url | within: collections.all }}"> {{ item.title }}</a>
-                <span id="item-price">{{ item.price | money }}</span>
-              </div>
-              
-              <input type="number" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" />
-
-            {% endfor %}
-        
-          
-          {% comment %}
-          For the checkout and update buttons to work, they need to use
-          a name attribute set to 'checkout' and 'update', respectively. That's case-sensitive.
-          {% endcomment %}
-      
-          <div>
-            
-            <span class="or">or</span>
-            <input type="submit" name="update" value="Update cart" />
-            <span class="or">or</span>
-                
-            {% comment %}Paypal and Google checkout buttons{% endcomment %}
-            {% if additional_checkout_buttons %}
-            <p class="additional-checkout-buttons">
-              {{ content_for_additional_checkout_buttons }}
-            </p>
-            {% endif %}    
+              {% if cart.item_count > 0 %}
+                <div id="pricing">
+                  <table style="width:300px">
+                    <tr>
+                      <td class="spacing-left">TOTAL </td>
+                      <td class="spacing-right">{{ cart.total_price | money }}</td> 
+                    </tr>
+                    <tr>
+                      <td class="spacing-left">{{ cart.item_count | items }} ITEMS</td>
+                    </tr>
+                    <tr>  
+                      <td class="spacing-left">SHIPPING | FREE</td> 
+                      <td class="spacing-right">FREE</td>
+                    </tr>
+                  </table>
+                </div>
+                <h3 id="ship">Free shipping in the US.</h3>
+              {% endif %}  
           </div>
+          {% for item in cart.items %}    
       
-          
-        </form>
+            {% comment %}
+            Determining the handle of the collection that was last seen for the 'continue shopping' link.
+            {% endcomment %}
+        
+            {% if forloop.first %}
+              {% assign collection_url = item.product.collections.first.url %}
+              {% if collection_url == '/collections/frontpage' or collection_url == '' %}{% assign collection_url = '/collections/all' %}{% endif %}
+            {% endif %}
+            <div>
+              <a href="/cart/change?line={{ forloop.index }}&quantity=0"><span class="remove-button glyphicon glyphicon-remove" style="color: #8E9292;display: block;float: right;"></span></a>
+              <a href="{{ item.product.url | within: collections.all }}">  
+                <img id="prod-img" src="{{ item.product.featured_image.src | product_img_url: 'compact' }}" alt="{{ item.title | escape }}" />
+              </a>
+              <span id="qty">QTY {{ item.quantity }}<span>
+              <a id="prod-title" href="{{ item.product.url | within: collections.all }}"> {{ item.title }}</a>
+              <span id="item-price">{{ item.price | money }}</span>
+            </div>
+            
+            <input type="number" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" />
 
-    {% else %}
+          {% endfor %}
+      
+        
+        {% comment %}
+        For the checkout and update buttons to work, they need to use
+        a name attribute set to 'checkout' and 'update', respectively. That's case-sensitive.
+        {% endcomment %}
+    
+        <div>
+          
+          <input type="submit" name="update" value="Update cart" />
+              
+          {% comment %}Paypal and Google checkout buttons{% endcomment %}
+          {% if additional_checkout_buttons %}
+          <p class="additional-checkout-buttons">
+            {{ content_for_additional_checkout_buttons }}
+          </p>
+          {% endif %}    
+        </div>
+    
+        
+      </form>
+
+    {% if cart.item_count == 0 %}
 
         <div>
-          <h2>It appears that your cart is currently empty!</h2>
-          <h3>You can continue browsing <a href="/collections/all">here</a>.</h3>
+          <h2 class="empty-cart-message">Your cart is empty</h2>
         </div>
 
     {% endif %}

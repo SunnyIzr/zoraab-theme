@@ -17,21 +17,21 @@ DONE add arrow images from bootstrap/components to boxes- http://css-tricks.com/
 DONE replace remove with "x" button from bootstrap/components
 <span class="glyphicon glyphicon-remove"></span>
 
-AJAX ITEMS INTO CART - pair?
+AJAX ITEMS INTO CART 
+  - add to cart (db) with posts & add to cart (ui) with get
+  - check if item already exists, if it does then just +1 qty
 
-clicking remove shouldn't redirect to cart page. nothing should go to that page- it is no longer needed. this can be done once i can access cart model/objects - sunny
+DONE clicking remove shouldn't redirect to cart page. nothing should go to that page- it is no longer needed. this can be done once i can access cart model/objects - sunny
 
-update quantity - sunny/ what should i use?
+update quantity 
 
-cart # should be changed - sunny
+DONE cart # should be changed
 
-checkout greyed out when cart empty
+DONE checkout greyed out when cart empty
 
-change table width in cart liquid head.pricing
+DONE add right arrow properly
 
-add right arrow properly
-
-change fonts, styles, and caps/non-caps
+change fonts, styles, caps/non-caps & sizing
 
 removed vendor - <span id="vendor">{{ item.vendor }}</span> 
 
@@ -62,3 +62,9 @@ removed "special instructions":{% comment %}
             <p>Special instructions for seller</p>
             <textarea name="note">{{ cart.note }}</textarea>
           </div>
+
+IN product.liquid ADD BUTTON NEEDS - class = "right-off-canvas-toggle"
+
+MAKE SURE EVERYTHING WORKS WITH AJAX
+
+when you remove last item from cart- grey out checkout box & display "cart is empty"
