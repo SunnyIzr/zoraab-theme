@@ -76,6 +76,7 @@
       } 
       #giftForm{
         margin-top: 5px;
+        font-size: 23px;
         
         input{
           margin-top: 15px;
@@ -83,9 +84,11 @@
           padding: 10px 40px;
           text-align: center;
           width: 60%;
+          margin-left: 0px;
         }
         textarea{
           margin-top: 15px;
+          margin-left: 0px;
           border: 1px solid $faded-color;
           padding: 10px 40px;
           text-align: center;
@@ -111,7 +114,7 @@
           display: inline-block;  
           position: absolute;
           bottom: -27px;
-          margin-left: 42px;
+          left: 49px;
           text-align: center;
           }
           label.active:before{

@@ -8572,6 +8572,7 @@ button.close {
 }
 .subscription .sub-form #giftForm {
   margin-top: 5px;
+  font-size: 23px;
 }
 .subscription .sub-form #giftForm input {
   margin-top: 15px;
@@ -8579,9 +8580,11 @@ button.close {
   padding: 10px 40px;
   text-align: center;
   width: 60%;
+  margin-left: 0px;
 }
 .subscription .sub-form #giftForm textarea {
   margin-top: 15px;
+  margin-left: 0px;
   border: 1px solid #b8b8b8;
   padding: 10px 40px;
   text-align: center;
@@ -8605,7 +8608,7 @@ button.close {
   display: inline-block;
   position: absolute;
   bottom: -27px;
-  margin-left: 42px;
+  left: 49px;
   text-align: center;
 }
 .subscription .sub-form #stepTwo label.active:before {

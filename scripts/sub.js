@@ -14,6 +14,7 @@ var stepOneComplete = function(){
       $($('.status')[0]).html('<i class="fa fa-check"></i>')
       $('#stepOne').collapse('hide')
       $('#stepTwo').collapse('show')
+      $('#giftForm').collapse('hide')
     }
     if ($('#gift').is(':checked')) {
       $($('.status')[0]).html('')
