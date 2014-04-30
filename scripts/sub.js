@@ -5,6 +5,7 @@ $(document).ready(function(){
   stepThreeComplete()
   stepFourComplete()
   upfrontMonths()
+  styleHover()
 })
 
 var stepOneComplete = function(){
@@ -64,4 +65,12 @@ var upfrontMonths = function(){
 
 var submitBtnComplete = function(){
   $( "input[type='submit']" ).addClass('submit')
+}
+
+var styleHover = function() {
+  $('.style-pic').hover(function(event){
+    $(this).children('.style-desc').css('opacity','1.0')
+  }, function(event){
+    $(this).children('.style-desc').css('opacity','0.0')
+  })
 }
