@@ -31,17 +31,25 @@
                     </a>
                   </h4>
                   <div class='status'>
+                    
                   </div>
                 </div>
                 <div id="stepOne" class="panel-collapse collapse in">
                   <div class="panel-body">
-                    <div data-toggle="buttons">
+                    <div id='stepOneAccordion' data-toggle="buttons">
                       <label class="btn">
-                        <input type="radio" name="options" id="option1"> ME!
+                        <input type="radio" name="recipients" id="me"> 
+                          ME!
                       </label>
                       <label class="btn">
-                        <input type="radio" name="options" id="option2"> GIFT
+                        <input type="radio" name="recipients" id="gift">
+                          GIFT
                       </label>
+                      <div id='giftForm' class='panel-collapse collapse'>
+                        <input type="text" id='recipient_name' name="recipient_name" placeholder="Recipient's Name"> <br/>
+                        <textarea rows='4' placeholder="Special Gift Message">
+                        </textarea>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -67,19 +75,19 @@
                     </div>
                     <div class="btn-group" data-toggle="buttons">
                       <label class="btn">
-                        <input type="checkbox">
+                        <input type="checkbox" name='style'>
                         {{ 'sub_casual.jpg' | asset_url | img_tag }}
                       </label>
                       <label class="btn">
-                        <input type="checkbox">
+                        <input type="checkbox" name='style'>
                         {{ 'sub_business.jpg' | asset_url | img_tag }}
                       </label>
                       <label class="btn">
-                        <input type="checkbox">
+                        <input type="checkbox" name='style'>
                         {{ 'sub_fashion.jpg' | asset_url | img_tag }}
                       </label>
                       <label class="btn">
-                        <input type="checkbox">
+                        <input type="checkbox" name='style'>
                         {{ 'sub_wild.jpg' | asset_url | img_tag }}
                       </label>
                     </div>
@@ -104,17 +112,17 @@
                   <div class="panel-body">
                     <div data-toggle="buttons">
                       <label class="btn">
-                        <input type="radio" name="options" id="option1"> 
+                        <input type="radio" name="qty" id="option1"> 
                         <p class='main-plan'>TWO</p>
                         <p class='pricing'>$20 / month</p>
                       </label>
                       <label class="btn">
-                        <input type="radio" name="options" id="option2">
+                        <input type="radio" name="qty" id="option2">
                         <p class='main-plan'>THREE</p>
                         <p class='pricing'>$29 / month</p>
                       </label>
                       <label class="btn">
-                        <input type="radio" name="options" id="option2">
+                        <input type="radio" name="qty" id="option2">
                         <p class='main-plan'>FIVE</p>
                         <p class='pricing'>$45 / month</p>
                       </label>
@@ -138,13 +146,32 @@
                 </div>
                 <div id="stepFour" class="panel-collapse collapse">
                   <div class="panel-body">
-                    <div data-toggle="buttons">
-                      <label class="btn">
-                        <input type="radio" name="options" id="option1"> MONTHLY
-                      </label>
-                      <label class="btn">
-                        <input type="radio" name="options" id="option2"> ONCE
-                      </label>
+                    <div id='stepFourAccordion'>
+                      <div data-toggle="buttons">
+                        <label class="btn">
+                          <input type="radio" name="payment" id="monthly"> MONTHLY
+                        </label>
+                        <label class="btn">
+                          <input type="radio" name="payment" id="once"> ONCE
+                        </label>
+                      </div>
+                      <div id='upfrontForm' class='panel-collapse collapse'>
+                        <div data-toggle="buttons">
+                          <label class="btn">
+                            <input type="radio" name="upfront_months" id="three"> THREE
+                          </label>
+                          <label class="btn">
+                            <input type="radio" name="upfront_months" id="six"> SIX
+                          </label>
+                          <label class="btn">
+                            <input type="radio" name="upfront_months" id="nine"> NINE
+                          </label>
+                          <label class="btn">
+                            <input type="radio" name="upfront_months" id="twelve"> TWELVE
+                          </label>                          
+                        </div>
+                  
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -152,7 +179,7 @@
               
             </div>
             <div class='submit-section'>
-              <input type='submit' value='Checkout' class='btn submit' />
+              <input type='submit' value='Checkout' class='btn' />
             </div>
           </div>
         </div>

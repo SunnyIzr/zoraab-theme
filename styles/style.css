@@ -8514,13 +8514,16 @@ button.close {
 .subscription .sub-form .status {
   text-align: right;
   right: 24px;
-  margin-top: -34px;
+  margin-top: -35px;
   float: right;
   position: absolute;
   width: 40px;
   height: 40px;
   border-radius: 40px;
   background-color: white;
+  color: #67c5a9;
+  font-size: 40px;
+  line-height: 1px;
 }
 .subscription .sub-form h4 {
   font-size: 28px;
@@ -8544,6 +8547,10 @@ button.close {
   border: 1px solid #b8b8b8;
   color: #67c5a9;
 }
+.subscription .sub-form .btn a:hover {
+  color: #67c5a9;
+  text-decoration: none;
+}
 .subscription .sub-form .btn.active {
   background-color: #e85c41;
   color: white;
@@ -8551,11 +8558,34 @@ button.close {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
+.subscription .sub-form .btn.active a {
+  color: white;
+}
+.subscription .sub-form .btn.active a:hover {
+  text-decoration: none;
+}
 .subscription .sub-form .btn.active .pricing {
   color: white;
 }
 .subscription .sub-form .btn.active .main-plan {
   border-bottom-color: white;
+}
+.subscription .sub-form #giftForm {
+  margin-top: 5px;
+}
+.subscription .sub-form #giftForm input {
+  margin-top: 15px;
+  border: 1px solid #b8b8b8;
+  padding: 10px 40px;
+  text-align: center;
+  width: 60%;
+}
+.subscription .sub-form #giftForm textarea {
+  margin-top: 15px;
+  border: 1px solid #b8b8b8;
+  padding: 10px 40px;
+  text-align: center;
+  width: 60%;
 }
 .subscription .sub-form #stepTwo .instructions {
   color: #b8b8b8;
@@ -8582,6 +8612,9 @@ button.close {
   font-family: FontAwesome;
   content: "\f046";
   color: #e85c41;
+}
+.subscription .sub-form #upfrontForm {
+  padding-top: 15px;
 }
 .subscription .sub-form .main-plan {
   border-bottom: 1px #b8b8b8 solid;
