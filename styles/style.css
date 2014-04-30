@@ -8619,6 +8619,9 @@ button.close {
 .subscription .sub-form #upfrontForm {
   padding-top: 15px;
 }
+.subscription .sub-form #upfrontForm .btn {
+  margin: 0 20px;
+}
 .subscription .sub-form .main-plan {
   border-bottom: 1px #b8b8b8 solid;
   padding-bottom: 8px;
