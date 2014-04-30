@@ -6,15 +6,18 @@ $(document).ready(function(){
   stepFourComplete()
   upfrontMonths()
   styleHover()
+  subFormSubmission()
 })
 
 var stepOneComplete = function(){
-  $( "input[name='recipients']" ).change(function(){
+  $( "input[class='recipients']" ).change(function(){
     if ($('#me').is(':checked')) {
       $($('.status')[0]).html('<i class="fa fa-check"></i>')
       $('#stepOne').collapse('hide')
       $('#stepTwo').collapse('show')
-      $('#giftForm').collapse('hide')
+      if ($('#giftForm').hasClass('in')) {
+        $('#giftForm').collapse('hide')
+      }
     }
     if ($('#gift').is(':checked')) {
       $($('.status')[0]).html('')
@@ -31,19 +34,19 @@ var recipientComplete = function(){
   })
 }
 var stepTwoComplete = function(){
-  $( "input[name='style']" ).change(function(){
+  $( "input[class='style']" ).change(function(){
     $($('.status')[1]).html('<i class="fa fa-check"></i>')   
   })
 }
 var stepThreeComplete = function(){
-  $( "input[name='qty']" ).change(function(){
+  $( "input[class='qty']" ).change(function(){
     $($('.status')[2]).html('<i class="fa fa-check"></i>')
     $('#stepThree').collapse('hide')
     $('#stepFour').collapse('show')
   })
 }
 var stepFourComplete = function(){
-  $( "input[name='payment']" ).change(function(){
+  $( "input[class='payment']" ).change(function(){
     if ($('#monthly').is(':checked')) {
       $($('.status')[3]).html('<i class="fa fa-check"></i>')
       $('#stepFour').collapse('hide')
@@ -57,7 +60,7 @@ var stepFourComplete = function(){
 }
 
 var upfrontMonths = function(){
-  $( "input[name='upfront_months']" ).change(function(){
+  $( "input[class='upfront_months']" ).change(function(){
     $($('.status')[3]).html('<i class="fa fa-check"></i>')
     $('#stepFour').collapse('hide')
     submitBtnComplete()
@@ -75,3 +78,20 @@ var styleHover = function() {
     $(this).children('.style-desc').css('opacity','0.0')
   })
 }
+
+var subFormSubmission = function() {
+  $('#subform').submit(function(e){
+    url = $('#subform').attr('action')
+    data = $('#subform').serialize()
+    e.preventDefault();
+    $.post(url, data, function(res) {
+      window.location=res.url 
+    })
+  })
+}
+
+
+
+
+
+

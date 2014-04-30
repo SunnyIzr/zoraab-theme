@@ -104,8 +104,8 @@
         .btn{
           padding: 5px;
           margin-bottom: 30px;
-          margin-left: 40px;
-          margin-right: 40px;
+          margin-left: 2px;
+          margin-right: 2px;
         }
         label:before {
           font-family: FontAwesome;
@@ -182,5 +182,45 @@
         }
       }
 
+  }
+}
+
+@media (min-width: 520px) {
+  .subscription{
+    .sub-form{
+      #stepTwo{
+        .btn{
+          margin-left: 15px;
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+}
+
+
+@media (min-width: 675px) {
+  .subscription{
+    .sub-form{
+      #stepTwo{
+        .btn{
+          margin-left: 2px;
+          margin-right: 2px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 830px) {
+  .subscription{
+    .sub-form{
+      #stepTwo{
+        .btn{
+          margin-left: 40px;
+          margin-right: 40px;
+        }
+      }
+    }
   }
 }
