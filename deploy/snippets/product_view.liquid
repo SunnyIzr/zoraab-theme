@@ -1,0 +1,41 @@
+<div class="product-quickview {% if template == 'product' %} product-only {% endif %}">
+  <div class="row">
+    {% if template == 'collection' %}
+    <div class="col-sm-8">
+    {% else %}
+    <div class="col-sm-9">
+    {% endif %}
+      <div class='product-image'>
+        {% if template == 'collection' %}
+        <img src="{{ product.featured_image.src | product_img_url: 'large' }}" alt="{{ product.featured_image.alt | escape }}" />
+        {% else %}
+        <img src="{{ product.featured_image.src | product_img_url: 'grande' }}" alt="{{ product.featured_image.alt | escape }}" />
+        {% endif %}
+
+        <div class='product-border'>
+        </div>
+      </div>
+    </div>
+    {% if template == 'collection' %}
+    <div class="col-sm-4">
+    {% else %}
+    <div class="col-sm-3">
+    {% endif %}
+      <div class='info'>
+        <h2>{{ product.title }}</h2>
+        <h4>{{product.vendor}}</h4>
+        <div class='price-details'>
+          <div class='mid-border'></div>
+          <h3>{{ product.price | money | remove: '.00'}}</h3>
+        </div>
+        <div class='qty'> QTY <input min="1" type="number" id="quantity" name="quantity" value="1" /> </div>
+        <div class='add-to-cart'>
+          <input type="submit" value="+ ADD TO CART" id="add" class="btn btn-lg btn-info" />
+        </div>
+        <div class='description'>
+          {{ product.description }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

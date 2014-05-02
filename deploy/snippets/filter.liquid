@@ -13,7 +13,9 @@
         {% capture svg %} {% include svg_snippet %} {% endcapture %}        
         <a href='/{{tag | handleize}}' class='select-filter' id='{{tag | handleize}}'>
           <li>
-            {{svg}}
+            <div class='svg-icon'>
+              {{svg}}
+            </div>
           </li>
         </a>
         {%endfor%}

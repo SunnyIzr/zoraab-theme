@@ -1,9 +1,22 @@
-  <center>
-    {% include 'product_quickview' %}
-  </center>
-  <div class='product-social'>
-    {% include 'social-icons'%}
+<div class='row'>
+  <div class='col-sm-12'>
+    <ol class="breadcrumb">
+      <li><a href="/">Home</a></li>
+      <li><a href="/collections/all">Shop</a></li>
+      <li class="active">{{product.title}}</li>
+    </ol>
   </div>
+</div>
+<div class='product-space'>
+</div>
+  
+  <center>
+    {% include 'product_view' %}
+  </center>
+  
+  <div class='product-social'>
+  </div>
+  {% comment %}
   <center>
     <div class='recommendations'>
       <div class="row">
@@ -11,5 +24,5 @@
       <p><strong>Body copy</strong>, ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet equat. Gift and you</p>
     </div>
   </center>
-  
+  {% endcomment %}
   

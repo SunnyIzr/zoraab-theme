@@ -1,63 +1,20 @@
-.product{
-  max-width: 1600px;  
-  .breadcrumb{
-    text-align: left;
-    background-color: transparent;
-    font-size:10px;
-    text-transform: uppercase;
-    a {
-      color: $primary-color;
-    }
-    a:hover{
-      color:$accent-color;
-      text-decoration: none;
-    }
+.breadcrumb{
+  position: absolute;
+  text-align: left;
+  background-color: #fff !important;
+  font-size:10px;
+  text-transform: uppercase;
+  a {
+    color: $primary-color;
   }
-  .product-image{
-    margin-bottom:25px;
-    width:85%;
-    img{
-      max-width: 100%;
-    }
-    .product-border{
-      padding-bottom:30px;
-      width:90%;
-      border-bottom: 1px solid $faded-color;
-      margin-right:30%;
-    }
+  a:hover{
+    color:$accent-color;
+    text-decoration: none;
   }
-  .info {
-    width:115%;
-    margin-left:-30%;
-    height:auto;
-    border: 1px solid $faded-color;
-    padding:10px;
-    h2 {
-      color: $accent-color;
-      text-transform: uppercase;
-    }
-    h4 {
-      font-weight: lighter;
-    }
-    h3 {
-      color: $accent-color;
-      font-weight: lighter;
-    }
-    .qty{
-      margin: 10px 0px;
-    }
-    #quantity{
-      width:35px;
-      border: 1px solid $faded-color;
-    }
-    .add-to-cart{
-      margin: 20px 0px;
-    }
-    .description{
-      text-align: left;
-      padding: 0px 15px; 
-    }
-  }
+}
+.product-space{
+  width: 100%;
+  margin-bottom: 30px;
 }
 
 .recommendations{
@@ -75,5 +32,6 @@
 }
 
 .product-social{
-  float:right;
+  width: 100%;
+  margin-bottom: 30px;
 }

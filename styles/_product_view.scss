@@ -1,0 +1,146 @@
+.quickview-modal{
+  .modal-body{
+    padding: 30px 3px 20px 3px;
+  }
+  .view-product{
+    position: absolute;
+    right: 38px;
+    margin-top:-18px;
+    z-index: 10;
+    a{
+      font-size: 10px;
+      color: $primary-color;
+    }
+    a:hover{
+      color: $accent-color;
+      text-decoration: none;  
+    }
+  }
+  .close-button{
+    position: absolute;
+    margin: -30px 0px 0 0;
+    right: 0;
+    text-align: right;
+    top: 0;
+    svg{
+      width: 12%;
+    }
+  }
+}
+
+.product-quickview{
+  max-width: 1600px;  
+  .product-image{
+    width:85%;
+    img{
+      max-width:100%;
+      max-height: 480px;
+    }
+  }
+  .info {
+    width:115%;
+    margin-left:-30%;
+    min-height: 381px;
+    border: 1px solid $faded-color;
+    padding:10px;
+    font-size:11px;
+    h2 {
+      color: $accent-color;
+      text-transform: uppercase;
+    }
+    h4 {
+      font-weight: lighter;
+    }
+    .price-details{
+      h3 {
+        color: $accent-color;
+        font-weight: lighter;
+        margin-top: -13px;
+        background-color: #fff;
+        margin-left: auto;
+        margin-right: auto;
+        width: 20%;
+      }
+      .mid-border{
+        border-top: 1px solid $faded-color;
+        margin-top: 30px;
+      }
+    }
+    .qty{
+      margin: 15px 0px;
+    }
+    #quantity{
+      width:35px;
+      border: 1px solid $faded-color;
+      text-align: center;
+      margin-left: 10px;
+      
+
+    }
+    input::-webkit-outer-spin-button,input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+    }
+    .add-to-cart{
+      margin: 20px 0px;
+    }
+    .description{
+      text-align: left;
+      padding: 0px 0px;
+      ul{
+        li{
+          display:list-item;
+          list-style-type: disc;
+          padding:0;
+          width:75%;
+          text-align: left;
+        }
+      }
+    }
+  }
+}
+
+.product-only{
+  .info{
+    width: 130%;
+  }
+}
+@media (min-width: 992px) {
+  .product-quickview{
+    .info{
+      height:480px;
+      font-size:14px;
+      width: 115%;
+    }
+  }
+  .quickview-modal{
+    .modal-body{
+    }
+    .view-product{ 
+      right: 52px;
+      a{
+        font-size:14px;
+      }
+      a:hover{
+      }
+    }
+    .close-button{
+      svg{
+        width: 15%;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 768px) {
+  .product-quickview{
+   .info{
+    border: none;
+    width: 100%;
+    margin-left: 0;
+    font-size: 14px;
+   } 
+  }
+}
