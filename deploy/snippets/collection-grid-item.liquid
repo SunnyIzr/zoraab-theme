@@ -20,13 +20,19 @@
 
 <div class="modal fade" id="{{product.id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <p class='view-all'><a href='{{product.url}}'>VIEW FULL DETAILS</a></p>
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-      </div>
+    <div class="quickview-modal modal-content">
       <div class="modal-body">
-        {% include 'product_quickview' %}
+        <div class='view-product'>
+          <a href='{{product.url}}'>
+            VIEW FULL DETAILS
+          </a>
+        </div>
+        <a href='#' data-dismiss='modal' aria-hidden='true'>
+          <div class='svg-close-icon close-button'>
+            {% include 'icon_close' %}
+          </div>
+        </a>
+        {% include 'product_view' %}
       </div>
     </div>
   </div>

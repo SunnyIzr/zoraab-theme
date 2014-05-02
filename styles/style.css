@@ -318,66 +318,24 @@
   border-radius: 30px;
 }
 
-.product {
-  max-width: 1600px;
-}
-.product .breadcrumb {
+.breadcrumb {
+  position: absolute;
   text-align: left;
-  background-color: transparent;
+  background-color: #fff !important;
   font-size: 10px;
   text-transform: uppercase;
 }
-.product .breadcrumb a {
+.breadcrumb a {
   color: #404041;
 }
-.product .breadcrumb a:hover {
+.breadcrumb a:hover {
   color: #67c5a9;
   text-decoration: none;
 }
-.product .product-image {
-  margin-bottom: 25px;
-  width: 85%;
-}
-.product .product-image img {
-  max-width: 100%;
-}
-.product .product-image .product-border {
-  padding-bottom: 30px;
-  width: 90%;
-  border-bottom: 1px solid #b8b8b8;
-  margin-right: 30%;
-}
-.product .info {
-  width: 115%;
-  margin-left: -30%;
-  height: auto;
-  border: 1px solid #b8b8b8;
-  padding: 10px;
-}
-.product .info h2 {
-  color: #67c5a9;
-  text-transform: uppercase;
-}
-.product .info h4 {
-  font-weight: lighter;
-}
-.product .info h3 {
-  color: #67c5a9;
-  font-weight: lighter;
-}
-.product .info .qty {
-  margin: 10px 0px;
-}
-.product .info #quantity {
-  width: 35px;
-  border: 1px solid #b8b8b8;
-}
-.product .info .add-to-cart {
-  margin: 20px 0px;
-}
-.product .info .description {
-  text-align: left;
-  padding: 0px 15px;
+
+.product-space {
+  width: 100%;
+  margin-bottom: 30px;
 }
 
 .recommendations {
@@ -395,7 +353,8 @@
 }
 
 .product-social {
-  float: right;
+  width: 100%;
+  margin-bottom: 30px;
 }
 
 .filter {
@@ -541,27 +500,49 @@
 .filter .accessory #pocketsquare {
   margin-left: -63%;
 }
-.filter .accessory .accessory-icon {
-  fill: #b8b8b8;
+
+.quickview-modal .modal-body {
+  padding: 30px 3px 20px 3px;
 }
-.filter .accessory .accessory-icon:hover {
-  fill: #67c5a9;
+.quickview-modal .view-product {
+  position: absolute;
+  right: 38px;
+  margin-top: -18px;
+  z-index: 10;
+}
+.quickview-modal .view-product a {
+  font-size: 10px;
+  color: #404041;
+}
+.quickview-modal .view-product a:hover {
+  color: #67c5a9;
+  text-decoration: none;
+}
+.quickview-modal .close-button {
+  position: absolute;
+  margin: -30px 0px 0 0;
+  right: 0;
+  text-align: right;
+  top: 0;
+}
+.quickview-modal .close-button svg {
+  width: 12%;
 }
 
 .product-quickview {
   max-width: 1600px;
 }
 .product-quickview .product-image {
-  margin-bottom: 25px;
   width: 85%;
 }
 .product-quickview .product-image img {
   max-width: 100%;
+  max-height: 480px;
 }
 .product-quickview .info {
   width: 115%;
   margin-left: -30%;
-  height: 381px;
+  min-height: 381px;
   border: 1px solid #b8b8b8;
   padding: 10px;
   font-size: 11px;
@@ -573,16 +554,33 @@
 .product-quickview .info h4 {
   font-weight: lighter;
 }
-.product-quickview .info h3 {
+.product-quickview .info .price-details h3 {
   color: #67c5a9;
   font-weight: lighter;
+  margin-top: -13px;
+  background-color: #fff;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+}
+.product-quickview .info .price-details .mid-border {
+  border-top: 1px solid #b8b8b8;
+  margin-top: 30px;
 }
 .product-quickview .info .qty {
-  margin: 10px 0px;
+  margin: 15px 0px;
 }
 .product-quickview .info #quantity {
   width: 35px;
   border: 1px solid #b8b8b8;
+  text-align: center;
+  margin-left: 10px;
+}
+.product-quickview .info input::-webkit-outer-spin-button, .product-quickview .info input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0;
+  /* <-- Apparently some margin are still there even though it's hidden */
 }
 .product-quickview .info .add-to-cart {
   margin: 20px 0px;
@@ -599,24 +597,45 @@
   text-align: left;
 }
 
+.product-only .info {
+  width: 130%;
+}
+
 @media (min-width: 992px) {
   .product-quickview .info {
     height: 480px;
     font-size: 14px;
+    width: 115%;
+  }
+
+  .quickview-modal .view-product {
+    right: 52px;
+  }
+  .quickview-modal .view-product a {
+    font-size: 14px;
+  }
+  .quickview-modal .close-button svg {
+    width: 15%;
   }
 }
-input[type=radio] {
+@media (max-width: 768px) {
+  .product-quickview .info {
+    border: none;
+    width: 100%;
+    margin-left: 0;
+    font-size: 14px;
+  }
+}
+#filter input[type=radio] {
   display: none;
 }
-
-label {
+#filter label {
   display: inline-block;
   cursor: pointer;
   position: relative;
   padding-left: 12px;
 }
-
-input[type=radio]:checked + label:before {
+#filter input[type=radio]:checked + label:before {
   content: "";
   display: inline-block;
   width: 16px;
@@ -629,8 +648,7 @@ input[type=radio]:checked + label:before {
   border: 1px solid #b8b8b8;
   background-color: #67c5a9;
 }
-
-label.checked:before {
+#filter label.checked:before {
   display: none;
   content: "";
   display: inline-block;
@@ -644,8 +662,7 @@ label.checked:before {
   border: 1px solid #b8b8b8;
   background-color: #67c5a9 !important;
 }
-
-label:before {
+#filter label:before {
   content: "";
   display: inline-block;
   width: 16px;
@@ -8497,5 +8514,205 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important;
+  }
+}
+.subscription {
+  text-align: center;
+}
+.subscription .copy {
+  font-size: 25px;
+  color: #b8b8b8;
+  margin: 30px 0;
+}
+.subscription .sub-form .step {
+  text-align: left;
+  float: left;
+  position: absolute;
+  font-size: 22px;
+  color: white;
+  margin-left: 5px;
+}
+.subscription .sub-form .status {
+  text-align: right;
+  right: 24px;
+  margin-top: -35px;
+  float: right;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background-color: white;
+  color: #67c5a9;
+  font-size: 40px;
+  line-height: 1px;
+}
+.subscription .sub-form h4 {
+  font-size: 28px;
+  color: white;
+  font-weight: 100;
+  letter-spacing: 1px;
+}
+.subscription .sub-form .heading {
+  background-color: #67c5a9;
+  border: none;
+  padding: 10px 0;
+}
+.subscription .sub-form .heading a:hover {
+  text-decoration: none;
+}
+.subscription .sub-form .btn {
+  font-size: 20px;
+  padding: 10px 40px;
+  margin: 0 25px;
+  background-color: white;
+  border: 1px solid #b8b8b8;
+  color: #67c5a9;
+}
+.subscription .sub-form .btn a:hover {
+  color: #67c5a9;
+  text-decoration: none;
+}
+.subscription .sub-form .btn.active {
+  background-color: #e85c41;
+  color: white;
+  border: 1px solid #e85c41;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.subscription .sub-form .btn.active a {
+  color: white;
+}
+.subscription .sub-form .btn.active a:hover {
+  text-decoration: none;
+}
+.subscription .sub-form .btn.active .pricing {
+  color: white;
+}
+.subscription .sub-form .btn.active .main-plan {
+  border-bottom-color: white;
+}
+.subscription .sub-form #giftForm {
+  margin-top: 5px;
+  font-size: 23px;
+}
+.subscription .sub-form #giftForm input {
+  margin-top: 15px;
+  border: 1px solid #b8b8b8;
+  padding: 10px 40px;
+  text-align: center;
+  width: 60%;
+  margin-left: 0px;
+}
+.subscription .sub-form #giftForm textarea {
+  margin-top: 15px;
+  margin-left: 0px;
+  border: 1px solid #b8b8b8;
+  padding: 10px 40px;
+  text-align: center;
+  width: 60%;
+}
+.subscription .sub-form #stepTwo .instructions {
+  color: #b8b8b8;
+  margin-top: -13px;
+  margin-bottom: 10px;
+}
+.subscription .sub-form #stepTwo .btn {
+  padding: 5px;
+  margin-bottom: 30px;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+.subscription .sub-form #stepTwo label:before {
+  font-family: FontAwesome;
+  content: "\f096";
+  color: #b8b8b8;
+  display: inline-block;
+  position: absolute;
+  bottom: -27px;
+  left: 49px;
+  text-align: center;
+}
+.subscription .sub-form #stepTwo label.active:before {
+  font-family: FontAwesome;
+  content: "\f046";
+  color: #e85c41;
+}
+.subscription .sub-form #upfrontForm {
+  padding-top: 15px;
+}
+.subscription .sub-form #upfrontForm .btn {
+  margin: 0 20px;
+}
+.subscription .sub-form .main-plan {
+  border-bottom: 1px #b8b8b8 solid;
+  padding-bottom: 8px;
+  margin-bottom: 11px;
+}
+.subscription .sub-form .pricing {
+  color: #404041;
+  font-style: italic;
+  font-size: 16px;
+}
+.subscription .sub-form .submit {
+  background-color: #e85c41;
+  color: white;
+  border: none;
+}
+.subscription .sub-form .submit-section {
+  margin-bottom: 100px;
+}
+.subscription .sub-form .style-pic {
+  position: relative;
+  width: 100%;
+}
+.subscription .sub-form .style-pic .style-desc {
+  opacity: 0.0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -webkit-transition: opacity 100ms ease-in-out;
+  -moz-transition: opacity 100ms ease-in-out;
+  -o-transition: opacity 100ms ease-in-out;
+  -ms-transition: opacity 100ms ease-in-out;
+  transition: opacity 100ms ease-in-out;
+}
+.subscription .sub-form .style-pic .style-desc .overlay {
+  position: absolute;
+  background-color: white;
+  opacity: 0.8;
+  height: 100%;
+  width: 100%;
+}
+.subscription .sub-form .style-pic .style-desc .style-name {
+  position: absolute;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  padding: 20% 0;
+}
+.subscription .sub-form .style-pic .style-desc .style-name h4 {
+  color: #404041;
+  font-weight: lighter;
+  font-size: 18px;
+  letter-spacing: 0px;
+}
+
+@media (min-width: 520px) {
+  .subscription .sub-form #stepTwo .btn {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+@media (min-width: 675px) {
+  .subscription .sub-form #stepTwo .btn {
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+}
+@media (min-width: 830px) {
+  .subscription .sub-form #stepTwo .btn {
+    margin-left: 40px;
+    margin-right: 40px;
   }
 }

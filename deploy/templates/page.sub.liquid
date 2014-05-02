@@ -1,0 +1,224 @@
+<div class="row">
+  {%include 'sub_hero'%}
+</div>
+
+</div>
+<div class='container-fluid'>
+  <div class='subscription'>
+    
+    <div class='row'>
+      <div class='col-lg-10 col-lg-push-1 col-md-12 col-xs-12 col-sm-12'>
+        <p class='copy'>
+          Cancel anytime. Give or get your monthly kit of sock swagger.  Accessories coming soon. Customize to your hearts content.
+        </p>
+      </div>
+    </div>
+    
+    <div class='row'>
+      <form id='subform' action='http://zoraab-users.herokuapp.com/new' method='post'>
+        <div class='sub-form'>
+          <div class='col-lg-10 col-lg-push-1 col-md-12 col-xs-12 col-sm-12'>
+            <div class="panel-group" id="accordion">
+              
+              <div class="panel panel-default">
+                <div class="heading">
+                  <div class='step hidden-xs'>
+                    STEP 1:
+                  </div>
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#stepOne">
+                      Pick out a recipient.
+                    </a>
+                  </h4>
+                  <div class='status'>
+                    
+                  </div>
+                </div>
+                <div id="stepOne" class="panel-collapse collapse in">
+                  <div class="panel-body">
+                    <div id='stepOneAccordion' data-toggle="buttons">
+                      <label class="btn">
+                        <input type="radio" class="recipients" name="recipient" id="me" value='self'> 
+                          ME!
+                      </label>
+                      <label class="btn">
+                        <input type="radio" class="recipients" name="recipient" id="gift" value='gift'>
+                          GIFT
+                      </label>
+                      <div id='giftForm' class='panel-collapse collapse'>
+                        <input type="text" id='recipient_name' name="recipient_name" placeholder="Recipient's Name">
+                        <textarea rows='4' name='gift_note' placeholder="Special Gift Message"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="panel panel-default">
+                <div class="heading">
+                  <div class='step hidden-xs'>
+                    STEP 2:
+                  </div>
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#stepTwo">
+                      Your Style Profile.
+                    </a>
+                  </h4>
+                  <div class='status'>
+                  </div>                  
+                </div>
+                <div id="stepTwo" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    <div class='instructions'>
+                      Check all that apply.
+                    </div>
+                    <div class="btn-group" data-toggle="buttons">
+                      <label class="btn">
+                        <input type="checkbox" class='style' name='style[]' value='casual'>
+                        <div class='style-pic'>
+                          <div class='style-desc'>
+                            <div class='overlay'>
+                            </div>
+                            <div class="style-name">
+                              <h4>Laid Back</h4>
+                            </div>
+                          </div>
+                          {{ 'sub_casual.jpg' | asset_url | img_tag }}
+                        </div>
+                      </label>
+                      <label class="btn">
+                        <input type="checkbox" class='style' name='style[]' value='dress'>
+                        <div class='style-pic'>
+                          <div class='style-desc'>
+                            <div class='overlay'>
+                            </div>
+                            <div class="style-name">
+                              <h4>Strictly<br>Business</h4>
+                            </div>
+                          </div>
+                          {{ 'sub_business.jpg' | asset_url | img_tag }}
+                        </div>                        
+                      </label>
+                      <label class="btn">
+                        <input type="checkbox" class='style' name='style[]' value='fashion'>
+                        <div class='style-pic'>
+                          <div class='style-desc'>
+                            <div class='overlay'>
+                            </div>
+                            <div class="style-name">
+                              <h4>Fashion<br>Statement</h4>
+                            </div>
+                          </div>                  
+                          {{ 'sub_fashion.jpg' | asset_url | img_tag }}
+                        </div>
+                      </label>
+                      <label class="btn">
+                        <input type="checkbox" class='style' name='style[]' value='fun'>
+                        <div class='style-pic'>
+                          <div class='style-desc'>
+                            <div class='overlay'>
+                            </div>
+                            <div class="style-name">
+                              <h4>Walk<br>on the<br>Wild Side</h4>
+                            </div>
+                          </div>                          
+                          {{ 'sub_wild.jpg' | asset_url | img_tag }}
+                        </div>                        
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="panel panel-default">
+                <div class="heading">
+                  <div class='step hidden-xs'>
+                    STEP 3:
+                  </div>
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#stepThree">
+                      Number of socks per month.
+                    </a>
+                  </h4>
+                  <div class='status'>
+                  </div>                  
+                </div>
+                <div id="stepThree" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    <div data-toggle="buttons">
+                      <label class="btn">
+                        <input type="radio" class="qty" name='qty' value='2' id="2"> 
+                        <p class='main-plan'>TWO</p>
+                        <p class='pricing'>$20 / month</p>
+                      </label>
+                      <label class="btn">
+                        <input type="radio" class="qty" name='qty' value='3' id="3">
+                        <p class='main-plan'>THREE</p>
+                        <p class='pricing'>$29 / month</p>
+                      </label>
+                      <label class="btn">
+                        <input type="radio" class="qty" name='qty' value='5' id="5">
+                        <p class='main-plan'>FIVE</p>
+                        <p class='pricing'>$45 / month</p>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="panel panel-default">
+                <div class="heading">
+                  <div class='step hidden-xs'>
+                    STEP 4:
+                  </div>
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#stepFour">
+                      Payment options.
+                    </a>
+                  </h4>
+                  <div class='status'>
+                  </div>                  
+                </div>
+                <div id="stepFour" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    <div id='stepFourAccordion'>
+                      <div data-toggle="buttons">
+                        <label class="btn">
+                          <input type="radio" class="payment" name='payment' value='monthly' id="monthly"> MONTHLY
+                        </label>
+                        <label class="btn">
+                          <input type="radio" class="payment" name='payment' value='once' id="once"> ONCE
+                        </label>
+                      </div>
+                      <div id='upfrontForm' class='panel-collapse collapse'>
+                        <div data-toggle="buttons">
+                          <label class="btn">
+                            <input type="radio" class="upfront_months" name='term' value='3m' id="three"> THREE
+                          </label>
+                          <label class="btn">
+                            <input type="radio" class="upfront_months" name='term' value='6m' id="six"> SIX
+                          </label>
+                          <label class="btn">
+                            <input type="radio" class="upfront_months" name='term' value='9m' id="nine"> NINE
+                          </label>
+                          <label class="btn">
+                            <input type="radio" class="upfront_months" name='term' value='12m' id="twelve"> TWELVE
+                          </label>                          
+                        </div>
+                  
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            <div class='submit-section'>
+              <input type='submit' value='CHECKOUT' class='btn' />
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
