@@ -85,3 +85,32 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .navbar{
+    border-bottom: 1px solid $faded-color;
+  }
+  .navbar-toggle-menu{
+    position: absolute;
+    left: 0;
+    }
+  .navbar-brand{
+    img{
+      margin-top: 12px;
+      width: 135px;
+    }
+  }
+  .cart-toggle{
+    position: absolute;
+    right: 0;
+    margin-right: 0px;
+    svg{
+      path{
+        fill: $faded-color;
+      }
+      circle{
+        fill: $faded-color;
+      }
+    }
+  }
+}
