@@ -1,6 +1,6 @@
+{% paginate collection.products by 60 %}
 {% include 'filter' %}
 
-{% paginate collection.products by 60 %}
 <div class='collection-grid'>
   <ul>
     {% for product in collection.products %}
@@ -13,11 +13,5 @@
     {% endfor %}
   </ul>
 </div>
-
-{% if paginate.pages > 1 %}
-<div class="pagination">
-  {{ paginate | default_pagination }}
-</div>
-{% endif %}
 
 {% endpaginate %}

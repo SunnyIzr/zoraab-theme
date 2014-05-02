@@ -1,8 +1,25 @@
 <div class='filter'>
   <div id="accordion">
-    <a data-toggle="collapse" data-parent="#accordion" href="#filter" class='btn btn-md btn-primary'>
-      SHOP BY <span class="glyphicon glyphicon-chevron-up"></span>
-    </a>
+    <div class='btn-tray'>
+      <a data-toggle="collapse" data-parent="#accordion" href="#filter" class='filter-btn btn btn-md btn-primary'>
+        SHOP BY <i class="shop-by fa fa-caret-up"></i>
+      </a>
+    </div>
+    {% if paginate.pages > 1 %}
+    <div class='pagination'>
+      {% if paginate.next %}
+      <div class='arrow'>
+        <a href='{{paginate.next.url}}'><i class="fa fa-caret-right"></i></a>
+      </div>
+      {% endif %}
+      <div class='text'>page {{paginate.current_page}} of {{paginate.pages}}</div>
+      {% if paginate.previous %}
+      <div class='arrow'>
+        <a href='{{paginate.previous.url}}'><i class="fa fa-caret-left"></i></a>
+      </div>
+      {% endif %}
+    </div>
+    {% endif %}
     <div id="filter" class="panel-collapse collapse in">
       <div class='panel-body'>
       <ul class='col-sm-4 accessory'>
