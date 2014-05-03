@@ -477,7 +477,7 @@
     width: 50% !important;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   #filter ul.filter-list {
     padding-left: 0% !important;
   }
@@ -8997,7 +8997,7 @@ button.close {
     width: 33%;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .linked-panel {
     height: 180px !important;
   }
