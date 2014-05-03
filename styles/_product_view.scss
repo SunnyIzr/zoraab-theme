@@ -109,7 +109,7 @@
 @media (min-width: 992px) {
   .product-quickview{
     .info{
-      height:480px;
+      min-height:480px;
       font-size:14px;
       width: 115%;
     }

@@ -15,7 +15,9 @@
       <img src="{{ product.featured_image.src | product_img_url: 'large' }}" alt="{{ product.featured_image.alt | escape }}" />
     {% endif %}
   </a>
-  <h5>{{ product.price | money | remove: '.00'}}</h5>
+  <div class='pricing-info'>
+    <h5>{{ product.price | money | remove: '.00'}}</h5>
+  </div>
 </div>
 
 <div class="modal fade" id="{{product.id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
