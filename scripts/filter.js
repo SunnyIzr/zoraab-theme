@@ -39,7 +39,7 @@ var filteredSelection = function(url,tags){
 }
 
 var noFilters = function(url) {
-  return $(url.split('/')).last()[0] == 'all'
+  return $(url.split('/')).last()[0] == 'mens-socks'
 }
 
 var tagSelected = function(url,tag){
