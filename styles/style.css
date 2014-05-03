@@ -8722,11 +8722,14 @@ button.close {
   content: "\f046";
   color: #e85c41;
 }
+.subscription .sub-form #stepFour .pricing {
+  margin-bottom: 0px;
+}
 .subscription .sub-form #upfrontForm {
   padding-top: 15px;
 }
 .subscription .sub-form #upfrontForm .btn {
-  margin: 0 20px;
+  margin: 0 -3px;
 }
 .subscription .sub-form .main-plan {
   border-bottom: 1px #b8b8b8 solid;

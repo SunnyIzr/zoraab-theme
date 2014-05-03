@@ -43,6 +43,7 @@ var stepThreeComplete = function(){
     $($('.status')[2]).html('<i class="fa fa-check"></i>')
     $('#stepThree').collapse('hide')
     $('#stepFour').collapse('show')
+    changeUpfrontPlanPricing()
   })
 }
 var stepFourComplete = function(){
@@ -88,6 +89,28 @@ var subFormSubmission = function() {
       window.location=res.url 
     })
   })
+}
+
+var changeUpfrontPlanPricing = function() {
+    if ($('#2').is(':checked')) {
+      $('.3m-price').html('$60')
+      $('.6m-price').html('$120')
+      $('.9m-price').html('$180')
+      $('.12m-price').html('$240')
+    }
+    if ($('#3').is(':checked')) {
+      $('.3m-price').html('$87')
+      $('.6m-price').html('$174')
+      $('.9m-price').html('$261')
+      $('.12m-price').html('$348')
+    }
+    if ($('#5').is(':checked')) {
+      $('.3m-price').html('$135')
+      $('.6m-price').html('$270')
+      $('.9m-price').html('$405')
+      $('.12m-price').html('$540')
+    }
+  
 }
 
 
