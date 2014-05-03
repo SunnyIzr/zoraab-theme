@@ -8789,6 +8789,84 @@ button.close {
     margin-right: 40px;
   }
 }
+@media (max-width: 767px) {
+  .subscription .copy {
+    font-size: 16px;
+  }
+  .subscription .sub-form h4 {
+    font-size: 16px;
+  }
+  .subscription .sub-form .status {
+    display: none;
+  }
+  .subscription .sub-form .btn {
+    font-size: 16px;
+    padding: 10px 25px;
+    margin: 0 3px;
+  }
+  .subscription .sub-form #giftForm {
+    margin-top: 5px;
+    font-size: 14px;
+  }
+  .subscription .sub-form #giftForm input {
+    margin-top: 15px;
+    border: 1px solid #b8b8b8;
+    padding: 10px 25px;
+    text-align: center;
+    width: 60%;
+    margin-left: 0px;
+  }
+  .subscription .sub-form #giftForm textarea {
+    margin-top: 15px;
+    margin-left: 0px;
+    border: 1px solid #b8b8b8;
+    padding: 10px 25px;
+    text-align: center;
+    width: 60%;
+  }
+  .subscription .sub-form #stepThree .btn {
+    padding: 5px 7px;
+    margin: 0 1px;
+  }
+  .subscription .sub-form #stepThree .main-plan {
+    border-bottom: 1px #b8b8b8 solid;
+    padding-bottom: 8px;
+    margin-bottom: 11px;
+  }
+  .subscription .sub-form #stepThree .pricing {
+    color: #404041;
+    font-style: italic;
+    font-size: 12px;
+  }
+  .subscription .sub-form #stepFour .step-four-panel-body {
+    padding: 15px 0px;
+  }
+  .subscription .sub-form #stepFour #upfrontForm .btn {
+    padding: 5px 0px;
+    margin: 0 0;
+    width: 74px;
+    margin: 0 -3px;
+  }
+  .subscription .sub-form #stepFour #upfrontForm .main-plan {
+    border-bottom: 1px #b8b8b8 solid;
+    padding-bottom: 8px;
+    margin-bottom: 11px;
+    word-break: break-all;
+  }
+  .subscription .sub-form #stepFour #upfrontForm .main-plan .months {
+    font-size: 11px;
+  }
+  .subscription .sub-form #stepFour #upfrontForm .pricing {
+    color: #404041;
+    font-style: italic;
+    font-size: 12px;
+  }
+}
+@media (max-width: 400px) {
+  .subscription .sub-form #stepTwo .btn-group {
+    margin-left: 18px;
+  }
+}
 .header-section {
   max-width: 1600px;
 }

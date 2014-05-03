@@ -232,3 +232,103 @@
     }
   }
 }
+
+
+@media (max-width: 767px) {
+  .subscription{
+    .copy{
+      font-size: 16px;
+    }
+    .sub-form{
+      h4{
+        font-size: 16px;
+      }
+      .status{
+        display:none;
+      }
+      .btn{
+        font-size: 16px;
+        padding: 10px 25px;
+        margin: 0 3px;
+      }
+       #giftForm{
+        margin-top: 5px;
+        font-size: 14px;
+        
+        input{
+          margin-top: 15px;
+          border: 1px solid $faded-color;
+          padding: 10px 25px;
+          text-align: center;
+          width: 60%;
+          margin-left: 0px;
+        }
+        textarea{
+          margin-top: 15px;
+          margin-left: 0px;
+          border: 1px solid $faded-color;
+          padding: 10px 25px;
+          text-align: center;
+          width: 60%;
+        }
+      }
+      #stepThree{
+        .btn{
+          padding: 5px 7px;
+          margin: 0 1px;
+        }
+        .main-plan{
+          border-bottom: 1px $faded-color solid;
+          padding-bottom: 8px;
+          margin-bottom: 11px;
+        }
+        .pricing{
+          color: $primary-color;
+          font-style: italic;
+          font-size: 12px;
+        }
+      }
+      #stepFour{
+        .step-four-panel-body{
+          padding: 15px 0px;
+        }
+        #upfrontForm{
+          .btn{
+            padding: 5px 0px;
+            margin: 0 0;
+            width:74px;
+            margin: 0 -3px;
+          }
+          .main-plan{
+            border-bottom: 1px $faded-color solid;
+            padding-bottom: 8px;
+            margin-bottom: 11px;
+            word-break: break-all;
+            .months{
+              font-size: 11px;
+            }
+          }
+          .pricing{
+            color: $primary-color;
+            font-style: italic;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 400px) {
+  
+  .subscription{
+    .sub-form{
+      #stepTwo{
+        .btn-group{
+          margin-left:18px;
+        }
+      }
+    }
+  }
+}
