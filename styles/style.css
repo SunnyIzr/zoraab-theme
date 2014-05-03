@@ -527,6 +527,9 @@
     margin-left: -8%;
     margin-bottom: 0px;
   }
+  #filter ul.filter-list .style-list .style li {
+    float: left;
+  }
   #filter ul.filter-list .color-list {
     margin-bottom: 0px;
     margin: 0 auto;
@@ -536,6 +539,44 @@
   }
   #filter ul.filter-list .pattern-list {
     width: 50% !important;
+  }
+  #filter ul.filter-list .pattern-list h4 {
+    margin-bottom: -4px;
+  }
+}
+@media screen and (max-width: 400px) {
+  #filter ul.filter-list {
+    padding-left: 0% !important;
+  }
+  #filter ul.filter-list li {
+    width: 50% !important;
+  }
+  #filter ul.filter-list .accessory-list {
+    width: 100% !important;
+    margin-bottom: 0px;
+  }
+  #filter ul.filter-list .style-list {
+    width: 100% !important;
+    margin-left: 0;
+    margin-top: 30px;
+    margin-bottom: 0px;
+  }
+  #filter ul.filter-list .style-list .style a {
+    float: left;
+  }
+  #filter ul.filter-list .style-list .style li {
+    margin-right: 15px;
+  }
+  #filter ul.filter-list .color-list {
+    width: 100% !important;
+    margin-bottom: 0px;
+    margin: 0 auto;
+  }
+  #filter ul.filter-list .color-list li {
+    text-align: center;
+  }
+  #filter ul.filter-list .pattern-list {
+    width: 100% !important;
   }
   #filter ul.filter-list .pattern-list h4 {
     margin-bottom: -4px;

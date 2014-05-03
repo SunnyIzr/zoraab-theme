@@ -253,6 +253,7 @@
         margin-bottom: 0px;
         .style{
         li{
+          float: left;
           }
         }
       }
@@ -268,6 +269,49 @@
           margin-bottom: -4px;
         }
         width: 50% !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+   #filter{
+    ul.filter-list{
+      padding-left: 0% !important;
+      li{
+        width: 50% !important;
+      }
+      .accessory-list{
+        width: 100% !important;
+        margin-bottom: 0px;
+      }
+      .style-list{
+        width: 100% !important;
+        margin-left:0;
+        margin-top: 30px;
+        margin-bottom: 0px;
+        .style{
+          a{
+            float: left;
+          }
+        li{
+          margin-right: 15px;
+          }
+        }
+      }
+      .color-list{
+        width: 100% !important;
+        margin-bottom: 0px;
+        margin: 0 auto;
+        li{
+          text-align: center;
+        }
+      }
+      .pattern-list{
+        h4{
+          margin-bottom: -4px;
+        }
+        width: 100% !important;
       }
     }
   }
