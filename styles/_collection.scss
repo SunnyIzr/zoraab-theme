@@ -1,4 +1,25 @@
 .collection-grid{
+  .paginate{
+    text-align: center;
+    height:21px;
+    margin-bottom: 0px;
+    margin-top: -30px;
+    margin: 0 auto;
+    a{
+      font-size: 34px;
+    }
+    .arrow{
+      float:right;
+      margin-top:-13px;
+      margin-left: 7px;
+      
+    }
+    .text{
+      float: right;
+      margin-left: 7px;
+      font-style: italic;
+    }
+  }
   position:relative;
   max-width: 1600px;
   text-align: center;

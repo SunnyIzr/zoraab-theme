@@ -4,6 +4,26 @@
   text-align: center;
   margin: 0 auto;
 }
+.collection-grid .paginate {
+  text-align: center;
+  height: 21px;
+  margin-bottom: 0px;
+  margin-top: -30px;
+  margin: 0 auto;
+}
+.collection-grid .paginate a {
+  font-size: 34px;
+}
+.collection-grid .paginate .arrow {
+  float: right;
+  margin-top: -13px;
+  margin-left: 7px;
+}
+.collection-grid .paginate .text {
+  float: right;
+  margin-left: 7px;
+  font-style: italic;
+}
 .collection-grid ul {
   padding: 0px;
   list-style: none;

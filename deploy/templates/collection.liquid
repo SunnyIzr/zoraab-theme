@@ -12,6 +12,21 @@
       <li>There are no products in this view.</li>
     {% endfor %}
   </ul>
+  {% if paginate.pages > 1 %}
+    <div class='paginate'>
+      {% if paginate.next %}
+      <div class='arrow'>
+        <a href='{{paginate.next.url}}'><i class="fa fa-caret-right"></i></a>
+      </div>
+      {% endif %}
+      <div class='text'>page {{paginate.current_page}} of {{paginate.pages}}</div>
+      {% if paginate.previous %}
+      <div class='arrow'>
+        <a href='{{paginate.previous.url}}'><i class="fa fa-caret-left"></i></a>
+      </div>
+      {% endif %}
+    </div>
+  {% endif %}
 </div>
 
 {% endpaginate %}
