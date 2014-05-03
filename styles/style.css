@@ -137,12 +137,6 @@
   position: relative;
   float: left;
 }
-.feature-panel .icon .svg-icon {
-  fill: #b8b8b8;
-}
-.feature-panel .icon .svg-icon:hover {
-  fill: #67c5a9;
-}
 .feature-panel .icon svg {
   width: 100%;
 }
