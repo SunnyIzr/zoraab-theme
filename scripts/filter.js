@@ -56,3 +56,9 @@ var removalUrl = function(url,tag){
   }
   return newUrl
 }
+
+var closeFilterOnMobile = function(){
+  if ($(document).width() <= 768) {
+    $('.filter-btn').click()
+  }
+}

@@ -3,6 +3,8 @@ $(document).ready(function(){
   filter()
   svgIcon()
   svgCloseIcon()
+  filterChevron()
+  closeFilterOnMobile()
 })
 
 
@@ -31,3 +33,18 @@ var svgCloseIcon = function() {
     $(this).find('path').attr('fill','#404041')
   })
 }
+
+var filterChevron = function() {
+  el = $('.filter-btn').find('i')
+  $('.filter-btn').click(function(){
+    if ($(el).hasClass('fa-caret-up')){
+      $(el).removeClass('fa-caret-up')
+      $(el).addClass('fa-caret-down')
+    } else if ($(el).hasClass('fa-caret-down')){
+      $(el).addClass('fa-caret-up')
+      $(el).removeClass('fa-caret-down')
+    }
+  })
+}
+
+
