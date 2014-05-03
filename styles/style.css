@@ -665,6 +665,23 @@
   padding: 10px;
   font-size: 11px;
 }
+.product-quickview .info select {
+  background: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: url("./arrows.png") no-repeat right;
+  border-radius: 0px;
+  color: #67c5a9;
+  text-align: center;
+  padding: 5px;
+  font-size: 24px;
+  border: 1px solid #b8b8b8;
+  width: 83px;
+  padding-right: 0px;
+}
+.product-quickview .info select option {
+  font-size: 15px;
+}
 .product-quickview .info h2 {
   color: #67c5a9;
   text-transform: uppercase;
@@ -680,6 +697,9 @@
   margin-left: auto;
   margin-right: auto;
   width: 20%;
+}
+.product-quickview .info .price-details h3.gift {
+  width: 30%;
 }
 .product-quickview .info .price-details .mid-border {
   border-top: 1px solid #b8b8b8;

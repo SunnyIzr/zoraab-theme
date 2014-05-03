@@ -11,7 +11,11 @@
 </div>
   
   <center>
-    {% include 'product_view' %}
+    {% if product.handle == 'gift-card' %}
+      {% include 'giftcard' %}
+    {% else %}
+      {% include 'product_view' %}
+    {% endif %}
   </center>
   
   <div class='product-social'>

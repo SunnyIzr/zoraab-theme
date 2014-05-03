@@ -44,6 +44,24 @@
     border: 1px solid $faded-color;
     padding:10px;
     font-size:11px;
+    select{
+      background: transparent;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      background: url('./arrows.png') no-repeat right; 
+      border-radius: 0px;
+      color: $accent-color;
+      text-align: center;
+      padding: 5px;
+      font-size: 24px;
+      border: 1px solid $faded-color;
+      width:83px;
+      padding-right: 0px;
+      option{
+        font-size: 15px;
+      }
+      
+    }
     h2 {
       color: $accent-color;
       text-transform: uppercase;
@@ -60,6 +78,9 @@
         margin-left: auto;
         margin-right: auto;
         width: 20%;
+      }
+      h3.gift{
+        width: 30%;
       }
       .mid-border{
         border-top: 1px solid $faded-color;
