@@ -11,6 +11,8 @@ $(document).ready(function(){
 
 var stepOneComplete = function(){
   $( "input[class='recipients']" ).change(function(){
+    valdiateCompleteForm()
+    $('#one-alert').alert('close')
     if ($('#me').is(':checked')) {
       $($('.status')[0]).html('<i class="fa fa-check"></i>')
       $('#stepOne').collapse('hide')
@@ -35,11 +37,15 @@ var recipientComplete = function(){
 }
 var stepTwoComplete = function(){
   $( "input[class='style']" ).change(function(){
+    valdiateCompleteForm()
+    $('#two-alert').alert('close')
     $($('.status')[1]).html('<i class="fa fa-check"></i>')   
   })
 }
 var stepThreeComplete = function(){
   $( "input[class='qty']" ).change(function(){
+    valdiateCompleteForm()
+    $('#three-alert').alert('close')
     $($('.status')[2]).html('<i class="fa fa-check"></i>')
     $('#stepThree').collapse('hide')
     $('#stepFour').collapse('show')
@@ -48,10 +54,12 @@ var stepThreeComplete = function(){
 }
 var stepFourComplete = function(){
   $( "input[class='payment']" ).change(function(){
+    valdiateCompleteForm()
+    $('#pmt-alert').alert('close')
     if ($('#monthly').is(':checked')) {
+      $('#month-alert').alert('close')
       $($('.status')[3]).html('<i class="fa fa-check"></i>')
       $('#stepFour').collapse('hide')
-      submitBtnComplete()
     } if ($('#once').is(':checked')) {
       $($('.status')[3]).html('')
       $( "input[type='submit']" ).removeClass('submit')
@@ -62,9 +70,10 @@ var stepFourComplete = function(){
 
 var upfrontMonths = function(){
   $( "input[class='upfront_months']" ).change(function(){
+    $('#months-alert').alert('close')
     $($('.status')[3]).html('<i class="fa fa-check"></i>')
     $('#stepFour').collapse('hide')
-    submitBtnComplete()
+    valdiateCompleteForm()
   })
 }
 
@@ -81,6 +90,9 @@ var styleHover = function() {
 }
 
 var subFormSubmission = function() {
+  $('.submit-section > input').click(function(){
+    validateForm()
+  })
   $('#subform').submit(function(e){
     url = $('#subform').attr('action')
     data = $('#subform').serialize()
@@ -113,6 +125,67 @@ var changeUpfrontPlanPricing = function() {
   
 }
 
+var validateForm = function(){
+  validateStepOne()
+  validateStepTwo()
+  validateStepThree()
+  validateStepFour()
+}
+
+var validateStepOne = function(){
+  if (!$( "input[class='recipients']" ).is(':checked')) {
+    $('#one-alert').alert('close')
+    $('#alerts').append("<div id='one-alert' class='alert alert-danger'>Please select a recipient.</div>")
+  }
+}
+
+var validateStepTwo = function() {
+  if (!$( "input[class='style']" ).is(':checked')) {
+    $('#two-alert').alert('close')
+    $('#alerts').append("<div id='two-alert' class='alert alert-danger'>Please select atleast ONE style attribute.</div>")
+  }
+}
+
+var validateStepThree = function(){
+  if (!$( "input[class='qty']" ).is(':checked')) {
+    $('#three-alert').alert('close')
+    $('#alerts').append("<div id='three-alert' class='alert alert-danger'>Please select a number of socks.</div>")
+  }
+}
+
+var validateStepFour = function(){
+  if (!$( "input[class='payment']" ).is(':checked')) {
+    $('#pmt-alert').alert('close')
+    $('#alerts').append("<div id='pmt-alert' class='alert alert-danger'>Please select a payment option.</div>")
+  } else if ($('#once').is(':checked')) {
+    if (!$( "input[class='upfront_months']" ).is(':checked')) {
+      $('#months-alert').alert('close')
+      $('#alerts').append("<div id='months-alert' class='alert alert-danger'>Please select number of months upfront.</div>")
+    }
+  } 
+  
+  
+}
+
+var valdiateCompleteForm = function(){
+  ary = []
+  ary.push($( "input[class='recipients']" ).is(':checked'))
+  ary.push($( "input[class='style']" ).is(':checked'))
+  ary.push($( "input[class='qty']" ).is(':checked'))
+  
+  if ($( "input[class='payment']" ).is(':checked')) {
+    if ($('#monthly').is(':checked')) {
+      ary.push(true) 
+    } else {
+      ary.push($( "input[class='upfront_months']" ).is(':checked'))
+    }
+  } else {
+    ary.push(false)
+  }
+  if ($.inArray(false,ary) == -1) {
+    submitBtnComplete()
+  }
+}
 
 
 

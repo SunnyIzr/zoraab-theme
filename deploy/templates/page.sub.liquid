@@ -13,11 +13,12 @@
         </p>
       </div>
     </div>
-    
     <div class='row'>
       <form id='subform' action='http://zoraab-users.herokuapp.com/new' method='post'>
         <div class='sub-form'>
           <div class='col-lg-10 col-lg-push-1 col-md-12 col-xs-12 col-sm-12'>
+            <div id='alerts'>
+            </div>
             <div class="panel-group" id="accordion">
               
               <div class="panel panel-default">
@@ -38,11 +39,11 @@
                   <div class="panel-body">
                     <div id='stepOneAccordion' data-toggle="buttons">
                       <label class="btn">
-                        <input type="radio" class="recipients" name="recipient" id="me" value='self'> 
+                        <input type="radio" class="recipients" name="recipient" id="me" value='self' required> 
                           ME!
                       </label>
                       <label class="btn">
-                        <input type="radio" class="recipients" name="recipient" id="gift" value='gift'>
+                        <input type="radio" class="recipients" name="recipient" id="gift" value='gift' required>
                           GIFT
                       </label>
                       <div id='giftForm' class='panel-collapse collapse'>
@@ -147,17 +148,17 @@
                   <div class="panel-body">
                     <div data-toggle="buttons">
                       <label class="btn">
-                        <input type="radio" class="qty" name='qty' value='2' id="2"> 
+                        <input type="radio" class="qty" name='qty' value='2' id="2" required> 
                         <p class='main-plan'>TWO</p>
                         <p class='pricing'>$20 / month</p>
                       </label>
                       <label class="btn">
-                        <input type="radio" class="qty" name='qty' value='3' id="3">
+                        <input type="radio" class="qty" name='qty' value='3' id="3" required>
                         <p class='main-plan'>THREE</p>
                         <p class='pricing'>$29 / month</p>
                       </label>
                       <label class="btn">
-                        <input type="radio" class="qty" name='qty' value='5' id="5">
+                        <input type="radio" class="qty" name='qty' value='5' id="5" required>
                         <p class='main-plan'>FIVE</p>
                         <p class='pricing'>$45 / month</p>
                       </label>
@@ -184,10 +185,10 @@
                     <div id='stepFourAccordion'>
                       <div data-toggle="buttons">
                         <label class="btn">
-                          <input type="radio" class="payment" name='payment' value='monthly' id="monthly">MONTHLY
+                          <input type="radio" class="payment" name='payment' value='monthly' id="monthly" required>MONTHLY
                         </label>
                         <label class="btn">
-                          <input type="radio" class="payment" name='payment' value='once' id="once"> ONCE
+                          <input type="radio" class="payment" name='payment' value='once' id="once" required> ONCE
                         </label>
                       </div>
                       <div id='upfrontForm' class='panel-collapse collapse'>

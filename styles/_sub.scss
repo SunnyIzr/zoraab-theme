@@ -1,4 +1,14 @@
 .subscription{
+  #alerts{
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: -16px;
+    margin-top: 0px;
+    .alert{
+      margin-top: -15px;
+      background-image: none;
+    }
+  }
   text-align: center;
   .copy{
     font-size: 25px;

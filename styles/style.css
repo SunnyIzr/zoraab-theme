@@ -8589,6 +8589,16 @@ button.close {
 .subscription {
   text-align: center;
 }
+.subscription #alerts {
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: -16px;
+  margin-top: 0px;
+}
+.subscription #alerts .alert {
+  margin-top: -15px;
+  background-image: none;
+}
 .subscription .copy {
   font-size: 25px;
   color: #b8b8b8;
