@@ -101,3 +101,30 @@
     width: 50%;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .collection-grid > ul > li {
+    .collection-item{
+      .pricing-info{
+        width: 180px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .collection-grid > ul > li {
+    .collection-item{
+      .pricing-info{
+        width: 100px;
+        h5{
+          font-size:13px;
+          width: 30px;
+          padding: 1px 5px 5px 5px;
+          border-bottom-left-radius: 30px;
+          border-bottom-right-radius: 30px;
+        }
+      }
+    }
+  }
+}
