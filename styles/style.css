@@ -275,8 +275,13 @@
 .filter {
   text-align: left;
 }
+.filter a:hover {
+  text-decoration: none;
+}
 .filter .panel-body {
   padding-top: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 .filter .shop-by {
   font-size: 17px;
@@ -286,7 +291,11 @@
   border-bottom: 1px #b8b8b8 solid;
 }
 .filter .pagination {
-  position: absolute;
+  position: relative;
+  float: right;
+  height: 21px;
+  overflow: hidden;
+  margin-bottom: 0px;
   right: 10px;
   margin-top: -30px;
 }
@@ -314,20 +323,41 @@
 .filter #filter {
   border-bottom: 1px solid #b8b8b8;
 }
-.filter h4 {
-  font-weight: lighter;
+.filter #filter ul.filter-list {
+  padding-left: 3%;
 }
-.filter .style li {
+.filter #filter ul.filter-list li {
+  float: left;
+  width: 20%;
+}
+.filter #filter ul.filter-list .accessory-list {
+  width: 27%;
+}
+.filter #filter ul.filter-list .style-list {
+  width: 10%;
+}
+.filter #filter ul.filter-list .style-list .style li {
+  float: none;
   margin-bottom: 10px;
+  margin-left: 10px;
   cursor: pointer;
 }
-.filter .brand {
+.filter #filter ul.filter-list .pattern-list h4 {
+  margin-bottom: -4px;
+}
+.filter #filter ul.filter-list .brand-list .brand {
   max-width: 100%;
 }
-.filter .brand li {
+.filter #filter ul.filter-list .brand-list .brand h4 {
+  margin-left: -10px;
+}
+.filter #filter ul.filter-list .brand-list .brand li {
   width: 50%;
   display: inline-block;
   float: left;
+}
+.filter h4 {
+  font-weight: lighter;
 }
 .filter .color {
   max-width: 225px;
@@ -411,8 +441,18 @@
   max-width: 50px;
   width: 25%;
   display: inline-block;
-  margin-right: 4%;
+  margin-right: 5%;
   vertical-align: middle;
+}
+.filter .accessory .last {
+  margin-right: 0;
+  margin-left: -2px;
+}
+.filter .accessory .second {
+  margin-right: 6%;
+}
+.filter .accessory .first {
+  margin-left: -25px;
 }
 .filter .accessory #sock {
   margin-top: -28%;
@@ -443,6 +483,64 @@
   margin-left: -63%;
 }
 
+@media screen and (max-width: 68.125em) {
+  #filter ul.filter-list {
+    padding-left: 10% !important;
+  }
+  #filter ul.filter-list li {
+    width: 41% !important;
+  }
+  #filter ul.filter-list .accessory-list {
+    width: 41% !important;
+    margin-bottom: 0px;
+  }
+  #filter ul.filter-list .style-list {
+    width: 18% !important;
+    margin-bottom: 0px;
+  }
+  #filter ul.filter-list .color-list {
+    margin-bottom: 0px;
+  }
+  #filter ul.filter-list .pattern-list {
+    width: 42% !important;
+  }
+  #filter ul.filter-list .pattern-list h4 {
+    margin-bottom: -4px;
+  }
+  #filter ul.filter-list .brand-list .brand li {
+    width: 50% !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  #filter ul.filter-list {
+    padding-left: 0% !important;
+  }
+  #filter ul.filter-list li {
+    width: 50% !important;
+  }
+  #filter ul.filter-list .accessory-list {
+    width: 83% !important;
+    margin-bottom: 0px;
+  }
+  #filter ul.filter-list .style-list {
+    width: 18% !important;
+    margin-left: -8%;
+    margin-bottom: 0px;
+  }
+  #filter ul.filter-list .color-list {
+    margin-bottom: 0px;
+    margin: 0 auto;
+  }
+  #filter ul.filter-list .color-list li {
+    text-align: center;
+  }
+  #filter ul.filter-list .pattern-list {
+    width: 50% !important;
+  }
+  #filter ul.filter-list .pattern-list h4 {
+    margin-bottom: -4px;
+  }
+}
 .quickview-modal .modal-body {
   padding: 30px 3px 20px 3px;
 }

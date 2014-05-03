@@ -1,7 +1,12 @@
 
 .filter{
+  a:hover{
+    text-decoration: none;
+  }
   .panel-body{
     padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
   }
   .shop-by{
     font-size: 17px
@@ -11,7 +16,11 @@
     border-bottom: 1px $faded-color solid;
   }
   .pagination{
-    position: absolute;
+    position: relative;
+    float:right;
+    height:21px;
+    overflow:hidden;
+    margin-bottom: 0px;
     right: 10px;
     margin-top: -30px;
     a{
@@ -41,23 +50,51 @@
   }
   #filter{
     border-bottom:1px solid $faded-color;
+    ul.filter-list{
+      padding-left: 3%;
+      li{
+        float: left;
+        width: 20%;
+      }
+      .accessory-list{
+        width: 27%;
+      }
+      .style-list{
+        width: 10%;
+        .style{
+        li{
+          float: none;
+          margin-bottom: 10px;
+          margin-left: 10px;
+          cursor: pointer;
+          }
+        }
+      }
+      .color-list{
+      }
+      .pattern-list{
+        h4{
+          margin-bottom: -4px;
+        }
+        
+      }
+      .brand-list{
+        .brand{
+          max-width:100%;
+          h4{
+            margin-left: -10px;
+          }
+          li{
+            width:50%;
+            display:inline-block;
+            float:left;
+          }
+        }    
+      }
+    }
   }
   h4{
     font-weight: lighter;
-  }
-  .style{
-    li{
-      margin-bottom:10px;
-      cursor:pointer;
-    }
-  }
-  .brand{
-    max-width:100%;
-    li{
-      width:50%;
-      display:inline-block;
-      float:left;
-    }
   }
   .color{
     max-width:225px;
@@ -110,8 +147,18 @@
       max-width: 50px;
       width:25%;
       display:inline-block;
-      margin-right:4%;
+      margin-right:5%;
       vertical-align: middle;
+    }
+    .last{
+      margin-right: 0;
+      margin-left: -2px;
+    }
+    .second{
+      margin-right: 6%
+    }
+    .first{
+      margin-left: -25px;
     }
     #sock{
       margin-top:-28%;
@@ -147,4 +194,81 @@
   }
 
   
+}
+
+
+@media screen and (max-width: 68.125em) {
+   #filter{
+    ul.filter-list{
+      padding-left: 10% !important;
+      li{
+        width: 41% !important;
+      }
+      .accessory-list{
+        width: 41% !important;
+        margin-bottom: 0px;
+      }
+      .style-list{
+        width: 18% !important;
+        margin-bottom: 0px;
+        .style{
+        li{
+          }
+        }
+      }
+      .color-list{
+        margin-bottom: 0px;
+      }
+      .pattern-list{
+        h4{
+          margin-bottom: -4px;
+        }
+          width: 42% !important;
+      }
+      .brand-list{
+        .brand{
+          li{
+            width: 50% !important;
+          }
+        }    
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+   #filter{
+    ul.filter-list{
+      padding-left: 0% !important;
+      li{
+        width: 50% !important;
+      }
+      .accessory-list{
+        width: 83% !important;
+        margin-bottom: 0px;
+      }
+      .style-list{
+        width: 18% !important;
+        margin-left:-8%;
+        margin-bottom: 0px;
+        .style{
+        li{
+          }
+        }
+      }
+      .color-list{
+        margin-bottom: 0px;
+        margin: 0 auto;
+        li{
+          text-align: center;
+        }
+      }
+      .pattern-list{
+        h4{
+          margin-bottom: -4px;
+        }
+        width: 50% !important;
+      }
+    }
+  }
 }

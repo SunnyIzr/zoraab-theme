@@ -22,72 +22,74 @@
     {% endif %}
     <div id="filter" class="panel-collapse collapse in">
       <div class='panel-body'>
-      <ul class='col-sm-4 accessory'>
-        <h4>Accessory</h4>
-        {% assign tags = 'All Socks,Bowties,Watches,Ties,PocketSquares' | split: ',' %}
-        {% for tag in tags %}
-        {% assign svg_snippet = tag | handleize | prepend: 'icon_' %}
-        {% capture svg %} {% include svg_snippet %} {% endcapture %}        
-        <a href='/{{tag | handleize}}' class='select-filter' id='{{tag | handleize}}'>
-          <li>
-            <div class='svg-icon'>
-              {{svg}}
-            </div>
-          </li>
-        </a>
-        {%endfor%}
-      </ul>
-      
-      <ul class='col-sm-1 style'>
-        <h4>Style</h4>
-        {% assign tags = 'Casual Socks,Dress Socks,Fashion Socks,Fun Socks' | split: ',' %}
-        {% for tag in tags %}
-        <a href='/{{tag | handleize}}' class='select-filter' id="{{ tag | handleize }}">
-          <li>
-            <label {% if current_tags contains tag %} class='checked' {%endif%} >
-              {{ tag | remove: ' Socks' }}
-            </label>
-          </li>
-        </a>
-        {% endfor %}
-      </ul>
-      
-      <ul class='col-sm-2 color'>
-        <h4>Color</h4>
-        {% assign tags = 'Black,Gray,Brown,Blue,Green,Orange,Pink,Red,White,Yellow,Purple,Multi' | split: ',' %}
-        {% for tag in tags %}
-        <a href='/{{tag|handleize}}' class='select-filter' id='{{ tag | handleize }}'> 
-          <li class="{{ tag | handleize}} {% if current_tags contains tag %}selected{%endif%}"></li>
-        </a>
-        {% endfor %}
-      </ul>
-      
-      <ul class='col-sm-2 pattern'>
-        <h4>Pattern</h4>
-        {% assign tags ='Argyle,Dots,Paisley,Camo,Stripes,Blocks,Novelty,Solid,Animal,Floral' | split: ',' %}
-        <br>
-        {% for tag in tags %}
-        {% assign image_file = tag | downcase | prepend: 'pattern_' | append: '.png' %}
-        <a href='{{tag |handleize}}' class='select-filter' id ='{{tag | handleize}}'>
-          <li {% if current_tags contains tag %} class='selected'{%endif%}>
-            {{ image_file | asset_url | img_tag }}{{ tag }}
-          </li>
-        </a>
-        {% endfor %}
-      </ul>
-      
-      <ul class='col-sm-3 brand hidden-xs'>
-        <h4>Brand</h4>
-        {% assign tags = 'Argoz,Foot Traffic,Happy Socks,Hot Sox,K.Bell,Mint Socks,Ozone,Pact,Richer Poorer,Sock it to Me,Unsimply Stitched' | split: ',' %}
-        {% for tag in tags %}
-        <a href='{{tag | handleize}}' class='select-filter' id='{{tag | handleize}}'>
-          <li>
-            <label {% if current_tags contains tag %} class='checked' {%endif%}>
-              {{tag}}
-            </label>
-          </li>
-        </a>
-        {% endfor %}
+      <ul class='filter-list'>
+        <li class='accessory-list'><ul class='accessory'>
+          <h4>Accessory</h4>
+          {% assign tags = 'All Socks,Bowties,Watches,Ties,PocketSquares' | split: ',' %}
+          {% for tag in tags %}
+          {% assign svg_snippet = tag | handleize | prepend: 'icon_' %}
+          {% capture svg %} {% include svg_snippet %} {% endcapture %}        
+          <a href='/{{tag | handleize}}' class='select-filter' id='{{tag | handleize}}'>
+            <li {% if tag == 'PocketSquares'%} class='last'{%elsif tag == 'Bowties'%} second {%elsif tag == 'All Socks'%} class='first' {% endif %}>
+              <div class='svg-icon'>
+                {{svg}}
+              </div>
+            </li>
+          </a>
+          {%endfor%}
+        </ul></li>
+        
+        <li class='style-list'><ul class='style'>
+          <h4>Style</h4>
+          {% assign tags = 'Casual Socks,Dress Socks,Fashion Socks,Fun Socks' | split: ',' %}
+          {% for tag in tags %}
+          <a href='/{{tag | handleize}}' class='select-filter' id="{{ tag | handleize }}">
+            <li>
+              <label {% if current_tags contains tag %} class='checked' {%endif%} >
+                {{ tag | remove: ' Socks' }}
+              </label>
+            </li>
+          </a>
+          {% endfor %}
+        </ul></li>
+        
+        <li class='color-list'><ul class='color'>
+          <h4>Color</h4>
+          {% assign tags = 'Black,Gray,Brown,Blue,Green,Orange,Pink,Red,White,Yellow,Purple,Multi' | split: ',' %}
+          {% for tag in tags %}
+          <a href='/{{tag|handleize}}' class='select-filter' id='{{ tag | handleize }}'> 
+            <li class="{{ tag | handleize}} {% if current_tags contains tag %}selected{%endif%}"></li>
+          </a>
+          {% endfor %}
+        </ul></li>
+        
+        <li class='pattern-list'><ul class='pattern'>
+          <h4>Pattern</h4>
+          {% assign tags ='Argyle,Dots,Paisley,Camo,Stripes,Blocks,Novelty,Solid,Animal,Floral' | split: ',' %}
+          <br>
+          {% for tag in tags %}
+          {% assign image_file = tag | downcase | prepend: 'pattern_' | append: '.png' %}
+          <a href='{{tag |handleize}}' class='select-filter' id ='{{tag | handleize}}'>
+            <li {% if current_tags contains tag %} class='selected'{%endif%}>
+              {{ image_file | asset_url | img_tag }}{{ tag }}
+            </li>
+          </a>
+          {% endfor %}
+        </ul></li>
+        
+        <li class='brand-list'><ul class='brand hidden-xs'>
+          <h4>Brand</h4>
+          {% assign tags = 'Argoz,Foot Traffic,Happy Socks,Hot Sox,K.Bell,Mint Socks,Ozone,Pact,Richer Poorer,Sock it to Me,Unsimply Stitched' | split: ',' %}
+          {% for tag in tags %}
+          <a href='{{tag | handleize}}' class='select-filter' id='{{tag | handleize}}'>
+            <li>
+              <label {% if current_tags contains tag %} class='checked' {%endif%}>
+                {{tag}}
+              </label>
+            </li>
+          </a>
+          {% endfor %}
+        </ul></li>
       </ul>
     </div>
   </div>
