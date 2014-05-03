@@ -59,6 +59,7 @@
       border: 1px solid $faded-color;
       width:83px;
       padding-right: 17px;
+      background-color: #fff;
       option{
         font-size: 15px;
       }
@@ -157,7 +158,7 @@
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .product-quickview{
    .info{
     border: none;

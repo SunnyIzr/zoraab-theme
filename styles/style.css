@@ -609,6 +609,7 @@
   border: 1px solid #b8b8b8;
   width: 83px;
   padding-right: 17px;
+  background-color: #fff;
 }
 .product-quickview .info select option {
   font-size: 15px;
@@ -687,7 +688,7 @@
     width: 15%;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .product-quickview .info {
     border: none;
     width: 100%;
