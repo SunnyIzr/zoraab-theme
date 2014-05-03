@@ -669,6 +669,8 @@
   background: transparent;
   -webkit-appearance: none;
   -moz-appearance: none;
+  text-indent: 0.01px;
+  text-overflow: "";
   background: url("./arrows.png") no-repeat right;
   border-radius: 0px;
   color: #67c5a9;
@@ -677,7 +679,7 @@
   font-size: 24px;
   border: 1px solid #b8b8b8;
   width: 83px;
-  padding-right: 0px;
+  padding-right: 17px;
 }
 .product-quickview .info select option {
   font-size: 15px;
