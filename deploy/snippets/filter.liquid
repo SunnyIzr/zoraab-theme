@@ -25,12 +25,12 @@
       <ul class='filter-list'>
         <li class='accessory-list'><ul class='accessory'>
           <h4>Accessory</h4>
-          {% assign tags = 'All Socks,Bowties,Watches,Ties,PocketSquares' | split: ',' %}
+          {% assign tags = 'All Socks,Bowties,Watches,Ties,Pocket Squares' | split: ',' %}
           {% for tag in tags %}
           {% assign svg_snippet = tag | handleize | prepend: 'icon_' %}
           {% capture svg %} {% include svg_snippet %} {% endcapture %}        
           <a href='/{{tag | handleize}}' class='select-filter' id='{{tag | handleize}}'>
-            <li {% if tag == 'PocketSquares'%} class='last'{%elsif tag == 'Bowties'%} second {%elsif tag == 'All Socks'%} class='first' {% endif %}>
+            <li {% if tag == 'Pocket Squares'%} class='last'{%elsif tag == 'Bowties'%} second {%elsif tag == 'All Socks'%} class='first' {% endif %}>
               <div class='svg-icon'>
                 {{svg}}
               </div>
@@ -79,7 +79,7 @@
         
         <li class='brand-list'><ul class='brand hidden-xs'>
           <h4>Brand</h4>
-          {% assign tags = 'Argoz,Ashi Dashi,Foot Traffic,Happy Socks,Hot Sox,K.Bell,Mint Socks,Ozone,Pact,Richer Poorer,Sock it to Me,Unsimply Stitched' | split: ',' %}
+          {% assign tags = 'Argoz,Ashi Dashi,Foot Traffic,Happy Socks,Hot Sox,K.Bell,May 28th,Mint Socks,Ozone,Pact,Richer Poorer,Sock it to Me,Unsimply Stitched,Zoraab' | split: ',' %}
           {% for tag in tags %}
           <a href='{{tag | handleize}}' class='select-filter' id='{{tag | handleize}}'>
             <li>
