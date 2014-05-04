@@ -117,7 +117,7 @@ $(function() {
     var url = item.url
     $('#container').prepend(
     "<div class='line-items'>
-      <div><a href='/cart/change?line="+1+"&quantity=0' class='close-button svg-close-icon'>"+closeButton+"</a></div>
+      <div><a href='/cart/change?line="+1+"&quantity=0' class='remove-button close-button svg-close-icon'>"+closeButton+"</a></div>
       <div class='img-wrapper'><a href="+item.url+">  
         <img class='prod-img' src="+img+" alt= title />
       </a></div>
