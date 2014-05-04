@@ -42,6 +42,9 @@
   width: 100%;
   cursor: pointer;
 }
+.collection-grid ul li .collection-item a .collection-image {
+  height: 100px;
+}
 .collection-grid ul li .collection-item .item-desc {
   opacity: 0.0;
   position: absolute;
@@ -88,17 +91,22 @@
   z-index: 10;
 }
 .collection-grid ul li .collection-item h5 {
-  color: #fff;
-  font-size: 15px;
-  font-weight: lighter;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #b8b8b8;
+  font-size: 16px;
+  font-weight: 100;
   text-align: right;
-  background-color: #67c5a9;
+  border-bottom: 1px solid #b8b8b8;
+  border-left: 1px solid #b8b8b8;
+  border-right: 1px solid #b8b8b8;
   width: 35px;
-  padding: 4px 5px 11px 5px;
-  border-bottom-left-radius: 35px;
-  border-bottom-right-radius: 35px;
+  padding: 4px 5px 5px 5px;
   float: right;
   margin-top: 0px;
+}
+.collection-grid ul li .collection-item .hover h5 {
+  color: #67c5a9;
+  border-color: #67c5a9;
 }
 
 @media screen and (max-width: 87.375em) {
@@ -126,11 +134,9 @@
     width: 100px;
   }
   .collection-grid > ul > li .collection-item .pricing-info h5 {
-    font-size: 13px;
-    width: 30px;
-    padding: 1px 5px 5px 5px;
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 1px 6px 5px 6px;
   }
 }
 .email-signup {

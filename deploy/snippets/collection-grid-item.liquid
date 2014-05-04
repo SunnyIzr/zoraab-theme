@@ -9,11 +9,13 @@
     </div>
   </div>
   <a href='{{product.url}}'>
+    <div clas='collection-image'>
     {% if template == 'index' %}
       <img src="{{ product.featured_image.src | product_img_url: 'large' }}" alt="{{ product.featured_image.alt | escape }}" />
     {% else %}
       <img src="{{ product.featured_image.src | product_img_url: 'medium' }}" alt="{{ product.featured_image.alt | escape }}" />
     {% endif %}
+    </div>
   </a>
   <div class="pricing-info {%if template =='index' %}hide{%endif%}">
     <h5>{{ product.price | money | remove: '.00'}}</h5>

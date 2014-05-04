@@ -12,9 +12,11 @@ var collectionHover = function() {
   $('.collection-item').hover(function(event){
     $(this).children('.item-desc').css('opacity','1.0')
     $(this).children('.pricing-info').css('border-color','#67c5a9')
+    $(this).children('.pricing-info').addClass('hover')
   }, function(event){
     $(this).children('.item-desc').css('opacity','0.0')
     $(this).children('.pricing-info').css('border-color','#b8b8b8')
+    $(this).children('.pricing-info').removeClass('hover')
   })
 }
 

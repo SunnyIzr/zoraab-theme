@@ -39,6 +39,11 @@
         position: relative;
         width:100%;
         cursor: pointer;
+        a{
+            .collection-image{
+            height: 100px;
+          }
+        }
         .item-desc{
           opacity: 0.0;
           position:absolute;
@@ -87,17 +92,30 @@
           z-index: 10;
         }
         h5{
-          color: #fff;
-          font-size: 15px;
-          font-weight: lighter;
+          // font-family: 'Arial';
+          font-family: 'Source Sans Pro', sans-serif;
+          // color: #fff;
+          color: $faded-color;
+          font-size: 16px;
+          font-weight: 100;
           text-align: right;
-          background-color: $accent-color;
+          // background-color: $faded-color;
+          
+          border-bottom: 1px solid $faded-color;
+          border-left: 1px solid $faded-color;
+          border-right: 1px solid $faded-color;
           width: 35px;
-          padding: 4px 5px 11px 5px;
-          border-bottom-left-radius: 35px;
-          border-bottom-right-radius: 35px;
+          padding: 4px 5px 5px 5px;
+          // border-bottom-left-radius: 35px;
+          // border-bottom-right-radius: 35px;
           float: right;
           margin-top: 0px;
+        }
+        .hover{
+          h5{
+            color: $accent-color;
+            border-color: $accent-color;
+          }
         }
       }
     }
@@ -139,11 +157,9 @@
       .pricing-info{
         width: 100px;
         h5{
-          font-size:13px;
-          width: 30px;
-          padding: 1px 5px 5px 5px;
-          border-bottom-left-radius: 30px;
-          border-bottom-right-radius: 30px;
+          font-size:16px;
+          font-weight: 400;
+          padding: 1px 6px 5px 6px;
         }
       }
     }
