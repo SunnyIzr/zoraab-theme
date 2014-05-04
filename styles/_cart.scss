@@ -1,75 +1,85 @@
-.button-ks {
-   text-decoration:none;
-   background: #606060;
-   padding: 16px 28px;
-   text-shadow: rgba(0,0,0,.4) 0 1px 0;
-   color: white;
-   font-size: 16px;
-   font-family: Georgia, serif;
-   text-decoration: none;
-   vertical-align: middle;
-   border-color: #606060;
-   }
-.button-ks:hover {
-   text-decoration:none;
-   background: #7F7F7F;
-   color: white;
-   }
-
-.button-co {
-   text-decoration:none;
-   background: #67C5A9;
-   padding: 10px 32px;
-   text-shadow: rgba(0,0,0,.4) 0 1px 0;
-   color: white;
-   font-size: 16px;
-   font-family: Georgia, serif;
-   text-decoration: none;
-   vertical-align: middle;
-   border-color: #67C5A9;
-   }
-.button-co:hover {
-   text-decoration:none;
-   background: #6BD6C0;
-   }
+#button-container{
+   height: 66px;
+   font-size: 15px;
+   .button-ks {
+      width: 50%;
+      height: 100%;
+      float: left;
+      text-decoration:none;
+      text-align: center;
+      background: $primary-color;
+      color: white;
+      font-size: 16px;
+      text-decoration: none;
+      cursor: pointer;
+      }
+   .button-ks:hover {
+      text-decoration:none;
+      background: #7F7F7F;
+      color: white;
+      }
+   .button-co {
+      height: 100%;
+      float: right;
+      text-decoration:none;
+      text-align: center;
+      width: 50%;
+      font-size: 16px;
+      }
+   .button-co:hover {
+      text-decoration:none;
+      background: #6BD6C0;
+      } 
+}
 
 #head {
    background: #EDF2ED;
 }
 
 #ship {
-   background: #A8A6A5;
-   font-size: 11px;
+   background: $faded-color;
+   font-size: 12px;
    text-align: center;
    color: white;
-   padding: 5px 0px;
+   padding: 10px 0px;
    font-style: italic;
 }
 
 #pricing{
-   margin: 10px 10px
+   margin: 10px 10px;
+   table{
+      width: 88%;
+      margin: 0 auto;
+      tr{
+         cursor: initial;
+      }
+      td{
+         font-size:12px;
+         border: 1px solid black;
+      }
+      .header{
+         font-size: 19px;
+         border-bottom: 1px solid $faded-color;
+         padding-bottom: 15px;
+      }
+      .left{
+         text-align: left;
+      }
+      .right{
+         text-align: right;
+      }
+   }
 }
 
-.spacing-right{
-   float: right;
-}
-
-.spacing-left{
-   padding-left: 20px;
-}
 
 .prod-img{
    height: 140px;
 }
 
-.qty{
-   font-size: 10px;
-   position: absolute;
-   margin-top: 15px;
-}
+
 
 .prod-title{
-   font-size: 18px;
+   font-size: 22px;
    position: absolute;
    width: 200px;
    margin-top: 8px;
@@ -77,10 +87,12 @@
 }
 
 .item-price{
+   font-family: $number-font;
    position: absolute;
-   margin-top: 68px;
+   font-weight: 400;
+   margin-top: 45px;
    width: 200px;
-   font-size: 14px;
+   font-size: 18px;
 }
 
 .empty-cart{
@@ -88,7 +100,6 @@
    padding: 10px 32px;
    text-shadow: rgba(0,0,0,.4) 0 1px 0;
    font-size: 16px;
-   font-family: Georgia, serif;
    vertical-align: middle;
    background: #3d3d3d;
    color: #666666;
@@ -105,10 +116,47 @@
 }
 
 #co{
-   font-family: FontAwesome;
+   // font-family: FontAwesome;
 }
 
 .update{
    width:20px;
    text-align: center;
+}
+
+.line-items{
+   border-bottom: 1px solid $faded-color;
+   width: 100%;
+   height: 200px;
+   .img-wrapper{
+      margin-top: 15px;
+      width: 170px;
+      margin-right: 15px;
+      height: 170px;
+      text-align: center;
+      float: left;
+   }
+   .product-details{
+      float: left;
+      padding-top: 15px;
+      
+   }
+   .close-button{
+    margin: -30px -246px 0 0;
+    float: right;
+    svg{
+      width: 12%;
+    }
+  }
+  .qty{
+   font-size: 14px;
+   position: absolute;
+   margin-top: 15px;
+   input{
+      width: 40px;
+      height: 35px;
+      border: 1px solid $faded-color;
+      margin-left: 10px;
+   }
+}
 }

@@ -31,9 +31,10 @@ var svgIcon = function() {
 }
 
 var svgCloseIcon = function() {
-  $('.svg-close-icon').hover(function(){
+  $(document).on('mouseenter','.svg-close-icon',function(e){
     $(this).find('path').attr('fill','#67c5a9')
-  }, function(){
+  });
+  $(document).on('mouseleave','.svg-close-icon',function(e){
     $(this).find('path').attr('fill','#404041')
   })
 }

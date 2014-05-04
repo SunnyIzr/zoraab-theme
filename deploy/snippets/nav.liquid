@@ -12,7 +12,7 @@
               <a href='/account/login'> LOG IN </a>
             {% endif %}
           </li>
-          <li><a href='/cart'> CART (<span class="item-count">{{cart.item_count}}</span>) {% include 'icon_cart' %} </a></li>
+          <li><a href='/cart' class="right-off-canvas-toggle" id="cart" > CART (<span class="item-count">{{cart.item_count}}</span>) {% include 'icon_cart' %} </a></li>
         </ul>
       </div>
       <div class='number'>
