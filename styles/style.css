@@ -10720,3 +10720,8 @@ ul.off-canvas-list li a:hover {
 #co {
   font-family: FontAwesome;
 }
+
+.update {
+  width: 20px;
+  text-align: center;
+}

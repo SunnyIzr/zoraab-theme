@@ -17,21 +17,17 @@ DONE add arrow images from bootstrap/components to boxes- http://css-tricks.com/
 DONE replace remove with "x" button from bootstrap/components
 <span class="glyphicon glyphicon-remove"></span>
 
-AJAX ITEMS INTO CART 
+DONE AJAX ITEMS INTO CART 
   - add to cart (db) with posts & add to cart (ui) with get
   - check if item already exists, if it does then just +1 qty - UI
 
 DONE clicking remove shouldn't redirect to cart page. nothing should go to that page- it is no longer needed. this can be done once i can access cart model/objects
 
-update quantity 
+DONE update quantity 
 
 DONE cart # should be changed
 
 DONE checkout greyed out when cart empty
-
-DONE add right arrow properly
-
-change fonts, styles, caps/non-caps & sizing
 
 removed vendor - <span id="vendor">{{ item.vendor }}</span> 
 
@@ -63,10 +59,23 @@ removed "special instructions":{% comment %}
             <textarea name="note">{{ cart.note }}</textarea>
           </div>
 
-MAKE SURE EVERYTHING WORKS WITH AJAX
+DONE cart number when adding/removing/updating
 
-when you remove last item from cart- grey out checkout box & display "cart is empty"
+DONE pricing section when adding/removing/updating
+
+DONE adding first item to cart
+
+DONE when you remove last item from cart- grey out checkout box & display "cart is empty"
+
+removing shouldnt close cart
+
+add validation for updates: var b = isNaN(e.currentTarget.value);
+    if b {
+
+    }
 
 max width of images?
 
-cart number when adding/removing
+change fonts, styles, caps/non-caps & sizing
+
+mo is awesome :D
