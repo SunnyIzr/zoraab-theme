@@ -92,22 +92,16 @@
           z-index: 10;
         }
         h5{
-          // font-family: 'Arial';
           font-family: $number-font, sans-serif;
-          // color: #fff;
           color: $faded-color;
           font-size: 16px;
           font-weight: 100;
           text-align: right;
-          // background-color: $faded-color;
-          
           border-bottom: 1px solid $faded-color;
           border-left: 1px solid $faded-color;
           border-right: 1px solid $faded-color;
           width: 35px;
           padding: 4px 5px 5px 5px;
-          // border-bottom-left-radius: 35px;
-          // border-bottom-right-radius: 35px;
           float: right;
           margin-top: 0px;
         }
