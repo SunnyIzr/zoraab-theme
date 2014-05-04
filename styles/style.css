@@ -73,11 +73,11 @@
 }
 .collection-grid ul li .collection-item .item-desc .item-detail h4 {
   color: #404041;
-  font-weight: lighter;
+  font-weight: 400;
 }
 .collection-grid ul li .collection-item .item-desc .item-detail h6 {
   margin: 10% 0;
-  font-weight: lighter;
+  font-weight: 400;
 }
 .collection-grid ul li .collection-item img {
   max-width: 100%;
@@ -91,7 +91,7 @@
   z-index: 10;
 }
 .collection-grid ul li .collection-item h5 {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   color: #b8b8b8;
   font-size: 16px;
   font-weight: 100;
@@ -1966,7 +1966,7 @@ html {
 }
 
 body {
-  font-family: "PT Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
   color: #404041;

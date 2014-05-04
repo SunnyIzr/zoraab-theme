@@ -70,11 +70,11 @@
             padding: 20% 0;
             h4{
               color:$primary-color;
-              font-weight: lighter;
+              font-weight: 400;
             }
             h6{
               margin: 10% 0;
-              font-weight: lighter;
+              font-weight: 400;
             }
           }
         }
@@ -93,7 +93,7 @@
         }
         h5{
           // font-family: 'Arial';
-          font-family: 'Source Sans Pro', sans-serif;
+          font-family: $number-font, sans-serif;
           // color: #fff;
           color: $faded-color;
           font-size: 16px;

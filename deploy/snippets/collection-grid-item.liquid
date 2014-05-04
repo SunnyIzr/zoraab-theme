@@ -9,7 +9,7 @@
     </div>
   </div>
   <a href='{{product.url}}'>
-    <div clas='collection-image'>
+    <div class='img-wrapper'>
     {% if template == 'index' %}
       <img src="{{ product.featured_image.src | product_img_url: 'large' }}" alt="{{ product.featured_image.alt | escape }}" />
     {% else %}
