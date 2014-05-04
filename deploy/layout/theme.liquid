@@ -48,7 +48,6 @@
 
     <body id="{{ page_title | handle }}" class="{% if customer %}customer-logged-in {% endif %}template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}" >
 
-<<<<<<< HEAD
   <div class="container-fluid">
     <header>
       {% include 'nav' %}
@@ -59,28 +58,8 @@
     <center>
       {% include 'footer' %}
     </center>
-=======
-      <div class="container-fluid">
-        <header>
-          {% include 'nav' %}
-        </header>
-      </div>
-
-      <div class="container">
-        {{ content_for_layout }}
-      </div>
-          
-      <div class="container-fluid">
-        <center>
-          {% include 'footer' %}
-        </center>
-      </div>
 
       {% include 'cart' %}
-        <!--[if lt IE 7]>
-        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-        <![endif]-->
->>>>>>> 2e944266e83a9c47789e4d64bc26c3ca48f90a28
 
       <!-- end of #container -->
 
