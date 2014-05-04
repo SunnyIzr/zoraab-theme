@@ -22,19 +22,26 @@
     <div class="col-sm-3">
     {% endif %}
       <div class='info'>
-        <h2>{{ product.title }}</h2>
-        <h4>{{product.vendor}}</h4>
-        <div class='price-details'>
-          <div class='mid-border'></div>
-          <h3>{{ product.price | money | remove: '.00'}}</h3>
-        </div>
-        <div class='qty'> QTY <input min="1" type="number" id="quantity" name="quantity" value="1" /> </div>
-        <div class='add-to-cart'>
-          <input type="submit" value="+ ADD TO CART" id="add" class="btn btn-lg btn-info" />
-        </div>
-        <div class='description'>
-          {{ product.description }}
-        </div>
+        <form action="/cart/add" method="post" enctype="multipart/form-data">
+          <h2>{{ product.title }}</h2>
+          <h4>{{product.vendor}}</h4>
+          <div class='price-details'>
+            <div class='mid-border'></div>
+            <h3>{{ product.price | money | remove: '.00'}}</h3>
+          </div>
+          <div class='qty'> QTY <input min="1" type="number" id="quantity" name="quantity" value="1" /> </div>
+          <div id='product-add' class='add-to-cart'>
+            <input type="submit" value="+ ADD TO CART" id="add" class="btn btn-lg btn-info right-off-canvas-toggle" />
+            <select id="product-select" name="id" class="hidden">
+            {% for variant in product.variants %}
+              <option value="{{ variant.id }}">{{ variant.title }} - {{ variant.price | money }}</option>
+            {% endfor %}
+            </select>
+          </div>
+          <div class='description'>
+            {{ product.description }}
+          </div>
+        </form>
       </div>
     </div>
   </div>
