@@ -22,7 +22,8 @@
   -moz-transition: -moz-transform 500ms ease;
   -ms-transition: -ms-transform 500ms ease;
   -o-transition: -o-transform 500ms ease;
-  transition: transform 500ms ease; }
+  transition: transform 500ms ease; 
+}
   .inner-wrap:before, .inner-wrap:after {
     content: " ";
     display: table; }
@@ -80,7 +81,8 @@ ul.off-canvas-list {
   -moz-transform: translate3d(-48.10rem, 0, 0);
   -ms-transform: translate3d(-48.10rem, 0, 0);
   -o-transform: translate3d(-48.10rem, 0, 0);
-  transform: translate3d(-48.10rem, 0, 0); }
+  transform: translate3d(-48.10rem, 0, 0); 
+}
 .move-left .exit-off-canvas {
   -webkit-backface-visibility: hidden;
   transition: background 300ms ease;

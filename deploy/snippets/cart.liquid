@@ -1,4 +1,5 @@
 <aside class="right-off-canvas-menu">
+  <div class='fixed-menu'>
   <ul class="off-canvas-list">
       <form id="cart-form" action="/cart" method="post">
           <div id="head"> 
@@ -56,14 +57,11 @@
         
       </form>
 
-    {% if cart.item_count == 0 %}
-       <div id="container">
-       </div>
-    {%endif%}
     <div class="empty-cart-message">
       {% if cart.item_count == 0 %}
         <h2 >Your cart is empty</h2>
       {% endif %}
     </div>
   </ul>
+  </div>
 </aside>
