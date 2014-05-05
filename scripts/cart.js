@@ -4,11 +4,26 @@ $(function() {
     e.preventDefault();
     Foundation.libs.offcanvas.click_toggle_class(e,'move-left')
   })
+  
+  $(document).on('click', '.empty-cart', function(e){
+    e.preventDefault();
+  })
+  
+  $(document).on('mouseenter', '.empty-cart', function(e){
+    $('#co').tooltip('show')
+  })
+    
+  $(document).on('mouseleave', '.empty-cart', function(e){
+    $('#co').tooltip('hide')
+  })
+      
   if ($('#cart')[0].innerText == " CART (0) ")
   {
   	$('#co').addClass("empty-cart");
   	$('#co').removeClass("button-co");
   }
+  
+
 
   $(document).on('click', '.remove-button', function(e){
   	e.preventDefault();
@@ -25,7 +40,7 @@ $(function() {
           $("#co").removeClass("button-co")
           $("#co").addClass("empty-cart")
           $('#price-container')[0].innerHTML = ""
-          $('.empty-cart-message')[0].innerHTML = "<h2 >Your cart is empty</h2>"
+          $('.empty-cart-message')[0].innerHTML = "<h2>Your cart is empty</h2>"
         }
         else {
           updatePricing()
@@ -66,7 +81,7 @@ $(function() {
     updateItemCounts("add")
   });
 
-  $('.update').keypress(function (e) {
+  $(document).on('keypress','.update',function (e) {
     if (e.which == 13) {
       e.preventDefault();
       if (e.currentTarget.value == 0){
@@ -89,23 +104,24 @@ $(function() {
       "<div id='pricing'>
         <table style='width:300px'>
           <tr>
-            <td class='spacing-left'>TOTAL </td>
-            <td id='price'class='spacing-right'>
-            {{ cart.total_price | money }}
-            </td> 
+            <td class='header left'>TOTAL </td>
+            <td class='price header right'></td> 
           </tr>
           <tr>
-            <td class='spacing-left'><span class='item-count'>
-              1</span> ITEMS
+            <td class='left'>
+              <span class='item-count'>1</span> ITEMS
+            </td>
+            <td class='price right'>
             </td>
           </tr>
           <tr>  
-            <td class='spacing-left'>SHIPPING | FREE</td> 
-            <td class='spacing-right'>FREE</td>
+            <td class='left'>SHIPPING</td> 
+            <td class='right'>FREE</td>
           </tr>
         </table>
       </div>
-      <h3 id='ship'>Free shipping in the US.</h3>"
+      <h3 id='ship'>Free shipping in the US and Canada.</h3>"
+  
     
     $("#co").removeClass("empty-cart")
     $("#co").addClass("button-co")
@@ -122,7 +138,7 @@ $(function() {
       <div class='img-wrapper'><a href="+item.url+">  
         <img class='prod-img' src="+img+" alt= title />
       </a></div>
-      <div class='product-details'><span class='qty'>QTY <input name='updates[]' class='update' value='1' /><span>
+      <div class='product-details'><span class='qty'>QTY <input name='updates[]' class='update' id='"+item.id+"' value='1' /><span>
       <a class='prod-title' href="+url+">"+ title +"</a>
       <span class='item-price'>"+ price +"</span></div>
     </div>"

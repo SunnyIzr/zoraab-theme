@@ -5,7 +5,7 @@
           <div id="head"> 
               <div id="button-container">
                 <button type='submit' class="btn btn-primary button-ks">KEEP SHOPPING</button>
-                <input type="submit" id="co" name="checkout" value="CHECKOUT" class="btn btn-primary button-co">
+                <input type="submit" id="co" name="checkout" value="CHECKOUT" class="btn btn-primary button-co" data-toggle="tooltip" data-placement="bottom" title="Your Cart is Empty. Treat yourself to some nice socks!" >
               </div>
               <div id="price-container">
               {% if cart.item_count > 0 %}
@@ -59,7 +59,7 @@
 
     <div class="empty-cart-message">
       {% if cart.item_count == 0 %}
-        <h2 >Your cart is empty</h2>
+        <h2 >Your cart is empty! Treat your self to some sweet socks! </h2>
       {% endif %}
     </div>
   </ul>

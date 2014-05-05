@@ -77,6 +77,9 @@
       float: right;
       height: 25px;
       border-left: none;
+      border-right: 1px solid $faded-color;
+      border-bottom: 1px solid $faded-color;
+      border-top: 1px solid $faded-color;
       padding-top: 3px;
       padding-right: 7px;
       color: $faded-color;

@@ -8655,150 +8655,6 @@ input.btn {
     margin-left: 18px;
   }
 }
-.header-section {
-  max-width: 1600px;
-}
-
-.header {
-  font-size: 12px;
-  z-index: 3;
-  height: 25px;
-  margin-top: 5px;
-  margin-bottom: -10px;
-  overflow: hidden;
-}
-.header .cart-icon {
-  fill: #67c5a9;
-}
-.header .free-shipping {
-  font-style: italic;
-}
-.header div {
-  float: right;
-  text-align: right;
-  padding-left: 25px;
-}
-.header ul {
-  padding: 0px;
-  list-style: none;
-  border-radius: 0px;
-  text-align: right;
-}
-.header ul li {
-  display: inline-block;
-}
-.header ul li a {
-  cursor: pointer;
-}
-.header ul li + li:before {
-  content: "|\00a0";
-  padding: 0 2px;
-  color: #cccccc;
-}
-
-.navbar-default {
-  box-shadow: none !important;
-}
-
-.navbar {
-  position: relative;
-  margin-top: 0px;
-  margin-bottom: 0px !important;
-  border: none;
-  z-index: 2;
-}
-.navbar .navbar-brand {
-  padding-top: 0px;
-}
-.navbar a {
-  color: #404041;
-}
-.navbar a:hover {
-  color: #67c5a9;
-  background-color: transparent !important;
-}
-.navbar .form-group {
-  width: 115%;
-  margin-left: -15%;
-  margin-top: 10px;
-}
-.navbar .form-group input {
-  float: left;
-  width: 83%;
-  height: 25px;
-  border-right: none;
-  box-shadow: none;
-}
-.navbar .form-group .search-icon {
-  float: right;
-  height: 25px;
-  border-left: none;
-  padding-top: 3px;
-  padding-right: 7px;
-  color: #b8b8b8;
-  box-shadow: none;
-  margin-right: 1px;
-  margin-left: -23px;
-}
-.navbar .form-group input[type=text] {
-  color: #404041;
-}
-.navbar .form-group ::-webkit-input-placeholder {
-  color: #b8b8b8;
-}
-.navbar .form-group :-moz-placeholder {
-  color: #b8b8b8;
-}
-.navbar .form-group ::-moz-placeholder {
-  color: #b8b8b8;
-}
-.navbar .form-group :-ms-input-placeholder {
-  color: #b8b8b8;
-}
-
-@media (max-width: 768px) {
-  .navbar {
-    border-bottom: 1px solid #b8b8b8;
-    width: 100%;
-  }
-
-  .navbar-toggle-menu {
-    position: absolute;
-    left: 0;
-  }
-
-  .navbar-brand img {
-    margin-top: 12px;
-    width: 135px;
-  }
-
-  .cart-toggle {
-    position: absolute;
-    right: 0;
-    margin-right: 0px;
-  }
-  .cart-toggle svg path {
-    fill: #b8b8b8;
-  }
-  .cart-toggle svg circle {
-    fill: #b8b8b8;
-  }
-}
-@media (min-width: 768px) {
-  .navbar {
-    margin-bottom: 12px !important;
-  }
-
-  .navbar-form.navbar-right:last-child {
-    margin-right: -23px;
-  }
-}
-@media (max-width: 825px) {
-  .navbar .form-group {
-    width: 95%;
-    margin-left: 0;
-  }
-}
 .feature-panels {
   border-bottom: 1px solid #b8b8b8;
 }
@@ -8941,6 +8797,17 @@ input.btn {
   width: 50%;
   font-size: 16px;
 }
+#button-container .empty-cart {
+  height: 100%;
+  float: right;
+  text-decoration: none;
+  text-align: center;
+  width: 50%;
+  font-size: 16px;
+  background: #3d3d3d;
+  color: #666666;
+  border-color: #3d3d3d;
+}
 #button-container .button-co:hover {
   text-decoration: none;
   background: #6BD6C0;
@@ -9006,19 +8873,16 @@ input.btn {
   font-size: 18px;
 }
 
-.empty-cart {
-  text-decoration: none;
-  padding: 10px 32px;
-  text-shadow: rgba(0, 0, 0, 0.4) 0 1px 0;
-  font-size: 16px;
-  vertical-align: middle;
-  background: #3d3d3d;
-  color: #666666;
-  border-color: #3d3d3d;
-}
-
 .empty-cart-message {
   text-align: center;
+}
+.empty-cart-message h2 {
+  color: #67c5a9;
+  width: 75%;
+  margin: 0 auto;
+  margin-top: 80px;
+  border: 1px solid #b8b8b8;
+  padding: 15px;
 }
 
 #button-container {
@@ -9086,4 +8950,152 @@ input.btn {
   -ms-transform: translate3d(0rem, 0, 0);
   -o-transform: translate3d(0rem, 0, 0);
   transform: translate3d(0rem, 0, 0);
+}
+
+.header-section {
+  max-width: 1600px;
+}
+
+.header {
+  font-size: 12px;
+  z-index: 3;
+  height: 25px;
+  margin-top: 5px;
+  margin-bottom: -10px;
+  overflow: hidden;
+}
+.header .cart-icon {
+  fill: #67c5a9;
+}
+.header .free-shipping {
+  font-style: italic;
+}
+.header div {
+  float: right;
+  text-align: right;
+  padding-left: 25px;
+}
+.header ul {
+  padding: 0px;
+  list-style: none;
+  border-radius: 0px;
+  text-align: right;
+}
+.header ul li {
+  display: inline-block;
+}
+.header ul li a {
+  cursor: pointer;
+}
+.header ul li + li:before {
+  content: "|\00a0";
+  padding: 0 2px;
+  color: #cccccc;
+}
+
+.navbar-default {
+  box-shadow: none !important;
+}
+
+.navbar {
+  position: relative;
+  margin-top: 0px;
+  margin-bottom: 0px !important;
+  border: none;
+  z-index: 2;
+}
+.navbar .navbar-brand {
+  padding-top: 0px;
+}
+.navbar a {
+  color: #404041;
+}
+.navbar a:hover {
+  color: #67c5a9;
+  background-color: transparent !important;
+}
+.navbar .form-group {
+  width: 115%;
+  margin-left: -15%;
+  margin-top: 10px;
+}
+.navbar .form-group input {
+  float: left;
+  width: 83%;
+  height: 25px;
+  border-right: none;
+  box-shadow: none;
+}
+.navbar .form-group .search-icon {
+  float: right;
+  height: 25px;
+  border-left: none;
+  border-right: 1px solid #b8b8b8;
+  border-bottom: 1px solid #b8b8b8;
+  border-top: 1px solid #b8b8b8;
+  padding-top: 3px;
+  padding-right: 7px;
+  color: #b8b8b8;
+  box-shadow: none;
+  margin-right: 1px;
+  margin-left: -23px;
+}
+.navbar .form-group input[type=text] {
+  color: #404041;
+}
+.navbar .form-group ::-webkit-input-placeholder {
+  color: #b8b8b8;
+}
+.navbar .form-group :-moz-placeholder {
+  color: #b8b8b8;
+}
+.navbar .form-group ::-moz-placeholder {
+  color: #b8b8b8;
+}
+.navbar .form-group :-ms-input-placeholder {
+  color: #b8b8b8;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    border-bottom: 1px solid #b8b8b8;
+    width: 100%;
+  }
+
+  .navbar-toggle-menu {
+    position: absolute;
+    left: 0;
+  }
+
+  .navbar-brand img {
+    margin-top: 12px;
+    width: 135px;
+  }
+
+  .cart-toggle {
+    position: absolute;
+    right: 0;
+    margin-right: 0px;
+  }
+  .cart-toggle svg path {
+    fill: #b8b8b8;
+  }
+  .cart-toggle svg circle {
+    fill: #b8b8b8;
+  }
+}
+@media (min-width: 768px) {
+  .navbar {
+    margin-bottom: 12px !important;
+  }
+
+  .navbar-form.navbar-right:last-child {
+    margin-right: -23px;
+  }
+}
+@media (max-width: 825px) {
+  .navbar .form-group {
+    width: 95%;
+    margin-left: 0;
+  }
 }
