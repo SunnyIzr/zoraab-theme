@@ -35,8 +35,9 @@ $(function() {
     })
   });
 
-  $('#add').click(function(e){
-    var itemId = parseInt($('#product-select')[0].children[0].value)
+  $('.add').click(function(e){
+    $(this).closest('.modal').modal('hide')
+    var itemId = $(this).parent().find('.product-select').val()
     $.getJSON("/cart.js",function(response){
       var itemArray = response.items
       var idArray = []

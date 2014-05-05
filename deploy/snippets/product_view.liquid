@@ -31,8 +31,8 @@
           </div>
           <div class='qty'> QTY <input min="1" type="number" id="quantity" name="quantity" value="1" /> </div>
           <div id='product-add' class='add-to-cart'>
-            <input type="submit" value="+ ADD TO CART" id="add" class="btn btn-lg btn-info right-off-canvas-toggle" />
-            <select id="product-select" name="id" class="hidden">
+            <input type="submit" value="+ ADD TO CART" class="add btn btn-lg btn-info right-off-canvas-toggle" />
+            <select name="id" class="product-select hidden">
             {% for variant in product.variants %}
               <option value="{{ variant.id }}">{{ variant.title }} - {{ variant.price | money }}</option>
             {% endfor %}
