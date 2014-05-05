@@ -161,47 +161,28 @@
 }
 }
 
-// .cart-canvas{
-  
-//    // position: fixed;
-//    // top: 0px;
-//    // height: 100%;
-//   // -webkit-backface-visibility: hidden;
-//   // position: relative;
-//   // width: 100%;
-//   // *zoom: 1;
-//   // -webkit-transition: -webkit-transform 500ms ease;
-//   // -moz-transition: -moz-transform 500ms ease;
-//   // -ms-transition: -ms-transform 500ms ease;
-//   // -o-transition: -o-transform 500ms ease;
-//   // transition: transform 500ms ease; 
-//    aside{
-//       position: fixed !important;
-//         width: 100%;
-//   *zoom: 1;
-//   -webkit-transition: -webkit-transform 500ms ease;
-//   -moz-transition: -moz-transform 500ms ease;
-//   -ms-transition: -ms-transform 500ms ease;
-//   -o-transition: -o-transform 500ms ease;
-//   transition: transform 500ms ease; 
-//       transition: transform 500ms ease;
-//      //      -ms-transform: translate(-48.10rem, 0);
-//      // -webkit-transform: translate3d(-48.10rem, 0, 0);
-//      // -moz-transform: translate3d(-48.10rem, 0, 0);
-//      // -ms-transform: translate3d(-48.10rem, 0, 0);
-//      // -o-transform: translate3d(-48.10rem, 0, 0);
-//      // transform: translate3d(-48.10rem, 0, 0);
-//    }
-   
-// }
-// .move-left > .cart-canvas aside {
-//      -ms-transform: translate(-48.10rem, 0);
-//      -webkit-transform: translate3d(-48.10rem, 0, 0);
-//      -moz-transform: translate3d(-48.10rem, 0, 0);
-//      -ms-transform: translate3d(-48.10rem, 0, 0);
-//      -o-transform: translate3d(-48.10rem, 0, 0);
-//      transform: translate3d(-48.10rem, 0, 0);
-// }
+.cart-canvas{
+   aside{
+      border-left: 1px solid $faded-color;
+      position: fixed !important;
+      *zoom: 1;
+      -webkit-transition: -webkit-transform 500ms ease;
+      -moz-transition: -moz-transform 500ms ease;
+      -ms-transition: -ms-transform 500ms ease;
+      -o-transition: -o-transform 500ms ease;
+      transition: transform 500ms ease; 
+      transition: transform 500ms ease;
+      z-index: 10000;
+   }
+}
+.move-left > .cart-canvas aside {
+     -ms-transform: translate(0.0rem, 0);
+     -webkit-transform: translate3d(0.0rem, 0, 0);
+     -moz-transform: translate3d(0.0rem, 0, 0);
+     -ms-transform: translate3d(0.0rem, 0, 0);
+     -o-transform: translate3d(0.0rem, 0, 0);
+     transform: translate3d(0.0rem, 0, 0);
+}
 
 // .no-csstransforms .move-left > .cart-canvas {
 //   right: 15.625rem; }

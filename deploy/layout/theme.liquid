@@ -48,6 +48,7 @@
     <body id="{{ page_title | handle }}" class="{% if customer %}customer-logged-in {% endif %}template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}" >
 
       <div class="off-canvas-wrap" data-offcanvas>
+        
         <div class="inner-wrap">
           <div class='normal-body'>
             <div class="container-fluid">
@@ -59,6 +60,9 @@
                 {% include 'footer' %}
               </center>
             </div>
+          </div>
+        </div>
+            
         <div class='cart-canvas'>
           {% include 'cart' %}
 
@@ -70,6 +74,7 @@
           </script>
           <a class="exit-off-canvas"></a>
         </div>
+        
       </div>
 
     </body>

@@ -1707,7 +1707,7 @@ html {
 }
 
 body {
-  font-family: "Raleway", sans-serif;
+  font-family: "PT Sans", sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
   color: #404041;
@@ -9045,4 +9045,26 @@ button.close {
   height: 35px;
   border: 1px solid #b8b8b8;
   margin-left: 10px;
+}
+
+.cart-canvas aside {
+  border-left: 1px solid #b8b8b8;
+  position: fixed !important;
+  *zoom: 1;
+  -webkit-transition: -webkit-transform 500ms ease;
+  -moz-transition: -moz-transform 500ms ease;
+  -ms-transition: -ms-transform 500ms ease;
+  -o-transition: -o-transform 500ms ease;
+  transition: transform 500ms ease;
+  transition: transform 500ms ease;
+  z-index: 10000;
+}
+
+.move-left > .cart-canvas aside {
+  -ms-transform: translate(0rem, 0);
+  -webkit-transform: translate3d(0rem, 0, 0);
+  -moz-transform: translate3d(0rem, 0, 0);
+  -ms-transform: translate3d(0rem, 0, 0);
+  -o-transform: translate3d(0rem, 0, 0);
+  transform: translate3d(0rem, 0, 0);
 }
