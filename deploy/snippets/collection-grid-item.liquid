@@ -5,7 +5,16 @@
     <div class="item-detail">
       <h4>{{ product.title }}</h4>
       <a href='#' data-toggle="modal" data-target="#{{product.id}}" ><h6>QUICK VIEW</h6></a>
-      <a class='btn btn-md btn-primary' href='#'> + CART </a>
+      <form action="/cart/add" method="post" enctype="multipart/form-data">
+        <div id='product-add' class='add-to-cart'>
+          <input type="submit" value="+ CART" class="add btn btn-md btn-primary right-off-canvas-toggle" />
+          <select name="id" class="product-select hidden">
+          {% for variant in product.variants %}
+            <option value="{{ variant.id }}">{{ variant.title }} - {{ variant.price | money }}</option>
+          {% endfor %}
+          </select>
+        </div>
+      </form>
     </div>
   </div>
   <a href='{{product.url}}'>
