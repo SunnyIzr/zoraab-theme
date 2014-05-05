@@ -184,5 +184,7 @@
      transform: translate3d(0.0rem, 0, 0);
 }
 
-// .no-csstransforms .move-left > .cart-canvas {
-//   right: 15.625rem; }
+
+@media screen and (max-width: 768px) {
+
+}
