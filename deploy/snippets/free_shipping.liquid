@@ -1,0 +1,32 @@
+<div class="shipping-modal modal fade" id="freeShipping" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class='svg-close-icon close-button' data-dismiss="modal">
+          {% include 'icon_close' %}
+        </div>
+       <img src="{{ 'freeship.jpg' | asset_url }}" class='img-responsive'>
+       {%comment%}
+       <div class='ship-icon'>
+        {% include 'icon_truck' %}
+      </div>
+      {%endcomment%}
+       <div class='break'></div>
+        <div class='copy'>
+          <div class='domestic'>
+            <h4>DOMESTIC</h4>
+            Free shipping on US and Canada
+            Ships same day, if ordered by 3PM EST
+            estimated 2 - 3 calendar day delivery (US only)
+          </div>
+          <div class='international'>
+            <h4>INTERNATIONAL</h4>
+            Flat rate of $15 
+            Ships same day, if ordered by 3PM EST 
+            estimated 7 - 10 business days
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
