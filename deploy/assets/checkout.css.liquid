@@ -1,0 +1,60 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic);
+
+body{
+  background-color: #fff;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+#logo{
+  height: 100px;
+  background: url({{ 'logov1.png' | asset_url | replace: 'http://','https://' }}) center no-repeat;
+}
+
+#header{
+  background: none;
+  margin-top: -52px;
+}
+
+#tagline{
+  display:none;
+}
+#overview{
+  background: none;
+  background-color: #fff;
+  border: 1px solid #b8b8b8;
+}
+
+#main{
+  background: none;
+  border: none;
+}
+
+#email{
+  background: none;
+  /*border: 1px solid #b8b8b8; */
+  border: none;
+}
+
+#email input{
+  height:35px;
+  border: 1px solid #b8b8b8; 
+  width: 100%;
+}
+
+#addresses{
+  background: none;
+  /*border: 1px solid #b8b8b8;*/
+  border:none;
+}
+
+#addresses td{
+  height: 35px;
+  vertical-align: middle;
+}
+
+#addresses input{
+  width: 100%;
+  height: 35px;
+  border: 1px solid #b8b8b8; 
+}
