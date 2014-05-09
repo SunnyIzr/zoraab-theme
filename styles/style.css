@@ -8364,6 +8364,74 @@ input.btn {
   border-radius: 0;
 }
 
+.sub-hero {
+  position: relative;
+  border-top: 1px solid #b8b8b8;
+  border-bottom: 1px solid #b8b8b8;
+  width: 100%;
+}
+.sub-hero .hero {
+  width: 50%;
+}
+.sub-hero .right {
+  position: absolute;
+  top: 0%;
+  right: 0;
+  width: 50%;
+  text-align: center;
+}
+.sub-hero .right .head {
+  width: 65%;
+  margin: 0 auto;
+  padding-bottom: 3%;
+  border-bottom: 1px solid #b8b8b8;
+}
+.sub-hero .right .head h1 {
+  font-weight: 400;
+}
+.sub-hero .right .subhead h1 {
+  font-size: 18px;
+  font-weight: 400;
+  color: #b8b8b8;
+}
+.sub-hero .right .sub-steps {
+  list-style: none;
+  font-size: 17px;
+  padding: 0;
+}
+.sub-hero .right .sub-steps .step {
+  margin: 0 auto;
+  width: 39px;
+  border-radius: 24px;
+  border: 2px solid #67c5a9;
+  color: #67c5a9;
+  font-size: 25px;
+}
+.sub-hero .right .sub-steps .action {
+  font-size: 14px;
+  color: #b8b8b8;
+  margin-top: 10px;
+}
+.sub-hero .right .sub-steps li {
+  display: inline-block;
+  padding: 25px 0;
+  width: 30%;
+  text-align: center;
+}
+.sub-hero .right .sub-steps li .img {
+  margin: 0 auto;
+  width: 47%;
+}
+.sub-hero .right .sub-steps li .img img {
+  margin: 0 auto;
+}
+.sub-hero .right .btn {
+  border: 2px solid #e85c41;
+  color: #e85c41;
+  font-weight: 600;
+  width: 50%;
+}
+
 .subscription {
   text-align: center;
 }
