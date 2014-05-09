@@ -77,20 +77,21 @@ $(function() {
 
   $('.add').click(function(e){
     $(this).closest('.modal').modal('hide')
-    var itemId = $(this).parent().find('.product-select').val()
+    var itemId = parseInt($(this).parent().find('.product-select').val())
     var newQty = $(this).parent().parent().find('.product-quantity').val()
     $.getJSON("/cart.js",function(response){
       var itemArray = response.items
       var idArray = []
-      for(var i =0;i<itemArray.length;i++){
-        idArray.push(itemArray[i].id)
-      }
+      $.each(itemArray, function(index,value){
+        idArray.push(value.id)
+      })
       var value = $.inArray(itemId,idArray)
       if (value != -1){
         var quantity = itemArray[value].quantity
-        $.post("/cart/change.js","quantity="+(quantity+1)+"&id="+itemId,function(response){
+        var totalNewQty = quantity + parseInt(newQty)
+        $.post("/cart/change.js","quantity="+totalNewQty+"&id="+itemId,function(response){
           updatePricing()
-        })
+        },'json')
       }
       else{ 
         $.post("/cart/add.js",{id: itemId, quantity: newQty},function(response){
@@ -104,7 +105,6 @@ $(function() {
         }, "json");
       }
     })
-    updateItemCounts("add")
   });
 
   $(document).on('keypress','.update',function (e) {
@@ -193,6 +193,7 @@ $(function() {
       $(".total-price").html("$"+(totalPrice/100)+".00")
       $.each(items,function(index,value){
         $('#'+value.id).parent().parent().parent().find('.amt').html('$'+((value.line_price/100).toFixed(2)))
+        $('#'+value.id).val(value.quantity)
       })
       
     },"json")
