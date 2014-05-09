@@ -37,4 +37,8 @@ $number-font: 'Source Sans Pro';
 
 @import 'nav';
 
-@import 'jumbotrons'
+@import 'jumbotrons';
+
+.number{
+  font-family: $number-font;
+}

@@ -9022,7 +9022,7 @@ input.btn {
 .line-items {
   border-bottom: 1px solid #b8b8b8;
   width: 100%;
-  height: 200px;
+  height: 187px;
 }
 .line-items .img-wrapper {
   margin-top: 15px;
@@ -9044,15 +9044,49 @@ input.btn {
   width: 12%;
 }
 .line-items .qty {
-  font-size: 14px;
+  font-size: 16px;
   position: absolute;
-  margin-top: 15px;
+  margin-top: 49px;
+}
+.line-items .qty .times {
+  margin: 0 15px;
+}
+.line-items .qty .plus-btn {
+  padding: 0 9px;
+  margin-right: -13px;
+  margin-top: -5px;
+  float: right;
+}
+.line-items .qty .minus-btn {
+  padding: 0 9px;
+  margin-right: -13px;
+  background-color: #404041;
+  float: right;
+  margin-top: -13px;
+  margin-bottom: 2px;
+}
+.line-items .qty .minus-btn:hover {
+  background-color: #7F7F7F;
 }
 .line-items .qty input {
   width: 40px;
   height: 35px;
   border: 1px solid #b8b8b8;
   margin-left: 10px;
+}
+.line-items .subtotal {
+  border-top: 1px solid #b8b8b8;
+  margin-top: 120px;
+  font-size: 16px;
+  position: absolute;
+  width: 213px;
+  padding-right: 5px;
+}
+.line-items .subtotal .text {
+  float: left;
+}
+.line-items .subtotal .amt {
+  float: right;
 }
 
 .cart-canvas aside {
@@ -9268,4 +9302,7 @@ jumbotron-section {
   .homepage-jumbotron {
     height: 600px;
   }
+}
+.number {
+  font-family: "Source Sans Pro";
 }

@@ -13,13 +13,13 @@
                   <table>
                     <tr>
                       <td class='header left'>TOTAL </td>
-                      <td class='price header right'>{{ cart.total_price | money }}</td> 
+                      <td class='number total-price header right'>{{ cart.total_price | money }}</td> 
                     </tr>
                     <tr>
                       <td class='left'>
-                        <span class="item-count">{{ cart.item_count | items }}</span> ITEMS
+                        <span class="number item-count">{{ cart.item_count | items }}</span> ITEMS
                       </td>
-                      <td class='price right'>
+                      <td class='number total-price right'>
                         {{ cart.total_price | money }}
                       </td>
                     </tr>
@@ -47,9 +47,22 @@
                   </a>
                 </div>
                 <div class='product-details'>
-                  <span class="qty">QTY <input name="updates[]" class="update" id="{{item.id}}" value="{{ item.quantity }}" /><span>
                   <a class="prod-title" href="{{ item.product.url | within: collections.all }}"> {{ item.title }}</a>
-                  <span class="item-price">{{ item.price | money }}</span>
+                  <span class="qty">
+                    <span class='number price-item'>
+                      {{ item.price | money }}
+                    </span>
+                    <span class='times'>x</span>
+                    QTY <input name="updates[]" class="quantity number update" id="{{item.id}}" value="{{ item.quantity }}" />
+                    <span class='plus-btn btn btn-primary'>+</span>
+                    <span class='minus-btn btn btn-primary'>-</span>
+                  </span>
+                    
+                  <span class='subtotal'>
+                    <span class='text'>SUBTOTAL</span>
+                    <span class='number amt price'>{{ item.line_price | money }}</span>
+                  </span>
+                  
                 </div>
               </div>
           {% endfor %}
