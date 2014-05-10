@@ -8,7 +8,7 @@
       <form action="/cart/add" method="post" enctype="multipart/form-data">
         <div class='qty hide'> QTY <input min="1" type="number" id="quantity" class='product-quantity' name="quantity" value="1" /> </div>
         <div id='product-add' class='add-to-cart'>
-          <input type="submit" value="+ CART" class="add btn btn-md btn-primary right-off-canvas-toggle" />
+          <input type="submit" value="+ CART" class="add btn {% if template == 'index' %}btn-lg{%else%}btn-md{%endif%} btn-primary right-off-canvas-toggle" />
           <select name="id" class="product-select hidden">
           {% for variant in product.variants %}
             <option value="{{ variant.id }}">{{ variant.title }} - {{ variant.price | money }}</option>

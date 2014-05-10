@@ -6,7 +6,6 @@ p aside {
 
 .off-canvas-wrap {
   -webkit-backface-visibility: hidden;
-  position: relative;
   width: 100%;
   overflow: hidden;
 }
@@ -18,7 +17,6 @@ p aside {
 
 .inner-wrap {
   -webkit-backface-visibility: hidden;
-  position: relative;
   width: 100%;
   *zoom: 1;
   -webkit-transition: -webkit-transform 500ms ease;
@@ -38,6 +36,7 @@ p aside {
 }
 
 .right-off-canvas-menu {
+  overflow: hidden;
   -webkit-backface-visibility: hidden;
   width: 48.10rem;
   top: 0;
@@ -927,6 +926,16 @@ ul.off-canvas-list li a:hover {
   position: absolute;
   left: 0;
   border: 1px solid #b8b8b8;
+}
+
+.header-blog {
+  background-color: #fff;
+  position: absolute;
+  z-index: 1;
+  height: 81px;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 iframe {

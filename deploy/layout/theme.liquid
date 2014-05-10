@@ -55,10 +55,8 @@
               <header>
                 {% include 'nav' %}
               </header>
-              {{ content_for_layout }}          
-              <center>
-                {% include 'footer' %}
-              </center>
+              {{ content_for_layout }}
+              {% include 'footer' %}
             </div>
           </div>
           {% include 'free_shipping' %}
