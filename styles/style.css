@@ -375,6 +375,10 @@ ul.off-canvas-list li a:hover {
   border-radius: 30px;
 }
 
+.footer {
+  margin-top: 45px;
+}
+
 .breadcrumb {
   position: absolute;
   text-align: left;
@@ -8765,6 +8769,36 @@ input.btn {
   letter-spacing: 0px;
 }
 
+.sub-confirm {
+  width: 100%;
+  text-align: center;
+}
+.sub-confirm .head {
+  margin: 0 auto;
+  border-bottom: 1px solid #b8b8b8;
+  width: 60%;
+}
+.sub-confirm .head h1 {
+  color: #67c5a9;
+  font-size: 43px;
+  font-weight: 400;
+  margin-bottom: 25px;
+}
+.sub-confirm .subhead {
+  margin: 0 auto;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.sub-confirm .subhead h1 {
+  color: #b8b8b8;
+  font-weight: 400;
+  font-size: 26px;
+}
+.sub-confirm img {
+  width: 75%;
+  margin: 0 auto;
+}
+
 @media (max-width: 1100px) {
   .subscription .sub-form {
     width: 97%;
@@ -8931,6 +8965,13 @@ input.btn {
     color: #404041;
     font-style: italic;
     font-size: 12px;
+  }
+
+  .sub-confirm .head {
+    width: 80%;
+  }
+  .sub-confirm img {
+    width: 100%;
   }
 }
 .step-link:hover {

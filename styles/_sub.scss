@@ -409,6 +409,36 @@
 }
 
 
+.sub-confirm{
+  width: 100%;
+  text-align: center;
+  .head{
+    margin: 0 auto;
+    border-bottom: 1px solid $faded-color;
+    width: 60%;
+    h1{
+      color: $accent-color;
+      font-size: 43px;
+      font-weight: 400;
+      margin-bottom: 25px;
+    }
+  }
+  .subhead{
+    margin: 0 auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    h1{
+      color: $faded-color;
+      font-weight: 400;
+      font-size: 26px;
+    }
+  }
+  img{
+    width: 75%;
+    margin: 0 auto;
+  }
+}
+
 @media (max-width: 1100px) {
   .subscription{
     .sub-form{
@@ -614,6 +644,15 @@
       }
     }
   }
+  
+  .sub-confirm{
+    .head{
+      width: 80%;
+    }
+    img{
+      width: 100%;
+    }
+  }
 }
 
 .step-link:hover{
@@ -639,3 +678,5 @@
     }
   }
 }
+
+
