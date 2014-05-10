@@ -15,6 +15,7 @@
     text-align: center;
     .head{
       h1{
+        margin-top: 1%;
         font-weight: 400;
       }
       width: 65%;
@@ -26,6 +27,7 @@
       h1{
         font-size: 18px;
         font-weight: 400;
+        margin-bottom:0px;
         color: $faded-color;
       }      
     }
@@ -349,6 +351,9 @@
         margin-bottom: 11px;
         width: 75%;
         margin: 0 auto;
+        .months{
+          font-family: $body-text-font !important;
+        }
       }
       .pricing{
         color: $primary-color;
@@ -403,45 +408,6 @@
   }
 }
 
-@media (min-width: 520px) {
-  .subscription{
-    .sub-form{
-      #stepTwo{
-        .btn{
-          margin-left: 15px;
-          margin-right: 15px;
-        }
-      }
-    }
-  }
-}
-
-
-@media (min-width: 675px) {
-  .subscription{
-    .sub-form{
-      #stepTwo{
-        .btn{
-          margin-left: 2px;
-          margin-right: 2px;
-        }
-      }
-    }
-  }
-}
-
-@media (min-width: 830px) {
-  .subscription{
-    .sub-form{
-      #stepTwo{
-        .btn{
-          margin-left: 40px;
-          margin-right: 40px;
-        }
-      }
-    }
-  }
-}
 
 @media (max-width: 1100px) {
   .subscription{
@@ -457,20 +423,122 @@
       }
     }
   }
+  .sub-hero{
+    .right{
+      .head{
+        h1{
+          margin-bottom: -3%;
+        }
+      }
+      .subhead{
+        h1{
+          margin-top: 2%;
+          margin-bottom: -14px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .sub-body{
+    text-align: center;
+    padding-top: 42px;
+    .sub-copy{
+      width: 100%;
+      margin: 0 auto;
+      border: none;
+      .copy{
+        float:left;
+        margin-top: 68px;
+        font-size: 13px;
+      }
+      img{
+        float:right;
+        width: 50%;
+      }
+    }
+    .subscription{
+      margin-top: -9px;
+      width: 100%;
+    }
+  }
+  .sub-hero{
+    .right{
+      .head{
+        h1{
+          font-size: 25px
+        }
+      }
+      .subhead{
+        h1{
+          font-size: 16px;
+        }
+      }
+      .sub-steps{
+        margin-bottom: -17px;
+        .step{
+          font-size: 18px;
+          width: 30px;
+        }
+        .action{
+          font-size: 16px;
+        }
+      }
+      .submit-btn{
+        .btn{
+          padding: 4px 16px;
+        }
+      }
+    }
+  }
 }
 
 
 @media (max-width: 767px) {
+  .sub-body{
+    .sub-copy{
+      .copy{
+        float:none;
+        margin-top: 0px;
+      }
+      img{
+        float:none;
+        width: 90%;
+      }
+    }
+    .subscription{
+      margin-top: 25px;
+      .sub-form{
+        width: 100%;
+        .step{
+          margin-top: -8px;
+        }
+      }
+    }
+  }
+  .sub-hero{
+    position: static;
+    .hero{
+      width: 100%;
+      position: static;
+    }
+    .right{
+      padding-top: 15px;
+      padding-bottom: 15px;
+      width: 100%;
+      position: static;
+    }
+  }
+  
+  
   .subscription{
     .copy{
       font-size: 16px;
     }
     .sub-form{
       h4{
-        font-size: 16px;
-      }
-      .status{
-        display:none;
+        font-size: 18px;
       }
       .btn{
         font-size: 16px;
@@ -532,7 +600,6 @@
             word-break: break-all;
             .months{
               font-size: 11px;
-              font-family: $body-text-font;
             }
           }
           .pricing{
@@ -546,15 +613,16 @@
   }
 }
 
+.step-link:hover{
+  text-decoration: none;
+}
+
 
 @media (max-width: 400px) {
-  
   .subscription{
     .sub-form{
-      #stepTwo{
-        .btn-group{
-          margin-left:18px;
-        }
+      h4{
+        font-size: 14px;
       }
     }
   }
