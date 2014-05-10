@@ -8372,6 +8372,7 @@ input.btn {
 }
 .sub-hero .hero {
   width: 50%;
+  border-right: 2px solid #b8b8b8;
 }
 .sub-hero .right {
   position: absolute;
@@ -8431,8 +8432,36 @@ input.btn {
   font-weight: 600;
   width: 50%;
 }
+.sub-hero .right .btn:hover {
+  border-color: #d8563d;
+  color: #d8563d;
+}
+
+.sub-body {
+  padding-top: 100px;
+  margin-bottom: 100px;
+}
+.sub-body .sub-copy {
+  border-right: 1px solid #b8b8b8;
+  float: left;
+  width: 50%;
+  text-align: center;
+}
+.sub-body .sub-copy h1 {
+  margin-top: -35px;
+  color: #67c5a9;
+  font-size: 22px;
+}
+.sub-body .sub-copy img {
+  margin: 0 auto;
+  width: 70%;
+  margin-top: 15px;
+}
 
 .subscription {
+  width: 50%;
+  float: right;
+  margin-top: -74px;
   text-align: center;
 }
 .subscription #alerts {
@@ -8446,36 +8475,54 @@ input.btn {
   background-image: none;
 }
 .subscription .copy {
-  font-size: 25px;
-  color: #b8b8b8;
+  font-size: 22px;
+  color: #67c5a9;
   margin: 30px 0;
+  font-weight: 600;
+}
+.subscription .sub-form {
+  width: 90%;
+  margin: 0 auto;
 }
 .subscription .sub-form .step {
   text-align: left;
   float: left;
   position: absolute;
   font-size: 22px;
-  color: white;
+  color: #67c5a9;
   margin-left: 5px;
+  width: 32px;
+  height: 32px;
+  border-radius: 20px;
+  background-color: #fff;
+  text-align: center;
+  margin-top: -5px;
 }
 .subscription .sub-form .status {
+  color: #fff;
   text-align: right;
-  right: 24px;
-  margin-top: -35px;
+  right: 14px;
+  margin-top: -26px;
   float: right;
   position: absolute;
   width: 40px;
   height: 40px;
-  border-radius: 40px;
-  background-color: white;
-  color: #67c5a9;
-  font-size: 40px;
+  font-size: 34px;
   line-height: 1px;
+  opacity: 0.0;
+  -webkit-transition: opacity 150ms ease-in-out;
+  -moz-transition: opacity 150ms ease-in-out;
+  -o-transition: opacity 150ms ease-in-out;
+  -ms-transition: opacity 150ms ease-in-out;
+  transition: opacity 150ms ease-in-out;
+}
+.subscription .sub-form .status-complete {
+  opacity: 1;
 }
 .subscription .sub-form h4 {
-  font-size: 28px;
+  font-size: 20px;
   color: white;
-  font-weight: 100;
+  font-weight: 400;
   letter-spacing: 1px;
 }
 .subscription .sub-form .heading {
@@ -8537,45 +8584,131 @@ input.btn {
   text-align: center;
   width: 60%;
 }
+.subscription .sub-form #stepTwo {
+  padding: 0;
+}
+.subscription .sub-form #stepTwo .panel-body {
+  padding-left: 0;
+  padding-right: 0;
+}
 .subscription .sub-form #stepTwo .instructions {
   color: #b8b8b8;
   margin-top: -13px;
   margin-bottom: 10px;
 }
-.subscription .sub-form #stepTwo .btn {
-  padding: 5px;
-  margin-bottom: 30px;
-  margin-left: 2px;
-  margin-right: 2px;
+.subscription .sub-form #stepTwo .style-list {
+  list-style: none;
+  padding: 0;
+  width: 100%;
 }
-.subscription .sub-form #stepTwo label:before {
+.subscription .sub-form #stepTwo .style-list li {
+  display: inline-block;
+  width: 24%;
+  margin: 0;
+}
+.subscription .sub-form #stepTwo .style-list li .btn {
+  padding: 0px;
+  margin: 0;
+}
+.subscription .sub-form #stepTwo .style-list li input[type=checkbox] {
+  display: none;
+}
+.subscription .sub-form #stepTwo .style-list li label:before {
   font-family: FontAwesome;
   content: "\f096";
   color: #b8b8b8;
   display: inline-block;
-  position: absolute;
+  margin-left: 2px;
   bottom: -27px;
-  left: 49px;
   text-align: center;
 }
-.subscription .sub-form #stepTwo label.active:before {
+.subscription .sub-form #stepTwo .style-list li label.active:before {
   font-family: FontAwesome;
   content: "\f046";
-  color: #e85c41;
+  color: #fff;
+}
+.subscription .sub-form #stepThree {
+  padding: 0;
+}
+.subscription .sub-form #stepThree .panel-body {
+  padding-left: 0;
+  padding-right: 0;
+}
+.subscription .sub-form #stepThree .btn {
+  width: 100%;
+  padding: 4px 20px;
+  margin: 0;
+}
+.subscription .sub-form #stepThree .plan-list {
+  width: 100%;
+  padding: 0;
+  list-style: none;
+}
+.subscription .sub-form #stepThree .plan-list li {
+  width: 30%;
+  display: inline-block;
+  margin-left: 1%;
+  margin-right: 1%;
+}
+.subscription .sub-form #stepThree .plan-list li input[type=radio] {
+  display: none;
+}
+.subscription .sub-form #stepFour {
+  padding: 0;
 }
 .subscription .sub-form #stepFour .pricing {
   margin-bottom: 0px;
 }
-.subscription .sub-form #upfrontForm {
+.subscription .sub-form #stepFour .panel-body {
+  padding-left: 0;
+  padding-right: 0;
+}
+.subscription .sub-form #stepFour .pmt-list {
+  list-style: none;
+  width: 100%;
+  padding: 0;
+}
+.subscription .sub-form #stepFour .pmt-list .btn {
+  width: 100%;
+  margin: 0;
+}
+.subscription .sub-form #stepFour .pmt-list li {
+  display: inline-block;
+  width: 43%;
+  margin-left: 3%;
+  margin-right: 3%;
+  max-width: 200px;
+}
+.subscription .sub-form #stepFour .pmt-list li input[type=radio] {
+  display: none;
+}
+.subscription .sub-form #stepFour #upfrontForm {
   padding-top: 15px;
 }
-.subscription .sub-form #upfrontForm .btn {
-  margin: 0 -3px;
+.subscription .sub-form #stepFour #upfrontForm .btn {
+  margin: 0;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+.subscription .sub-form #stepFour #upfrontForm .upfront-list {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+.subscription .sub-form #stepFour #upfrontForm .upfront-list li {
+  width: 24%;
+  display: inline-block;
+}
+.subscription .sub-form #stepFour #upfrontForm .upfront-list li input[type=radio] {
+  display: none;
 }
 .subscription .sub-form .main-plan {
   border-bottom: 1px #b8b8b8 solid;
   padding-bottom: 8px;
   margin-bottom: 11px;
+  width: 75%;
+  margin: 0 auto;
 }
 .subscription .sub-form .pricing {
   color: #404041;
@@ -8622,7 +8755,7 @@ input.btn {
 }
 .subscription .sub-form .style-pic .style-desc .style-name h4 {
   color: #404041;
-  font-weight: lighter;
+  font-weight: 400;
   font-size: 18px;
   letter-spacing: 0px;
 }
@@ -8643,6 +8776,17 @@ input.btn {
   .subscription .sub-form #stepTwo .btn {
     margin-left: 40px;
     margin-right: 40px;
+  }
+}
+@media (max-width: 1100px) {
+  .subscription .sub-form {
+    width: 97%;
+  }
+  .subscription .sub-form #giftForm input {
+    width: 75%;
+  }
+  .subscription .sub-form #giftForm textarea {
+    width: 75%;
   }
 }
 @media (max-width: 767px) {
@@ -8711,6 +8855,7 @@ input.btn {
   }
   .subscription .sub-form #stepFour #upfrontForm .main-plan .months {
     font-size: 11px;
+    font-family: "Raleway";
   }
   .subscription .sub-form #stepFour #upfrontForm .pricing {
     color: #404041;
@@ -9193,6 +9338,9 @@ input.btn {
 }
 .header .cart-icon {
   fill: #67c5a9;
+}
+.header .cart-count {
+  font-size: 14px;
 }
 .header .free-shipping {
   font-style: italic;

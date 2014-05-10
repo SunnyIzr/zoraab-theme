@@ -14,7 +14,7 @@ var stepOneComplete = function(){
     valdiateCompleteForm()
     $('#one-alert').alert('close')
     if ($('#me').is(':checked')) {
-      $($('.status')[0]).html('<i class="fa fa-check"></i>')
+      $($('.status')[0]).addClass('status-complete')
       $('#stepOne').collapse('hide')
       $('#stepTwo').collapse('show')
       if ($('#giftForm').hasClass('in')) {
@@ -22,7 +22,7 @@ var stepOneComplete = function(){
       }
     }
     if ($('#gift').is(':checked')) {
-      $($('.status')[0]).html('')
+      $($('.status')[0]).removeClass('status-complete')
       $('#giftForm').collapse('show')
     }
   })
@@ -31,7 +31,7 @@ var stepOneComplete = function(){
 var recipientComplete = function(){
   $( "input[name='recipient_name']" ).change(function(){
     if ($('#recipient_name').val().length > 0) {
-      $($('.status')[0]).html('<i class="fa fa-check"></i>')
+      $($('.status')[0]).addClass('status-complete')
     }
   })
 }
@@ -39,14 +39,14 @@ var stepTwoComplete = function(){
   $( "input[class='style']" ).change(function(){
     valdiateCompleteForm()
     $('#two-alert').alert('close')
-    $($('.status')[1]).html('<i class="fa fa-check"></i>')   
+    $($('.status')[1]).addClass('status-complete')   
   })
 }
 var stepThreeComplete = function(){
   $( "input[class='qty']" ).change(function(){
     valdiateCompleteForm()
     $('#three-alert').alert('close')
-    $($('.status')[2]).html('<i class="fa fa-check"></i>')
+    $($('.status')[2]).addClass('status-complete')
     $('#stepThree').collapse('hide')
     $('#stepFour').collapse('show')
     changeUpfrontPlanPricing()
@@ -58,10 +58,10 @@ var stepFourComplete = function(){
     $('#pmt-alert').alert('close')
     if ($('#monthly').is(':checked')) {
       $('#month-alert').alert('close')
-      $($('.status')[3]).html('<i class="fa fa-check"></i>')
+      $($('.status')[3]).addClass('status-complete')
       $('#stepFour').collapse('hide')
     } if ($('#once').is(':checked')) {
-      $($('.status')[3]).html('')
+      $($('.status')[3]).removeClass('status-complete')
       $( "input[type='submit']" ).removeClass('submit')
       $('#upfrontForm').collapse('show')
     }
@@ -71,7 +71,7 @@ var stepFourComplete = function(){
 var upfrontMonths = function(){
   $( "input[class='upfront_months']" ).change(function(){
     $('#months-alert').alert('close')
-    $($('.status')[3]).html('<i class="fa fa-check"></i>')
+    $($('.status')[3]).addClass('status-complete')
     $('#stepFour').collapse('hide')
     valdiateCompleteForm()
   })

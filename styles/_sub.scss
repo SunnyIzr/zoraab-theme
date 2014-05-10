@@ -5,6 +5,7 @@
   width: 100%;
   .hero{
     width: 50%;
+    border-right: 2px solid $faded-color;
   }
   .right{
     position: absolute;
@@ -65,9 +66,39 @@
       font-weight: 600;
       width: 50%;
     }
+    .btn:hover{
+      border-color: $emphasis-hover-color;
+      color: $emphasis-hover-color;
+    }
   }
 }
+
+.sub-body{
+  padding-top: 100px;
+  margin-bottom: 100px;
+  .sub-copy{
+    border-right: 1px solid $faded-color;
+    float: left;
+    width: 50%;
+    text-align: center;
+    h1{
+      margin-top: -35px;
+      color: $accent-color;
+      font-size: 22px;
+    }
+    img{
+      margin: 0 auto;
+      width: 70%;
+      margin-top: 15px;
+    }
+  }
+}
+
+
 .subscription{
+  width: 50%;
+  float: right;
+  margin-top: -74px;
   #alerts{
     width: 100%;
     margin: 0 auto;
@@ -80,37 +111,53 @@
   }
   text-align: center;
   .copy{
-    font-size: 25px;
-    color: $faded-color;
+    font-size: 22px;
+    color: $accent-color;
     margin: 30px 0;
+    font-weight: 600;
   }
   .sub-form{
+    width: 90%;
+    margin: 0 auto;
     .step{
       text-align: left;
       float: left;
       position: absolute;
       font-size: 22px;
-      color: white;
+      color: $accent-color;
       margin-left: 5px;
+      width: 32px;
+      height: 32px;
+      border-radius: 20px;
+      background-color: #fff;
+      text-align: center;
+      margin-top: -5px;
     }
     .status{
+      color: #fff;
       text-align: right;
-      right: 24px;
-      margin-top: -35px;
+      right: 14px;
+      margin-top: -26px;
       float: right;
       position: absolute;
       width: 40px;
       height: 40px;
-      border-radius: 40px;
-      background-color: white;
-      color: $accent-color;
-      font-size: 40px;
+      font-size: 34px;
       line-height: 1px;
+      opacity: 0.0;
+      -webkit-transition: opacity 150ms ease-in-out;
+      -moz-transition: opacity 150ms ease-in-out;
+      -o-transition: opacity 150ms ease-in-out;
+      -ms-transition: opacity 150ms ease-in-out;
+      transition: opacity 150ms ease-in-out;
+    }
+    .status-complete{
+      opacity: 1.0
     }
     h4{
-      font-size: 28px;
+      font-size: 20px;
       color: white;
-      font-weight: 100;
+      font-weight: 400;
       letter-spacing: 1px;
     }
     .heading{
@@ -175,49 +222,133 @@
         }
       }     
       #stepTwo{
+        padding: 0;
+        .panel-body{
+          padding-left: 0;
+          padding-right: 0;
+        }
         .instructions{
           color: $faded-color;
           margin-top: -13px;
           margin-bottom: 10px;
         }
-        .btn{
-          padding: 5px;
-          margin-bottom: 30px;
-          margin-left: 2px;
-          margin-right: 2px;
-        }
-        label:before {
-          font-family: FontAwesome;
-          content: "\f096";
-          color: $faded-color;
-          display: inline-block;  
-          position: absolute;
-          bottom: -27px;
-          left: 49px;
-          text-align: center;
-          }
-          label.active:before{
+        .style-list{
+          list-style: none;
+          padding: 0;
+          width: 100%;
+          li{
+            display: inline-block;
+            width:24%;
+            margin: 0;
+            .btn{
+              padding: 0px;
+              margin: 0;
+              img{
+                // margin-top: -28px;
+              }
+            }
+            input[type=checkbox] {  
+              display: none;  
+            }
+            label:before {
             font-family: FontAwesome;
-            content: "\f046";
-            color: $emphasis-color;
-            
+            content: "\f096";
+            color: $faded-color;
+            display: inline-block;  
+            margin-left: 2px;
+            bottom: -27px;
+            text-align: center;
+            }
+            label.active:before{
+              font-family: FontAwesome;
+              content: "\f046";
+              color: #fff;
+            }
           }
+        }
+      }
+      #stepThree{
+        padding: 0;
+        .panel-body{
+          padding-left: 0;
+          padding-right: 0;
+        }
+        .btn{
+          width: 100%;
+          padding: 4px 20px;
+          margin:0;
+        }
+        .plan-list{
+          width: 100%;
+          padding: 0;
+          list-style: none;
+          li{
+            width: 30%;
+            display: inline-block;
+            margin-left: 1%;
+            margin-right: 1%;
+            input[type=radio]{
+              display: none;
+            }
+          }
+        }
       }
       #stepFour{
+        padding: 0;
         .pricing{
           margin-bottom: 0px;
         }
-      }
-      #upfrontForm{
-        padding-top: 15px;
-        .btn{
-          margin: 0 -3px;
+        .panel-body{
+          padding-left: 0;
+          padding-right: 0;
+        }
+        .pmt-list{
+          list-style: none;
+          width: 100%;
+          padding: 0;
+          .btn{
+            width: 100%;
+            margin: 0;
+          }
+          li{
+            display: inline-block;
+            width: 43%;
+            margin-left: 3%;
+            margin-right: 3%;
+            max-width: 200px;
+            input[type=radio]{
+              display: none;
+            }
+          }
+        }
+        #upfrontForm{
+          padding-top: 15px;
+          .btn{
+            margin: 0;
+            width: 100%;
+            padding-left: 0;
+            padding-right: 0;
+          }
+          .upfront-list{
+            list-style: none;
+            padding: 0;
+            width: 100%;
+            li{
+              width: 24%;
+              display: inline-block;
+              input[type=radio]{
+                display:none;
+              }
+            }
+          }
         }
       }
       .main-plan{
         border-bottom: 1px $faded-color solid;
         padding-bottom: 8px;
         margin-bottom: 11px;
+        width: 75%;
+        margin: 0 auto;
       }
       .pricing{
         color: $primary-color;
@@ -261,7 +392,7 @@
             padding: 20% 0;
             h4{
               color:$primary-color;
-              font-weight: lighter;
+              font-weight: 400;
               font-size: 18px;
               letter-spacing: 0px;
             }
@@ -306,6 +437,22 @@
         .btn{
           margin-left: 40px;
           margin-right: 40px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .subscription{
+    .sub-form{
+      width: 97%;
+      #giftForm{
+        input{
+          width: 75%;
+        }
+        textarea{
+          width: 75%;
         }
       }
     }
@@ -385,6 +532,7 @@
             word-break: break-all;
             .months{
               font-size: 11px;
+              font-family: $body-text-font;
             }
           }
           .pricing{

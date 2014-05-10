@@ -12,11 +12,11 @@
               <a href='/account/login'> LOG IN </a>
             {% endif %}
           </li>
-          <li><a href='/cart' class="right-off-canvas-toggle" id="cart" > CART (<span class="item-count">{{cart.item_count}}</span>) {% include 'icon_cart' %} </a></li>
+          <li><a href='/cart' class="right-off-canvas-toggle" id="cart" > CART <span class='number cart-count'>(<span class="item-count">{{cart.item_count}}</span>)</span> {% include 'icon_cart' %} </a></li>
         </ul>
       </div>
-      <div class='number'>
-        <i class="fa fa-phone"></i> (800) 973-8247
+      <div class='number hide'>
+        <i class="fa fa-phone"></i> (866) 981-5188
       </div>
       <div class='free-shipping'>
         <a href='#' data-toggle="modal" data-target="#freeShipping">Free shipping on all orders!</a>

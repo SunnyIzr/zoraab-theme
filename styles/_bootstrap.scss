@@ -2163,8 +2163,8 @@ fieldset[disabled] .btn-success.active {
 .btn-info.active,
 .open .dropdown-toggle.btn-info {
   color: #ffffff;
-  background-color: #d8563d;
-  border-color: #d8563d;
+  background-color: $emphasis-hover-color;
+  border-color: $emphasis-hover-color;
 }
 .btn-info:active,
 .btn-info.active,
