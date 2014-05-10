@@ -9,6 +9,10 @@ $(function() {
     e.preventDefault();
   })
   
+  $(document).on('click','.quantity', function(e){
+    e.preventDefault();
+  })
+  
   $(document).on('mouseenter', '.empty-cart', function(e){
     $('#co').tooltip('show')
   })
@@ -164,7 +168,7 @@ $(function() {
     "<div class='line-items'>
       <div><a href='/cart/change?line="+1+"&quantity=0' class='remove-button close-button svg-close-icon'>"+closeButton+"</a></div>
       <div class='img-wrapper'><a href="+item.url+">  
-        <img class='prod-img' src="+img+" alt= title />
+        <img class='img-responsive' src="+img+" alt= title />
       </a></div>
       <div class='product-details'>
       <a class='prod-title' href='"+url+"'>"+title+"</a>

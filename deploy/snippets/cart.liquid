@@ -43,7 +43,7 @@
                 </div>
                 <div class='img-wrapper'>
                   <a href="{{ item.product.url | within: collections.all }}">  
-                    <img id="prod-img" src="{{ item.product.featured_image.src | product_img_url: 'compact' }}" alt="{{ item.title | escape }}" />
+                    <img id="prod-img" src="{{ item.product.featured_image.src | product_img_url: 'compact' }}" class='img-responsive' alt="{{ item.title | escape }}" />
                   </a>
                 </div>
                 <div class='product-details'>
