@@ -931,7 +931,7 @@ ul.off-canvas-list li a:hover {
 .header-blog {
   background-color: #fff;
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   height: 81px;
   top: 0;
   left: 0;
@@ -939,6 +939,7 @@ ul.off-canvas-list li a:hover {
 }
 
 iframe {
+  z-index: 1;
   position: absolute;
   top: 14px;
   left: 0;
@@ -9508,6 +9509,7 @@ input.btn {
 }
 .header-section {
   max-width: 1600px;
+  z-index: 3;
 }
 
 .header {
@@ -9559,7 +9561,7 @@ input.btn {
   margin-top: 0px;
   margin-bottom: 0px !important;
   border: none;
-  z-index: 2;
+  z-index: 3;
 }
 .navbar .navbar-brand {
   padding-top: 0px;
