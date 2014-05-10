@@ -307,9 +307,10 @@ ul.off-canvas-list li a:hover {
   font-style: italic;
   font-size: 12px;
 }
-.email-signup input {
+.email-signup input[type=email] {
   padding: 5px;
   font-size: 15px;
+  color: #404041;
 }
 
 .press-banner {
