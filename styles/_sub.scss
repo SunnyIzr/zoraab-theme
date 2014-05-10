@@ -545,6 +545,9 @@
         padding: 10px 25px;
         margin: 0 3px;
       }
+      .status{
+        margin-top: -23px;
+      }
        #giftForm{
         margin-top: 5px;
         font-size: 14px;
@@ -623,6 +626,15 @@
     .sub-form{
       h4{
         font-size: 14px;
+      }
+      .style-pic{
+        .style-desc{
+          .style-name{
+            h4{
+              font-size: 14px;
+            }
+          }
+        }
       }
     }
   }

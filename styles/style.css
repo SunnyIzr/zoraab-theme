@@ -8872,6 +8872,9 @@ input.btn {
     padding: 10px 25px;
     margin: 0 3px;
   }
+  .subscription .sub-form .status {
+    margin-top: -23px;
+  }
   .subscription .sub-form #giftForm {
     margin-top: 5px;
     font-size: 14px;
@@ -8936,6 +8939,9 @@ input.btn {
 
 @media (max-width: 400px) {
   .subscription .sub-form h4 {
+    font-size: 14px;
+  }
+  .subscription .sub-form .style-pic .style-desc .style-name h4 {
     font-size: 14px;
   }
 }
