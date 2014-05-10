@@ -1,5 +1,9 @@
 $(function() {
   
+  $('.inner-wrap').click(function(e){
+    $('.off-canvas-wrap').removeClass('move-left')
+  })
+  
   $('.button-ks').click(function(e){
     e.preventDefault();
     Foundation.libs.offcanvas.click_toggle_class(e,'move-left')
