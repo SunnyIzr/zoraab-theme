@@ -62,7 +62,8 @@ $(function() {
     e.preventDefault();
     Foundation.libs.offcanvas.click_toggle_class(e,'move-left')
     var url = this.href
-    $(this).parent().parent().remove()
+    lineItemEl = $(this).parent().parent()
+    lineItemEl.find('.loader').addClass('loading')
     $.get(url,function(r){
       $.getJSON("/cart.js",function(response){ 
         var item_count = response.item_count
@@ -80,6 +81,8 @@ $(function() {
         }
       }, "json");
       changeLineNumbers()  
+    }).done(function(){
+      lineItemEl.remove()
     })
   });
 
@@ -202,6 +205,7 @@ $(function() {
       $.each(items,function(index,value){
         $('#'+value.id).parent().parent().parent().find('.amt').html('$'+((value.line_price/100).toFixed(2)))
         $('#'+value.id).val(value.quantity)
+        $('#'+value.id).parent().parent().parent().find('.remove-button')[0].href='/cart/change?line='+(index+1)+"&quantity=0"
       })
       
     },"json")
@@ -218,3 +222,4 @@ $(function() {
 var closeButton = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
 <path fill="#404041" d="M51.311,51.315L71.426,31.13c0.361-0.363,0.361-0.951-0.004-1.313c-0.363-0.359-0.951-0.363-1.313,0.004  L50,50L29.891,29.821c-0.363-0.366-0.95-0.363-1.313-0.004c-0.365,0.363-0.365,0.95-0.004,1.313l20.115,20.185L28.574,71.501  c-0.361,0.363-0.361,0.951,0.004,1.313c0.181,0.18,0.417,0.27,0.655,0.27c0.238,0,0.477-0.091,0.658-0.274L50,52.631L70.109,72.81  c0.181,0.183,0.421,0.274,0.658,0.274c0.238,0,0.473-0.091,0.655-0.27c0.365-0.363,0.365-0.95,0.004-1.313L51.311,51.315z"/>
 </svg>'
+

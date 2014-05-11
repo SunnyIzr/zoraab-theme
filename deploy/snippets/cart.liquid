@@ -36,6 +36,7 @@
           <div id="container">
           {% for item in cart.items %}
               <div class="line-items">
+                <div class='loader'><div class='overlay'></div><img src='{{"loader.gif" | asset_url}}' class='img-responsive'></div>
                 <div>
                   <a href="/cart/change?line={{ forloop.index }}&quantity=0" class='remove-button close-button svg-close-icon'>
                     {% include 'icon_close' %}
