@@ -6,51 +6,32 @@
   label {  
       display: inline-block;  
       cursor: pointer;  
-      position: relative;  
-      padding-left: 12px;  
+      position: relative;
+      padding-left: 10px;
   }  
 
-  input[type=radio]:checked + label:before {  
-    content: "";  
-    display: inline-block;  
-
-    width: 16px;  
-    height: 16px;  
-    border-radius: 8px;
-    margin-left: -10px;
-    margin-top: 2px;  
-    position: absolute;  
-    left: 0;  
-    border: 1px solid $faded-color;
-    background-color: $accent-color;
-  }
-
-  label.checked:before {  
-      display:none;
+  label.checked:before { 
       content: "";  
-      display: inline-block;  
-      width: 16px;  
-      height: 16px;  
-      border-radius: 8px;
-      margin-left: -10px;
-      margin-top: 2px;  
-      position: absolute;  
-      left: 0;  
-      border: 1px solid $faded-color;
-      background-color: $accent-color !important;
+      display: inline-block;
+      font-family: FontAwesome;
+      content: "\f14a";
+      color: $accent-color;
+      font-size: 18px;
+      position: absolute;
+      top: -1px;
+      left: -9px;
   }
 
   label:before {  
     content: "";  
-    display: inline-block;  
-    width: 16px;  
-    height: 16px;  
-    border-radius: 8px;
-    margin-left: -10px;
-    margin-top: 2px;  
-    position: absolute;  
-    left: 0;  
-    border: 1px solid $faded-color;
+    display: inline-block;
+    font-family: FontAwesome;
+    content: "\f096";
+    color: $faded-color;
+    font-size: 18px;
+    position: absolute;
+    top: -1px;
+    left: -9px;
     
   }
 }

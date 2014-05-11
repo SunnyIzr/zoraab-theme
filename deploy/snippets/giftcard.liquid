@@ -13,23 +13,26 @@
     </div>
     <div class="col-sm-3">
       <div class='info'>
+        <form action="/cart/add" method="post" enctype="multipart/form-data">
         <h2>{{ product.title }}</h2>
         <h4>{{product.vendor}}</h4>
         <div class='price-details'>
           <div class='mid-border'></div>
-          <h3 class='gift'><select id="product-select-{{ product.id }}" name="id">
+          <h3 class='gift'>
+            <select id="product-select-{{ product.id }}" name="id" class='product-select'>
           {% for variant in product.variants %}
             <option value="{{ variant.id }}">{{ variant.title | escape }}</option>
           {% endfor %}
           </select></h3>
         </div>
-        <div class='qty'> QTY <input min="1" type="number" id="quantity" name="quantity" value="1" /> </div>
+        <div class='qty'> QTY <input min="1" type="number" id="quantity" class='product-quantity' name="quantity" value="1" /> </div>
         <div class='add-to-cart'>
-          <input type="submit" value="+ ADD TO CART" id="add" class="btn btn-lg btn-info" />
+          <input type="submit" value="+ ADD TO CART" class="add btn btn-lg btn-info right-off-canvas-toggle" />
         </div>
         <div class='description'>
           {{ product.description }}
         </div>
+      </form>
       </div>
     </div>
   </div>

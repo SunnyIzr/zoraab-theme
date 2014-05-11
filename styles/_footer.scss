@@ -77,9 +77,15 @@
       display: inline-block;
       width: 60px;
       height: 60px;
-      background-color: $accent-color;
+      background-color: #fff;
       text-align: center;
       border-radius: 30px;
+      a{
+        color: $faded-color !important;  
+      }
+      a:hover{
+        color: $accent-color !important;  
+      }
     }
   }
 }

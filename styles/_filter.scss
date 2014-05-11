@@ -55,6 +55,21 @@
       li{
         float: left;
         width: 20%;
+        position: relative;
+        .selected-tag{
+          position: absolute;
+          top: 0px;
+          right: 0px;
+          margin-top: -14px;
+          margin-right: -14px;
+          svg{
+            width: 60px;
+            height: 60px;
+            path{
+              fill: #fff;
+            }
+          }
+        }
       }
       .accessory-list{
         width: 27%;
@@ -63,18 +78,60 @@
         width: 10%;
         .style{
         li{
-          float: none;
           margin-bottom: 10px;
           margin-left: 10px;
           cursor: pointer;
+          width:100%;
+          display:inline-block;
+          float:left;
           }
         }
       }
       .color-list{
+        .white{
+          .selected-tag{
+            svg{
+              path{
+                fill: $primary-color;
+              }
+            }
+          }
+        }
       }
       .pattern-list{
         h4{
           margin-bottom: -4px;
+        }
+        img{
+          border: 1px solid $faded-color;
+        }
+        .selected-pattern{
+          color: $accent-color;
+        }
+        .selected-tag{
+          position: absolute;
+          top: 0px;
+          right: 0px;
+          margin-left: 0px;
+          margin-top: 0px;
+          margin-right: 0px;
+          .overlay{
+            width: 35px;
+            height: 25px;
+            margin-left: 25px;
+            background-color: #fff;
+            opacity: 0.7;
+          }
+          svg{
+            width: 60px;
+            height: 54px;
+            position: absolute;
+            top: -15px;
+            left: 13px;
+            path{
+              fill: $primary-color;
+            }
+          }
         }
         
       }
@@ -121,8 +178,20 @@
     li.white{background-color:#fff;border-color: $primary-color}
     li.yellow{background-color: #fff200}
     li.purple{background-color: #662d91}
-    li.multi{background-color:#fff;border-color: $primary-color}
     li.selected{border: 3px solid $accent-color;}
+    li.multi{
+      background-color:#fff;
+      border-color: $primary-color;
+      div{
+        float:left;
+        width: 25%;
+        height: 100%;
+      }
+      .purple{ background-color: #662d91 }
+      .pink{ background-color: #f26d7d }
+      .green{ background-color: #00a651 }
+      .yellow{ background-color: #fff200 }
+    }
   }
   .pattern{
     max-width:225px;
@@ -139,6 +208,10 @@
       display:inline-block;
       margin-right:5%;
       margin-bottom:7%;
+      img{
+        height: 25px;
+        width: 35px;
+      }
     }
   }
   .accessory{
@@ -152,6 +225,16 @@
       display:inline-block;
       margin-right:5%;
       vertical-align: middle;
+      .selected-svg-icon{
+        svg{
+          path{
+            fill: $accent-color;
+          }
+          polygon{
+            fill: $accent-color;
+          }
+        }
+      }
     }
     .last{
       margin-right: 0;

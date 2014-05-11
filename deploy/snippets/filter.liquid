@@ -2,10 +2,9 @@
   <div id="accordion">
     <div class='btn-tray'>
       <a data-toggle="collapse" data-parent="#accordion" href="#filter" class='filter-btn btn btn-md btn-primary'>
-        SHOP BY <i class="shop-by fa fa-caret-up"></i>
+        FILTER BY <i class="shop-by fa {% if current_tags.size > 0 %}fa-caret-up{%else%}fa-caret-down{%endif%}"></i>
       </a>
     </div>
-    {% if paginate.pages > 1 %}
     <div class='pagination'>
       {% if paginate.next %}
       <div class='arrow'>
@@ -19,8 +18,7 @@
       </div>
       {% endif %}
     </div>
-    {% endif %}
-    <div id="filter" class="panel-collapse collapse in">
+    <div id="filter" class="panel-collapse collapse {% if current_tags.size > 0 %} in {% endif %}">
       <div class='panel-body'>
       <ul class='filter-list'>
         <li class='accessory-list'><ul class='accessory'>
@@ -31,7 +29,7 @@
           {% capture svg %} {% include svg_snippet %} {% endcapture %}        
           <a href='/{{tag | handleize}}' class='select-filter' id='{{tag | handleize}}'>
             <li {% if tag == 'Pocket Squares'%} class='last'{%elsif tag == 'Bowties'%} second {%elsif tag == 'All Socks'%} class='first' {% endif %}>
-              <div class='svg-icon'>
+              <div class='{% if current_tags contains tag %} selected-svg-icon {% endif %} svg-icon'>
                 {{svg}}
               </div>
             </li>
@@ -58,7 +56,19 @@
           {% assign tags = 'Black,Gray,Brown,Blue,Green,Orange,Pink,Red,White,Yellow,Purple,Multi' | split: ',' %}
           {% for tag in tags %}
           <a href='/{{tag|handleize}}' class='select-filter' id='{{ tag | handleize }}'> 
-            <li class="{{ tag | handleize}} {% if current_tags contains tag %}selected{%endif%}"></li>
+            <li class="{{ tag | handleize}}">
+              {% if tag == 'Multi' %}
+              <div class='purple'></div>
+              <div class='pink'></div>
+              <div class='green'></div>
+              <div class='yellow'></div>
+              {% endif %}
+              {% if current_tags contains tag %}
+              <div class='selected-tag'>
+                {% include 'icon_close' %}
+              </div>
+              {% endif %}
+            </li>
           </a>
           {% endfor %}
         </ul></li>
@@ -70,8 +80,15 @@
           {% for tag in tags %}
           {% assign image_file = tag | handleize | prepend: 'pattern_' | append: '.png' %}
           <a href='{{tag |handleize}}' class='select-filter' id ='{{tag | handleize}}'>
-            <li {% if current_tags contains tag %} class='selected'{%endif%}>
+            <li>
               {{ image_file | asset_url | img_tag }}{{ tag | remove: ' Socks' }}
+               {% if current_tags contains tag %}
+               <div class='selected-tag'>
+                <div class='overlay'>
+                </div>
+                {% include 'icon_close' %}
+              </div>
+              {% endif %}
             </li>
           </a>
           {% endfor %}
