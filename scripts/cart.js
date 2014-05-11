@@ -179,7 +179,7 @@ $(function() {
       <span class='qty'>
       <span class='number price-item'>"+price+"</span>
       <span class='times'>x</span>
-      QTY <input name='updates[]'' class='quantity number update' id='"+item.id+"'' value="+qty+" />
+      QTY <input name='updates[]'class='quantity number update' id='"+item.id+"'' value="+qty+" />
       <span class='plus-btn btn btn-primary'>+</span>
       <span class='minus-btn btn btn-primary'>-</span>
       </span>
