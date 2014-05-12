@@ -56,12 +56,13 @@
       text-align: center;
       padding: 5px;
       font-size: 24px;
+      background-position-x: 53px;
       border: 1px solid $faded-color;
       width:83px;
       padding-right: 17px;
       background-color: #fff;
       option{
-        font-size: 15px;
+        font-size: 12px;
       }
       
     }
@@ -84,6 +85,10 @@
       }
       h3.gift{
         width: 30%;
+        font-family: $number-font;
+        select{
+          padding-left: 14px;
+        }
       }
       .mid-border{
         border-top: 1px solid $faded-color;

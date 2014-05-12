@@ -88,8 +88,9 @@ $(function() {
 
   $('.add').click(function(e){
     $(this).closest('.modal').modal('hide')
-    var itemId = parseInt($(this).parent().find('.product-select').val())
+    var itemId = parseInt($(this).parent().parent().find('.product-select').val())
     var newQty = $(this).parent().parent().find('.product-quantity').val()
+    console.log(itemId)
     $.getJSON("/cart.js",function(response){
       var itemArray = response.items
       var idArray = []

@@ -873,13 +873,14 @@ ul.off-canvas-list li a:hover {
   text-align: center;
   padding: 5px;
   font-size: 24px;
+  background-position-x: 53px;
   border: 1px solid #b8b8b8;
   width: 83px;
   padding-right: 17px;
   background-color: #fff;
 }
 .product-quickview .info select option {
-  font-size: 15px;
+  font-size: 12px;
 }
 .product-quickview .info h2 {
   color: #67c5a9;
@@ -899,6 +900,10 @@ ul.off-canvas-list li a:hover {
 }
 .product-quickview .info .price-details h3.gift {
   width: 30%;
+  font-family: "Source Sans Pro";
+}
+.product-quickview .info .price-details h3.gift select {
+  padding-left: 14px;
 }
 .product-quickview .info .price-details .mid-border {
   border-top: 1px solid #b8b8b8;

@@ -19,11 +19,12 @@
         <div class='price-details'>
           <div class='mid-border'></div>
           <h3 class='gift'>
-            <select id="product-select-{{ product.id }}" name="id" class='product-select'>
-          {% for variant in product.variants %}
-            <option value="{{ variant.id }}">{{ variant.title | escape }}</option>
-          {% endfor %}
-          </select></h3>
+            <select name="id" class='product-select'>
+            {% for variant in product.variants %}
+              <option value="{{ variant.id }}">{{ variant.title | escape }}</option>
+            {% endfor %}
+            </select>
+          </h3>
         </div>
         <div class='qty'> QTY <input min="1" type="number" id="quantity" class='product-quantity' name="quantity" value="1" /> </div>
         <div class='add-to-cart'>
