@@ -511,7 +511,7 @@ ul.off-canvas-list li a:hover {
   display: inline-block;
   float: left;
 }
-.filter #filter ul.filter-list .color-list .white .selected-tag svg path {
+.filter #filter ul.filter-list .color-list .white .selected-tag svg path, .filter #filter ul.filter-list .color-list .yellow .selected-tag svg path {
   fill: #404041;
 }
 .filter #filter ul.filter-list .pattern-list h4 {
