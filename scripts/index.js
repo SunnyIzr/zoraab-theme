@@ -1,5 +1,8 @@
 $(document).ready(function(){
   panelHoverEffect()
+  $('#indexHero').image($('#hero-url').html(), function(){
+  $('#indexHero').addClass('hero-reveal')
+  })
 })
 
 
@@ -13,4 +16,23 @@ var panelHoverEffect = function(){
     $(this).find('.link').css('color','#404041');
     $(this).find('path').attr('fill','#b8b8b8');
   })
+}
+
+var getHeroImg = function(){
+  heroUrl = $('#hero-url').html()
+  $.get(heroUrl, 'image/jpg', function(res){
+    
+  })
+}
+
+
+
+$.fn.image = function(src, f) {
+  return this.each(function() {
+    var i = new Image();
+    $(i).addClass('img-responsive')
+    i.src = src;
+    i.onload = f;
+    this.insertBefore(i,this.firstChild);
+  });
 }

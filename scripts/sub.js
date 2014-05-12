@@ -7,6 +7,11 @@ $(document).ready(function(){
   upfrontMonths()
   styleHover()
   subFormSubmission()
+  $('#subHero').subImage($('#hero-url').html(), function(){
+    $('.sub-loader').hide();
+    $('#subHero > img').addClass('sub-hero-reveal');
+    $('.sub-body').addClass('sub-body-reveal');
+  })
 })
 
 var stepOneComplete = function(){
@@ -94,13 +99,18 @@ var subFormSubmission = function() {
     validateForm()
   })
   $('#subform').submit(function(e){
-    url = $('#subform').attr('action')
-    data = $('#subform').serialize()
     e.preventDefault();
-    $.post(url, data, function(res) {
-      window.location=res.url 
-    })
+    alert('hi');
+  //   url = $('#subform').attr('action')
+  //   data = $('#subform').serialize()
+  //   $.post(url, data, function(res) {
+  //     window.location=res.url 
+  //   })
   })
+}
+
+var startSubmitLoader = function(){
+  
 }
 
 var changeUpfrontPlanPricing = function() {
@@ -187,6 +197,17 @@ var valdiateCompleteForm = function(){
   }
 }
 
+
+$.fn.subImage = function(src, f) {
+  return this.each(function() {
+    var i = new Image();
+    $(i).addClass('img-responsive')
+    $(i).addClass('hero')
+    i.src = src;
+    i.onload = f;
+    this.insertBefore(i,this.firstChild);
+  });
+}
 
 
 

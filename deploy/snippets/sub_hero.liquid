@@ -1,5 +1,9 @@
-<div class='sub-hero'>
-  <img src="{{ 'hero_sub.jpg' | asset_url }}"class='hero img-responsive'  >
+<div id='subHero' class='sub-hero'>
+  <div class='sub-loader'>
+    <img src="{{ 'loader.gif' | asset_url }}">
+  </div>
+
+  <span id='hero-url' class='hide'>{{ 'hero_sub.jpg' | asset_url }}</span>
   <div class='right'>
     <div class='head'>
       <h1>THE ZORAAB KIT</h1>

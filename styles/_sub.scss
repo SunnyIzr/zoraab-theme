@@ -1,3 +1,17 @@
+.sub-loader{
+  width: 50%;
+  height: 400px;
+  text-align: center;
+  position: absolute;
+  margin-top: -400px;
+  img{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 125px;
+    width: 35px;
+  }
+}
+
 .sub-hero{
   position: relative;
   border-top: 1px solid $faded-color;
@@ -6,6 +20,9 @@
   .hero{
     width: 50%;
     border-right: 2px solid $faded-color;
+  }
+  .sub-hero-reveal{
+    opacity: 1.0;
   }
   .right{
     position: absolute;
@@ -75,9 +92,17 @@
   }
 }
 
+
+
 .sub-body{
   padding-top: 100px;
   margin-bottom: 100px;
+  opacity: 0.0;
+  -webkit-transition: opacity 200ms ease-in-out;
+  -moz-transition: opacity 200ms ease-in-out;
+  -o-transition: opacity 200ms ease-in-out;
+  -ms-transition: opacity 200ms ease-in-out;
+  transition: opacity 200ms ease-in-out;
   .sub-copy{
     border-right: 1px solid $faded-color;
     float: left;
@@ -96,6 +121,9 @@
   }
 }
 
+.sub-body-reveal{
+  opacity: 1.0;
+}
 
 .subscription{
   width: 50%;
