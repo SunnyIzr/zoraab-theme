@@ -8823,6 +8823,9 @@ input.btn {
   position: relative;
   width: 100%;
 }
+.subscription .sub-form .style-pic img {
+  width: 100%;
+}
 .subscription .sub-form .style-pic .style-desc {
   opacity: 0.0;
   position: absolute;

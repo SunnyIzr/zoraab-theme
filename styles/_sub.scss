@@ -371,6 +371,9 @@
       .style-pic{
         position: relative;
         width: 100%;
+        img{
+          width: 100%;
+        }
         .style-desc{
           opacity: 0.0;
           position: absolute;
