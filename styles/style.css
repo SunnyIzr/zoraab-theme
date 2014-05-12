@@ -319,6 +319,8 @@ ul.off-canvas-list li a:hover {
   max-width: 1600px;
   margin: 0 auto;
   text-align: center;
+  margin-top: 25px;
+  margin-bottom: 158px;
 }
 .press-banner img {
   width: 75%;
@@ -9653,6 +9655,7 @@ input.btn {
   list-style: none;
   border-radius: 0px;
   text-align: right;
+  padding-right: 7px;
 }
 .header ul li {
   display: inline-block;
@@ -9746,7 +9749,8 @@ input.btn {
 
   .navbar-brand img {
     margin-top: 12px;
-    width: 135px;
+    width: 135px !important;
+    height: 34px !important;
   }
 
   .cart-toggle {
