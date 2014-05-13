@@ -338,6 +338,7 @@ ul.off-canvas-list li a:hover {
 }
 .bottom-footer a:hover {
   text-decoration: none;
+  color: #67c5a9;
 }
 .bottom-footer .content {
   max-width: 1600px;
