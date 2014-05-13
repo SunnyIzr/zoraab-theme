@@ -336,6 +336,9 @@ ul.off-canvas-list li a:hover {
   padding-left: 5%;
   padding-right: 5%;
 }
+.bottom-footer a:hover {
+  text-decoration: none;
+}
 .bottom-footer .content {
   max-width: 1600px;
   margin: 0 auto;
