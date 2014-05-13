@@ -9593,6 +9593,8 @@ input.btn {
   height: 170px;
   text-align: center;
   float: left;
+  background: url("./loader.gif") no-repeat center;
+  background-size: 20%;
 }
 .line-items .product-details {
   float: left;
