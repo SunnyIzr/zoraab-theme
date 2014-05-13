@@ -8858,7 +8858,49 @@ input.btn {
   border: none;
 }
 .subscription .sub-form .submit-section {
+  position: relative;
   margin-bottom: 100px;
+}
+.subscription .sub-form .submit-section input:focus {
+  outline: 0;
+}
+.subscription .sub-form .submit-section .overlay {
+  z-index: -10;
+  opacity: 0.0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  position: absolute;
+  -webkit-transition: opacity 300ms ease-in-out;
+  -moz-transition: opacity 300ms ease-in-out;
+  -o-transition: opacity 300ms ease-in-out;
+  -ms-transition: opacity 300ms ease-in-out;
+  transition: opacity 300ms ease-in-out;
+}
+.subscription .sub-form .submit-section .sub-checkout-loader {
+  z-index: -10;
+  opacity: 0.0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-transition: opacity 430ms ease-in-out;
+  -moz-transition: opacity 430ms ease-in-out;
+  -o-transition: opacity 430ms ease-in-out;
+  -ms-transition: opacity 430ms ease-in-out;
+  transition: opacity 430ms ease-in-out;
+}
+.subscription .sub-form .submit-section .sub-checkout-loader img {
+  margin: 0 auto;
+  width: 35px;
+  margin-top: 9px;
+}
+.subscription .sub-form .submit-section-reveal .overlay {
+  z-index: 1;
+  opacity: 0.7;
+}
+.subscription .sub-form .submit-section-reveal .sub-checkout-loader {
+  z-index: 1;
+  opacity: 1.0;
 }
 .subscription .sub-form .style-pic {
   position: relative;

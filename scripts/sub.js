@@ -100,12 +100,12 @@ var subFormSubmission = function() {
   })
   $('#subform').submit(function(e){
     e.preventDefault();
-    alert('hi');
-  //   url = $('#subform').attr('action')
-  //   data = $('#subform').serialize()
-  //   $.post(url, data, function(res) {
-  //     window.location=res.url 
-  //   })
+    $('.submit-section').addClass('submit-section-reveal')
+    url = $('#subform').attr('action')
+    data = $('#subform').serialize()
+    $.post(url, data, function(res) {
+      window.location=res.url 
+    })
   })
 }
 
@@ -175,6 +175,25 @@ var validateStepFour = function(){
   } 
   
   
+}
+
+var isFormComplete = function(){
+  ary = []
+  ary.push($( "input[class='recipients']" ).is(':checked'))
+  ary.push($( "input[class='style']" ).is(':checked'))
+  ary.push($( "input[class='qty']" ).is(':checked'))
+  
+  if ($( "input[class='payment']" ).is(':checked')) {
+    if ($('#monthly').is(':checked')) {
+      ary.push(true) 
+    } else {
+      ary.push($( "input[class='upfront_months']" ).is(':checked'))
+    }
+  } else {
+    ary.push(false)
+  }
+  
+  return $.inArray(false,ary) == -1
 }
 
 var valdiateCompleteForm = function(){
