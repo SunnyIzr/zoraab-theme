@@ -10,12 +10,33 @@
       <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1' /><![endif]-->
 
       <title>
-      {{ page_title }}{% if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif %}{% if current_page != 1 %} &ndash; Page {{ current_page }}{% endif %}{% unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless %}
+        {% if template == "index" %}
+          Men's Socks | Fashion, Colorful & Crazy Socks | Subscription | Zoraab
+        {% else %}
+          {% if template == "404" %}
+            Page Not Found
+          {% else %}
+            {% if current_tags contains 'Fashion Socks' %}
+              Men's Fashion Socks | Zoraab
+            {%else%}
+              {% if current_tags contains 'Fun Socks' %}
+                Men's Fun Socks | Zoraab
+              {%else%}
+              {{ page_title | escape }} &mdash; Zoraab
+              {% endif %}
+            {% endif %}
+          {% endif %}
+        {% endif %}
       </title>
-
-      {% if page_description %}
-      <meta name="description" content="{{ page_description | escape }}" />
+      
+      {% if template == "index" %}
+        <meta name="description" content="The hottest sock phenomenon! Curated brands and styles of Men’s Fashion, Dress, & Crazy Socks – sold à la carte or monthly subscription. Free Shipping.">
+      {% elsif page.handle == "sock-subscription" %}
+        <meta name="description" content="Are you kittin’ yet? The zoraab kit – monthly men’s fashion socks subscription. Customized selections - Buy it, Gift it, Guaranteed to make a statement!">
+      {% elsif page_description %}
+        <meta name="description" content="{{ page_description | escape }}" />
       {% endif %}
+
 
       <link rel="canonical" href="{{ canonical_url }}" />
 
