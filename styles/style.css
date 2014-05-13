@@ -9527,10 +9527,11 @@ input.btn {
 }
 
 .prod-title {
-  font-size: 22px;
+  font-size: 20px;
   position: absolute;
   width: 200px;
-  margin-top: 8px;
+  margin-top: 0px;
+  line-height: 24px;
   text-decoration: none;
 }
 
@@ -9628,7 +9629,7 @@ input.btn {
 .line-items .qty {
   font-size: 16px;
   position: absolute;
-  margin-top: 49px;
+  margin-top: 54px;
 }
 .line-items .qty .times {
   margin: 0 15px;
