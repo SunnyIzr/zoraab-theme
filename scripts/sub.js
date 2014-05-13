@@ -222,6 +222,7 @@ $.fn.subImage = function(src, f) {
     var i = new Image();
     $(i).addClass('img-responsive')
     $(i).addClass('hero')
+    $(i).attr('alt','sock-subscription')
     i.src = src;
     i.onload = f;
     this.insertBefore(i,this.firstChild);
