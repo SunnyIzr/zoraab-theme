@@ -179,18 +179,28 @@
     li.yellow{background-color: #fff200}
     li.purple{background-color: #662d91}
     li.selected{border: 3px solid $accent-color;}
-    li.multi{
+    li.multi-color{
       background-color:#fff;
       border-color: $primary-color;
       div{
         float:left;
         width: 25%;
         height: 100%;
+        position: absolute;
       }
       .purple{ background-color: #662d91 }
-      .pink{ background-color: #f26d7d }
-      .green{ background-color: #00a651 }
-      .yellow{ background-color: #fff200 }
+      .pink{ background-color: #f26d7d; left: 25%; }
+      .green{ background-color: #00a651; left: 50%; }
+      .yellow{ background-color: #fff200; left: 75%;}
+      .selected-tag{
+        width: 100%;
+        margin-right: 12px !important;
+        svg{
+          path{
+            fill: #000 !important;
+          }
+        }
+      }
     }
   }
   .pattern{

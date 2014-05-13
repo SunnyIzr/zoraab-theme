@@ -115,6 +115,9 @@
 }
 
 @media (max-width: 768px) {
+  .zopim{
+    display: none;
+  }
   .navbar{
     border-bottom: 1px solid $faded-color;
     width: 100%;

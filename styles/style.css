@@ -624,26 +624,37 @@ ul.off-canvas-list li a:hover {
 .filter .color li.selected {
   border: 3px solid #67c5a9;
 }
-.filter .color li.multi {
+.filter .color li.multi-color {
   background-color: #fff;
   border-color: #404041;
 }
-.filter .color li.multi div {
+.filter .color li.multi-color div {
   float: left;
   width: 25%;
   height: 100%;
+  position: absolute;
 }
-.filter .color li.multi .purple {
+.filter .color li.multi-color .purple {
   background-color: #662d91;
 }
-.filter .color li.multi .pink {
+.filter .color li.multi-color .pink {
   background-color: #f26d7d;
+  left: 25%;
 }
-.filter .color li.multi .green {
+.filter .color li.multi-color .green {
   background-color: #00a651;
+  left: 50%;
 }
-.filter .color li.multi .yellow {
+.filter .color li.multi-color .yellow {
   background-color: #fff200;
+  left: 75%;
+}
+.filter .color li.multi-color .selected-tag {
+  width: 100%;
+  margin-right: 12px !important;
+}
+.filter .color li.multi-color .selected-tag svg path {
+  fill: #000 !important;
 }
 .filter .pattern {
   max-width: 225px;
@@ -1020,7 +1031,7 @@ ul.off-canvas-list li a:hover {
   width: 100%;
 }
 
-iframe {
+.blog-iframe iframe {
   z-index: 1;
   position: absolute;
   top: 14px;
@@ -1035,7 +1046,7 @@ iframe {
 }
 
 @media (min-width: 768px) {
-  iframe {
+  .blog-iframe iframe {
     top: 37px;
   }
 }
@@ -9280,6 +9291,9 @@ input.btn {
 }
 /* Small devices (tablets, 768px and up) */
 @media (max-width: 768px) {
+  .hero {
+    margin: 0 auto;
+  }
   .hero .hero-text {
     top: 8%;
     left: 3%;
@@ -9847,6 +9861,10 @@ input.btn {
 }
 
 @media (max-width: 768px) {
+  .zopim {
+    display: none;
+  }
+
   .navbar {
     border-bottom: 1px solid #b8b8b8;
     width: 100%;

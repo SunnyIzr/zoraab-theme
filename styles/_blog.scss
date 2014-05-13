@@ -7,23 +7,28 @@
   left:0;
   width:100%;
 }
-iframe {
-  z-index: 1;
-  position: absolute;
-  top: 14px;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-  padding-top: 0px;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box; 
-  -webkit-box-sizing:border-box;
+
+.blog-iframe{
+  iframe {
+    z-index: 1;
+    position: absolute;
+    top: 14px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding-top: 0px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing:border-box;
+  }
 }
 
 @media (min-width: 768px) {
-  iframe{
-    top: 37px;
+  .blog-iframe{
+    iframe{
+      top: 37px;
+    }
   }
 }
 
