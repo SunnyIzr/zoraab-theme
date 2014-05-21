@@ -1,9 +1,10 @@
 <div class='collection-item'>
   <div class='item-desc hidden-sm hidden-xs'>
+    
     <div class='overlay'>
     </div>
     <div class="item-detail">
-      <h4>{{ product.title }}</h4>
+      <a href='{{product.url}}'><h4>{{ product.title }}</h4></a>
       <a href='#' data-toggle="modal" data-target="#{{product.id}}" ><h6>QUICK VIEW</h6></a>
       <form action="/cart/add" method="post" enctype="multipart/form-data">
         <div class='qty hide'> QTY <input min="1" type="number" id="quantity" class='product-quantity' name="quantity" value="1" /> </div>
