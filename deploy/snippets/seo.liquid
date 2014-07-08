@@ -1,0 +1,31 @@
+<title>
+  {% if template == "index" %}
+    Men's Socks | Cool, Colorful & Crazy Socks | Subscription | Zoraab
+  {% elsif template == "404" %}
+    Page Not Found
+  {% else %}
+      
+      
+      {% if current_tags contains 'Fashion Socks' %}
+        Men's Fashion Socks | Zoraab
+      {% else %}
+        {% if current_tags contains 'Fun Socks' %}
+          Fun Socks for Men | Zoraab
+        {% elsif current_tags contains 'Argyle Socks' %}
+          Argyle Socks for Men | Zoraab
+        {% else %}
+          {{ page_title | escape }} &mdash; Zoraab
+        {% endif %}
+      {% endif %}
+      
+      
+  {% endif %}
+</title>
+      
+      {% if template == "index" %}
+        <meta name="description" content="The hottest sock phenomenon! Curated brands and styles of Men’s Fashion, Dress, & Crazy Socks – sold à la carte or monthly subscription. Free Shipping.">
+      {% elsif page.handle == "sock-subscription" %}
+        <meta name="description" content="Are you kittin’ yet? The zoraab kit – monthly men’s fashion socks subscription. Customized selections - Buy it, Gift it, Guaranteed to make a statement!">
+      {% elsif page_description %}
+        <meta name="description" content="{{ page_description | escape }}" />
+      {% endif %}
