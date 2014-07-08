@@ -11,7 +11,7 @@
 
       <title>
         {% if template == "index" %}
-          Men's Socks | Fashion, Colorful & Crazy Socks | Subscription | Zoraab
+          Men's Socks | Cool, Colorful & Crazy Socks | Subscription | Zoraab
         {% else %}
           {% if template == "404" %}
             Page Not Found
@@ -20,9 +20,11 @@
               Men's Fashion Socks | Zoraab
             {%else%}
               {% if current_tags contains 'Fun Socks' %}
-                Men's Fun Socks | Zoraab
-              {%else%}
-              {{ page_title | escape }} &mdash; Zoraab
+                Fun Socks for Men | Zoraab
+              {%elsif current_tags contains 'Argyle Socks' %}
+                Argyle Socks for Men | Zoraab
+              {% else %}
+                {{ page_title | escape }} &mdash; Zoraab
               {% endif %}
             {% endif %}
           {% endif %}
