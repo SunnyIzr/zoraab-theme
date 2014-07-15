@@ -28,3 +28,41 @@ var google_remarketing_only = false;
 <img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/1009145473/?value=0.000000&amp;label=_DDgCNfx3QcQga2Z4QM&amp;guid=ON&amp;script=0"/>
 </div>
 </noscript>
+
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28956813-1']);
+  _gaq.push(['_trackPageview']);
+  _gaq.push(['_addTrans',
+    parseInt(window.location.toString().split('?')[1].split('=')[2]),           // transaction ID - required
+    'Zoraab',  // affiliation or store name
+    parseInt(window.location.toString().split('?')[1].split('=')[1]),          // total - required
+    '0.0',           // tax
+    '0',              // shipping
+    'New York',       // city
+    'New York',     // state or province
+    'USA'             // country
+  ]);
+
+   // add item might be called for every item in the shopping cart
+   // where your ecommerce engine loops through each item in the cart and
+   // prints out _addItem for each
+  _gaq.push(['_addItem',
+    '1234',           // transaction ID - required
+    'SUB',           // SKU/code - required
+    parseInt(window.location.toString().split('?')[1].split('=')[1]),          // unit price - required
+    '1'               // quantity - required
+  ]);
+  _gaq.push(['_trackTrans']); //submits transaction to the Analytics servers
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
