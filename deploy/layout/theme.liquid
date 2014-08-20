@@ -67,6 +67,9 @@
     </head>
 
     <body id="{{ page_title | handle }}" class="{% if customer %}customer-logged-in {% endif %}template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}" >
+      
+      
+
 
       <div class="off-canvas-wrap" data-offcanvas>
         
@@ -97,5 +100,23 @@
         
       </div>
 
+      <!-- AdRoll Smart Pixel -->
+      <script type="text/javascript">
+        adroll_adv_id = "AQIM3RVGLNHZDEISYOQDG5";
+        adroll_pix_id = "6MA5HRCDRNGTNIV4PO6T7F";
+        (function () {
+        var oldonload = window.onload;
+        window.onload = function(){
+           __adroll_loaded=true;
+           var scr = document.createElement("script");
+           var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+           scr.setAttribute('async', 'true');
+           scr.type = "text/javascript";
+           scr.src = host + "/j/roundtrip.js";
+           ((document.getElementsByTagName('head') || [null])[0] ||
+            document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+           if(oldonload){oldonload()}};
+        }());
+      </script>
     </body>
   </html>
