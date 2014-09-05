@@ -29,7 +29,7 @@
             <div class='mid-border'></div>
             <h3>{{ product.price | money | remove: '.00'}}</h3>
           </div>
-          <h3 class='size-run gift'>
+          <h3 class='size-run'>
             <select name="id" class='product-select'>
             {% for variant in product.variants %}
               <option value="{{ variant.id }}">{{ variant.title | escape }}</option>
