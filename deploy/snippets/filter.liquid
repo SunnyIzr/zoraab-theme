@@ -23,7 +23,7 @@
       <ul class='filter-list'>
         <li class='accessory-list'><ul class='accessory'>
           <h4>Accessory</h4>
-          {% assign tags = 'All Socks,Bowties,Watches,Ties,Pocket Squares' | split: ',' %}
+          {% assign tags = 'All Socks,Boxers,Bowties,Ties,Pocket Squares' | split: ',' %}
           {% for tag in tags %}
           {% assign svg_snippet = tag | handleize | prepend: 'icon_' %}
           {% capture svg %} {% include svg_snippet %} {% endcapture %}        
