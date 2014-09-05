@@ -46,8 +46,6 @@
     font-size:11px;
     select{
       background: transparent;
-      -webkit-appearance: none;
-      -moz-appearance: none;
       text-indent: 0.01px;
       text-overflow: "";
       background: url('./arrows.png') no-repeat right; 
@@ -173,3 +171,20 @@
    } 
   }
 }
+
+    .size-run{
+      .product-select{
+        width: 120px !important;
+        font-size: 16px !important;
+        padding-left: 9px !important;
+        padding-right: 9px !important;
+        background: none !important;
+      }
+    }
+    
+    .gift{
+      select{
+        -webkit-appearance: none !important;
+        -moz-appearance: none !important;
+      }
+    }

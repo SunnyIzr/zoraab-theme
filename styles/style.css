@@ -884,8 +884,6 @@ ul.off-canvas-list li a:hover {
 }
 .product-quickview .info select {
   background: transparent;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   text-indent: 0.01px;
   text-overflow: "";
   background: url("./arrows.png") no-repeat right;
@@ -989,6 +987,19 @@ ul.off-canvas-list li a:hover {
     font-size: 14px;
   }
 }
+.size-run .product-select {
+  width: 120px !important;
+  font-size: 16px !important;
+  padding-left: 9px !important;
+  padding-right: 9px !important;
+  background: none !important;
+}
+
+.gift select {
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+}
+
 #filter input[type=radio] {
   display: none;
 }
@@ -9496,6 +9507,13 @@ input.btn {
   font-style: italic;
 }
 
+.out-of-stock {
+  height: 30px;
+  color: #b8b8b8;
+  font-style: italic;
+  display: none;
+}
+
 #pricing {
   margin: 10px 10px;
 }
@@ -9642,11 +9660,12 @@ input.btn {
 }
 .line-items .qty .minus-btn {
   padding: 0 9px;
-  margin-right: -13px;
+  margin-right: -26px;
   background-color: #404041;
   float: right;
-  margin-top: -13px;
+  margin-top: 22px;
   margin-bottom: 2px;
+  margin-left: 7px;
 }
 .line-items .qty .minus-btn:hover {
   background-color: #7F7F7F;
@@ -9734,8 +9753,8 @@ input.btn {
   }
   .line-items .product-details .qty .minus-btn {
     padding: 3px 16px;
-    margin-right: 10px;
-    margin-left: -10px;
+    margin-right: -30px;
+    margin-left: 9px;
   }
   .line-items .product-details .subtotal {
     width: 160px;
