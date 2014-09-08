@@ -30,7 +30,7 @@
             <h3>{{ product.price | money | remove: '.00'}}</h3>
           </div>
           <h3 class='size-run'>
-            <select name="id" class='product-select'>
+            <select name="id" class='product-select {% if product.variants.size == 1 %} hidden {%endif%}'>
             {% for variant in product.variants %}
               <option value="{{ variant.id }}">{{ variant.title | escape }}</option>
             {% endfor %}
@@ -39,11 +39,6 @@
           <div class='qty'> QTY <input min="1" type="number" id="quantity" class='product-quantity' name="quantity" value="1" /> </div>
           <div id='product-add' class='add-to-cart'>
             <input type="submit" value="+ ADD TO CART" class="add btn btn-lg btn-info right-off-canvas-toggle" />
-            <select name="id" class="product-select hidden">
-            {% for variant in product.variants %}
-              <option value="{{ variant.id }}">{{ variant.title }} - {{ variant.price | money }}</option>
-            {% endfor %}
-            </select>
           </div>
           <div class='description'>
             {{ product.description }}
