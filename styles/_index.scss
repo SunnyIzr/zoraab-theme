@@ -76,16 +76,84 @@
   }
   .hero-text{
     position: absolute;
-    top: 10%;
-    left: 5%;
+    top: 36%;
+    left: 1.25%;
     width: 37%;
     h1{
-      font-size: 40px;
+      font-size: 25px;
       color: #fff;
       font-weight: 400;
     }
+    h3{
+      font-size: 20px;
+      color: #fff;
+      font-weight: 200;
+      margin-top: -2px;
+    }
     .btn{
-      margin-top: 3%;
+      margin-top: 8%;
+    }
+  }
+  .hero-right-panel{
+    position: absolute;
+    top: 5%;
+    right: 1.25%;
+    width: 34%;
+    height: 90%;
+    ul{
+      margin-top:6%;
+      padding: 0px;
+      list-style: none;
+      text-align: left;
+      li{
+        display: inline-block;
+        width: 45%;
+        height:150px;
+        background-color: #fff;
+        margin-bottom: 30px;
+        border: 2px solid $emphasis-color;
+      }
+      .right-grid{
+        margin-left:9%;
+      }
+    }
+    .sub-callout{
+      height: 21%;
+      width: 100%;
+      border: 2px solid #fff;
+      padding-left: 10px;
+      padding-right: 10px;
+      h1{
+        font-size: 25px;
+        color: #fff;
+        font-weight: 400;
+        margin-top: 11px;
+        border-bottom: 1px solid #fff;
+        padding-bottom: 7px;
+        width: 249px;
+      }
+      .sub-desc{
+        font-size:16px;
+        font-weight: 200;
+        border: none;
+        margin: 0;
+        padding: 0;
+        width: 275px;
+      }
+      .btn{
+        border: 1px solid #fff;
+        float: right;
+        margin-top: -30px;
+      }
+      a.btn{
+        color: #fff;
+      }
+      a.btn:hover{
+        color: $emphasis-color;
+      }
+      .btn:hover{
+        border-color: $emphasis-color;
+      }
     }
   }
 }

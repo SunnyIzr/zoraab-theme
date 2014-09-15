@@ -9260,17 +9260,85 @@ input.btn {
 }
 .hero .hero-text {
   position: absolute;
-  top: 10%;
-  left: 5%;
+  top: 36%;
+  left: 1.25%;
   width: 37%;
 }
 .hero .hero-text h1 {
-  font-size: 40px;
+  font-size: 25px;
   color: #fff;
   font-weight: 400;
 }
+.hero .hero-text h3 {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 200;
+  margin-top: -2px;
+}
 .hero .hero-text .btn {
-  margin-top: 3%;
+  margin-top: 8%;
+}
+.hero .hero-right-panel {
+  position: absolute;
+  top: 5%;
+  right: 1.25%;
+  width: 34%;
+  height: 90%;
+}
+.hero .hero-right-panel ul {
+  margin-top: 6%;
+  padding: 0px;
+  list-style: none;
+  text-align: left;
+}
+.hero .hero-right-panel ul li {
+  display: inline-block;
+  width: 45%;
+  height: 150px;
+  background-color: #fff;
+  margin-bottom: 30px;
+  border: 2px solid #e85c41;
+}
+.hero .hero-right-panel ul .right-grid {
+  margin-left: 9%;
+}
+.hero .hero-right-panel .sub-callout {
+  height: 21%;
+  width: 100%;
+  border: 2px solid #fff;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.hero .hero-right-panel .sub-callout h1 {
+  font-size: 25px;
+  color: #fff;
+  font-weight: 400;
+  margin-top: 11px;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 7px;
+  width: 249px;
+}
+.hero .hero-right-panel .sub-callout .sub-desc {
+  font-size: 16px;
+  font-weight: 200;
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: 275px;
+}
+.hero .hero-right-panel .sub-callout .btn {
+  border: 1px solid #fff;
+  float: right;
+  margin-top: -30px;
+}
+.hero .hero-right-panel .sub-callout a.btn {
+  color: #fff;
+}
+.hero .hero-right-panel .sub-callout a.btn:hover {
+  color: #e85c41;
+}
+.hero .hero-right-panel .sub-callout .btn:hover {
+  border-color: #e85c41;
 }
 
 .hero-reveal {
