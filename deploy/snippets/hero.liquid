@@ -7,10 +7,12 @@
   </div>
   <div class='hero-right-panel'>
     <ul>
-      <li></li>
-      <li class='right-grid'></li>
-      <li></li>
-      <li class='right-grid'></li>
+      {% assign collection = collections.hero-grid %}
+      {% assign products = collection.products %}
+      <li><img src="{{ products[0].featured_image.src | product_img_url: 'medium' }}" alt="{{ product.featured_image.alt | escape }}" /></li>
+      <li class='right-grid'><img src="{{ products[1].featured_image.src | product_img_url: 'medium' }}" alt="{{ product.featured_image.alt | escape }}" /></li>
+      <li><img src="{{ products[2].featured_image.src | product_img_url: 'medium' }}" alt="{{ product.featured_image.alt | escape }}" /></li>
+      <li class='right-grid'><img src="{{ products[3].featured_image.src | product_img_url: 'medium' }}" alt="{{ product.featured_image.alt | escape }}" /></li>
     </ul>
     <div class='sub-callout'>
       <h1>NO MORE LAUNDRY.</h1>

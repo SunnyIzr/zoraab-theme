@@ -6,6 +6,7 @@ $emphasis-color: #e85c41;
 $emphasis-hover-color: #d8563d;
 $body-text-font: 'Raleway';
 $number-font: 'Source Sans Pro';
+$plain-text-font: 'PT Sans';
 
 @import 'reduced_foundation';
 
@@ -36,6 +37,8 @@ $number-font: 'Source Sans Pro';
 @import 'cart';
 
 @import 'nav';
+
+@import 'network_hat';
 
 .number{
   font-family: $number-font;
