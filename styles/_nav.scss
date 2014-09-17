@@ -24,24 +24,6 @@
     text-align:right;
     padding-left:25px;
   }
-  ul{
-    padding:0px;
-    list-style: none;
-    border-radius: 0px;
-    text-align:right;
-    padding-right: 7px;
-    li {
-      display: inline-block;
-      a {
-        cursor: pointer;
-      }
-    } 
-    li + li:before {
-      content: "|\00a0";
-      padding: 0 2px;
-      color: #cccccc;
-    }
-  }
 }
 
 .navbar-default{
@@ -152,6 +134,8 @@
 @media (min-width: 768px) {
   .navbar{
     margin-bottom: 12px !important;
+    margin-top: -10px;
+    z-index: 0;
   }
   .navbar-form.navbar-right:last-child {
     margin-right: -23px;

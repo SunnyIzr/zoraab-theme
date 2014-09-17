@@ -1,11 +1,18 @@
 $(document).ready(function(){
   panelHoverEffect()
+  heroCollectionHoverEffect();
   $('#indexHero').image($('#hero-url').html(), function(){
   $('#indexHero').addClass('hero-reveal')
   })
 })
 
-
+var heroCollectionHoverEffect = function(){
+  $('.hero-right-panel li').hover(function(event){
+    $(this).find('.item-desc').css('opacity','1.0')
+  }, function(event){
+    $(this).find('.item-desc').css('opacity','0.0')
+  })
+}
 var panelHoverEffect = function(){
   $('.linked-panel').hover(function(){
     $(this).find('.text').css('color','#67c5a9');

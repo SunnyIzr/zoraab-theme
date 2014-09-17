@@ -1,19 +1,30 @@
 <div class='network_hat'>
-  <ul>
-    <li style='width:33%' class='left'>
+  <ul class='main-links'>
+    <li style='width:22%' class='left'>
       <a href='#' data-toggle="modal" data-target="#freeShipping">
         FREE SHIPPING ON ALL US & CANADA ORDERS
       </a>
       </li>
-    <li style='width:33%'>
+    <li style='width:28%'>
       <form action="http://zoraab.us4.list-manage.com/subscribe/post?u=fdf8a5ce2518c055fc3be35d7&id=331f9e54ce" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
         Save 10% Newsletter
         <input type='email' placeholder='your@email.com' id='mce-EMAIL' name='EMAIL' />
         <input type='submit' class='btn btn-primary' name='subscribe' value='SIGN UP'/>
       </form>
     </li>
-    <li style='width:33%'>$59 Sock Drawer (RE)fresh - 10 Pairs</li>
+    <li style='width:22%'>$59 Sock Drawer Makeover (10 Pairs)</li>
     <li class='hide' style='width:20%'>FREE SOCKS Lifetime Supply</li>
+  </ul>
+  <ul class='header-links'>
+    <li><a href='/pages/help-faq'> HELP </a></li>
+    <li>
+      {% if customer %}
+        <a href='/account/logout'> LOG OUT </a>
+      {% else %}
+        <a href='/account/login'> LOG IN </a>
+      {% endif %}
+    </li>
+    <li><a href='/cart' class="right-off-canvas-toggle" id="cart" > CART <span class='number cart-count'>(<span class="item-count">{{cart.item_count}}</span>)</span> {% include 'icon_cart' %} </a></li>
   </ul>
 </div>
 
@@ -22,6 +33,7 @@
   <div class="row">
     <div class='header col-sm-8 col-sm-offset-4 hidden-xs'>    
       <div>
+        {% comment %}
         <ul class='header-links'>
           <li><a href='/pages/help-faq'> HELP </a></li>
           <li>
@@ -33,6 +45,7 @@
           </li>
           <li><a href='/cart' class="right-off-canvas-toggle" id="cart" > CART <span class='number cart-count'>(<span class="item-count">{{cart.item_count}}</span>)</span> {% include 'icon_cart' %} </a></li>
         </ul>
+        {% endcomment %}
       </div>
       <div class='number hide'>
         <i class="fa fa-phone"></i> (866) 981-5188

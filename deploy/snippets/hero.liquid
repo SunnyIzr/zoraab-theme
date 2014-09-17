@@ -9,10 +9,23 @@
     <ul>
       {% assign collection = collections.hero-grid %}
       {% assign products = collection.products %}
-      <li><img src="{{ products[0].featured_image.src | product_img_url: 'medium' }}" alt="{{ product.featured_image.alt | escape }}" /></li>
-      <li class='right-grid'><img src="{{ products[1].featured_image.src | product_img_url: 'medium' }}" alt="{{ product.featured_image.alt | escape }}" /></li>
-      <li><img src="{{ products[2].featured_image.src | product_img_url: 'medium' }}" alt="{{ product.featured_image.alt | escape }}" /></li>
-      <li class='right-grid'><img src="{{ products[3].featured_image.src | product_img_url: 'medium' }}" alt="{{ product.featured_image.alt | escape }}" /></li>
+      {% for product in products %}
+      <li {% if products[1] == product or products[3] == product %} class='right-grid' {%endif%}>
+        <a href='{{product.url}}'>
+          <div class='img-wrapper'>
+            <img src="{{ product.featured_image.src | product_img_url: 'medium' }}" alt="{{ product.featured_image.alt | escape }}" />
+          </div>
+          <div class='item-desc'>
+            <div class='overlay'>
+            </div>
+            <div class='item-detail'>
+              <h4>{{product.title}}</h4>
+              <h4 class='number'>{{product.price | money | remove: '.00'}}</h4>
+            </div>
+          </div>
+        </a>
+      </li>
+      {% endfor %}
     </ul>
     <div class='sub-callout'>
       <h1>NO MORE LAUNDRY.</h1>
