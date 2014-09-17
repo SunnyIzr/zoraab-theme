@@ -10030,11 +10030,18 @@ input.btn {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #404041;
   width: 100%;
   height: 24px;
   overflow: hidden;
   z-index: 10;
+}
+.network_hat .bg-overlay {
+  background-color: #404041;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
   opacity: 0.85;
 }
 .network_hat .main-links {
@@ -10049,13 +10056,20 @@ input.btn {
   height: 20px;
   color: #fff;
   text-align: center;
-  border-left: 1px solid #fff;
   padding-top: 0px;
   font-weight: 300;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.8px;
 }
 .network_hat .main-links li a {
   color: #fff;
+}
+.network_hat .main-links li .section-border {
+  height: 50%;
+  width: 28%;
+  position: absolute;
+  top: 27%;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
 }
 .network_hat .main-links li form input {
   height: 16.9px;
@@ -10074,6 +10088,7 @@ input.btn {
 .network_hat .main-links .left {
   border: none;
   font-weight: 600;
+  letter-spacing: 0.4px;
 }
 .network_hat .header-links {
   margin-top: -30px;
@@ -10085,6 +10100,7 @@ input.btn {
 }
 .network_hat .header-links a {
   color: #fff;
+  font-size: 10px;
 }
 .network_hat .header-links li {
   display: inline-block;
@@ -10095,10 +10111,11 @@ input.btn {
 .network_hat .header-links li + li:before {
   content: "|\00a0";
   padding: 0 2px;
-  color: #cccccc;
+  color: #fff;
 }
 .network_hat .header-links svg {
   fill: #fff;
+  margin-bottom: -4px;
 }
 
 .number {
