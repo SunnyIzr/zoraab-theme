@@ -9460,6 +9460,21 @@ input.btn {
     font-size: 16px;
     margin-top: 1px;
   }
+  .hero .hero-right-panel ul li .item-desc {
+    top: 65%;
+  }
+  .hero .hero-right-panel ul li .item-desc .item-detail h4 {
+    height: 0;
+    padding-bottom: 27%;
+  }
+  .hero .hero-right-panel ul li .item-desc .item-detail .number {
+    padding: 0% 7%;
+    padding-top: 13%;
+    padding-bottom: 22%;
+  }
+  .hero .hero-right-panel ul li:hover .item-desc {
+    top: 30%;
+  }
   .hero .hero-right-panel .sub-callout {
     padding-left: 5px;
     padding-right: 5px;
