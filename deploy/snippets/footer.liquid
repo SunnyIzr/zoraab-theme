@@ -1,16 +1,6 @@
 </div>
 <div class='footer'>
-  <div class='row'>
-    <form action="http://zoraab.us4.list-manage.com/subscribe/post?u=fdf8a5ce2518c055fc3be35d7&id=331f9e54ce" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
-      <div class='email-signup hidden-xs'>
-      SIGN UP FOR OUR NEWSLETTER TO <span class='emphasize'> SAVE 10% </span>
-        <input type='email' placeholder='your@email.com' id='mce-EMAIL' name='EMAIL' />
-        <input type='submit' class='btn btn-info' name='subscribe' value='SUBMIT'/>
-        <span class='free-shipping hidden-xs hidden-sm'> Free shipping on all orders!</span>
-      </div>
-    </form>
-  </div>
-  <div class='row'>
+  <div class="row {% if page.template == blog %} hide {%endif%}">
     <div class='press-banner hidden-xs'>
       <div class='col-sm-2'>
         <img src="{{'press_logo1.png' | asset_url}}" class='img-responsive'>
