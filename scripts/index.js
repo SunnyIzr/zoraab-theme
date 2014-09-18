@@ -1,6 +1,6 @@
 $(document).ready(function(){
   panelHoverEffect()
-  heroCollectionHoverEffect();
+  // heroCollectionHoverEffect();
   $('#indexHero').image($('#hero-url').html(), function(){
   $('#indexHero').addClass('hero-reveal')
   })
