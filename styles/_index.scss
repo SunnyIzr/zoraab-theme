@@ -108,7 +108,7 @@
       li{
         cursor: pointer;
         display: inline-block;
-        width: 42%;
+        width: 45%;
         height: 10%;
         overflow: hidden;
         background-color: #fff;
@@ -155,7 +155,7 @@
         }
       }
       .right-grid{
-        margin-left:14.7%;
+        margin-left:8.7%;
       }
     }
     .sub-callout{
@@ -217,6 +217,63 @@
 
 /*** MEDIA QUERIES ***/
 
+/* Medium monitors */
+@media (max-width: 1230px) {
+  .hero{
+    img{      
+    }
+    .hero-text{
+      width: 30%;
+      top: 26%;
+      h1{
+      }
+      h3{
+        font-size: 16px;
+        margin-top: 1px;
+      }
+      .btn{
+      }
+    }
+    .hero-right-panel{
+      ul{
+        li{
+        }
+        .right-grid{
+        }
+      }
+      .sub-callout{
+        padding-left: 5px;
+        padding-right: 5px;
+        
+        h1{
+          margin-top: 4%;
+          font-size: 20px;
+          padding-bottom: 4px;
+          width: 67%;
+        }
+        .sub-desc{
+          font-size: 14px;
+          margin-top:-4px;
+          width: 70%;
+        }
+      }
+      .btn{
+        width: 27%;
+        height: 66%;
+        margin-top: -17% !important;
+        white-space: normal !important;
+      }
+      a.btn{
+      }
+      .btn:hover{
+      }
+    }
+  }
+
+}
+
+
+
 
 /* Medium devices (tablets) */
 @media (max-width: 991px) {
@@ -271,8 +328,9 @@
       .btn{
         border: 4px solid #fff;
         float: left;
-        margin-top: -2px;
+        margin-top: -2px !important;
         width: 86%;
+        height: 40px !important;
       }
       a.btn{
         color: #fff;
