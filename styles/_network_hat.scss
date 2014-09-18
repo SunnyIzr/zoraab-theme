@@ -94,6 +94,44 @@
   }
 }
 
+@media (max-width: 1225px) { 
+  .network_hat{
+    // position: absolute;
+    .bg-overlay{
+      // opacity: 1.0;
+      // background-color: #5E5E5E;
+    }
+    .main-links{
+      li{
+        width: 27% !important;
+         .section-border{
+          width: 33% !important;
+        }
+      }
+      .email-form{
+        width: 33% !important;
+        
+      }
+    }
+  }
+} 
+
+
+@media (max-width: 992px) { 
+  .network_hat{
+    // position: absolute;
+    .bg-overlay{
+      // opacity: 1.0;
+      // background-color: #5E5E5E;
+    }
+    .main-links{
+      li{
+        width: 70% !important;
+      }
+    }
+  }
+} 
+
 @media (max-width: 768px) { 
   .network_hat{
     position: absolute;

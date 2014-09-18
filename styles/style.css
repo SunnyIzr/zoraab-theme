@@ -9488,7 +9488,7 @@ input.btn {
   }
 }
 /* Small devices (large mobile) */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .hero {
     margin: 0 auto;
     width: 145%;
@@ -10218,6 +10218,22 @@ input.btn {
   margin-bottom: -4px;
 }
 
+@media (max-width: 1225px) {
+  .network_hat .main-links li {
+    width: 27% !important;
+  }
+  .network_hat .main-links li .section-border {
+    width: 33% !important;
+  }
+  .network_hat .main-links .email-form {
+    width: 33% !important;
+  }
+}
+@media (max-width: 992px) {
+  .network_hat .main-links li {
+    width: 70% !important;
+  }
+}
 @media (max-width: 768px) {
   .network_hat {
     position: absolute;
