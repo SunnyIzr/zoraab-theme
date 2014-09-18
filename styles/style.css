@@ -9280,7 +9280,7 @@ input.btn {
 }
 .hero .hero-right-panel {
   position: absolute;
-  top: 5%;
+  top: 2%;
   right: 1.25%;
   width: 32%;
   height: 90%;
@@ -9294,8 +9294,8 @@ input.btn {
 .hero .hero-right-panel ul li {
   cursor: pointer;
   display: inline-block;
-  width: 45%;
-  height: 180px;
+  width: 42%;
+  height: 10%;
   overflow: hidden;
   background-color: #fff;
   margin-bottom: 17px;
@@ -9309,7 +9309,6 @@ input.btn {
   opacity: 0.0;
   height: 100%;
   width: 100%;
-  margin-top: -109%;
   -webkit-transition: opacity 100ms ease-in-out;
   -moz-transition: opacity 100ms ease-in-out;
   -o-transition: opacity 100ms ease-in-out;
@@ -9340,7 +9339,7 @@ input.btn {
   margin-top: 14%;
 }
 .hero .hero-right-panel ul .right-grid {
-  margin-left: 9%;
+  margin-left: 14.7%;
 }
 .hero .hero-right-panel .sub-callout {
   height: 21%;
@@ -9398,32 +9397,88 @@ input.btn {
 }
 
 /*** MEDIA QUERIES ***/
-/* Medium devices (desktops, 992px and up) */
-@media (max-width: 992px) {
-  .hero .hero-text h1 {
-    font-size: 30px;
+/* Medium devices (tablets) */
+@media (max-width: 991px) {
+  .hero {
+    top: 21%;
   }
-  .hero .hero-text .btn {
+  .hero .hero-text {
+    width: 30%;
+    top: 26%;
+  }
+  .hero .hero-text h3 {
     font-size: 16px;
+    margin-top: 1px;
+  }
+  .hero .hero-right-panel {
+    top: -2%;
+    right: -2%;
+  }
+  .hero .hero-right-panel ul li {
+    width: 38%;
+    height: 10%;
+    margin-bottom: 7px;
+  }
+  .hero .hero-right-panel ul .right-grid {
+    margin-left: 9%;
+  }
+  .hero .hero-right-panel .sub-callout {
+    width: 86%;
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 25%;
+  }
+  .hero .hero-right-panel .sub-callout h1 {
+    font-size: 16px;
+    width: 160px;
+    margin-top: 5px;
+    padding-bottom: 6px;
+  }
+  .hero .hero-right-panel .sub-callout .sub-desc {
+    font-size: 13px;
+    width: 191px;
+    margin-top: -5px;
+    line-height: 17px;
+  }
+  .hero .hero-right-panel .btn {
+    border: 4px solid #fff;
+    float: left;
+    margin-top: -2px;
+    width: 86%;
+  }
+  .hero .hero-right-panel a.btn {
+    color: #fff;
+  }
+  .hero .hero-right-panel .btn:hover {
+    border-color: #e85c41;
+    background-color: #e85c41;
   }
 }
-/* Small devices (tablets, 768px and up) */
+/* Small devices (large mobile) */
 @media (max-width: 768px) {
   .hero {
     margin: 0 auto;
+    width: 145%;
   }
   .hero .hero-text {
-    top: 8%;
-    left: 3%;
+    top: 26%;
+    left: 1%;
+    width: 29%;
   }
   .hero .hero-text h1 {
     font-size: 20px;
+  }
+  .hero .hero-text h3 {
+    font-size: 18px;
+    margin-bottom: 7px;
+    margin-top: 16px;
   }
   .hero .hero-text .btn {
     font-size: 15px;
     padding: 9px 7px;
   }
 }
+/* Medium sized mobile */
 @media (max-width: 560px) {
   .hero {
     width: 158%;
@@ -9432,17 +9487,29 @@ input.btn {
   }
   .hero .hero-text {
     text-align: left;
-    top: 1%;
+    top: 13%;
     left: 1%;
+    width: 22%;
   }
   .hero .hero-text h1 {
     font-size: 20px;
+    margin-bottom: 12px;
+  }
+  .hero .hero-text h3 {
+    font-size: 16px;
   }
   .hero .hero-text .btn {
     font-size: 15px;
     padding: 9px 7px;
   }
 }
+/* Small Mobile Iphones*/
+@media (max-width: 399px) {
+  .hero .hero-text {
+    top: 1%;
+  }
+}
+/**/
 .shipping-modal {
   margin: 0 auto;
   text-align: center;
@@ -10118,6 +10185,18 @@ input.btn {
   margin-bottom: -4px;
 }
 
+@media (max-width: 768px) {
+  .network_hat {
+    position: absolute;
+  }
+  .network_hat .bg-overlay {
+    opacity: 1.0;
+    background-color: #5E5E5E;
+  }
+  .network_hat .main-links li {
+    width: 100% !important;
+  }
+}
 .number {
   font-family: "Source Sans Pro";
 }

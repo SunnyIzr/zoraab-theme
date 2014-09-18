@@ -96,7 +96,7 @@
   }
   .hero-right-panel{
     position: absolute;
-    top: 5%;
+    top: 2%;
     right: 1.25%;
     width: 32%;
     height: 90%;
@@ -108,8 +108,8 @@
       li{
         cursor: pointer;
         display: inline-block;
-        width: 45%;
-        height:180px;
+        width: 42%;
+        height: 10%;
         overflow: hidden;
         background-color: #fff;
         margin-bottom: 17px;
@@ -122,7 +122,6 @@
           opacity: 0.0;
           height: 100%;
           width: 100%;
-          margin-top: -109%;
           -webkit-transition: opacity 100ms ease-in-out;
           -moz-transition: opacity 100ms ease-in-out;
           -o-transition: opacity 100ms ease-in-out;
@@ -156,7 +155,7 @@
         }
       }
       .right-grid{
-        margin-left:9%;
+        margin-left:14.7%;
       }
     }
     .sub-callout{
@@ -219,37 +218,94 @@
 /*** MEDIA QUERIES ***/
 
 
-/* Medium devices (desktops, 992px and up) */
-@media (max-width: 992px) {
+/* Medium devices (tablets) */
+@media (max-width: 991px) {
   .hero{
+    top: 21%;
     img{
       
     }
     .hero-text{
+      width: 30%;
+      top: 26%;
       h1{
-        font-size: 30px;
+      }
+      h3{
+        font-size: 16px;
+        margin-top: 1px;
       }
       .btn{
-        font-size: 16px;
+      }
+    }
+    .hero-right-panel{
+      top: -2%;
+      right: -2%;
+      ul{
+        li{
+          width: 38%;
+          height: 10%;
+          margin-bottom: 7px;
+        }
+        .right-grid{
+          margin-left: 9%;
+        }
+      }
+      .sub-callout{
+        width: 86%;
+        padding-left: 5px;
+        padding-right: 5px;
+        height: 25%;
+        h1{
+          font-size: 16px;
+          width: 160px;
+          margin-top: 5px;
+          padding-bottom: 6px;
+        }
+        .sub-desc{
+          font-size: 13px;
+          width: 191px;
+          margin-top: -5px;
+          line-height: 17px;
+        }
+      }
+      .btn{
+        border: 4px solid #fff;
+        float: left;
+        margin-top: -2px;
+        width: 86%;
+      }
+      a.btn{
+        color: #fff;
+      }
+      .btn:hover{
+        border-color: $emphasis-color;
+        background-color: $emphasis-color;
       }
     }
   }
 
 }
 
-/* Small devices (tablets, 768px and up) */
+/* Small devices (large mobile) */
 
 @media (max-width: 768px) { 
   .hero{
     margin: 0 auto;
+    width: 145%;
     img{
       
     }
     .hero-text{
-      top:8%;
-      left:3%;
+      top:26%;
+      left:1%;
+      width: 29%;
       h1{
         font-size: 20px;
+      }
+      h3{
+        font-size: 18px;
+        margin-bottom: 7px;
+        margin-top: 16px;
       }
       .btn{
         font-size: 15px;
@@ -259,7 +315,7 @@
   }
 
 }
-
+/* Medium sized mobile */
 @media (max-width: 560px) { 
   .hero{
     width:158%;
@@ -270,10 +326,15 @@
     }
     .hero-text{
       text-align: left;
-      top: 1%;
+      top: 13%;
       left: 1%;
+      width: 22%;
       h1{
         font-size: 20px;
+        margin-bottom: 12px;
+      }
+      h3{
+        font-size: 16px;
       }
       .btn{
         font-size: 15px;
@@ -284,6 +345,29 @@
 
 }
 
+/* Small Mobile Iphones*/
+@media (max-width: 399px) { 
+  .hero{
+    img{
+      
+    }
+    .hero-text{
+      top: 1%;
+      h1{
+      }
+      h3{
+      }
+      .btn{
+      }
+    }
+  }
+
+}
+
+
+
+
+/**/
 .shipping-modal{
   margin: 0 auto;
   text-align: center;

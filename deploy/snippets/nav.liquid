@@ -7,7 +7,7 @@
         FREE SHIPPING ON ALL US & CANADA ORDERS
       </a>
       </li>
-    <li style='width:28%'>
+    <li style='width:28%' class='hidden-xs'>
       <div class='section-border'></div>
       <form action="http://zoraab.us4.list-manage.com/subscribe/post?u=fdf8a5ce2518c055fc3be35d7&id=331f9e54ce" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
         Save 10% Newsletter
@@ -15,10 +15,10 @@
         <input type='submit' class='btn btn-primary' name='subscribe' value='SIGN UP'/>
       </form>
     </li>
-    <li style='width:22%'>$59 Sock Drawer - 10 Pairs</li>
+    <li style='width:22%' class='hidden-xs'>$59 Sock Drawer - 10 Pairs</li>
     <li class='hide' style='width:20%'>FREE SOCKS Lifetime Supply</li>
   </ul>
-  <ul class='header-links'>
+  <ul class='header-links hidden-xs'>
     <li><a href='/pages/help-faq'> HELP </a></li>
     <li>
       {% if customer %}
@@ -70,7 +70,7 @@
           <span class="icon-bar"></span>
         </button>
         <button type="button" class="cart-toggle navbar-toggle right-off-canvas-toggle">
-          {% include 'icon_cart' %}
+          {% include 'icon_cart_mobile' %}
         </button>
         <a href='/' class='navbar-brand'>
           {{ 'logo.png' | asset_url | img_tag }}

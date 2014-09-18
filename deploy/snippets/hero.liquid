@@ -5,7 +5,7 @@
     <h3>Fall Fashions have arrived.</h3>
     <a href='/collections/mens-socks' class='btn btn-info btn-lg'> SHOP NOW </a>
   </div>
-  <div class='hero-right-panel'>
+  <div class='hero-right-panel hidden-xs'>
     <ul>
       {% assign collection = collections.hero-grid %}
       {% assign products = collection.products %}
@@ -15,7 +15,7 @@
           <div class='img-wrapper'>
             <img src="{{ product.featured_image.src | product_img_url: 'medium' }}" alt="{{ product.featured_image.alt | escape }}" />
           </div>
-          <div class='item-desc'>
+          <div class='item-desc hidden-sm'>
             <div class='overlay'>
             </div>
             <div class='item-detail'>
@@ -27,12 +27,13 @@
       </li>
       {% endfor %}
     </ul>
-    <div class='sub-callout'>
+    <div class='sub-callout hidden-xs'>
       <h1>NO MORE LAUNDRY.</h1>
       <h1 class='sub-desc'>
         Fresh socks and more delivered monthly via subscription service.
       </h1>
-      <a href='/pages/sock-subscription' class='btn btn-md'> LEARN MORE </a>
+      <a href='/pages/sock-subscription' class='btn btn-md hidden-sm'> LEARN MORE </a>
     </div>
+      <a href='/pages/sock-subscription' class='btn btn-md visible-sm'> LEARN MORE </a>
   </div>
 </div>

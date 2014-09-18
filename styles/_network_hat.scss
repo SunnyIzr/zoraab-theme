@@ -93,3 +93,18 @@
     }
   }
 }
+
+@media (max-width: 768px) { 
+  .network_hat{
+    position: absolute;
+    .bg-overlay{
+      opacity: 1.0;
+      background-color: #5E5E5E;
+    }
+    .main-links{
+      li{
+        width: 100% !important;
+      }
+    }
+  }
+} 
