@@ -215,6 +215,26 @@ ul.off-canvas-list li a:hover {
   height: 99%;
   width: 100%;
 }
+.collection-grid ul li .collection-item .item-desc .link-overlay {
+  opacity: 0.9;
+  background: none;
+  z-index: 11;
+  height: 47%;
+}
+.collection-grid ul li .collection-item .item-desc .bottom-link {
+  height: 28%;
+  bottom: -11%;
+}
+.collection-grid ul li .collection-item .item-desc .left-link {
+  height: 100%;
+  width: 37%;
+  left: 0;
+}
+.collection-grid ul li .collection-item .item-desc .right-link {
+  height: 100%;
+  width: 37%;
+  right: 0;
+}
 .collection-grid ul li .collection-item .item-desc .item-detail {
   position: absolute;
   margin: 0 auto;
@@ -226,8 +246,10 @@ ul.off-canvas-list li a:hover {
 .collection-grid ul li .collection-item .item-desc .item-detail h4 {
   color: #404041;
   font-weight: 400;
+  z-index: 15;
 }
 .collection-grid ul li .collection-item .item-desc .item-detail h6 {
+  z-index: 15;
   margin: 10% 0;
   font-weight: 400;
 }
@@ -9380,6 +9402,7 @@ input.btn {
   text-align: right;
   padding-right: 8%;
   padding-top: 3%;
+  color: #404041;
 }
 .hero .hero-right-panel ul li .item-desc .item-detail .add-btn .add-plus-btn {
   background-color: #67c5a9;
