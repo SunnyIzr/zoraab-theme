@@ -125,10 +125,10 @@
           width: 100%;
           position: absolute;
           top: 83%;
-            -webkit-transition: all 0.3s ease-in 0s;
-            -moz-transition: all 0.3s ease-in 0s;
-            -o-transition: all 0.3s ease-in 0s;
-            transition: all 0.3s ease-in 0s;
+          -webkit-transition: all 0.3s ease-in 0s;
+          -moz-transition: all 0.3s ease-in 0s;
+          -o-transition: all 0.3s ease-in 0s;
+          transition: all 0.3s ease-in 0s;
           .overlay{
             background-color: #fff;
             width: 100%;
@@ -191,7 +191,7 @@
               text-align: right;
               padding-right: 8%;
               padding-top: 3%;
-              .plus-btn{
+              .add-plus-btn{
                 background-color: $accent-color;
                 color: #fff;
                 font-size: 20px;

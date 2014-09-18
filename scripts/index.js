@@ -1,18 +1,29 @@
 $(document).ready(function(){
   panelHoverEffect()
-  // heroCollectionHoverEffect();
+  heroAddClickEffect();
+  heroAddEffect();
   $('#indexHero').image($('#hero-url').html(), function(){
   $('#indexHero').addClass('hero-reveal')
   })
 })
 
-var heroCollectionHoverEffect = function(){
-  $('.hero-right-panel li').hover(function(event){
-    $(this).find('.item-desc').css('opacity','1.0')
-  }, function(event){
-    $(this).find('.item-desc').css('opacity','0.0')
+
+var heroAddClickEffect = function(){
+  $('.add-btn').click(function(event){
+    $(this).parent().find('.add').click()
   })
 }
+
+var heroAddEffect = function(){
+  $('.add-btn').hover(function(){
+    $(this).find('.add-plus-btn').css('background-color','#3ea284')
+    $(this).css('color','#3ea284')
+  }, function(){
+    $(this).find('.add-plus-btn').css('background-color','#67c5a9')
+    $(this).css('color','#404041');
+  })
+}
+
 var panelHoverEffect = function(){
   $('.linked-panel').hover(function(){
     $(this).find('.text').css('color','#67c5a9');

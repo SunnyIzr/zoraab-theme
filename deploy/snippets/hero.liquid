@@ -11,7 +11,7 @@
       {% assign products = collection.products %}
       {% for product in products %}
       <li {% if products[1] == product or products[3] == product %} class='right-grid' {%endif%}>
-        <!-- <a href='{{product.url}}'> -->
+        <a href='{{product.url}}'>
           <div class='img-wrapper'>
             <img src="{{ product.featured_image.src | product_img_url: 'medium' }}" alt="{{ product.featured_image.alt | escape }}" />
           </div>
@@ -19,17 +19,25 @@
             <div class='overlay'>
             </div>
             <div class='item-detail'>
-              <h4>{{product.title}}</h4>
-              <h4 class='number'>{{product.price | money | remove: '.00'}}</h4>
-              <div class='qty-input'>
-                <input min="1" type="number" id="quantity" class='product-quantity' name="quantity" value="1" />
-              </div>
-              <div class='add-btn'>
-                ADD TO CART &nbsp;<span class='plus-btn'>&nbsp;+&nbsp;</span>
-              </div>
+              <form action="/cart/add" method="post" enctype="multipart/form-data">
+                <h4>{{product.title}}</h4>
+                <h4 class='number'>{{product.price | money | remove: '.00'}}</h4>
+                <div class='qty-input'>
+                  <input min="1" type="number" id="quantity" class='product-quantity' name="quantity" value="1" />
+                </div>
+                <select name="id" class="product-select hidden">
+                  {% for variant in product.variants %}
+                    <option value="{{ variant.id }}">{{ variant.title }} - {{ variant.price | money }}</option>
+                  {% endfor %}
+                </select>
+                <div class='add-btn right-off-canvas-toggle'>
+                  ADD TO CART &nbsp;<span class='add-plus-btn'>&nbsp;+&nbsp;</span>
+                </div>
+                 <input type="submit" value="+ ADD TO CART" class="add btn btn-lg btn-info right-off-canvas-toggle hide" />
+              </form>
             </div>
           </div>
-        <!-- </a> -->
+        </a>
       </li>
       {% endfor %}
     </ul>
