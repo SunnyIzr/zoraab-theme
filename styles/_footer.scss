@@ -1,33 +1,24 @@
-.email-signup {
-  background: $accent-color;
-  color: white;
-  font-size:24px;
-  padding: 8px;
-  margin: 0 auto;
-  text-align: center;
-  .emphasize{
-    color: $emphasis-color;
+.as-seen{
+  max-width:1600px;
+  margin:0 auto;
+  p{
+    background-color: $emphasis-color;
+    color: #fff;
+    width: 95px;
+    padding: 4px 5px;
   }
-  .free-shipping{
-    font-style: italic;
-    font-size: 12px;
-  }
-  input[type=email]{
-    padding:5px;
-    font-size:15px;
-    color: $primary-color;
-  }  
 }
-
 .press-banner{
   height:100%;
   vertical-align: middle;
+  border-top: 1px solid $accent-color;
   padding: 0px 50px;
   max-width:1600px;
   margin: 0 auto;
   text-align: center;
-  margin-top: 25px;
-  margin-bottom: 158px;
+  margin-top: -10px;
+  margin-bottom: 10%;
+  padding-top: 2%;
   img{
     width: 75%;
     height: 75%;
@@ -35,13 +26,17 @@
 }
 
 .bottom-footer{
+  font-family: $number-font;
+  font-weight: 400;
   padding-top:25px;
   padding-bottom:25px;
   height:auto;
-  background-color: #99999f;
-  color:white;
+  color:$primary-color;
   padding-left: 5%;
   padding-right: 5%;
+  border-top: 1px solid $accent-color;
+  margin: 0 auto;
+  max-width: 1600px;
   a:hover{
     text-decoration: none;
     color: $accent-color;
@@ -51,17 +46,25 @@
     margin: 0 auto;
     text-align: left;
     h5{
-      font-weight: lighter;
+      font-weight: 600;
+      color: $accent-color;
+    }
+    .footer-link:hover{
+      h5{
+        color: $accent-hover-color;
+      }
     }
     p{
-      font-weight: lighter;
     }
     a{
-      color: white;
+      color: $primary-color;
+    }
+    a:hover{
+      color: $accent-hover-color;
     }
     .footer-links{
-      border-left: 1px solid white;
-      border-right: 1px solid white;
+      border-left: 1px solid $accent-color;
+      border-right: 1px solid $accent-color;
     }
     .copyright{
       margin-top:10px;
@@ -78,6 +81,7 @@
 }
 
 .social-icons{
+  max-width: 216px;
   ul{
     margin-left:25px;
     list-style:none;
@@ -87,19 +91,26 @@
       display: inline-block;
       width: 60px;
       height: 60px;
-      background-color: #fff;
+      background-color: $accent-color;
       text-align: center;
       border-radius: 30px;
       a{
-        color: $faded-color !important;  
+        color: #fff !important;  
       }
       a:hover{
-        color: $accent-color !important;  
+        color: #fff !important;  
       }
+    }
+    li:hover{
+      background-color: $accent-hover-color;
     }
   }
 }
 
 .footer{
   margin-top:45px;
+}
+.blog-footer{
+  margin-top: 210px;
+  z-index: 1;
 }

@@ -6,11 +6,11 @@
     <a href='/collections/mens-socks' class='btn btn-info btn-lg'> SHOP NOW </a>
   </div>
   <div class='hero-right-panel hidden-xs'>
-    <ul>
+    <ul class='prod-grid'>
       {% assign collection = collections.hero-grid %}
       {% assign products = collection.products %}
       {% for product in products %}
-      <li {% if products[1] == product or products[3] == product %} class='right-grid' {%endif%}>
+      <li {% if products[1] == product or products[3] == product %} class='single-prod right-grid' {%endif%}>
         <a href='{{product.url}}'>
           <div class='img-wrapper'>
             <img src="{{ product.featured_image.src | product_img_url: 'medium' }}" alt="{{ product.featured_image.alt | escape }}" />
@@ -27,20 +27,38 @@
                 <h4 class='number'>{{product.price | money | remove: '.00'}}</h4>
                 <div class='qty-input'>
                   <input min="1" type="number" id="quantity" class='product-quantity' name="quantity" value="1" />
+                  <select name="id" class="product-select hidden">
+                      {% for variant in product.variants %}
+                        <option value="{{ variant.id }}">{{ variant.title }}</option>
+                      {% endfor %}
+                  </select>
                 </div>
-                <select name="id" class="product-select hidden">
-                  {% for variant in product.variants %}
-                    <option value="{{ variant.id }}">{{ variant.title }} - {{ variant.price | money }}</option>
-                  {% endfor %}
-                </select>
-                <div class='add-btn right-off-canvas-toggle'>
-                  ADD TO CART &nbsp;<span class='add-plus-btn'>&nbsp;+&nbsp;</span>
-                </div>
-                 <input type="submit" value="+ ADD TO CART" class="add btn btn-lg btn-info right-off-canvas-toggle hide" />
+                {% if product.variants.size == 1 %}
+                  <div class='add-btn add-to-cart-action {% if product.variants.size == 1 %} right-off-canvas-toggle {% endif %}'>
+                    ADD TO CART &nbsp;<span class='add-plus-btn'>&nbsp;+&nbsp;</span>
+                  </div>
+                {% else %}
+                  <div class='add-btn add-sized-btn stop-hide-dropdown' data-target='#{{ product.id }}'>
+                    ADD TO CART &nbsp;<span class='add-plus-btn'>&nbsp;+&nbsp;</span>
+                  </div>                  
+                {% endif %}
+                 <input id='sub{{product.id}}' type="submit" value="+ ADD TO CART" class="add btn btn-lg btn-info right-off-canvas-toggle hide" />
               </form>
             </div>
           </div>
       </li>
+      {% if product.variants.size > 1 %}
+      {% assign sizes = 'S,M,L,XL' | split: ',' %}
+      {% assign variants = product.variants %}
+      {% assign indices = '0,1,2,3' | split: ','%}
+        <ul id='{{product.id}}' class='size-dropdown'>
+          <div class='arrow'></div>
+          {% for index in indices %}
+          {% assign i = index | times:1 %}
+            <li data-target='#sub{{product.id}}' data-variant='{{variants[i].id}}' class='add-size-to-cart-action first right-off-canvas-toggle'>{{ sizes[i] }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
       {% endfor %}
     </ul>
     <div class='sub-callout hidden-xs'>

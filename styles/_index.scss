@@ -105,6 +105,45 @@
       padding: 0px;
       list-style: none;
       text-align: left;
+        .size-dropdown{
+          color: red;
+          display: none;
+          position: absolute;
+          z-index: 1;
+          left: 36.5%;
+          top: 31.3%;
+          -webkit-transition: opacity 150ms ease-in-out;
+          -moz-transition: opacity 150ms ease-in-out;
+          -o-transition: opacity 150ms ease-in-out;
+          -ms-transition: opacity 150ms ease-in-out;
+          transition: opacity 150ms ease-in-out;
+          .arrow{
+            width: 0; 
+            height: 0; 
+            margin-left: 6px;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-bottom: 5px solid $accent-color;
+          }
+          li{
+            display: block;
+            width: 100%;
+            margin-bottom: 0;
+            text-align: center;
+            border: none;
+            background-color: $accent-color;
+            color: #fff;
+            padding: 1px 3px;
+            cursor: pointer;
+            border-top: 1px solid #fff; 
+          }
+          .first{
+            border: none;
+          }
+          li:hover{
+            background-color: $accent-hover-color;
+          }
+        }
       li{
         cursor: pointer;
         display: inline-block;
@@ -184,6 +223,7 @@
               margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
               }
             }
+   
             .add-btn{
               float:right;
               width: 65%;

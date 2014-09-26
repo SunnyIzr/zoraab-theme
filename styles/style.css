@@ -313,36 +313,28 @@ ul.off-canvas-list li a:hover {
     padding: 1px 6px 5px 6px;
   }
 }
-.email-signup {
-  background: #67c5a9;
-  color: white;
-  font-size: 24px;
-  padding: 8px;
+.as-seen {
+  max-width: 1600px;
   margin: 0 auto;
-  text-align: center;
 }
-.email-signup .emphasize {
-  color: #e85c41;
-}
-.email-signup .free-shipping {
-  font-style: italic;
-  font-size: 12px;
-}
-.email-signup input[type=email] {
-  padding: 5px;
-  font-size: 15px;
-  color: #404041;
+.as-seen p {
+  background-color: #e85c41;
+  color: #fff;
+  width: 95px;
+  padding: 4px 5px;
 }
 
 .press-banner {
   height: 100%;
   vertical-align: middle;
+  border-top: 1px solid #67c5a9;
   padding: 0px 50px;
   max-width: 1600px;
   margin: 0 auto;
   text-align: center;
-  margin-top: 25px;
-  margin-bottom: 158px;
+  margin-top: -10px;
+  margin-bottom: 10%;
+  padding-top: 2%;
 }
 .press-banner img {
   width: 75%;
@@ -350,13 +342,17 @@ ul.off-canvas-list li a:hover {
 }
 
 .bottom-footer {
+  font-family: "Source Sans Pro";
+  font-weight: 400;
   padding-top: 25px;
   padding-bottom: 25px;
   height: auto;
-  background-color: #99999f;
-  color: white;
+  color: #404041;
   padding-left: 5%;
   padding-right: 5%;
+  border-top: 1px solid #67c5a9;
+  margin: 0 auto;
+  max-width: 1600px;
 }
 .bottom-footer a:hover {
   text-decoration: none;
@@ -368,17 +364,21 @@ ul.off-canvas-list li a:hover {
   text-align: left;
 }
 .bottom-footer .content h5 {
-  font-weight: lighter;
+  font-weight: 600;
+  color: #67c5a9;
 }
-.bottom-footer .content p {
-  font-weight: lighter;
+.bottom-footer .content .footer-link:hover h5 {
+  color: #3ea284;
 }
 .bottom-footer .content a {
-  color: white;
+  color: #404041;
+}
+.bottom-footer .content a:hover {
+  color: #3ea284;
 }
 .bottom-footer .content .footer-links {
-  border-left: 1px solid white;
-  border-right: 1px solid white;
+  border-left: 1px solid #67c5a9;
+  border-right: 1px solid #67c5a9;
 }
 .bottom-footer .content .copyright {
   margin-top: 10px;
@@ -392,6 +392,9 @@ ul.off-canvas-list li a:hover {
   margin-top: 10px;
 }
 
+.social-icons {
+  max-width: 216px;
+}
 .social-icons ul {
   margin-left: 25px;
   list-style: none;
@@ -402,19 +405,27 @@ ul.off-canvas-list li a:hover {
   display: inline-block;
   width: 60px;
   height: 60px;
-  background-color: #fff;
+  background-color: #67c5a9;
   text-align: center;
   border-radius: 30px;
 }
 .social-icons ul li a {
-  color: #b8b8b8 !important;
+  color: #fff !important;
 }
 .social-icons ul li a:hover {
-  color: #67c5a9 !important;
+  color: #fff !important;
+}
+.social-icons ul li:hover {
+  background-color: #3ea284;
 }
 
 .footer {
   margin-top: 45px;
+}
+
+.blog-footer {
+  margin-top: 210px;
+  z-index: 1;
 }
 
 .breadcrumb {
@@ -1065,7 +1076,7 @@ ul.off-canvas-list li a:hover {
 }
 
 .blog-iframe iframe {
-  z-index: -2;
+  z-index: 0;
   position: absolute;
   top: 47px;
   left: 0;
@@ -9314,6 +9325,45 @@ input.btn {
   list-style: none;
   text-align: left;
 }
+.hero .hero-right-panel ul .size-dropdown {
+  color: red;
+  display: none;
+  position: absolute;
+  z-index: 1;
+  left: 36.5%;
+  top: 31.3%;
+  -webkit-transition: opacity 150ms ease-in-out;
+  -moz-transition: opacity 150ms ease-in-out;
+  -o-transition: opacity 150ms ease-in-out;
+  -ms-transition: opacity 150ms ease-in-out;
+  transition: opacity 150ms ease-in-out;
+}
+.hero .hero-right-panel ul .size-dropdown .arrow {
+  width: 0;
+  height: 0;
+  margin-left: 6px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #67c5a9;
+}
+.hero .hero-right-panel ul .size-dropdown li {
+  display: block;
+  width: 100%;
+  margin-bottom: 0;
+  text-align: center;
+  border: none;
+  background-color: #67c5a9;
+  color: #fff;
+  padding: 1px 3px;
+  cursor: pointer;
+  border-top: 1px solid #fff;
+}
+.hero .hero-right-panel ul .size-dropdown .first {
+  border: none;
+}
+.hero .hero-right-panel ul .size-dropdown li:hover {
+  background-color: #3ea284;
+}
 .hero .hero-right-panel ul li {
   cursor: pointer;
   display: inline-block;
@@ -10199,7 +10249,7 @@ input.btn {
   .navbar {
     margin-bottom: 12px !important;
     margin-top: -10px;
-    z-index: 0;
+    z-index: 3;
   }
 
   .navbar-form.navbar-right:last-child {
@@ -10261,7 +10311,6 @@ input.btn {
   position: absolute;
   top: 27%;
   border-left: 1px solid #fff;
-  border-right: 1px solid #fff;
 }
 .network_hat .main-links li form input {
   height: 16.9px;

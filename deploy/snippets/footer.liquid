@@ -1,6 +1,9 @@
 </div>
-<div class='footer'>
-  <div class="row {% if page.template == blog %} hide {%endif%}">
+<div class="{% if page.handle =='blog' %} blog-footer {% endif %} footer">
+  <div class='as-seen hidden-xs'>
+    <p>AS SEEN IN</p>
+  </div>
+  <div class="row">
     <div class='press-banner hidden-xs'>
       <div class='col-sm-2'>
         <img src="{{'press_logo1.png' | asset_url}}" class='img-responsive'>
@@ -26,25 +29,25 @@
     <div class="content">
       <div class='row'>
         <div class='col-sm-2'>
-          <a href='/pages/sock-subscription'>
+          <a href='/pages/sock-subscription' class='footer-link'>
             <h5>SUBSCRIPTION</h5>
             <p>Be it party socks, colorful socks or cool socks, every preference is customized based on your style profile.</p>
           </a>
         </div>
         <div class='col-sm-2'>
-          <a href='/collections/mens-socks'>
+          <a href='/collections/mens-socks' class='footer-link'>
             <h5>SHOP</h5>
             <p>Accessories for every man from bowties, pocket squares to colorful socks and dare we say even crazy socks. Find your look.</p>
           </a>
         </div>
         <div class='col-sm-2'>
-          <a href='/products/gift-card'>
+          <a href='/products/gift-card' class='footer-link'>
             <h5>GIFT CARDS</h5>
             <p>For the man who knows how he likes his pocket squares and bowties. In fact he’s particular about his crazy socks.</p>
           </a>
         </div>
         <div class='col-sm-2'>
-          <a href='/pages/blog'>
+          <a href='/pages/blog' class='footer-link'>
             <h5>BLOG</h5>
             <p>Find your inspirational pocket square, watch, tie and even cool socks look, curated just for you.</p>
           </a>

@@ -4,12 +4,47 @@ $(document).ready(function(){
   heroAddEffect();
   $('#indexHero').image($('#hero-url').html(), function(){
   $('#indexHero').addClass('hero-reveal')
+  slideDownSizeVars();
+  hideSizeVarDropdown();
+  heroAddSizeEffect();
   })
 })
 
+var heroAddSizeEffect = function(){
+  $('.add-size-to-cart-action').click(function(event){
+    target = $(this).data('target')
+    variant = $(this).data('variant')
+    console.log(variant)
+    $('option[value="'+variant+'"]').prop('selected','true')
+    $(target).click()
+  })
+}
+
+var slideDownSizeVars = function(){
+  $('.add-sized-btn').click(function(e){
+    target = $(this).data('target')
+    $(target).slideDown(function() {})
+    
+  })
+}
+
+var removeAllSizeVarDropdowns = function(){
+  $('.size-dropdown').css('display','none')
+}
+
+var hideSizeVarDropdown = function(){
+  $(document).click(function(){
+    removeAllSizeVarDropdowns()
+  });
+  $('.stop-hide-dropdown').click(function(e){
+    e.stopPropagation();
+  })
+  
+}
+
 
 var heroAddClickEffect = function(){
-  $('.add-btn').click(function(event){
+  $('.add-to-cart-action').click(function(event){
     $(this).parent().find('.add').click()
   })
 }
