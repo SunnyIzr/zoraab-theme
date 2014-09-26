@@ -9549,6 +9549,9 @@ input.btn {
     padding-top: 13%;
     padding-bottom: 22%;
   }
+  .hero .hero-right-panel ul li .item-desc-hover {
+    top: 30%;
+  }
   .hero .hero-right-panel ul li:hover .item-desc {
     top: 30%;
   }
