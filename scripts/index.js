@@ -16,12 +16,14 @@ var heroAddSizeEffect = function(){
     variant = $(this).data('variant')
     console.log(variant)
     $('option[value="'+variant+'"]').prop('selected','true')
+    $($(target).parent().parent().parent()).removeClass('item-desc-hover')
     $(target).click()
   })
 }
 
 var slideDownSizeVars = function(){
   $('.add-sized-btn').click(function(e){
+    $($(this).parent().parent().parent()).addClass('item-desc-hover')
     target = $(this).data('target')
     $(target).slideDown(function() {})
     

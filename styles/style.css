@@ -9462,6 +9462,9 @@ input.btn {
   border-radius: 14px;
   letter-spacing: 2px;
 }
+.hero .hero-right-panel ul li .item-desc-hover {
+  top: 55%;
+}
 .hero .hero-right-panel ul li:hover .item-desc {
   top: 55%;
 }
