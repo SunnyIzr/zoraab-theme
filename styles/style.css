@@ -1333,226 +1333,43 @@ a.newbuttonsignup:hover, input.newbutton:hover {
 }
 
 /* END LOGIN STUFF */
-/* CUSTOMER ACCOUTN STUFF */
-.fixedwidthcontain {
-  margin: 0 auto;
-  padding: 0 5%;
-}
-
-#accountgreet {
-  position: relative;
-  width: 100%;
-  /*for IE 6 */
-  margin-bottom: -76px;
-}
-
-#accthello {
-  position: absolute;
-  top: 21px;
-  left: 289px;
-  width: 100%;
-}
-
-#allcustorders {
-  width: 100%;
-}
-#allcustorders th {
-  text-align: center;
-}
-
-#accthello span {
-  color: #99999f;
-  font-weight: normal;
-  letter-spacing: -1px;
-  padding: 10px;
-  font-size: 23px;
-  font-family: "avenir";
-}
-
-#custname {
-  position: absolute;
-  width: 100px;
-  text-align: center;
-  top: 76px;
-  left: 210px;
-  width: 100%;
-}
-
-#custname span {
-  color: #99999f;
-  font-weight: normal;
-  letter-spacing: -1px;
-  padding: 10px;
-  font-size: 22px;
-}
-
-td {
-  height: 30px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 5px;
-  padding-right: 5px;
-  text-align: center;
-  overflow: hidden;
-}
-
-th {
-  background-color: #98edd4;
-  color: white;
-  font-weight: bold;
-  padding: 5px;
-  text-align: center;
-  overflow: hidden;
-}
-
-tr:hover {
-  background-color: #f1f1f1;
-  cursor: pointer;
-}
-
-tr.selected {
-  background-color: #e1e1e1;
-  cursor: pointer;
-}
-
-#ordersummbox {
-  margin-top: 0px;
-  margin-bottom: 15px;
-  border-radius: 30px;
-  overflow: hidden;
-  border: 1px solid;
-  width: 100%;
-  height: 365px;
-  border-color: #c1bbbb;
-  /* box-shadow: 10px 10px 15px #888; */
-}
-
-#ordersummboxhead {
-  font-size: 26px;
-  background-color: #98edd4;
-  color: #ffffff;
-  text-align: center;
-  font-weight: normal;
-}
-
-#ordersumboxjustorders {
-  height: 275px;
-  overflow: auto;
-  overflow-x: hidden;
-}
-
-#ordersumboxbuttons {
-  margin-top: 15px;
-  margin-bottom: 0px;
-  margin-left: 50px;
-  margin-right: 50px;
-  font-size: 26px;
-  color: #ffffff;
-}
-
-.button {
-  display: block;
-  width: 100px;
-  background: #cccccc;
-  border: none;
-  border-radius: 15px;
-  color: #ffffff;
-  text-align: center;
-}
-
-a.button {
-  text-decoration: none;
-}
-
-a.button:hover {
-  background: #98edd4;
-  font-weight: normal;
-}
-
-.cd_heading {
-  font-size: 17px;
-  color: #67c5a9;
-  margin-bottom: -6px;
-}
-
-.cd_info {
-  margin-top: 15px;
-  line-height: 20px;
-}
-
-#customer_details {
-  width: auto;
-  height: 110px;
-  margin-bottom: 55px;
-  margin-left: 0px;
-  float: right;
-  margin-left: 12px;
-}
-
-#zkitBox {
-  width: 525px;
-  float: left;
-  color: #99999f;
-  font-size: 16px;
-}
-
-.zkitBox {
-  color: #99999f;
-  font-size: 18px;
-}
-
-#zkitBox, h2 {
-  font-size: 32px;
-  color: #99999f;
-}
-
-#zkitBox, h3 {
-  font-size: 20px;
-  color: #6bc4a9;
-  margin-bottom: 7px;
-}
-
-#zKitBoxIcon {
-  width: 250px;
-  float: right;
-  color: #cfcfcf;
-}
-
-#zKitBoxIcon a:link {
-  color: #cfcfcf;
-}
-
-#zKitBoxIcon a:visited {
-  color: #cfcfcf;
-}
-
-#zKitBoxIcon a:hover {
-  color: #67c5a9;
-}
-
-/* END CUSTOMER ACCOUNT STUFF */
-#order_details {
-  width: 100%;
-  text-align: left;
+.account {
   border: 1px solid #b8b8b8;
+  padding: 25px;
+  font-family: "Source Sans Pro";
 }
-#order_details th {
-  padding: 5px;
+.account .nav {
+  width: 100%;
 }
-#order_details td {
-  text-align: left;
-  padding: 5px;
+.account .nav li {
+  width: 16.66%;
+  text-align: center;
 }
-
-.order-detail-summary {
-  float: right;
+.account .account-body {
+  padding: 0 10px;
 }
-.order-detail-summary .label {
-  float: left;
-  color: #404041;
+.account .account-body h2 {
+  font-size: 24px;
+  font-weight: normal;
+  margin: 40px 0px;
 }
-.order-detail-summary .total {
-  float: right;
+.account .account-body h3 {
+  font-size: 18px;
+  font-weight: normal;
+  color: #67c5a9;
+}
+.account .account-body .left-section {
+  border-right: 1px solid #b8b8b8;
+  margin-right: -10px;
+}
+.account .account-body .left-section .example-img {
+  margin-top: 20px;
+  background-color: #b8b8b8;
+  height: 125px;
+  width: 200px;
+}
+.account .account-body .right-section {
+  padding-left: 40px;
 }
 
 /*!
