@@ -86,7 +86,7 @@ $.fn.image = function(src, f) {
   return this.each(function() {
     var i = new Image();
     $(i).addClass('img-responsive')
-    $(i).attr('alt','Cool Socks and Colorful Socks')
+    $(i).attr('alt','Cool Socks For Men and Colorful Socks')
     i.src = src;
     i.onload = f;
     this.insertBefore(i,this.firstChild);

@@ -9486,7 +9486,7 @@ input.btn {
   margin-top: 11px;
   border-bottom: 1px solid #fff;
   padding-bottom: 7px;
-  width: 249px;
+  width: 255px;
 }
 .hero .hero-right-panel .sub-callout .sub-desc {
   font-size: 16px;
@@ -9609,7 +9609,7 @@ input.btn {
     height: 25%;
   }
   .hero .hero-right-panel .sub-callout h1 {
-    font-size: 16px;
+    font-size: 14px;
     width: 160px;
     margin-top: 5px;
     padding-bottom: 6px;
