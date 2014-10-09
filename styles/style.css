@@ -1371,6 +1371,15 @@ a.newbuttonsignup:hover, input.newbutton:hover {
 .account .account-body .right-section {
   padding-left: 40px;
 }
+.account .account-body table {
+  width: 100%;
+}
+.account .account-body table th {
+  text-align: center;
+}
+.account .account-body table td {
+  text-align: center;
+}
 
 /*!
  * Bootstrap v3.1.1 (http://getbootstrap.com)

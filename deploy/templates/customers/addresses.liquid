@@ -1,5 +1,29 @@
 {% layout settings.customer_layout %}
 
+
+<div class='account'>
+  <ul class="nav nav-tabs" role="tablist">
+    <li><a href="/account">DASHBOARD</a></li>
+    <li><a href="#profile">ACCOUNT INFORMATION</a></li>
+    <li class='active'><a href="/account/addresses">ADDRESS BOOK</a></li>
+    <li><a href="/pages/order-history">ORDER HISTORY</a></li>
+    <li><a href="#settings">CREDIT CARDS</a></li>
+    <li><a href="#settings">SUBSCRIPTION</a></li>
+  </ul>
+  
+  <div class='account-body'>
+    <div class='row'>
+      <div class='col-md-9'>
+        <h3>Contact Information</h3>
+      </div>
+      <div class='col-md-3'>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% comment %}
 <div id="admin_header">
   <div class="action_link action_return note" id='return_to_account'><a href="/account">Return to Account page</a></div>
   <h2 class="title">Manage Account Address</h2>
@@ -161,3 +185,4 @@
     new Shopify.CountryProvinceSelector('address_country_{{address.id}}', 'address_province_{{address.id}}', {hideElement: 'address_province_container_{{address.id}}'});
   {% endfor %}
 </script>
+{% endcomment %}

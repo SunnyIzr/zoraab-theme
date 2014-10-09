@@ -1,0 +1,37 @@
+<div class='account'>
+  <ul class="nav nav-tabs" role="tablist">
+    <li><a href="/account">DASHBOARD</a></li>
+    <li><a href="#profile">ACCOUNT INFORMATION</a></li>
+    <li><a href="/account/addresses">ADDRESS BOOK</a></li>
+    <li class='active'><a href="/pages/order-history">ORDER HISTORY</a></li>
+    <li><a href="#settings">CREDIT CARDS</a></li>
+    <li><a href="#settings">SUBSCRIPTION</a></li>
+  </ul>
+  
+  <div class='account-body'>
+    <h3>Order History</h3>
+     <table class='table'>
+        <thead>
+          <tr>
+            <th width="16.6%">Order #</th>
+            <th width="16.6%">Date</th>
+            <th width="16.6%">Ship To</th>
+            <th width="16.6%">Total</th>
+            <th width='16.6%'>Status</th>
+            <th width='16.6%'></th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for order in customer.orders %}
+            <tr>
+              <td>{{ order.name }}</td>
+              <td>{{ order.created_at | date: "%b %d, %Y" }}</td>
+              <td>{{ order.shipping_address.name }}</td>
+              <td>{{ order.total_price | money }}</td>
+              <td>{% if order.fulfillment_status =="fulfilled" %}Shipped{%else%}
+                  {% if order.payment_status =="Refunded" %}Refunded {%else%} Processing {%endif%}{% endif %}</td>
+              <td><a href='#'>View Order</a></td>
+            </tr>            
+          {%endfor%}
+        </tbody>
+      </table>
