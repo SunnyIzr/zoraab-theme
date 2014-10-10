@@ -1342,7 +1342,7 @@ a.newbuttonsignup:hover, input.newbutton:hover {
   width: 100%;
 }
 .account .nav li {
-  width: 16.66%;
+  width: 20%;
   text-align: center;
 }
 .account .account-body {
@@ -1358,6 +1358,14 @@ a.newbuttonsignup:hover, input.newbutton:hover {
   font-weight: normal;
   color: #67c5a9;
 }
+.account .account-body h3 .edit-account {
+  font-size: 14px;
+  cursor: pointer;
+  color: #404041;
+}
+.account .account-body h3 .edit-account:hover {
+  text-decoration: underline;
+}
 .account .account-body .left-section {
   border-right: 1px solid #b8b8b8;
   margin-right: -10px;
@@ -1371,6 +1379,10 @@ a.newbuttonsignup:hover, input.newbutton:hover {
 .account .account-body .right-section {
   padding-left: 40px;
 }
+.account .account-body .right-section img {
+  margin-top: 20px;
+  float: right;
+}
 .account .account-body table {
   width: 100%;
 }
@@ -1379,6 +1391,13 @@ a.newbuttonsignup:hover, input.newbutton:hover {
 }
 .account .account-body table td {
   text-align: center;
+}
+.account .account-body .account-info {
+  width: 70%;
+}
+.account .account-body .account-info td {
+  text-align: left;
+  height: 40px;
 }
 
 /*!
