@@ -62,5 +62,18 @@
         height: 40px;
       }
     }
+    .enrolled-date{
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+    .next-date{
+      margin-bottom: 30px;
+    }
+    .top-section{
+      border-bottom: 1px solid $faded-color;
+    }
+    .bottom-section{
+      padding-top: 20px;
+    }
   }
 }

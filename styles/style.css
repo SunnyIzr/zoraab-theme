@@ -1399,6 +1399,19 @@ a.newbuttonsignup:hover, input.newbutton:hover {
   text-align: left;
   height: 40px;
 }
+.account .account-body .enrolled-date {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.account .account-body .next-date {
+  margin-bottom: 30px;
+}
+.account .account-body .top-section {
+  border-bottom: 1px solid #b8b8b8;
+}
+.account .account-body .bottom-section {
+  padding-top: 20px;
+}
 
 /*!
  * Bootstrap v3.1.1 (http://getbootstrap.com)
