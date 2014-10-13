@@ -1,46 +1,31 @@
-.header-blog{
-  background-color: #fff;
-  position:absolute;
-  z-index: -1;
-  height:81px;
-  top: 0;
-  left:0;
-  width:100%;
-}
-
-.blog-iframe{
-  iframe {
-    z-index: 0;
-    position: absolute;
-    top: 47px;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
-    padding-top: 0px;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box; 
-    -webkit-box-sizing:border-box;
+.blog{
+  max-width: 800px;
+  overflow:hidden;
+  margin:0 auto;
+  border-top: 1px solid $faded-color;
+  p{
+    width: 600px;
+    margin: 0 auto;
+    line-height: 23px;
   }
-}
-
-@media (max-width: 768px) {
-  .blog-iframe{
-    iframe{
-      top: 35px;
-    }
+  .main{
+    width: 800px;
+    height: 450px;
+    margin: 0 -100px;
+    margin-bottom: 25px;
   }
-}
-
-.blog-loader{
-  width: 100%;
-  height: 400px;
-  text-align: center;
-  z-index: -3;
-  img{
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 125px;
-    width: 35px;
+  h1{
+    font-size: 40px;
+    font-weight: 100;
+  }
+  .quote{
+    font-size: 25px;
+    line-height: 40px;
+    text-align: center;
+    border-top: 1px solid $faded-color;
+    border-bottom: 1px solid $faded-color;
+    margin: 15px 75px;
+    padding: 55px 50px 15px 50px;
+    background: url('./icon_quote.svg') no-repeat center -3%;
   }
 }
