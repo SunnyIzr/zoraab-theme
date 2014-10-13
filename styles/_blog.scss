@@ -2,21 +2,55 @@
   max-width: 800px;
   overflow:hidden;
   margin:0 auto;
-  border-top: 1px solid $faded-color;
+  .loader{
+    text-align: center;
+    img{
+      margin: 0 auto;
+      height: 35px;
+      position: absolute;
+      top: 200px;
+    }
+  }
+  .hero{
+    height: 500px;
+    overflow: hidden;
+    border: 1px solid $faded-color;
+    img{
+      width: 100%;
+    }
+  }
+  .hero-blog-reveal{
+    opacity: 1.0;
+    border: none !important;
+  }
+  .loading{
+    border: 1px solid $faded-color;
+  }
   p{
-    width: 600px;
+    max-width: 600px;
+    width: 100%;
+    // width: 600px;
     margin: 0 auto;
     line-height: 23px;
   }
-  .main{
-    width: 800px;
-    height: 450px;
+  .blog-hero{
+    // max-width: 800px;
+    // width: 100%;
+    // height: 450px;
+    display: none;
+    
     margin: 0 -100px;
     margin-bottom: 25px;
   }
   h1{
     font-size: 40px;
     font-weight: 100;
+    margin: 0 auto;
+    border-bottom: 1px solid $faded-color;
+    text-align: center;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    margin-top: 30px;
   }
   .quote{
     font-size: 25px;
@@ -24,8 +58,17 @@
     text-align: center;
     border-top: 1px solid $faded-color;
     border-bottom: 1px solid $faded-color;
-    margin: 15px 75px;
-    padding: 55px 50px 15px 50px;
+    margin: 15px auto;
+    padding: 55px 80px 15px 80px;
     background: url('./icon_quote.svg') no-repeat center -3%;
+  }
+}
+
+@media (max-width: 767px) {
+  .blog{
+    .quote{
+      padding-left: 20px;
+      padding-right: 20px;
+    }
   }
 }

@@ -3,10 +3,10 @@ $(document).ready(function(){
   heroAddClickEffect();
   heroAddEffect();
   $('#indexHero').image($('#hero-url').html(), function(){
-  $('#indexHero').addClass('hero-reveal')
-  slideDownSizeVars();
-  hideSizeVarDropdown();
-  heroAddSizeEffect();
+    $('#indexHero').addClass('hero-reveal')
+    slideDownSizeVars();
+    hideSizeVarDropdown();
+    heroAddSizeEffect();
   })
 })
 
