@@ -1125,6 +1125,9 @@ ul.off-canvas-list li a:hover {
   padding: 55px 80px 15px 80px;
   background: url("./icon_quote.svg") no-repeat center -3%;
 }
+.blog .blog-preview {
+  display: none;
+}
 
 @media (max-width: 767px) {
   .blog .quote {
@@ -1132,6 +1135,59 @@ ul.off-canvas-list li a:hover {
     padding-right: 20px;
   }
 }
+.blogs {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.blogs .blog-hero {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.blogs .blog-hero img {
+  margin: 0 auto;
+}
+.blogs .blog-grid {
+  padding: 0px;
+  list-style: none;
+}
+.blogs .blog-grid .blog-preview a {
+  color: #404041;
+}
+.blogs .blog-grid .blog-preview a:hover {
+  text-decoration: none;
+}
+.blogs .blog-grid li {
+  margin: 0 auto;
+  display: inline-block;
+  width: 33%;
+  text-align: center;
+  margin-bottom: -35px;
+  cursor: pointer;
+}
+.blogs .blog-grid li .preview-img {
+  margin: 0 auto;
+  border: 1px solid #b8b8b8;
+}
+.blogs .blog-grid li .preview-text {
+  position: relative;
+  top: -70px;
+  background-color: #fff;
+  width: 60%;
+  height: 70px;
+  border: 1px solid #b8b8b8;
+  left: 14px;
+  text-align: left;
+  padding: 20px;
+  -webkit-transition: all 150ms ease-in-out;
+  -moz-transition: all 150ms ease-in-out;
+  -o-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+.blogs .blog-grid li .preview-text-hover {
+  background-color: #e85c41;
+  color: #fff;
+}
+
 .header-blog {
   background-color: #fff;
   position: absolute;

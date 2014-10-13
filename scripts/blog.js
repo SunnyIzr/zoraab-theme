@@ -7,7 +7,15 @@ $(document).ready(function(){
 
 var BlogController = {
   init: function(){
+    this.prevewHover()
     
+  }, 
+  prevewHover: function(){
+    $('.blog-preview').hover(function(){
+      $(this).find('.preview-text').addClass('preview-text-hover')
+    }, function(){
+      $(this).find('.preview-text').removeClass('preview-text-hover')
+    })
   }
 }
 
