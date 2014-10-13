@@ -11,11 +11,6 @@ var BlogController = {
     this.popBlogs()
   }, 
   prevewHover: function(){
-    // $(document).on('hover','.blog-preview',function(){
-    //   $(this).find('.preview-text').addClass('preview-text-hover')
-    // }, function(){
-    //   $(this).find('.preview-text').removeClass('preview-text-hover')
-    // })
     $(document).on('mouseover','.blog-preview',function(){
       $(this).find('.preview-text').addClass('preview-text-hover')
     }).on('mouseout',function(){
@@ -34,9 +29,9 @@ var BlogModel = {
   getBlogs: function(){
     url = "http://zoraab.herokuapp.com/blogs"
     $.getJSON(url,function(res){
-      $.each(res,function(idx,blog){
+      BlogView.addFeatured(res.featured)
+      $.each(res.blogs,function(idx,blog){
         BlogView.addBlog(blog)
-        // $('.blog-preview').last().addClass('blog-preview-revealed')
       })
     })
   }
@@ -50,5 +45,13 @@ var BlogView = {
     liEl = $("<li class='blog-preview'></li>")
     liEl = $(liEl).append(el)
     $(liEl).appendTo($('.blog-grid'))
+  },
+  addFeatured: function(blog){
+    $($('.hero-content > h1')[0]).html(blog.title)
+    $($('.hero-content > h3')[0]).html(blog.subtext)
+    $('.hero-content > h5 > a')[0].href = blog.link
+    $('#featuredImage').image(blog.main_img_link, function(){
+      $('#featuredImage').addClass('hero-blog-reveal')
+    })
   }
 }

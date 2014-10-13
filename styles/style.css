@@ -1147,15 +1147,8 @@ ul.off-canvas-list li a:hover {
   margin-bottom: 50px;
   height: 500px;
 }
-.blogs .blog-hero img {
-  margin: 0 auto;
-  height: 500px;
-  width: 800px;
-  float: right;
-  position: relative;
-  z-index: -1;
-}
 .blogs .blog-hero .hero-content {
+  z-index: 2;
   float: left;
   position: relative;
   width: 150px;
@@ -1174,6 +1167,21 @@ ul.off-canvas-list li a:hover {
 }
 .blogs .blog-hero .hero-content h5 {
   margin-top: 25px;
+}
+.blogs .blog-hero #featuredImage {
+  height: 500px;
+  width: 800px;
+  margin: 0 auto;
+  float: right;
+}
+.blogs .blog-hero #featuredImage img {
+  position: relative;
+  z-index: 1;
+  height: 500px;
+  width: 800px;
+}
+.blogs .blog-hero .hero-blog-reveal {
+  opacity: 1.0;
 }
 .blogs .blog-grid {
   clear: both;
