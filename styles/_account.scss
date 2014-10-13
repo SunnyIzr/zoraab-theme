@@ -2,6 +2,9 @@
   border: 1px solid $faded-color;
   padding: 25px;
   font-family: $number-font;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
   .nav{
     width: 100%;
     li{
@@ -20,12 +23,12 @@
       font-size: 18px;
       font-weight: normal;
       color: $accent-color;
-      .edit-account{
+      .edit-data{
         font-size: 14px;
         cursor: pointer;
         color: $primary-color;
       }
-      .edit-account:hover{
+      .edit-data:hover{
         text-decoration: underline;
       }
     }
@@ -59,7 +62,8 @@
       width: 70%;
       td{
         text-align: left;
-        height: 40px;
+        height: 60px;
+        font-size: 18px;
       }
     }
     .enrolled-date{

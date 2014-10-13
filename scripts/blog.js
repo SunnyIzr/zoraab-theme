@@ -1,14 +1,14 @@
 $(document).ready(function(){
-  BlogController.init()
-  $('#blogHero').image(BlogModel.heroUrl(), function(){
-    $('#blogHero').addClass('hero-blog-reveal')
-  })
+  
 })
 
 var BlogController = {
   init: function(){
     this.prevewHover()
     this.popBlogs()
+    $('#blogHero').image(BlogModel.heroUrl(), function(){
+      $('#blogHero').addClass('hero-blog-reveal')
+    })
   }, 
   prevewHover: function(){
     $(document).on('mouseover','.blog-preview',function(){

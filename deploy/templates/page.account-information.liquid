@@ -9,25 +9,27 @@
   
   <div class='account-body'>
     <div class='row'>
-      <div class='col-md-6'>
-        <h3>Account Information <span class='edit-account'>edit</span></h3>
-        <table class='account-info'>
-          <tr>
-            <td width='35%'>First Name</td>
-            <td>{{customer.first_name}}</td>
-          </tr>
-          <tr>
-            <td>Last Name</td>
-            <td>{{customer.last_name}}</td>
-          </tr>
-          <tr>
-            <td>Email Address</td>
-            <td>{{customer.email}}</td>
-          </tr>
-        </table>
+      <div class='col-md-8'>
+        <h3>Account Information &nbsp; <span class='edit-account edit-data'>edit</span></h3>
+        <form role="form">
+          <table class='account-info'>
+            <tr>
+              <td width='35%'><h5>FIRST NAME</h5></td>
+              <td class='account-editable'>{{customer.first_name}}</td>
+            </tr>
+            <tr>
+              <td><h5>LAST NAME</h5></td>
+              <td class='account-editable'>{{customer.last_name}}</td>
+            </tr>
+            <tr>
+              <td><h5>EMAIL ADDRESS</h5></td>
+              <td class='account-editable'>{{customer.email}}</td>
+            </tr>
+          </table>
+        </form>
       </div>
-      <div class='right-section col-md-offset-2 col-md-4'>
-        <img src="http://dummyimage.com/300x175/888888/fff.jpg">
+      <div class='right-section col-md-4'>
+        <img src="http://dummyimage.com/300x225/888888/fff.jpg">
       </div>
     </div>
   </div>

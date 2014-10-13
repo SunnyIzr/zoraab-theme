@@ -18,9 +18,9 @@
         <div class='row'>
           <div class='col-md-6'>
             <h3>Account Information</h3>
-            <p>Tina Israni<br>
-              tina@zoraab.com<br>
-              <a href='#'>edit</a></p>
+            <p>{{ customer.name }}<br>
+              {{ customer.email }}<br>
+              <a href='/pages/account-information'>edit</a></p>
           </div>
           <div class='col-md-6'>
             <div class='example-img'></div>
@@ -28,16 +28,15 @@
         </div>
         <div class='row'>
           <div class='col-md-6'>
-            <h3>Default Billing Address</h3>
-            <p>43 Rosenbrook Drive<br/>
-              Lincoln Park, NJ 07035<br/>
-              <a href='#'>edit</a></p>
+            <h3>Default Shipping Address</h3>
+            <p>{{ customer.default_address.first_name }} {{ customer.default_address.last_name }}<br/>
+              {{ customer.default_address.address1 }}<br/>
+              {% if customer.default_address.address2.size > 0 %}{{ customer.default_address.address2 }}<br/>{% endif %}
+              {{ customer.default_address.city }}, {{ customer.default_address.province_code }} {{ customer.default_address.zip }}<br/>
+              {{ customer.default_address.country }}<br/>
+              <a href='/account/addresses'>edit</a></p>
           </div>
           <div class='col-md-6'>
-            <h3>Default Shipping Address</h3>
-            <p>43 Rosenbrook Drive<br/>
-            Lincoln Park, NJ 07035<br/>
-            <a href='#'>edit</a></p>
           </div>
         </div>
       </div>
@@ -47,82 +46,3 @@
     </div>
   </div>
 </div>
-
-{%comment%}
-</div>
-<div class='container'>
-<div class="fixedwidthcontain">
-  <div class='row'>
-  <div class="col-md-6 col-sm-12">
-  
-    <div id="accountgreet">
-        <img src="{{ "accountgreeting.jpg" | asset_url }}"/>
-        <div id ="accthello"> <span> &nbsp;&nbsp; Why<br/> hello there, </span> </div>
-    
-        <div id ="custname" style="width: 265px; overflow:hidden;"> <span> {{ customer.first_name }}! </span> </div>
-    </div>
-
-    <div style="margin-top:100px;" class='hidden-xs hidden-sm'>
-    <a href="/pages/sock-subscription">   
-    <img src="{{ "subadacc.jpg" | asset_url}}">
-    </a>
-    </div>
-  </div>
-  <div class='col-md-6 col-sm-12'>
-    <div id="customer_details">
-        
-        <div style="height:112px">
-
-        <div style="width: 175px; height: 110px; float: left; border-right: 1px solid; border-color: #67c5a9;">
-          <div class="cd_heading">Name and Email </div>
-          
-          <div class="cd_info">{{ customer.name }}</br>
-          <a href="mailto:{{ customer.email }}">{{ customer.email }}</a><br/>
-          {{ customer.default_address.phone }}
-          </div>
-        </div>
-        
-        <div style="width: 175px;height:110px;float:left; margin-left: 35px;">
-          <div class="cd_heading">Shipping Address</div>
-          
-          
-          <div class="cd_info">
-            {{ customer.default_address.first_name}} {{ customer.default_address.last_name}} <br/>
-            {{ customer.default_address.address1 }}<br/>
-            {% if customer.default_address.address2 != "" %}
-            {{ customer.default_address.address2 }}<br/>
-            {% endif %}
-            {{ customer.default_address.city}},{{customer.default_address.province_code}} {{customer.default_address.zip}}<br/>
-            {{customer.default_address.country}}<br/>
-              
-          </div>
-        </div>
-        
-        </div>
-
-        <div style="width: 262px;margin-top:10px;float:right;">     
-
-        <a class="button" style="line-height: 30px; width:100px;height: 30px;" href="/account/addresses">
-        Update
-        </a>
-      
-        </div>  
-          
-        
-      </div>
-
-  <div style="margin-top:0px;">
-    {%include 'ordersumbox'%}
-
-
-  </div>
-</div>
-</div>
-</div>
-
-
-
-</div>
-<div class='container-fluid'>
-
-{%endcomment%}

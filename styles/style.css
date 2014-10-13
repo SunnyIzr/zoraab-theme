@@ -1508,6 +1508,9 @@ a.newbuttonsignup:hover, input.newbutton:hover {
   border: 1px solid #b8b8b8;
   padding: 25px;
   font-family: "Source Sans Pro";
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 .account .nav {
   width: 100%;
@@ -1529,12 +1532,12 @@ a.newbuttonsignup:hover, input.newbutton:hover {
   font-weight: normal;
   color: #67c5a9;
 }
-.account .account-body h3 .edit-account {
+.account .account-body h3 .edit-data {
   font-size: 14px;
   cursor: pointer;
   color: #404041;
 }
-.account .account-body h3 .edit-account:hover {
+.account .account-body h3 .edit-data:hover {
   text-decoration: underline;
 }
 .account .account-body .left-section {
@@ -1568,7 +1571,8 @@ a.newbuttonsignup:hover, input.newbutton:hover {
 }
 .account .account-body .account-info td {
   text-align: left;
-  height: 40px;
+  height: 60px;
+  font-size: 18px;
 }
 .account .account-body .enrolled-date {
   margin-top: 30px;
