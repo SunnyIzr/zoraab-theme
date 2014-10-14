@@ -1527,6 +1527,9 @@ a.newbuttonsignup:hover, input.newbutton:hover {
   font-weight: normal;
   margin: 40px 0px;
 }
+.account .account-body .second-heading {
+  margin-top: 40px;
+}
 .account .account-body h3 {
   font-size: 18px;
   font-weight: normal;
@@ -1559,6 +1562,7 @@ a.newbuttonsignup:hover, input.newbutton:hover {
 }
 .account .account-body table {
   width: 100%;
+  margin-bottom: 25px;
 }
 .account .account-body table th {
   text-align: center;
@@ -1566,13 +1570,20 @@ a.newbuttonsignup:hover, input.newbutton:hover {
 .account .account-body table td {
   text-align: center;
 }
+.account .account-body .data-submit {
+  width: 70%;
+  display: none;
+}
+.account .account-body .address-submit, .account .account-body .contact-submit {
+  width: 70%;
+  display: none;
+}
 .account .account-body .account-info {
   width: 70%;
 }
 .account .account-body .account-info td {
   text-align: left;
-  height: 60px;
-  font-size: 18px;
+  height: 50px;
 }
 .account .account-body .enrolled-date {
   margin-top: 30px;

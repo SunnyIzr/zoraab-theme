@@ -1,38 +1,48 @@
 var AccountController = {
   init: function(){
     this.editAccountInfo()
-    this.editContactInfo()
-    this.editAddressInfo()
+    this.dataSubmit()
   },
   editAccountInfo: function(){
-    $('.edit-account').click(function(){
-      AccountView.makeAccountEditable()
+    $('.edit-data').click(function(){
+      fields = $(this).data('input')
+      console.log(fields)
+      submit = $(this).data('submit')
+      AccountView.makeDataEditable(fields,submit)
     })
   },
-  editContactInfo: function(){
-    $('.edit-contact').click(function(){
-      AccountView.makeContactEditable()
-    })
-  },
-  editAddressInfo: function(){
-    $('.edit-address').click(function(){
-      AccountView.makeAddressEditable()
+  dataSubmit: function(){
+    $('.data-submit').click(function(e){
+      e.preventDefault();
+      AccountModel.updateShopifyData(this)
     })
   }
 }
 
 var AccountModel = {
-  
+  shopifyId: function(){
+    return $('#customerId').html()
+  },
+  updateShopifyData: function(submitTag){
+    data = $(submitTag).parent().serializeArray()
+    url = 'https://zoraab.herokuapp.com/update_shopify_customer'
+    $.post(url,{id: AccountModel.shopifyId, updates: data}, function(res){
+    }).success(function(){
+      location.reload()
+    })
+  }
 }
 
 var AccountView = {
-  makeAccountEditable: function(){
-    $('.account-editable').html("<input type='text' class='form-control'>")
-  },
-  makeContactEditable: function(){
-    $('.contact-editable').html("<input type='text' class='form-control'>")
-  },
-  makeAddressEditable: function(){
-    $('.address-editable').html("<input type='text' class='form-control'>")
+  makeDataEditable: function(fields){
+    $.each($('.'+fields),function(k,v){
+      originalValue = $(v).html()
+      paramName = $(v).data('name')
+      if (paramName == 'address[phone]') {
+        originalValue = originalValue.replace('(','').replace(') ','').replace('-','')
+      }
+      $(v).html("<input type='text' name='" + paramName + "' class='form-control' value='" + originalValue + "'>")     
+    })
+    $('.'+submit).show()
   }
 }

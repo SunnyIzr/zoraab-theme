@@ -8,24 +8,26 @@
   </ul>
   
   <div class='account-body'>
+    <p id='customerId' class='hide'>{{customer.id}}</p>
     <div class='row'>
       <div class='col-md-8'>
-        <h3>Account Information &nbsp; <span class='edit-account edit-data'>edit</span></h3>
+        <h3>Account Information &nbsp; <span class='edit-data' data-input='account-editable' data-submit='account-submit'>edit</span></h3>
         <form role="form">
           <table class='account-info'>
             <tr>
               <td width='35%'><h5>FIRST NAME</h5></td>
-              <td class='account-editable'>{{customer.first_name}}</td>
+              <td class='account-editable' data-name='first_name'>{{customer.first_name}}</td>
             </tr>
             <tr>
               <td><h5>LAST NAME</h5></td>
-              <td class='account-editable'>{{customer.last_name}}</td>
+              <td class='account-editable' data-name='last_name'>{{customer.last_name}}</td>
             </tr>
             <tr>
               <td><h5>EMAIL ADDRESS</h5></td>
-              <td class='account-editable'>{{customer.email}}</td>
+              <td class='account-editable' data-name='email'>{{customer.email}}</td>
             </tr>
           </table>
+          <input type="submit" class='account-submit data-submit btn btn-info btn-lg' value='Update'>
         </form>
       </div>
       <div class='right-section col-md-4'>

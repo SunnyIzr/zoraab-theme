@@ -19,6 +19,9 @@
       font-weight: normal;
       margin: 40px 0px;
     }
+    .second-heading{
+      margin-top: 40px;
+    }
     h3{
       font-size: 18px;
       font-weight: normal;
@@ -57,14 +60,23 @@
       td{
         text-align: center;
       }
+      margin-bottom: 25px;
+    }
+    .data-submit{
+      width: 70%;
+      display: none;
+    }
+    .address-submit, .contact-submit{
+      width: 70%;
+      display: none; 
     }
     .account-info{
       width: 70%;
       td{
         text-align: left;
-        height: 60px;
-        font-size: 18px;
+        height: 50px;
       }
+      
     }
     .enrolled-date{
       margin-top: 30px;
