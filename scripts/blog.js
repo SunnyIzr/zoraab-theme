@@ -6,9 +6,7 @@ var BlogController = {
   init: function(){
     this.prevewHover()
     this.popBlogs()
-    $('#blogHero').image(BlogModel.heroUrl(), function(){
-      $('#blogHero').addClass('hero-blog-reveal')
-    })
+
   }, 
   prevewHover: function(){
     $(document).on('mouseover','.blog-preview',function(){
@@ -18,7 +16,16 @@ var BlogController = {
     })
   },
   popBlogs: function(){
-    blogs = BlogModel.getBlogs()
+    if ($(".blogs").size() > 0) {
+      blogs = BlogModel.getBlogs()
+    }
+  },
+  popHeroImg: function(){
+    if ($("#blogHero").size() > 0) {
+      $('#blogHero').image(BlogModel.heroUrl(), function(){
+        $('#blogHero').addClass('hero-blog-reveal')
+      })
+    }
   }
 }
 

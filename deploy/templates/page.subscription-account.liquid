@@ -7,22 +7,27 @@
     <li class='active'><a href="/pages/account-subscription">SUBSCRIPTION</a></li>
   </ul>
   <div class='account-body'>
+    <div class='load-overlay'>
+      <div class='loading'>
+        {{ 'loader.gif' | asset_url | img_tag }}
+      </div>
+    </div>
     <h3> Subscription </h3>
     <p id='customerId' class='hide'>{{customer.id}}</p>
-    <div class='row'>
+    <div id='subData' class='row'>
       <div class='left-section col-md-5'>
         <div class='top-section'>
           <div class='plan'>
             <h5>CURRENT PLAN</h5>
-            <p id='planInfo'></p>
+            <p id='planInfo'>&nbsp;</p>
           </div>
           <div class='enrolled-date'>
             <h5>DATE ENROLLED</h5>
-            <p id='startDate'></p>
+            <p id='startDate'>&nbsp;</p>
           </div>
           <div class='next-date'>
             <h5>NEXT SHIPMENT DATE</h5>
-            <p id='nextDate'></p>
+            <p id='nextDate'>&nbsp;</p>
           </div>
           
         </div>
@@ -36,49 +41,3 @@
     </div>
   </div>
 </div>
-
-<script>
-
-$(document).ready(function(){
-  SubController.init()
-})
-
-var SubController = {
-  init: function(){
-    SubModel.getSubData()
-  }
-}
-
-var SubModel = {
-  subInfo: {},
-  subId: function(){
-    return parseInt($('#customerId').html())
-  },
-  getSubData: function(){
-    url = 'http://zoraab.herokuapp.com/shopify-sub-data/' + SubModel.subId()
-    $.getJSON(url,function(res){
-      SubModel.subInfo = res
-    }).done(function(){
-      SubView.populateData()
-    })
-  }
-}
-
-var SubView = {
-  populateData: function(){
-    data = SubModel.subInfo
-    var monthNames = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ]
-    startDate = new Date(data.cid.start_date)
-    nextDate = new Date(data.cid.next_pmt_date)
-    $('#planInfo').html(data.cid.plan);
-    $('#startDate').html(monthNames[startDate.getMonth()] +' '+startDate.getDate()+', '+startDate.getFullYear());
-    $('#nextDate').html(monthNames[nextDate.getMonth()] +' '+nextDate.getDate()+', '+nextDate.getFullYear())
-  }
-}
-
-
-
-
-
-
-</script>
