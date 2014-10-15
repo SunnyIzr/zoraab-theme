@@ -74,6 +74,8 @@
       .preview-img{
         margin: 0 auto;
         border: 1px solid $faded-color;
+        height: 300px;
+        width: 300px;
       }
       .preview-text{
         position: relative;
@@ -85,6 +87,7 @@
         left: 14px;
         text-align: left;
         padding: 20px;
+        overflow: hidden;
         -webkit-transition: all 150ms ease-in-out;
         -moz-transition: all 150ms ease-in-out;
         -o-transition: all 150ms ease-in-out;

@@ -1215,6 +1215,8 @@ ul.off-canvas-list li a:hover {
 .blogs .blog-grid li .preview-img {
   margin: 0 auto;
   border: 1px solid #b8b8b8;
+  height: 300px;
+  width: 300px;
 }
 .blogs .blog-grid li .preview-text {
   position: relative;
@@ -1226,6 +1228,7 @@ ul.off-canvas-list li a:hover {
   left: 14px;
   text-align: left;
   padding: 20px;
+  overflow: hidden;
   -webkit-transition: all 150ms ease-in-out;
   -moz-transition: all 150ms ease-in-out;
   -o-transition: all 150ms ease-in-out;
