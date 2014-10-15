@@ -6,6 +6,7 @@ var BlogController = {
   init: function(){
     this.prevewHover()
     this.popBlogs()
+    this.popHeroImg()
 
   }, 
   prevewHover: function(){

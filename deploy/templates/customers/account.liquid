@@ -12,7 +12,7 @@
   
   <div class='account-body'>
     <h2>Hello, {{ customer.name }}!</h2>
-    
+    <p id='customerId' class='hide'>{{customer.id}}</p>
     <div class='row'>
       <div class='col-md-8 left-section'>
         <div class='row'>
@@ -42,7 +42,8 @@
       </div>
       <div class='col-md-4 right-section'>
         <h3> Subscriptions </h3>
-        <p></p>
+        <p id='planInfo'>&nbsp;</p>
+        <a href='/pages/account-subscription' class='btn btn-md btn-info'>View Details</a>
       </div>
     </div>
   </div>
