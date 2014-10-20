@@ -47,11 +47,12 @@ var BlogModel = {
 
 var BlogView = {
   addBlog: function(blog,idx){
-    columnNum = ['col-one','','col-three']
+    columnNum = ['col-one','col-two','col-three']
+    xsColumnNum = ['xs-col-one','xs-col-two']
     el = "<a href='" + blog.link + "'></a>"
     el = $(el).append("<img class='preview-img' src='" + blog.img_link + "'>")
     el = el.append("<p class='preview-text'>" + blog.title + "</p>")
-    liEl = $("<li class='blog-preview " + columnNum[idx % 3] + " col-xs-4'></li>")
+    liEl = $("<li class='blog-preview " + xsColumnNum[idx % 2] + ' ' + columnNum[idx % 3] + " col-sm-4 col-xs-6'></li>")
     liEl = $(liEl).append(el)
     $(liEl).appendTo($('.blog-grid'))
   },
