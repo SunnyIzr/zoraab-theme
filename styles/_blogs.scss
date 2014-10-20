@@ -1,10 +1,10 @@
 .blogs{
-  max-width: 1000px;
+  max-width: 960px;
   margin: 0 auto;
   .blog-hero{
     text-align: center;
     margin-bottom: 50px;
-    height: 500px;
+    height: 595px;
 
     .hero-content{
       z-index: 2;
@@ -28,15 +28,15 @@
       }
     }
     #featuredImage{
-      height: 500px;
-      width: 800px;
+      height: 595px;
+      width: 745px;
       margin: 0 auto;
       float: right;
       img{
         position: relative;
         z-index: 1;
-        height: 500px;
-        width: 800px;
+        height: 595px;
+        width: 745px;
       }
     }
     .hero-blog-reveal{
@@ -44,9 +44,11 @@
     }
   }
   .blog-grid{
+      width: 100%;
+      max-width: 960px;
       clear: both;
+      margin: 0;
     .blog-preview{
-      // opacity: 0.0;
       -webkit-transition: opacity 10s ease-in-out;
       -moz-transition: opacity 10s ease-in-out;
       -o-transition: opacity 10s ease-in-out;
@@ -68,14 +70,15 @@
       margin:0 auto;
       display: inline-block;
       width: 33%;
+      
       text-align: center;
       margin-bottom: -35px;
       cursor: pointer;
+      margin-right: 20px;
       .preview-img{
-        margin: 0 auto;
+        float:left;
         border: 1px solid $faded-color;
-        height: 300px;
-        width: 300px;
+        width: 100%;
       }
       .preview-text{
         position: relative;

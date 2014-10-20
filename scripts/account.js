@@ -2,6 +2,7 @@ var AccountController = {
   init: function(){
     this.editAccountInfo()
     this.dataSubmit()
+    this.generateGravatar()
   },
   editAccountInfo: function(){
     $('.edit-data').click(function(){
@@ -16,12 +17,20 @@ var AccountController = {
       e.preventDefault();
       AccountModel.updateShopifyData(this)
     })
+  },
+  generateGravatar: function(){
+    if ($('#customerEmail').size() > 0){
+      AccountView.appendGravatarImg(AccountModel.emailAddress())
+    }
   }
 }
 
 var AccountModel = {
   shopifyId: function(){
     return $('#customerId').html()
+  },
+  emailAddress: function(){
+    return $('#customerEmail').html()
   },
   updateShopifyData: function(submitTag){
     data = $(submitTag).parent().serializeArray()
@@ -44,5 +53,13 @@ var AccountView = {
       $(v).html("<input type='text' name='" + paramName + "' class='form-control' value='" + originalValue + "'>")     
     })
     $('.'+submit).show()
+  },
+  appendGravatarImg: function(email){
+    url = 'http://zoraab.herokuapp.com/gravatar-info'
+    $.getJSON(url,{email: email}, function(res){
+      $('#gravatarImg').image(res.img,function(){
+        
+      })
+    })
   }
 }

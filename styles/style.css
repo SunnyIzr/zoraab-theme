@@ -1165,13 +1165,13 @@ ul.off-canvas-list li a:hover {
   }
 }
 .blogs {
-  max-width: 1000px;
+  max-width: 960px;
   margin: 0 auto;
 }
 .blogs .blog-hero {
   text-align: center;
   margin-bottom: 50px;
-  height: 500px;
+  height: 595px;
 }
 .blogs .blog-hero .hero-content {
   z-index: 2;
@@ -1195,22 +1195,25 @@ ul.off-canvas-list li a:hover {
   margin-top: 25px;
 }
 .blogs .blog-hero #featuredImage {
-  height: 500px;
-  width: 800px;
+  height: 595px;
+  width: 745px;
   margin: 0 auto;
   float: right;
 }
 .blogs .blog-hero #featuredImage img {
   position: relative;
   z-index: 1;
-  height: 500px;
-  width: 800px;
+  height: 595px;
+  width: 745px;
 }
 .blogs .blog-hero .hero-blog-reveal {
   opacity: 1.0;
 }
 .blogs .blog-grid {
+  width: 100%;
+  max-width: 960px;
   clear: both;
+  margin: 0;
   padding: 0px;
   list-style: none;
 }
@@ -1237,12 +1240,12 @@ ul.off-canvas-list li a:hover {
   text-align: center;
   margin-bottom: -35px;
   cursor: pointer;
+  margin-right: 20px;
 }
 .blogs .blog-grid li .preview-img {
-  margin: 0 auto;
+  float: left;
   border: 1px solid #b8b8b8;
-  height: 300px;
-  width: 300px;
+  width: 100%;
 }
 .blogs .blog-grid li .preview-text {
   position: relative;
@@ -1533,6 +1536,18 @@ a.newbuttonsignup:hover, input.newbutton:hover {
 }
 
 /* END LOGIN STUFF */
+.account-hero {
+  margin-left: -12px;
+  margin-right: -10px;
+  height: 25%;
+  max-height: 350px;
+  overflow: hidden;
+  margin-bottom: 2%;
+}
+.account-hero img {
+  width: 100%;
+}
+
 .account {
   border: 1px solid #b8b8b8;
   padding: 25px;
@@ -1575,20 +1590,26 @@ a.newbuttonsignup:hover, input.newbutton:hover {
 }
 .account .account-body .left-section {
   border-right: 1px solid #b8b8b8;
-  margin-right: -10px;
+  width: 65%;
 }
-.account .account-body .left-section .example-img {
+.account .account-body .left-section .grav-img {
   margin-top: 20px;
-  background-color: #b8b8b8;
-  height: 125px;
-  width: 200px;
+  height: 150px;
+  width: 150px;
 }
 .account .account-body .right-section {
-  padding-left: 40px;
+  width: 30%;
+  float: right;
 }
 .account .account-body .right-section img {
   margin-top: 20px;
   float: right;
+}
+.account .account-body .account-info-img img {
+  max-width: 325px;
+}
+.account .account-body .addresses-img img {
+  max-width: 320px;
 }
 .account .account-body table {
   width: 100%;
@@ -1629,6 +1650,33 @@ a.newbuttonsignup:hover, input.newbutton:hover {
   padding-top: 20px;
 }
 
+@media (max-width: 768px) {
+  .account .account-body h2 {
+    margin-bottom: 15px;
+  }
+  .account .account-body .left-section {
+    border-right: none;
+    border-bottom: 1px solid #b8b8b8;
+    width: 100%;
+    padding-bottom: 4%;
+    margin-bottom: 4%;
+  }
+  .account .account-body .right-section {
+    width: 100%;
+  }
+  .account .account-body .account-info {
+    width: 100%;
+  }
+  .account .account-body .data-submit {
+    width: 100%;
+  }
+  .account .account-body .address-submit {
+    width: 100%;
+  }
+  .account .account-body .contact-submit {
+    width: 100%;
+  }
+}
 /*!
  * Bootstrap v3.1.1 (http://getbootstrap.com)
  * Copyright 2011-2014 Twitter, Inc.

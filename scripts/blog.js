@@ -5,7 +5,7 @@ $(document).ready(function(){
 var BlogController = {
   init: function(){
     this.prevewHover()
-    this.popBlogs()
+    // this.popBlogs()
     this.popHeroImg()
 
   }, 

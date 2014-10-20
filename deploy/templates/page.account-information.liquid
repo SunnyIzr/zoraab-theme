@@ -1,7 +1,11 @@
+<div class='account-hero'>
+  {{ 'account_hero.jpg' | asset_url | img_tag }}
+</div>
+
 <div class='account'>
   <ul class="nav nav-tabs" role="tablist">
     <li><a href="/account">DASHBOARD</a></li>
-    <li class='active'><a href="/pages/account-information">ACCOUNT INFORMATION</a></li>
+    <li class='active'><a href="/pages/account-information">ACCOUNT INFO</a></li>
     <li><a href="/account/addresses">ADDRESS BOOK</a></li>
     <li><a href="/pages/order-history">ORDER HISTORY</a></li>
     <li><a href="/pages/account-subscription">SUBSCRIPTION</a></li>
@@ -10,7 +14,7 @@
   <div class='account-body'>
     <p id='customerId' class='hide'>{{customer.id}}</p>
     <div class='row'>
-      <div class='col-md-8'>
+      <div class='col-md-8 col-sm-8'>
         <h3>Account Information &nbsp; <span class='edit-data' data-input='account-editable' data-submit='account-submit'>edit</span></h3>
         <form role="form">
           <table class='account-info'>
@@ -30,8 +34,8 @@
           <input type="submit" class='account-submit data-submit btn btn-info btn-lg' value='Update'>
         </form>
       </div>
-      <div class='right-section col-md-4'>
-        <img src="http://dummyimage.com/300x225/888888/fff.jpg">
+      <div class='right-section col-md-4 col-sm-4 hidden-xs account-info-img'>
+        {{ 'account-info.jpg' | asset_url | img_tag }}
       </div>
     </div>
   </div>

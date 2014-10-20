@@ -1,10 +1,13 @@
 {% layout settings.customer_layout %}
+<div class='account-hero'>
+  {{ 'account_hero.jpg' | asset_url | img_tag }}
+</div>
 
   
 <div class='account'>
   <ul class="nav nav-tabs" role="tablist">
     <li class="active"><a href="/account">DASHBOARD</a></li>
-    <li><a href="/pages/account-information">ACCOUNT INFORMATION</a></li>
+    <li><a href="/pages/account-information">ACCOUNT INFO</a></li>
     <li><a href="/account/addresses">ADDRESS BOOK</a></li>
     <li><a href="/pages/order-history">ORDER HISTORY</a></li>
     <li><a href="/pages/account-subscription">SUBSCRIPTION</a></li>
@@ -13,21 +16,22 @@
   <div class='account-body'>
     <h2>Hello, {{ customer.name }}!</h2>
     <p id='customerId' class='hide'>{{customer.id}}</p>
+    <p id='customerEmail' class='hide'>{{customer.email}}</p>
     <div class='row'>
-      <div class='col-md-8 left-section'>
+      <div class='col-md-8 col-sm-8 col-xs-12 left-section'>
         <div class='row'>
-          <div class='col-md-6'>
+          <div class='col-md-7 col-sm-7 col-xs-12'>
             <h3>Account Information</h3>
             <p>{{ customer.name }}<br>
               {{ customer.email }}<br>
               <a href='/pages/account-information'>edit</a></p>
           </div>
-          <div class='col-md-6'>
-            <div class='example-img'></div>
+          <div class='col-md-5 col-sm-5 col-xs-6 hidden-xs hidden-sm'>
+            <div id='gravatarImg' class='grav-img'></div>
           </div>
         </div>
         <div class='row'>
-          <div class='col-md-6'>
+          <div class='col-md-7 col-sm-7 col-xs-12'>
             <h3>Default Shipping Address</h3>
             <p>{{ customer.default_address.first_name }} {{ customer.default_address.last_name }}<br/>
               {{ customer.default_address.address1 }}<br/>
@@ -35,8 +39,6 @@
               {{ customer.default_address.city }}, {{ customer.default_address.province_code }} {{ customer.default_address.zip }}<br/>
               {{ customer.default_address.country }}<br/>
               <a href='/account/addresses'>edit</a></p>
-          </div>
-          <div class='col-md-6'>
           </div>
         </div>
       </div>

@@ -1,3 +1,14 @@
+.account-hero{
+  margin-left: -12px;
+  margin-right: -10px;
+  height: 25%;
+  max-height: 350px;
+  overflow: hidden;
+  margin-bottom: 2%;
+  img{
+    width: 100%;
+  }
+}
 .account{
   border: 1px solid $faded-color;
   padding: 25px;
@@ -38,19 +49,30 @@
     }
     .left-section{
       border-right: 1px solid $faded-color;
-      margin-right: -10px;
-      .example-img{
+      width: 65%;
+      .grav-img{
         margin-top: 20px;
-        background-color: $faded-color;
-        height: 125px;
-        width: 200px;
+        height: 150px;
+        width: 150px;
+        
       }
     }
     .right-section{
-      padding-left: 40px;
+      width: 30%;
+      float: right;
       img{
         margin-top: 20px;
         float: right;
+      }
+    }
+    .account-info-img{
+      img{
+        max-width: 325px;
+      }
+    }
+    .addresses-img{
+      img{
+        max-width: 320px;
       }
     }
     table{
@@ -94,3 +116,52 @@
     }
   }
 }
+
+
+// MEDIUM DESKTOPS
+@media (max-width: 1200px) { 
+} 
+
+// TABLETS
+@media (max-width: 992px) { 
+} 
+
+// SMALL PHONES
+@media (max-width: 768px) {
+  .account{
+    .account-body{
+      h2{
+        margin-bottom: 15px;
+      }
+      .left-section{
+        border-right: none;
+        border-bottom: 1px solid $faded-color;
+        width: 100%;
+        padding-bottom: 4%;
+        margin-bottom: 4%;
+      }
+      .right-section{
+        width: 100%;
+      }
+      .account-info{
+        width: 100%;
+      }
+      .data-submit{
+        width: 100%;
+      }
+      .address-submit{
+        width: 100%;
+      }
+      .contact-submit{
+        width: 100%;
+      }
+    }
+  }
+} 
+
+// IPHONE
+@media (max-width: 400px) {
+} 
+
+
+
