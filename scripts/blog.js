@@ -5,7 +5,7 @@ $(document).ready(function(){
 var BlogController = {
   init: function(){
     this.prevewHover()
-    // this.popBlogs()
+    this.popBlogs()
     this.popHeroImg()
 
   }, 
@@ -37,20 +37,21 @@ var BlogModel = {
   getBlogs: function(){
     url = "http://zoraab.herokuapp.com/blogs"
     $.getJSON(url,function(res){
-      BlogView.addFeatured(res.featured)
+      // BlogView.addFeatured(res.featured)
       $.each(res.blogs,function(idx,blog){
-        BlogView.addBlog(blog)
+        BlogView.addBlog(blog,idx)
       })
     })
   }
 }
 
 var BlogView = {
-  addBlog: function(blog){
+  addBlog: function(blog,idx){
+    columnNum = ['col-one','','col-three']
     el = "<a href='" + blog.link + "'></a>"
     el = $(el).append("<img class='preview-img' src='" + blog.img_link + "'>")
     el = el.append("<p class='preview-text'>" + blog.title + "</p>")
-    liEl = $("<li class='blog-preview'></li>")
+    liEl = $("<li class='blog-preview " + columnNum[idx % 3] + " col-xs-4'></li>")
     liEl = $(liEl).append(el)
     $(liEl).appendTo($('.blog-grid'))
   },

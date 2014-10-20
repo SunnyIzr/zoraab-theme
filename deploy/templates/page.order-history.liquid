@@ -4,7 +4,7 @@
 <div class='account'>
   <ul class="nav nav-tabs" role="tablist">
     <li><a href="/account">DASHBOARD</a></li>
-    <li><a href="/pages/account-information">ACCOUNT INFORMATION</a></li>
+    <li><a href="/pages/account-information">ACCOUNT INFO</a></li>
     <li><a href="/account/addresses">ADDRESS BOOK</a></li>
     <li class='active'><a href="/pages/order-history">ORDER HISTORY</a></li>
     <li><a href="/pages/account-subscription">SUBSCRIPTION</a></li>
@@ -17,9 +17,9 @@
         <tr>
           <th width="16.6%">Order #</th>
           <th width="16.6%">Date</th>
-          <th width="16.6%">Ship To</th>
+          <th class='hidden-xxs' width="16.6%">Ship To</th>
           <th width="16.6%">Total</th>
-          <th width='16.6%'>Status</th>
+          <th class='hidden-xxs' width='16.6%'>Status</th>
           <th width='16.6%'></th>
         </tr>
       </thead>
@@ -28,9 +28,9 @@
           <tr>
             <td>{{ order.name }}</td>
             <td>{{ order.created_at | date: "%b %d, %Y" }}</td>
-            <td>{{ order.shipping_address.name }}</td>
+            <td class='hidden-xxs'>{{ order.shipping_address.name }}</td>
             <td>{{ order.total_price | money }}</td>
-            <td>{% if order.fulfillment_status =="fulfilled" %}Shipped{%else%}
+            <td class='hidden-xxs'>{% if order.fulfillment_status =="fulfilled" %}Shipped{%else%}
                 {% if order.payment_status =="Refunded" %}Refunded {%else%} Processing {%endif%}{% endif %}</td>
             <td><a href='#'>View Order</a></td>
           </tr>            
