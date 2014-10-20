@@ -1140,6 +1140,7 @@ ul.off-canvas-list li a:hover {
   padding-bottom: 30px;
   margin-bottom: 30px;
   margin-top: 30px;
+  max-width: 600px;
 }
 .blog .quote {
   font-size: 25px;
@@ -1156,6 +1157,37 @@ ul.off-canvas-list li a:hover {
 }
 .blog .featured-subtext {
   display: none;
+}
+.blog .blog-line {
+  border-bottom: 1px solid #b8b8b8;
+}
+.blog .share {
+  max-width: 600px;
+  margin: 45px auto 0;
+}
+.blog .share .share-heading h5 {
+  margin: 0 auto;
+  text-align: center;
+  font-weight: 300;
+  width: 25%;
+  background-color: #fff;
+  margin-top: -8px;
+  min-width: 100px;
+}
+.blog .share .share-icons h5 {
+  height: 70px;
+}
+.blog .blog-nav {
+  max-width: 600px;
+  margin: 15px auto 0;
+  text-align: center;
+}
+.blog .blog-nav a {
+  margin: 0 auto;
+  color: #404041;
+}
+.blog .blog-nav a:hover {
+  text-decoration: underline;
 }
 
 @media (max-width: 767px) {

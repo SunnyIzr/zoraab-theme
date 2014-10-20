@@ -46,6 +46,7 @@
     padding-bottom: 30px;
     margin-bottom: 30px;
     margin-top: 30px;
+    max-width: 600px;
   }
   .quote{
     font-size: 25px;
@@ -62,6 +63,41 @@
   }
   .featured-subtext{
     display: none;
+  }
+  .blog-line{
+    border-bottom: 1px solid $faded-color;
+  }
+  .share{
+    max-width: 600px;
+    margin: 45px auto 0;
+    .share-heading{
+      h5{
+        margin: 0 auto;
+        text-align: center;
+        font-weight: 300;
+        width: 25%;
+        background-color: #fff;
+        margin-top: -8px;
+        min-width: 100px;
+      }
+    }
+    .share-icons{
+      h5{
+        height: 70px;
+      }
+    }
+  }
+  .blog-nav{
+    max-width: 600px;
+    margin: 15px auto 0;
+    text-align: center;
+    a{
+      margin: 0 auto;
+      color: $primary-color;
+    }
+    a:hover{
+      text-decoration: underline;
+    }
   }
 }
 
