@@ -1,0 +1,40 @@
+.order-summaries{
+  font-family: $number-font;
+  .summ-head{
+    margin-top: -50px;
+    border-bottom: 1px solid $faded-color;
+    h1{
+      font-weight: 300;
+      font-size: 28px;
+      color: $accent-color;
+      .order-date{
+        font-style: italic;
+        font-size: 14px;
+        color: $faded-color;
+      }
+    }
+  }
+  .order-details{
+    margin-bottom: 30px;
+    table{
+      width: 100%;
+      td{
+        height: 25px;
+      }
+    }
+    .payment-fulfillment{
+      h4{
+        margin-bottom: 0;
+      }
+    }
+    .order-detail{
+      margin-bottom: 30px;
+    }
+  }
+  .table{
+    th{
+      background-color: $emphasis-color;
+      color: #fff;
+    }
+  }
+}

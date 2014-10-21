@@ -10624,6 +10624,43 @@ input.btn {
     width: 100% !important;
   }
 }
+.order-summaries {
+  font-family: "Source Sans Pro";
+}
+.order-summaries .summ-head {
+  margin-top: -50px;
+  border-bottom: 1px solid #b8b8b8;
+}
+.order-summaries .summ-head h1 {
+  font-weight: 300;
+  font-size: 28px;
+  color: #67c5a9;
+}
+.order-summaries .summ-head h1 .order-date {
+  font-style: italic;
+  font-size: 14px;
+  color: #b8b8b8;
+}
+.order-summaries .order-details {
+  margin-bottom: 30px;
+}
+.order-summaries .order-details table {
+  width: 100%;
+}
+.order-summaries .order-details table td {
+  height: 25px;
+}
+.order-summaries .order-details .payment-fulfillment h4 {
+  margin-bottom: 0;
+}
+.order-summaries .order-details .order-detail {
+  margin-bottom: 30px;
+}
+.order-summaries .table th {
+  background-color: #e85c41;
+  color: #fff;
+}
+
 .number {
   font-family: "Source Sans Pro";
 }
