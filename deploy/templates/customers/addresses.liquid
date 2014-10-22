@@ -41,7 +41,7 @@
           </table>
           <input type="submit" class='contact-submit btn btn-info btn-lg' value='Update'>
         {% endform %}
-        <h3 class='second-heading'>Address &nbsp; <span class='edit-address edit-data' data-input='address-editable' data-submit='address-submit'>edit</span></h3>
+        <h3 class='second-heading'>Default Shipping Address &nbsp; <span class='edit-address edit-data' data-input='address-editable' data-submit='address-submit'>edit</span></h3>
         {% assign address = customer.default_address %}
         {% form 'customer_address', address %}
           <table class='account-info'>

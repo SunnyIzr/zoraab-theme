@@ -2,6 +2,7 @@
   {{ 'account_hero.jpg' | asset_url | img_tag }}
 </div>
 <div class='account'>
+  <span id='fallbackImg' class='hide'>{{'sock-fallback.png' | asset_url}}</span>
   <ul class="nav nav-tabs" role="tablist">
     <li><a href="/account">DASHBOARD</a></li>
     <li><a href="/pages/account-information">ACCOUNT INFO</a></li>
@@ -18,7 +19,7 @@
     <h3> Subscription </h3>
     <p id='customerId' class='hide'>{{customer.id}}</p>
     <div id='subData' class='row'>
-      <div class='col-md-3 left-section '>
+      <div class='col-sm-3 left-section '>
         <div class='top-section'>
           <div class='plan'>
             <h5>CURRENT PLAN</h5>
@@ -41,28 +42,30 @@
           </a>
         </div>
       </div>
-      <div class='right-section col-md-9'>
+      <div class='right-section col-sm-9'>
         <div class='this-month'>
-          <h5>THIS MONTH'S KIT: October 2014</h5>
-          <p class='status'>Status: Shipped</p>
-          <ul class='sub-order'>
-            <li><img src="https://cdn.shopify.com/s/files/1/0127/4312/products/MS-MO706_237e36a7-36f2-4a93-b479-732371ca639c_small.jpg"></li>
-            <li><img src="https://cdn.shopify.com/s/files/1/0127/4312/products/MS-MO706_237e36a7-36f2-4a93-b479-732371ca639c_small.jpg"></li>
-            <li><img src="https://cdn.shopify.com/s/files/1/0127/4312/products/MS-MO706_237e36a7-36f2-4a93-b479-732371ca639c_small.jpg"></li>
-            <li><img src="{{'sock-fallback.png' | asset_url }}"></li>
-            <li><img src="{{'sock-fallback.png' | asset_url }}"></li>
-          </ul>
+          <h5>THIS MONTH'S KIT</h5>
+          <p class='status'>Status: <span class='order-status'></span></p>
+          <div class='sub-order-wrapper'>
+            <div class='no-order'>
+              {{ 'hanger.jpg' | asset_url | img_tag }}
+              <p>Making the best selections for you. Check back shortly!</p>
+            </div>
+            <ul class='sub-order'>
+            </ul>
+          </div>
         </div>
         <div class='next-month'>
-          <h5>THIS MONTH'S KIT: November 2014</h5>
-          <p class='status'>Status: Pending</p>
-          <ul class='sub-order'>
-            <li><img src="https://cdn.shopify.com/s/files/1/0127/4312/products/US_13-015-2_small.jpeg"></li>
-            <li><img src="https://cdn.shopify.com/s/files/1/0127/4312/products/US_13-015-2_small.jpeg"></li>
-            <li><img src="https://cdn.shopify.com/s/files/1/0127/4312/products/US_13-015-2_small.jpeg"></li>
-            <li><img src="https://cdn.shopify.com/s/files/1/0127/4312/products/US_13-015-2_small.jpeg"></li>
-            <li><img src="https://cdn.shopify.com/s/files/1/0127/4312/products/US_13-015-2_small.jpeg"></li>
-          </ul>
+          <h5>NEXT MONTH'S KIT</h5>
+          <p class='status'>Status: <span class='order-status'></span></p>
+          <div class='sub-order-wrapper'>
+            <div class='no-order'>
+              {{ 'hanger.jpg' | asset_url | img_tag }}
+              <p>Making the best selections for you. Check back shortly!</p>
+            </div>
+            <ul class='sub-order'>
+            </ul>
+          </div>
         </div>
       </div>
       
