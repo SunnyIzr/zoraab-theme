@@ -49,7 +49,7 @@ var SubAccountView = {
       $('.this-month > .status > span').html(lastStatus)
       $.each(orders.last_order.skus,function(k,sku){
         url = '/products/' + sku + '.js'
-        $.getJSON(url,function(res){
+        $.getJSON(url,function(res){}).success(function(res){
           imgLink = res.images[0]
           link = res.url
           $('.this-month > .sub-order-wrapper > ul').append('<li><a href="'+ link +'" target="_blank"><img src="' + imgLink + '"></a></li>')
@@ -72,8 +72,9 @@ var SubAccountView = {
       $('.next-month > .status > span').html(nextStatus)
       $.each(orders.next_order.skus,function(k,sku){
         url = '/products/' + sku + '.js'
-        $.getJSON(url,function(res){
+        $.getJSON(url,function(res){}).success(function(res){
           imgLink = res.images[0]
+          link = res.url
           $('.next-month > .sub-order-wrapper > ul').append('<li><a href="'+ link +'" target="_blank"><img src="' + imgLink + '"></a></li>')
         }).fail(function(){
           imgLink = $('#fallbackImg').html()
