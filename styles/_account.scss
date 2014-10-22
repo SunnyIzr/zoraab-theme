@@ -72,6 +72,29 @@
       }
       .right-section{
         width: 74%;
+        .sub-order{
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          li{
+            display: inline-block;
+            img{
+              width: 100px;
+            }
+          }
+        }
+        h5{
+          margin-bottom: 2px;
+        }
+        .status{
+          color: $faded-color;
+          font-style: italic;
+        }
+        .next-month{
+          margin-top: 17px;
+          border-top: 1px solid $faded-color;
+          padding-top: 17px;
+        }
       }
       .bottom-section{
         a:hover{
@@ -172,6 +195,14 @@
       }
       .contact-submit{
         width: 100%;
+      }
+      #subData{
+        .left-section{
+          width: 100%;
+        }
+        .right-section{
+          width: 100%;
+        }
       }
     }
   }

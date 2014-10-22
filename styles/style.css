@@ -1745,6 +1745,29 @@ a.newbuttonsignup:hover, input.newbutton:hover {
 .account .account-body #subData .right-section {
   width: 74%;
 }
+.account .account-body #subData .right-section .sub-order {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.account .account-body #subData .right-section .sub-order li {
+  display: inline-block;
+}
+.account .account-body #subData .right-section .sub-order li img {
+  width: 100px;
+}
+.account .account-body #subData .right-section h5 {
+  margin-bottom: 2px;
+}
+.account .account-body #subData .right-section .status {
+  color: #b8b8b8;
+  font-style: italic;
+}
+.account .account-body #subData .right-section .next-month {
+  margin-top: 17px;
+  border-top: 1px solid #b8b8b8;
+  padding-top: 17px;
+}
 .account .account-body #subData .bottom-section a:hover svg path {
   fill: #67c5a9;
 }
@@ -1817,6 +1840,12 @@ a.newbuttonsignup:hover, input.newbutton:hover {
     width: 100%;
   }
   .account .account-body .contact-submit {
+    width: 100%;
+  }
+  .account .account-body #subData .left-section {
+    width: 100%;
+  }
+  .account .account-body #subData .right-section {
     width: 100%;
   }
 }
