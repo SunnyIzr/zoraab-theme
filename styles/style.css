@@ -1696,6 +1696,13 @@ a.newbuttonsignup:hover, input.newbutton:hover {
   width: 20%;
   text-align: center;
 }
+.account .nav a:hover {
+  background-color: #67c5a9;
+  color: #fff;
+  border-top: 1px solid #67c5a9;
+  border-left: 1px solid #67c5a9;
+  border-right: 1px solid #67c5a9;
+}
 .account .account-body {
   padding: 0 10px;
   position: relative;

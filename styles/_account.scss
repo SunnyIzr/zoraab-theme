@@ -22,6 +22,13 @@
       width: 20%;
       text-align: center;
     }
+    a:hover{
+      background-color: $accent-color;
+      color: #fff;
+      border-top: 1px solid $accent-color;
+      border-left: 1px solid $accent-color;
+      border-right: 1px solid $accent-color;
+    }
   }
   .account-body{
     padding: 0 10px;
