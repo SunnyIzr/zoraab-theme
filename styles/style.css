@@ -1247,6 +1247,7 @@ ul.off-canvas-list li a:hover {
   font-size: 30px;
   font-weight: 100;
   color: #67c5a9;
+  text-transform: uppercase;
 }
 .blogs .blog-hero .hero-content h3 {
   width: 160px;

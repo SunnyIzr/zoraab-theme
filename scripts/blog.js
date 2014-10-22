@@ -37,7 +37,7 @@ var BlogModel = {
   getBlogs: function(){
     url = "http://zoraab.herokuapp.com/blogs"
     $.getJSON(url,function(res){
-      // BlogView.addFeatured(res.featured)
+      BlogView.addFeatured(res.featured)
       $.each(res.blogs,function(idx,blog){
         BlogView.addBlog(blog,idx)
       })
