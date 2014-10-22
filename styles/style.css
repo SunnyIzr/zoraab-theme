@@ -1711,9 +1711,10 @@ a.newbuttonsignup:hover, input.newbutton:hover {
 }
 .account .account-body #subData .left-section {
   width: 25%;
+  padding-right: 1%;
 }
 .account .account-body #subData .right-section {
-  width: 75%;
+  width: 74%;
 }
 .account .account-body #subData .bottom-section a:hover svg path {
   fill: #67c5a9;
