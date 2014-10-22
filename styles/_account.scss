@@ -65,6 +65,23 @@
         float: right;
       }
     }
+    #subData{
+      .left-section{
+        width: 25%;
+      }
+      .right-section{
+        width: 75%;
+      }
+      .bottom-section{
+        a:hover{
+          svg{
+            path{
+              fill: $accent-color;
+            }
+          }
+        }
+      }
+    }
     .account-info-img{
       img{
         max-width: 325px;
