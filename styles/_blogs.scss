@@ -3,40 +3,48 @@
   margin: 0 auto;
   .blog-hero{
     text-align: center;
-    margin-bottom: 50px;
-    height: 595px;
-
+    width: 100%;
+    overflow: auto;
     .hero-content{
       z-index: 2;
       float: left;
       position: relative;
       width: 150px;
       text-align: left;
-      border-top: 5px solid $accent-color;
+      border-top: 5px solid $primary-color;
+      font-family: $serif-font;
       h1{
-        width: 350px;
-        font-size: 50px;
+        width: 210px;
+        font-size: 30px;
         font-weight: 100;
+        color: $accent-color;
       }
       h3{
-        width: 280px;
-        font-size: 25px;
-        line-height: 40px;
+        width: 160px;
+        font-size: 15px;
+        font-style: italic;
+        line-height: 28px;
+        color: $faded-color;
       }
       h5{
         margin-top: 25px;
+        a{
+          color: $emphasis-color;
+        }
+        a:hover{
+          color: $emphasis-hover-color;
+        }
       }
     }
     #featuredImage{
-      height: 595px;
-      width: 745px;
+      max-width: 750px;
+      width: 79%;
       margin: 0 auto;
       float: right;
       img{
         position: relative;
         z-index: 1;
-        height: 595px;
-        width: 745px;
+        width: 100%;
       }
     }
     .hero-blog-reveal{
@@ -44,6 +52,8 @@
     }
   }
   .blog-heading{
+    margin-top: 40px;
+    width: 100%;
     padding-bottom: 30px;
     text-align: center;
     h5{
@@ -53,6 +63,7 @@
       color: $accent-color;
       background-color: #fff;
       width: 15%;
+      min-width: 120px;
       margin: 0 auto;
       padding: 0;
       text-align: center;
@@ -132,6 +143,24 @@
 
 @media (max-width: 767px) {
   .blogs{
+    .blog-hero{
+      .hero-content{
+        width: 100%;
+        border-top: none;
+        h1{
+          width: 100%;
+        }
+        h3{
+          width: 100%;
+        }
+        h5{
+          width: 100%;
+        }
+      }
+      #featuredImage{
+        width: 100%;
+      }
+    }
     .blog-grid{
       .xs-col-one{
         padding-left: 0;
