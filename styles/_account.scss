@@ -90,6 +90,13 @@
         float: right;
       }
     }
+    #noSubPresent{
+      display: none;
+      p{
+        font-family: $body-text-font;
+        font-size: 16px;
+      }
+    }
     #subData{
       .left-section{
         width: 25%;

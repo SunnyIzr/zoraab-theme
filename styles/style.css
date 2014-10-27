@@ -1858,6 +1858,13 @@ a.newbuttonsignup:hover, input.newbutton:hover {
   margin-top: 20px;
   float: right;
 }
+.account .account-body #noSubPresent {
+  display: none;
+}
+.account .account-body #noSubPresent p {
+  font-family: "Raleway";
+  font-size: 16px;
+}
 .account .account-body #subData .left-section {
   width: 25%;
   padding-right: 1%;
