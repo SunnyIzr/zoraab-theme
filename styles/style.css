@@ -1116,6 +1116,7 @@ ul.off-canvas-list li a:hover {
 .blog .hero-blog-reveal {
   opacity: 1.0;
   border: none !important;
+  height: auto;
 }
 .blog .loading {
   border: 1px solid #b8b8b8;

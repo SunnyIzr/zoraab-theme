@@ -1,7 +1,3 @@
-$(document).ready(function(){
-  
-})
-
 var BlogController = {
   init: function(){
     this.prevewHover()
