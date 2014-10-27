@@ -1478,6 +1478,34 @@ ul.off-canvas-list li a:hover {
   margin-top: -10px;
   margin-bottom: 10px;
 }
+.account-forms .account-form .alert ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+.account-forms .account-form .alert ul li {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+.account-forms .account-form #recover-password {
+  display: none;
+}
+.account-forms .account-form #recover-password .btn {
+  margin-top: 10px;
+}
+.account-forms .account-form #recover-password p {
+  color: #b8b8b8;
+  font-family: "PT Sans";
+  width: 80%;
+  margin: -5px auto 20px;
+}
+.account-forms .account-form #create-account .btn {
+  margin-top: 10px;
+}
+.account-forms .account-form #password-reset-form .btn {
+  margin-top: 10px;
+}
 .account-forms .account-form ::-webkit-input-placeholder {
   color: #b8b8b8;
 }

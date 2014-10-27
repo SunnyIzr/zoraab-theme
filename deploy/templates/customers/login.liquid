@@ -3,15 +3,37 @@
 <div class='row'>
   <div class='account-forms'>
     <div class='account-form'>
-      <h3> LOG INTO YOUR ACCOUNT </h3>
-      {% form 'customer_login' %}
-        {{ form.errors | default_errors }}
+
+      <div id='login-form' class='single-account-form'>
+        <h3> LOG INTO YOUR ACCOUNT </h3>
+        {% form 'customer_login' %}
+          {% if form.errors %}
+            <div class='alert alert-danger'>{{ form.errors | default_errors }}</div>
+          {% endif %}
+          
           <input type="email" placeholder="Email" name="customer[email]" id="customer_email" class="form-control" />
           <input type="password" placeholder="Password" name="customer[password]" id="customer_password" class="form-control"/><br/>
           <input type="submit" class='btn btn-primary btn-lg' value="Log In"/>
           <p><a href="/account/register"> Sign up for a new account </a></p>
-          <p><a href="#" onclick="showRecoverPasswordForm()" class="forgot_password_link">Forgot your password?</a></p>
-      {% endform %}
+          <p><a href="#" class="switch-account-form" data-target='#recover-password'>Forgot your password?</a></p>
+        {% endform %}
+      </div>
+      <div id="recover-password" class='single-account-form'>
+        <h3> RESET YOUR PASSWORD </h3>
+        <p class='instructions'> Enter your Email Address and we'll send you Password Reset Instructions immediately. </p>
+        {% form 'recover_customer_password' %}
+          {% if form.posted_successfully? %}
+            <p class='success'> Thanks! We will send you instructions to reset your password shortly! </p>
+          {% else %}
+            {% if form.errors %}
+              <div id='passwordErrors' class='alert alert-danger'>{{ form.errors | default_errors }}</div>
+            {% endif %}
+            <input type="email" value="" placeholder="Email" size="30" name="email" id="recover-email" class="form-control" />
+            <input class="btn btn-primary btn-lg" type="submit" value="Reset Password" />
+            <a href="#" class='switch-account-form' data-target='#login-form'>Cancel</a>
+          {% endif %}
+        {% endform %}
+      </div>
     </div>
     <div class='hero-img hidden-xs'>
       {{ "login-slide.jpg" | asset_url | img_tag }}
@@ -21,42 +43,6 @@
 
 
 {% comment %}
-<div class='row'>    
-
-<div class="account_form">
-  <div class='background-image hidden-xs'>
-    <img src="{{ 'login-slide.jpg' | asset_url }}" class='img-responsive'>
-  </div>
-  <div class='col-sm-6 col-sm-offset-6'>
-    <div id="customer">
-      <div class="login_form">
-      
-      </div>
-    </div>
-    <div id="recover-password">
-      <div class="login_formforpw">
-      {% form 'recover_customer_password' %}
-        {{ form.errors | default_errors }}
-        <div id="recover_email" class="clearfix large_form">
-          <input type="email" value="" placeholder="Email" size="30" name="email" id="recover-email" class="logininputforpw" />
-        </div>
-        <div style="margin-top:30px; text-align: center; color:#a6a3a3; width: 205px;">
-          <p class="action_bottom">
-            <input class="newbutton" type="submit" value="Reset Password" />
-            <span class="note">
-            <br/>
-            <a href="#" onclick="hideRecoverPasswordForm()">Cancel</a></span>
-          </p>
-        </div>
-      {% endform %}
-      </div>
-    </div>
-  
-  </div>
-</div>
-
-
-
   {% if shop.checkout.guest_login %}
   <div id="guest">
     <div class="template_header">
@@ -67,20 +53,4 @@
     {% endform %}
   </div>
   {% endif %}
-</div>
-</div>
-
-<script type="text/javascript">
-  function showRecoverPasswordForm() {
-    document.getElementById('recover-password').style.display = 'inline-block';
-    document.getElementById('customer').style.display='none';
-  }
-
-  function hideRecoverPasswordForm() {
-    document.getElementById('recover-password').style.display = 'none';
-    document.getElementById('customer').style.display = 'inline-block';
-  }
-
-  if (window.location.hash == '#recover') { showRecoverPasswordForm() }
-</script>
 {% endcomment %}

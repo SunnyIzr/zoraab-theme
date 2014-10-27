@@ -33,6 +33,42 @@
       margin-top: -10px;
       margin-bottom: 10px;
     }
+    .alert{
+      ul{
+        margin: 0;
+        list-style: none;
+        padding: 0;
+        li{
+          display: inline-block;
+          margin: 0;
+          padding: 0;
+        }
+      }
+    }
+    #login-form{
+    }
+    #recover-password{
+      display: none;
+      .btn{
+        margin-top: 10px;
+      }
+      p{
+        color: $faded-color;
+        font-family: $plain-text-font;
+        width: 80%;
+        margin: -5px auto 20px;
+      }
+    }
+    #create-account{
+      .btn{
+        margin-top: 10px;
+      }
+    }
+    #password-reset-form{
+      .btn{
+        margin-top: 10px;
+      }
+    }
     ::-webkit-input-placeholder {
       color: $faded-color;
     }
