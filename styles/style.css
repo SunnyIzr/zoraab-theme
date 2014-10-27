@@ -10837,8 +10837,17 @@ input.btn {
 .order-summaries {
   font-family: "Source Sans Pro";
 }
+.order-summaries .svg-close-icon {
+  position: absolute;
+  right: -245px;
+  top: -21px;
+}
+.order-summaries .svg-close-icon svg {
+  width: 16%;
+  cursor: pointer;
+}
 .order-summaries .summ-head {
-  margin-top: -50px;
+  margin-top: -25px;
   border-bottom: 1px solid #b8b8b8;
 }
 .order-summaries .summ-head h1 {

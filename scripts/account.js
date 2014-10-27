@@ -4,6 +4,7 @@ var AccountController = {
     this.dataSubmit()
     this.generateGravatar()
     this.activateResponsiveTab()
+    TabLinks.setTabActive();
   },
   editAccountInfo: function(){
     $('.edit-data').click(function(){
@@ -69,3 +70,39 @@ var AccountView = {
     })
   }
 }
+
+var TabLinks = {
+  removeAllActive: function(){
+    $('#accountNav').find('li').removeClass('active')  
+  },
+  setTabActive: function(){
+    $('.tab-switch').click(function(){
+      TabLinks.removeAllActive()
+      target = '#' + this.href.split('#')[1]
+      newTab = $("#accountNav").find('li a[href="' + target + '"]')
+      $(newTab).parent().addClass('active')
+    })
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  

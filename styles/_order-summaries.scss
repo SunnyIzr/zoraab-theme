@@ -1,7 +1,16 @@
 .order-summaries{
   font-family: $number-font;
+  .svg-close-icon{
+    position: absolute;
+    right: -245px;
+    top: -21px;
+    svg{
+      width: 16%;
+      cursor: pointer;
+    }
+  }
   .summ-head{
-    margin-top: -50px;
+    margin-top: -25px;
     border-bottom: 1px solid $faded-color;
     h1{
       font-weight: 300;

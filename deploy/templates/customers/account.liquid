@@ -5,6 +5,7 @@
 
   
 <div class='account'>
+  
   <span id='fallbackImg' class='hide'>{{'sock-fallback.png' | asset_url}}</span>
   <ul class="nav nav-tabs responsive" role="tablist" id='accountNav'>
     <li class="active"><a href="#dashboard" role='tab' data-toggle='tab'>DASHBOARD</a></li>
@@ -41,11 +42,10 @@
   <div class="modal fade" id="{{order.id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        </div>
         <div class="modal-body">
-          
+          <div class='svg-close-icon close-button' data-dismiss="modal">
+            {% include 'icon_close' %}
+          </div>
           {% include 'order-summary' %}
         </div>
       </div>
