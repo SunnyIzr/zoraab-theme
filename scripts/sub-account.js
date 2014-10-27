@@ -1,6 +1,18 @@
 var SubAccountController = {
   init: function(){
     SubAccountModel.getSubData()
+  },
+  presentSub: function(){
+    $('#subPresent').show()
+    SubAccountView.populateData()
+    SubAccountView.populateOrders()
+    clearLoader();
+  },
+  noPresentSub: function(){
+    $('#subData').hide()
+    $('#noSubPresent').show()
+    $('#noSub').show()
+    clearLoader();
   }
 }
 
@@ -12,15 +24,13 @@ var SubAccountModel = {
       $.getJSON(url,function(res){
         SubAccountModel.subInfo = res
       }).done(function(){
-        $('#subPresent').show()
-        SubAccountView.populateData()
-        SubAccountView.populateOrders()
-        clearLoader();
+        if (SubAccountModel.subInfo.cid.status == 'canceled' || SubAccountModel.subInfo.cid.status == 'expired') {
+          SubAccountController.noPresentSub()  
+        } else{
+          SubAccountController.presentSub()
+        }
       }).fail(function(){
-        $('#subData').hide()
-        $('#noSubPresent').show()
-        $('#noSub').show()
-        clearLoader();
+        SubAccountController.noPresentSub()
       })
     }
   },

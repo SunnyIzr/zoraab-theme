@@ -20,17 +20,17 @@
   </ul>
   <ul class='header-links hidden-xs'>
     <li><a href='/pages/help-faq'> HELP </a></li>
-    <li class='account-network-hat'>
       {% if customer %}
-        
-        <a>
+    <li class='account-network-hat'>
+        <a class='account-network-hat'>
           ACCOUNT <span class="caret"></span>
         </a>
-
-      {% else %}
-        <a href='/account/login'> LOG IN </a>
-      {% endif %}
     </li>
+      {% else %}
+    <li class='account-network-hat'>
+        <a href='/account/login'> LOG IN </a>
+    </li>
+      {% endif %}
     <li><a href='/cart' class="right-off-canvas-toggle" id="cart" > CART <span class='number cart-count'>(<span class="item-count">{{cart.item_count}}</span>)</span> {% include 'icon_cart' %} </a></li>
   </ul>
 </div>
