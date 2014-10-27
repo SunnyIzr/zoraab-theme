@@ -8,7 +8,9 @@
         <h3>Account Information</h3>
         <p>{{ customer.name }}<br>
           {{ customer.email }}<br>
-          <a href='#account-info' class='tab-switch' role='tab' data-toggle='tab'>edit</a></p>
+          <a href='#account-info' class='tab-switch hidden-xs hidden-sm' data-toggle='tab'>edit</a>
+          
+          <a href='#collapse-account-info' class='accordion-toggle visible-xs visible-sm' data-parent='#collapse-accountNav' data-toggle='collapse'>edit</a></p>
       </div>
       <div class='col-md-5 col-sm-5 col-xs-6 hidden-xs hidden-sm'>
         <div id='gravatarImg' class='grav-img'></div>
@@ -22,13 +24,15 @@
           {% if customer.default_address.address2.size > 0 %}{{ customer.default_address.address2 }}<br/>{% endif %}
           {{ customer.default_address.city }}, {{ customer.default_address.province_code }} {{ customer.default_address.zip }}<br/>
           {{ customer.default_address.country }}<br/>
-          <a href='#addresses' class='tab-switch' role='tab' data-toggle='tab'>edit</a></p>
+          <a href='#addresses' class='tab-switch hidden-xs hidden-sm' role='tab' data-toggle='tab'>edit</a>
+          <a href='#collapse-addresses' class='accordion-toggle visible-xs visible-sm' data-parent='#collapse-accountNav' data-toggle='collapse'>edit</a></p>
       </div>
     </div>
   </div>
   <div class='col-md-4 right-section'>
     <h3> Subscriptions </h3>
     <p id='planInfo'>&nbsp;</p>
-    <a href='#subscription' class='btn btn-md btn-info tab-switch' role='tab' data-toggle='tab'>View Details</a>
+    <a href='#subscription' class='btn btn-md btn-info tab-switch hidden-xs hidden-sm' role='tab' data-toggle='tab'>View Details</a>
+    <a href='#collapse-subscription' class='accordion-toggle btn btn-md btn-info visible-xs visible-sm' data-parent='#collapse-accountNav' data-toggle='collapse'>View Details</a>
   </div>
 </div>

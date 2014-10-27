@@ -9,7 +9,6 @@ var AccountController = {
   editAccountInfo: function(){
     $('.edit-data').click(function(){
       fields = $(this).data('input')
-      console.log(fields)
       submit = $(this).data('submit')
       AccountView.makeDataEditable(fields,submit)
     })
@@ -50,14 +49,16 @@ var AccountModel = {
 }
 
 var AccountView = {
-  makeDataEditable: function(fields){
+  makeDataEditable: function(fields,submit){
     $.each($('.'+fields),function(k,v){
       originalValue = $(v).html()
       paramName = $(v).data('name')
       if (paramName == 'address[phone]') {
         originalValue = originalValue.replace('(','').replace(') ','').replace('-','')
       }
-      $(v).html("<input type='text' name='" + paramName + "' class='form-control' value='" + originalValue + "'>")     
+      if ($(v).find('input').size() == 0) {
+        $(v).html("<input type='text' name='" + paramName + "' class='form-control' value='" + originalValue + "'>")     
+      }
     })
     $('.'+submit).show()
   },
