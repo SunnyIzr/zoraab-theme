@@ -6,7 +6,7 @@
   
 <div class='account'>
   <span id='fallbackImg' class='hide'>{{'sock-fallback.png' | asset_url}}</span>
-  <ul class="nav nav-tabs" role="tablist">
+  <ul class="nav nav-tabs responsive" role="tablist" id='accountNav'>
     <li class="active"><a href="#dashboard" role='tab' data-toggle='tab'>DASHBOARD</a></li>
     <li><a href="#account-info" role='tab' data-toggle='tab'>ACCOUNT INFO</a></li>
     <li><a href="#addresses" role='tab' data-toggle='tab'>ADDRESS BOOK</a></li>
@@ -14,21 +14,23 @@
     <li><a href="#subscription" role='tab' data-toggle='tab'>SUBSCRIPTION</a></li>
   </ul>
   
-  <div class='account-body tab-content'>
-    <div id='dashboard' class='tab-pane active'>
-      {% include 'account-dashboard' %}
-    </div>
-    <div id='account-info' class='tab-pane'>
-      {% include 'account-info' %}
-    </div>
-    <div id='addresses' class='tab-pane'>
-      {% include 'account-addresses' %}
-    </div>
-    <div id='orders' class='tab-pane'>
-      {% include 'account-orders' %}
-    </div>
-    <div id='subscription' class='tab-pane'>
-      {% include 'account-subscription' %}
+  <div class='account-body'>
+    <div class='tab-content responsive'>
+      <div id='dashboard' class='tab-pane active'>
+        {% include 'account-dashboard' %}
+      </div>
+      <div id='account-info' class='tab-pane'>
+        {% include 'account-info' %}
+      </div>
+      <div id='addresses' class='tab-pane'>
+        {% include 'account-addresses' %}
+      </div>
+      <div id='orders' class='tab-pane'>
+        {% include 'account-orders' %}
+      </div>
+      <div id='subscription' class='tab-pane'>
+        {% include 'account-subscription' %}
+      </div>
     </div>
   </div>
 </div>

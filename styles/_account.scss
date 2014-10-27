@@ -205,7 +205,9 @@
 // SMALL PHONES
 @media (max-width: 768px) {
   .account{
+    padding: 10px 3px;
     .account-body{
+      padding: 0;
       h2{
         margin-bottom: 15px;
       }

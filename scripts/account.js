@@ -3,6 +3,7 @@ var AccountController = {
     this.editAccountInfo()
     this.dataSubmit()
     this.generateGravatar()
+    this.activateResponsiveTab()
   },
   editAccountInfo: function(){
     $('.edit-data').click(function(){
@@ -21,6 +22,11 @@ var AccountController = {
   generateGravatar: function(){
     if ($('#customerEmail').size() > 0){
       AccountView.appendGravatarImg(AccountModel.emailAddress())
+    }
+  },
+  activateResponsiveTab: function(){
+    if ($('.account').size() > 0){
+      fakewaffle.responsiveTabs()
     }
   }
 }

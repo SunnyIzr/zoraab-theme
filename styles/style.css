@@ -1946,6 +1946,12 @@ a.newbuttonsignup:hover, input.newbutton:hover {
 }
 
 @media (max-width: 768px) {
+  .account {
+    padding: 10px 3px;
+  }
+  .account .account-body {
+    padding: 0;
+  }
   .account .account-body h2 {
     margin-bottom: 15px;
   }
