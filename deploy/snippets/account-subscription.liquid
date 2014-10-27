@@ -1,59 +1,61 @@
 <div class='load-overlay'>
-<div class='loading'>
-  {{ 'loader.gif' | asset_url | img_tag }}
-</div>
+  <div class='loading'>
+    {{ 'loader.gif' | asset_url | img_tag }}
+  </div>
 </div>
 <h3> Subscription </h3>
 <p id='customerId' class='hide'>{{customer.id}}</p>
 <div id='subData' class='row'>
-<div class='col-sm-3 left-section '>
-  <div class='top-section'>
-    <div class='plan'>
-      <h5>CURRENT PLAN</h5>
-      <p id='planInfo'>&nbsp;</p>
+  <div class='col-sm-3 left-section '>
+    <div class='top-section'>
+      <div class='plan'>
+        <h5>CURRENT PLAN</h5>
+        <p class='planInfo'>&nbsp;</p>
+      </div>
+      <div class='enrolled-date'>
+        <h5>DATE ENROLLED</h5>
+        <p id='startDate'>&nbsp;</p>
+      </div>
+      <div class='next-date'>
+        <h5>NEXT SHIPMENT DATE</h5>
+        <p id='nextDate'>&nbsp;</p>
+      </div>
+      
     </div>
-    <div class='enrolled-date'>
-      <h5>DATE ENROLLED</h5>
-      <p id='startDate'>&nbsp;</p>
+    <div class='bottom-section'>
+      <h5>CONTACT US!</h5>
+      <a href='mailto: zoraabkit@zoraab.com?subject=Question%'>
+        {% include 'icon_mail' %}
+      </a>
     </div>
-    <div class='next-date'>
-      <h5>NEXT SHIPMENT DATE</h5>
-      <p id='nextDate'>&nbsp;</p>
-    </div>
-    
   </div>
-  <div class='bottom-section'>
-    <h5>CONTACT US!</h5>
-    <a href='mailto: zoraabkit@zoraab.com?subject=Question%'>
-      {% include 'icon_mail' %}
-    </a>
+  <div class='right-section col-sm-9'>
+    <div class='this-month'>
+      <h5>THIS MONTH'S KIT</h5>
+      <p class='status'>Status: <span class='order-status'></span></p>
+      <div class='sub-order-wrapper'>
+        <div class='no-order'>
+          {{ 'hanger.jpg' | asset_url | img_tag }}
+          <p>Making the best selections for you. Check back shortly!</p>
+        </div>
+        <ul class='sub-order'>
+        </ul>
+      </div>
+    </div>
+    <div class='next-month'>
+      <h5>NEXT MONTH'S KIT</h5>
+      <p class='status'>Status: <span class='order-status'></span></p>
+      <div class='sub-order-wrapper'>
+        <div class='no-order'>
+          {{ 'hanger.jpg' | asset_url | img_tag }}
+          <p>Making the best selections for you. Check back shortly!</p>
+        </div>
+        <ul class='sub-order'>
+        </ul>
+      </div>
+    </div>
   </div>
 </div>
-<div class='right-section col-sm-9'>
-  <div class='this-month'>
-    <h5>THIS MONTH'S KIT</h5>
-    <p class='status'>Status: <span class='order-status'></span></p>
-    <div class='sub-order-wrapper'>
-      <div class='no-order'>
-        {{ 'hanger.jpg' | asset_url | img_tag }}
-        <p>Making the best selections for you. Check back shortly!</p>
-      </div>
-      <ul class='sub-order'>
-      </ul>
-    </div>
-  </div>
-  <div class='next-month'>
-    <h5>NEXT MONTH'S KIT</h5>
-    <p class='status'>Status: <span class='order-status'></span></p>
-    <div class='sub-order-wrapper'>
-      <div class='no-order'>
-        {{ 'hanger.jpg' | asset_url | img_tag }}
-        <p>Making the best selections for you. Check back shortly!</p>
-      </div>
-      <ul class='sub-order'>
-      </ul>
-    </div>
-  </div>
-</div>
-
+<div id='noSub'>
+    {%include 'sub_hero'%}
 </div>

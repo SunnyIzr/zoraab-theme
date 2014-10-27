@@ -48,6 +48,13 @@
       font-size: 24px;
       font-weight: normal;
       margin: 40px 0px;
+      span{
+        font-size: 12px;
+        color: $faded-color;
+      }
+      a{
+        color: $faded-color;
+      }
     }
     .second-heading{
       margin-top: 40px;
@@ -139,6 +146,13 @@
             }
           }
         }
+      }
+    }
+    #noSub{
+      display: none;
+      #subHero{
+        height: 350px;
+        border-bottom: none;
       }
     }
     .account-info-img{

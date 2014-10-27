@@ -1,4 +1,4 @@
-<h2>Hello, {{ customer.name }}!</h2>
+<h2>Hello, {{ customer.name }}! <span class='not-you'>Not {{customer.first_name | capitalize }}? <a href='/account/logout'>Log Out</a><span></h2>
 <p id='customerId' class='hide'>{{customer.id}}</p>
 <p id='customerEmail' class='hide'>{{customer.email}}</p>
 <div class='row'>
@@ -31,7 +31,7 @@
   </div>
   <div class='col-md-4 right-section'>
     <h3> Subscriptions </h3>
-    <p id='planInfo'>&nbsp;</p>
+    <p class='planInfo'>&nbsp;</p>
     <a href='#subscription' class='btn btn-md btn-info tab-switch hidden-xs hidden-sm' role='tab' data-toggle='tab'>View Details</a>
     <a href='#collapse-subscription' class='accordion-toggle btn btn-md btn-info visible-xs visible-sm' data-parent='#collapse-accountNav' data-toggle='collapse'>View Details</a>
   </div>

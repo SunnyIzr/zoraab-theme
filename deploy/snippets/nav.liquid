@@ -20,15 +20,24 @@
   </ul>
   <ul class='header-links hidden-xs'>
     <li><a href='/pages/help-faq'> HELP </a></li>
-    <li>
+    <li class='account-network-hat'>
       {% if customer %}
-        <a href='/account/logout'> LOG OUT </a>
+        
+        <a>
+          ACCOUNT <span class="caret"></span>
+        </a>
+
       {% else %}
         <a href='/account/login'> LOG IN </a>
       {% endif %}
     </li>
     <li><a href='/cart' class="right-off-canvas-toggle" id="cart" > CART <span class='number cart-count'>(<span class="item-count">{{cart.item_count}}</span>)</span> {% include 'icon_cart' %} </a></li>
   </ul>
+</div>
+<div class='account-dropdown hidden-xs'>
+  <div class>Hi {{ customer.first_name }} </div>
+  <div class='dropdown-link'><a href='/account'>ACCOUNT</a></div>
+  <div class='dropdown-link'><a href='/account/logout'>LOG OUT</a></div>
 </div>
 
 <center>
