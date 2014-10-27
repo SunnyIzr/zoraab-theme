@@ -1858,6 +1858,9 @@ a.newbuttonsignup:hover, input.newbutton:hover {
   margin-top: 20px;
   float: right;
 }
+.account .account-body #subPresent {
+  display: none;
+}
 .account .account-body #noSubPresent {
   display: none;
 }
@@ -10848,6 +10851,11 @@ input.btn {
 }
 .account-dropdown .dropdown-link {
   padding: 2px 0;
+}
+.account-dropdown .dropdown-greeting {
+  font-style: italic;
+  padding-bottom: 3px;
+  border-bottom: 1px solid #fff;
 }
 .account-dropdown .dropdown-link:hover {
   background-color: #67c5a9;

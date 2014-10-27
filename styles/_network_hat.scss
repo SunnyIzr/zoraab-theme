@@ -114,6 +114,11 @@
   .dropdown-link{
     padding: 2px 0;
   }
+  .dropdown-greeting{
+    font-style: italic;
+    padding-bottom: 3px;
+    border-bottom: 1px solid #fff;
+  }
   .dropdown-link:hover{
     background-color: $accent-color;
   }

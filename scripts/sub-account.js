@@ -12,10 +12,16 @@ var SubAccountModel = {
       $.getJSON(url,function(res){
         SubAccountModel.subInfo = res
       }).done(function(){
+        $('#subPresent').show()
         SubAccountView.populateData()
         SubAccountView.populateOrders()
         clearLoader();
-      })  
+      }).fail(function(){
+        $('#subData').hide()
+        $('#noSubPresent').show()
+        $('#noSub').show()
+        clearLoader();
+      })
     }
   },
   shopifyImgUrl: function(sku){
