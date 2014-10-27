@@ -131,7 +131,7 @@ var fakewaffle = ( function ( $, fakewaffle ) {
 		$.each( panelGroups, function ( index, panelGroup ) {
 
 			var destinationId = $( panelGroup ).attr( 'id' ).replace( 'collapse-', '#' );
-			var destination   = $( destinationId ).next( '.account-body' )[ 0 ];
+			var destination   = $( destinationId ).next( '.account-body' ).find('.tab-content')[0];
 
 			// Find the panel contents
 			var panelContents = $( panelGroup ).find( '.panel-body' );
