@@ -1443,6 +1443,74 @@ ul.off-canvas-list li a:hover {
   width: 35px;
 }
 
+.account-forms .hero-img {
+  width: 100%;
+}
+.account-forms .hero-img img {
+  width: 100%;
+}
+.account-forms .account-form {
+  right: 10%;
+  top: 10%;
+  margin-top: 100px;
+  position: absolute;
+  max-width: 350px;
+  width: 100%;
+  padding: 30px;
+  background-color: #fff;
+  text-align: center;
+}
+.account-forms .account-form h3 {
+  color: #67c5a9;
+  font-weight: 300;
+  font-size: 22px;
+}
+.account-forms .account-form .form-control {
+  margin-bottom: 5px;
+}
+.account-forms .account-form input {
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 13px;
+}
+.account-forms .account-form .btn {
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+.account-forms .account-form ::-webkit-input-placeholder {
+  color: #b8b8b8;
+}
+.account-forms .account-form :-moz-placeholder {
+  color: #b8b8b8;
+}
+.account-forms .account-form ::-moz-placeholder {
+  color: #b8b8b8;
+}
+.account-forms .account-form :-ms-input-placeholder {
+  color: #b8b8b8;
+}
+
+@media (max-width: 1200px) {
+  .account-forms .account-form {
+    top: 5%;
+    right: 5%;
+  }
+}
+@media (max-width: 992px) {
+  .account-forms .account-form {
+    top: 0%;
+    right: 0%;
+  }
+}
+@media (max-width: 768px) {
+  .account-forms .account-form {
+    top: 6%;
+    left: 0;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
 .account_form {
   height: 500px;
   width: 100%;

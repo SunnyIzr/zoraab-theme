@@ -1,23 +1,36 @@
 {% layout settings.customer_layout %}
+
+<div class='row'>
+  <div class='account-forms'>
+    <div class='account-form'>
+      <h3> LOG INTO YOUR ACCOUNT </h3>
+      {% form 'customer_login' %}
+        {{ form.errors | default_errors }}
+          <input type="email" placeholder="Email" name="customer[email]" id="customer_email" class="form-control" />
+          <input type="password" placeholder="Password" name="customer[password]" id="customer_password" class="form-control"/><br/>
+          <input type="submit" class='btn btn-primary btn-lg' value="Log In"/>
+          <p><a href="/account/register"> Sign up for a new account </a></p>
+          <p><a href="#" onclick="showRecoverPasswordForm()" class="forgot_password_link">Forgot your password?</a></p>
+      {% endform %}
+    </div>
+    <div class='hero-img hidden-xs'>
+      {{ "login-slide.jpg" | asset_url | img_tag }}
+    </div>
+  </div>
+</div>
+
+
+{% comment %}
 <div class='row'>    
 
 <div class="account_form">
   <div class='background-image hidden-xs'>
     <img src="{{ 'login-slide.jpg' | asset_url }}" class='img-responsive'>
   </div>
-  <div class='col-sm-4 col-sm-offset-8'>
+  <div class='col-sm-6 col-sm-offset-6'>
     <div id="customer">
       <div class="login_form">
-      {% form 'customer_login' %}
-        {{ form.errors | default_errors }}
-          <input type="email" value="" placeholder="Email" name="customer[email]" id="customer_email" class="logininput" size="30" />
-          <input type="password" value="" placeholder="Password" name="customer[password]" id="customer_password" class="logininputpw" size="30" />
-        <div style="margin-top:30px; text-align: center; color:#a6a3a3; width: 205px;">
-          <input class="newbutton" type="submit" value="Log In"  /><br/>
-          <p><a href="/account/register"> Sign up for a new account </a></p>
-          <p><a href="#" onclick="showRecoverPasswordForm()" class="forgot_password_link">Forgot your password?</a></p>
-        </div>
-      {% endform %}
+      
       </div>
     </div>
     <div id="recover-password">
@@ -70,3 +83,4 @@
 
   if (window.location.hash == '#recover') { showRecoverPasswordForm() }
 </script>
+{% endcomment %}
