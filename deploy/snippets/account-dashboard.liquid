@@ -1,0 +1,34 @@
+<h2>Hello, {{ customer.name }}!</h2>
+<p id='customerId' class='hide'>{{customer.id}}</p>
+<p id='customerEmail' class='hide'>{{customer.email}}</p>
+<div class='row'>
+  <div class='col-md-8 col-sm-8 col-xs-12 left-section'>
+    <div class='row'>
+      <div class='col-md-7 col-sm-7 col-xs-12'>
+        <h3>Account Information</h3>
+        <p>{{ customer.name }}<br>
+          {{ customer.email }}<br>
+          <a href='/pages/account-information'>edit</a></p>
+      </div>
+      <div class='col-md-5 col-sm-5 col-xs-6 hidden-xs hidden-sm'>
+        <div id='gravatarImg' class='grav-img'></div>
+      </div>
+    </div>
+    <div class='row'>
+      <div class='col-md-7 col-sm-7 col-xs-12'>
+        <h3>Default Shipping Address</h3>
+        <p>{{ customer.default_address.first_name }} {{ customer.default_address.last_name }}<br/>
+          {{ customer.default_address.address1 }}<br/>
+          {% if customer.default_address.address2.size > 0 %}{{ customer.default_address.address2 }}<br/>{% endif %}
+          {{ customer.default_address.city }}, {{ customer.default_address.province_code }} {{ customer.default_address.zip }}<br/>
+          {{ customer.default_address.country }}<br/>
+          <a href='/account/addresses'>edit</a></p>
+      </div>
+    </div>
+  </div>
+  <div class='col-md-4 right-section'>
+    <h3> Subscriptions </h3>
+    <p id='planInfo'>&nbsp;</p>
+    <a href='/pages/account-subscription' class='btn btn-md btn-info'>View Details</a>
+  </div>
+</div>

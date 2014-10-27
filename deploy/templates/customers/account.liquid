@@ -5,48 +5,49 @@
 
   
 <div class='account'>
+  <span id='fallbackImg' class='hide'>{{'sock-fallback.png' | asset_url}}</span>
   <ul class="nav nav-tabs" role="tablist">
-    <li class="active"><a href="/account">DASHBOARD</a></li>
-    <li><a href="/pages/account-information">ACCOUNT INFO</a></li>
-    <li><a href="/account/addresses">ADDRESS BOOK</a></li>
-    <li><a href="/pages/order-history">ORDER HISTORY</a></li>
-    <li><a href="/pages/account-subscription">SUBSCRIPTION</a></li>
+    <li class="active"><a href="#dashboard" role='tab' data-toggle='tab'>DASHBOARD</a></li>
+    <li><a href="#account-info" role='tab' data-toggle='tab'>ACCOUNT INFO</a></li>
+    <li><a href="#addresses" role='tab' data-toggle='tab'>ADDRESS BOOK</a></li>
+    <li><a href="#orders" role='tab' data-toggle='tab'>ORDER HISTORY</a></li>
+    <li><a href="#subscription" role='tab' data-toggle='tab'>SUBSCRIPTION</a></li>
   </ul>
   
-  <div class='account-body'>
-    <h2>Hello, {{ customer.name }}!</h2>
-    <p id='customerId' class='hide'>{{customer.id}}</p>
-    <p id='customerEmail' class='hide'>{{customer.email}}</p>
-    <div class='row'>
-      <div class='col-md-8 col-sm-8 col-xs-12 left-section'>
-        <div class='row'>
-          <div class='col-md-7 col-sm-7 col-xs-12'>
-            <h3>Account Information</h3>
-            <p>{{ customer.name }}<br>
-              {{ customer.email }}<br>
-              <a href='/pages/account-information'>edit</a></p>
-          </div>
-          <div class='col-md-5 col-sm-5 col-xs-6 hidden-xs hidden-sm'>
-            <div id='gravatarImg' class='grav-img'></div>
-          </div>
+  <div class='account-body tab-content'>
+    <div id='dashboard' class='tab-pane active'>
+      {% include 'account-dashboard' %}
+    </div>
+    <div id='account-info' class='tab-pane'>
+      {% include 'account-info' %}
+    </div>
+    <div id='addresses' class='tab-pane'>
+      {% include 'account-addresses' %}
+    </div>
+    <div id='orders' class='tab-pane'>
+      {% include 'account-orders' %}
+    </div>
+    <div id='subscription' class='tab-pane'>
+      {% include 'account-subscription' %}
+    </div>
+  </div>
+</div>
+
+
+<div class='order-summaries'>
+  {% for order in customer.orders %}
+  <div class="modal fade" id="{{order.id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
         </div>
-        <div class='row'>
-          <div class='col-md-7 col-sm-7 col-xs-12'>
-            <h3>Default Shipping Address</h3>
-            <p>{{ customer.default_address.first_name }} {{ customer.default_address.last_name }}<br/>
-              {{ customer.default_address.address1 }}<br/>
-              {% if customer.default_address.address2.size > 0 %}{{ customer.default_address.address2 }}<br/>{% endif %}
-              {{ customer.default_address.city }}, {{ customer.default_address.province_code }} {{ customer.default_address.zip }}<br/>
-              {{ customer.default_address.country }}<br/>
-              <a href='/account/addresses'>edit</a></p>
-          </div>
+        <div class="modal-body">
+          
+          {% include 'order-summary' %}
         </div>
-      </div>
-      <div class='col-md-4 right-section'>
-        <h3> Subscriptions </h3>
-        <p id='planInfo'>&nbsp;</p>
-        <a href='/pages/account-subscription' class='btn btn-md btn-info'>View Details</a>
       </div>
     </div>
   </div>
+  {% endfor %}
 </div>

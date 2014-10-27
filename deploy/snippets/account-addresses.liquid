@@ -1,0 +1,66 @@
+<p id='customerId' class='hide'>{{customer.id}}</p>
+<div class='row'>
+  <div class='col-md-8 col-sm-8'>
+    <h3>Contact Information &nbsp; <span class='edit-contact edit-data' data-input='contact-editable' data-submit='contact-submit'>edit</span></h3>
+    {% assign address = customer.default_address %}
+    {% form 'customer_address', address %}
+      <table class='account-info'>
+        <tr>
+          <td width='35%'><h5>FIRST NAME</h5></td>
+          <td class='contact-editable' data-name='address[first_name]'>{{address.first_name}}</td>
+        </tr>
+        <tr>
+          <td><h5>LAST NAME</h5></td>
+          <td class='contact-editable' data-name='address[last_name]'>{{address.last_name}}</td>
+        </tr>
+        <tr>
+          <td><h5>COMPANY</h5></td>
+          <td class='contact-editable' data-name='address[company]'>{{address.company}}</td>
+        </tr>
+        <tr>
+          <td><h5>TELEPHONE</h5></td>
+          {% assign ph_ary = address.phone | split: '' %}
+          {% assign phone = | '(' | append:ph_ary[0] | append: ph_ary[1] | append: ph_ary[2] | append: ') ' | append: ph_ary[3] | append: ph_ary[4] | append: ph_ary[5] | append: '-' | append: ph_ary[6] | append: ph_ary[7] | append: ph_ary[8] | append: ph_ary[9] %}
+          <td class='contact-editable' data-name='address[phone]'>{{phone}}</td>
+        </tr>
+      </table>
+      <input type="submit" class='contact-submit btn btn-info btn-lg' value='Update'>
+    {% endform %}
+    <h3 class='second-heading'>Default Shipping Address &nbsp; <span class='edit-address edit-data' data-input='address-editable' data-submit='address-submit'>edit</span></h3>
+    {% assign address = customer.default_address %}
+    {% form 'customer_address', address %}
+      <table class='account-info'>
+        <tr>
+          <td width='35%'><h5>STREET</h5></td>
+          <td class='address-editable' data-name='address[address1]'>{{address.address1}}</td>
+        </tr>
+        <tr>
+          <td><h5>STREET2</h5></td>
+          <td class='address-editable' data-name='address[address2]'>{{address.address2}}</td>
+        </tr>
+        <tr>
+          <td><h5>CITY</h5></td>
+          <td class='address-editable' data-name='address[city]'>{{address.city}}</td>
+        </tr>
+        <tr>
+          <td><h5>STATE / PROVINCE</h5></td>
+          <td class='address-editable' data-name='address[province]'>{{address.province}}</td>
+        </tr>
+        <tr>
+          <td><h5>ZIP / POSTAL CODE</h5></td>
+          <td class='address-editable' data-name='address[zip]'>{{address.zip}}</td>
+        </tr>
+        <tr>
+          <td><h5>COUNTRY</h5></td>
+          <td class='address-editable' data-name='address[country]'>{{address.country}}</td>
+        </tr>
+      </table>
+      <input type="submit" class='address-submit btn btn-info btn-lg' value='Update'>
+    {% endform %}
+  </div>
+  
+  
+  <div class='right-section col-md-4 col-sm-4 hidden-xs addresses-img'>
+    {{ 'addressbook.jpg' | asset_url | img_tag }}
+  </div>
+</div>
