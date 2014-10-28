@@ -1,6 +1,60 @@
+<head prefix="og: http://ogp.me/ns#">
+  <meta property="og:title" content="{{ page.title }}">
+</head>
+
 <div class='blog'>
   <div id='blogHero' class='hero loading'>
   </div>  
-<h1>{{page.title}}</h1>
+<h1 id='title'>{{page.title}}</h1>
 {{ page.content }}
+  <div class='share'>
+    <div class='share-heading'>
+      <div class='blog-line'>
+      </div>
+      <h5>Share This Article</h5>
+    </div>
+    <div class='share-icons'>
+      <ul class='social-share-list'>
+        <li><a id='facebookLink' class='facebook-share share-popup' href='https://www.facebook.com/sharer/sharer.php?' rel='nofollow'><i class="fa fa-facebook"></i></a></li>
+        <li><a class='twitter share-popup' href='https://twitter.com/share?text="{{ page.title }}"%20from%20@Zoraab'><i class="fa fa-twitter" rel='nofollow'></i></a></li>
+        <li><a id='tumblrLink' class='tumblr share-popup' href='https://www.tumblr.com/share?v=3&t={{ page.title }}' rel='nofollow'><i class="fa fa-tumblr"></i></a></li>
+        {%comment%}
+        <li><i class="fa fa-google-plus"></i></li>
+        <li><i class="fa fa-pinterest"></i></li>
+        {%endcomment%}
+      </ul>
+    </div>
+  </div>
+  <div class='blog-nav'>
+    <div class='blog-line'>
+    </div>
+    <a href='/pages/blogs'>BLOG HOME</a>
+  </div>
 </div>
+
+
+<script>
+  $('.share-popup').click(function(event) {
+    var width  = 575,
+        height = 400,
+        left   = ($(window).width()  - width)  / 2,
+        top    = ($(window).height() - height) / 2,
+        url    = this.href,
+        opts   = 'status=1' +
+                 ',width='  + width  +
+                 ',height=' + height +
+                 ',top='    + top    +
+                 ',left='   + left;
+    
+    window.open(url, 'twitter', opts); 
+    return false;
+  });
+  $(document).ready(function(){
+    currentUrl = window.location.href.replace(/:/g,'%3A').replace(/\//g,'%2F')
+    title = $('#title').html()
+    link = 'https://www.tumblr.com/share?v=3&u=' + currentUrl + '&t=' + title
+    $('#tumblrLink').attr('href',link)
+    fbLink = 'https://www.facebook.com/sharer/sharer.php?u=' + currentUrl
+    $('#facebookLink').attr('href',fbLink)
+  })
+</script>
