@@ -10,7 +10,7 @@
     {% if order.fulfillment_status == 'unfulfilled' %}
     {% else %}
       <h4>Tracking Information</h4>
-      <a href='{{ order.line_items[0].fulfillment.tracking_url }}'>{{ order.line_items[0].fulfillment.tracking_company }} {{ order.line_items[0].fulfillment.tracking_number }}</a>
+      <a href='{{ order.line_items[0].fulfillment.tracking_url }}' target='_blank'>{{ order.line_items[0].fulfillment.tracking_company }} {{ order.line_items[0].fulfillment.tracking_number }}</a>
     {% endif %}
   </div>
   <div class='col-sm-3 order-detail'>
