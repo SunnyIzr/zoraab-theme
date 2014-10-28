@@ -10774,6 +10774,22 @@ input.btn {
   font-weight: 300;
   letter-spacing: 0.8px;
 }
+.network_hat .main-links li .mail-overlay {
+  position: fixed;
+  top: 0;
+  width: 10.2%;
+  height: 24px;
+  cursor: text;
+  left: 34%;
+}
+.network_hat .main-links li .submit-overlay {
+  position: fixed;
+  top: 0;
+  width: 4.2%;
+  height: 24px;
+  cursor: pointer;
+  left: 44.2%;
+}
 .network_hat .main-links li a {
   color: #fff;
 }

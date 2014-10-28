@@ -7,6 +7,7 @@ $(document).ready(function(){
     slideDownSizeVars();
     hideSizeVarDropdown();
     heroAddSizeEffect();
+    networkHatMailSignupFix();
   })
 })
 
@@ -77,6 +78,15 @@ var getHeroImg = function(){
   heroUrl = $('#hero-url').html()
   $.get(heroUrl, 'image/jpg', function(res){
     
+  })
+}
+
+var networkHatMailSignupFix = function(){
+  $('.mail-overlay').click(function(){
+    $('#mce-EMAIL').focus()
+  })
+  $('.submit-overlay').click(function(){
+    $('#submitEmail').click()
   })
 }
 
