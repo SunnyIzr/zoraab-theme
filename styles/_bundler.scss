@@ -2,6 +2,7 @@
   .left-panel{
     width: 100%;
     float: left;
+    height: 600px;
     border: 1px solid $faded-color;
     img{
       width: 60%;
@@ -22,6 +23,12 @@
       font-weight: 300;
       font-size: 28px;
       line-height: 35px;
+    }
+    .price{
+      width: 135px;
+      position: absolute;
+      left: 8%;
+      top: 13%;
     }
     .mid-border{
       margin: 9px auto 0;
@@ -53,6 +60,7 @@
       margin: 0;
       padding: 0;
       li{
+        visibility: hidden;
         display: inline-block;
         margin: 0 0 10px;
         padding: 0;
@@ -77,6 +85,11 @@
       padding-top: 3px;
       h1{
         max-width: 400px;
+      }
+      .price{
+        width: 115px;
+        left: 8%;
+        top: 9%;
       }
       .nyt-logo{
         max-width: 250px;

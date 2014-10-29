@@ -1,0 +1,46 @@
+<div class='row'>
+  <div class='bundler'>
+    <div class='left-panel'>
+      {{ 'hero-bundler.jpg' | asset_url | img_tag }}
+    </div>
+    <div class='right-panel'>
+      <h1>SOCK DRAWER MAKEOVER</h1>
+      <img class='price hidden-xs hidden-sm' src='{{ "bundler-price.png" | asset_url}}'>
+      <div class='mid-border'></div>
+      <h3><i>FREE</i> US SHIPPING</h3>
+      {% assign bundle_collection = collections.bundle %}
+      {% for product in bundle_collection.products %}
+        <form action="/cart/add" method="post" enctype="multipart/form-data">
+        <select name="id" class='product-select hide'>
+          {% for variant in product.variants %}
+            <option value="{{ variant.id }}">{{ variant.title | escape }}</option>
+          {% endfor %}
+        </select>      
+        <input type="submit" value="BUY NOW" class="add btn buy-bundle btn-lg btn-info right-off-canvas-toggle" />
+        </form>
+      {% endfor %}
+      <h4>Get 10 new pairs of socks for a total of $59.</h4>
+      <ul>
+      {% assign collection = collections.mints %}
+      {% for product in collection.products %}
+        <li class='sock-item'>
+          <img src="{{ product.featured_image.src | product_img_url: 'medium' }}" alt="{{ product.featured_image.alt | escape }}" />
+        </li>
+      {% endfor %}  
+      </ul>
+      <img class='nyt-logo' src="{{ 'bundler-nyt-logo.png' | asset_url }}">
+    </div>
+  </div>  
+</div>
+
+<script>
+$(document).ready(function(){
+  $('.sock-item').addClass('fadeIn');
+  $('.left-panel').css('height','auto')
+  setInterval(function(){
+    $('.buy-bundle').addClass('pulse')
+  },5000)
+  
+})
+
+</script>
