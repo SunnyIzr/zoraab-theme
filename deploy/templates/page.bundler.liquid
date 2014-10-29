@@ -1,0 +1,23 @@
+<div class='row'>
+  <div class='bundler'>
+    <div class='left-panel'>
+      {{ 'hero-bundler.jpg' | asset_url | img_tag }}
+    </div>
+    <div class='right-panel'>
+      <h1>SOCK DRAWER MAKEOVER</h1>
+      <div class='mid-border'></div>
+      <h3><i>FREE</i> US SHIPPING</h3>
+      <a class='btn btn-info btn-lg' href='#'> BUY NOW </a>
+      <h4>Get 10 new pairs of socks for a total of $59.</h4>
+      <ul>
+      {% assign collection = collections.mints %}
+      {% for product in collection.products %}
+        <li>
+          <img src="{{ product.featured_image.src | product_img_url: 'medium' }}" alt="{{ product.featured_image.alt | escape }}" />
+        </li>
+      {% endfor %}  
+      </ul>
+      <img class='nyt-logo' src="{{ 'bundler-nyt-logo.png' | asset_url }}">
+    </div>
+  </div>  
+</div>

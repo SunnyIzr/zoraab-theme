@@ -9,6 +9,8 @@ $number-font: 'Source Sans Pro';
 $plain-text-font: 'PT Sans';
 $serif-font: 'Playfair Display';
 
+@import 'bundler';
+
 @import 'reduced_foundation';
 
 @import 'collection';
@@ -51,6 +53,27 @@ $serif-font: 'Playfair Display';
 
 @import 'order-summaries';
 
+
+
 .number{
   font-family: $number-font;
 }
+
+
+
+
+// MEDIUM DESKTOPS
+@media (max-width: 1200px) { 
+} 
+
+// TABLETS
+@media (max-width: 992px) { 
+} 
+
+// SMALL PHONES
+@media (max-width: 768px) {
+} 
+
+// IPHONE
+@media (max-width: 450px) {
+} 

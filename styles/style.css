@@ -1,3 +1,99 @@
+.bundler .left-panel {
+  width: 100%;
+  float: left;
+  border: 1px solid #b8b8b8;
+}
+.bundler .left-panel img {
+  width: 60%;
+}
+.bundler .right-panel {
+  position: absolute;
+  right: 0;
+  width: 40%;
+  float: right;
+  border: none;
+  text-align: center;
+  padding-top: 10px;
+}
+.bundler .right-panel h1 {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 300px;
+  font-weight: 300;
+  font-size: 28px;
+  line-height: 35px;
+}
+.bundler .right-panel .mid-border {
+  margin: 9px auto 0;
+  width: 85%;
+  max-width: 170px;
+  border-bottom: 1px solid #b8b8b8;
+}
+.bundler .right-panel h3 {
+  font-size: 17px;
+  font-weight: 400;
+  font-family: "Source Sans Pro";
+  margin: 14px auto 20px;
+}
+.bundler .right-panel .btn {
+  padding: 8px 35px;
+  font-size: 25px;
+}
+.bundler .right-panel h4 {
+  font-size: 18px;
+  font-weight: 300;
+  font-family: "Source Sans Pro";
+  width: 85%;
+  max-width: 200px;
+  margin: 14px auto;
+  line-height: 24px;
+}
+.bundler .right-panel ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.bundler .right-panel ul li {
+  display: inline-block;
+  margin: 0 0 10px;
+  padding: 0;
+  width: 19%;
+}
+.bundler .right-panel ul li img {
+  width: 100%;
+}
+.bundler .right-panel .nyt-logo {
+  width: 100%;
+  max-width: 300px;
+}
+
+@media (max-width: 1200px) {
+  .bundler .right-panel {
+    padding-top: 3px;
+  }
+  .bundler .right-panel h1 {
+    max-width: 400px;
+  }
+  .bundler .right-panel .nyt-logo {
+    max-width: 250px;
+  }
+}
+@media (max-width: 992px) {
+  .bundler .left-panel img {
+    width: 100%;
+  }
+  .bundler .right-panel {
+    position: static;
+    width: 100%;
+  }
+  .bundler .right-panel h1 {
+    max-width: 100%;
+    font-size: 26px;
+  }
+  .bundler .right-panel h4 {
+    max-width: 100%;
+  }
+}
 p aside {
   font-size: 0.875rem;
   line-height: 1.35;
