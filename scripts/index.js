@@ -2,13 +2,15 @@ $(document).ready(function(){
   panelHoverEffect()
   heroAddClickEffect();
   heroAddEffect();
-  $('#indexHero').image($('#hero-url').html(), function(){
-    $('#indexHero').addClass('hero-reveal')
-    slideDownSizeVars();
-    hideSizeVarDropdown();
-    heroAddSizeEffect();
-    networkHatMailSignupFix();
-  })
+  if ($('.video-hero').size() == 0) {
+    $('#indexHero').image($('#hero-url').html(), function(){
+        $('#indexHero').addClass('hero-reveal')
+        slideDownSizeVars();
+        hideSizeVarDropdown();
+        heroAddSizeEffect();
+        networkHatMailSignupFix();
+    })
+  }
 })
 
 var heroAddSizeEffect = function(){

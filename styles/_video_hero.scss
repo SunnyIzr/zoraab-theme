@@ -1,0 +1,82 @@
+.video-hero{
+  video{
+    width: 83%;
+    float: left;
+  }
+  .featured-hero-prods{
+    width: 17%;
+    height:585px;
+    background-color: #ebebeb;
+    float: right;
+    text-align: center;
+    cursor: pointer;
+    h2{
+     font-family: $fun-font;
+     color: $accent-color;
+     border-top: 1px solid $accent-color; 
+     border-bottom: 1px solid $accent-color;
+     font-size: 125%;
+     font-weight: normal;
+     width: 80%;
+     margin: 5% auto 7%;
+     line-height: 140%;
+     padding: 5% 0 4%;
+    }
+    .featured-prods{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      text-align: center;
+      li{
+        display: inline;
+        margin: 0 auto;
+        padding: 0;
+        img{
+          border: 1px solid $accent-color;
+          width: 65%;
+          margin-bottom: 7%;
+        }
+      }
+    }
+    .btn-primary{
+      margin: 2% auto 0;
+      border: 2px solid $emphasis-color;
+      background-color: transparent;
+      color: $emphasis-color;
+      font-size: 16px;
+      transition: background-color 300ms ease-out; 
+    }
+  }
+  .featured-hero-prods:hover{
+    .btn-primary{
+      background-color: $emphasis-color;
+      color: #fff;
+    }
+  }
+  .hero-call-to-action{
+    .backlay{
+      position: absolute;
+      background-color: #5d5d5e;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      right: 0;
+      opacity: 0.65;
+    }
+    .content{
+      z-index: 1;
+      position: relative;
+      .btn-lg{
+        padding: 9px 15px;
+      }
+    }
+    color: #fff;
+    font-family: $fun-font;
+    padding: 0.5% 0.4% 0.5% 0.5%;
+    font-size: 130%;
+    width: auto;
+    float: left;
+    margin-top: -6%;
+    position: relative;
+  }
+}

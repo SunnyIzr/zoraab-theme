@@ -1,3 +1,82 @@
+.video-hero video {
+  width: 83%;
+  float: left;
+}
+.video-hero .featured-hero-prods {
+  width: 17%;
+  height: 585px;
+  background-color: #ebebeb;
+  float: right;
+  text-align: center;
+  cursor: pointer;
+}
+.video-hero .featured-hero-prods h2 {
+  font-family: "Quicksand";
+  color: #67c5a9;
+  border-top: 1px solid #67c5a9;
+  border-bottom: 1px solid #67c5a9;
+  font-size: 125%;
+  font-weight: normal;
+  width: 80%;
+  margin: 5% auto 7%;
+  line-height: 140%;
+  padding: 5% 0 4%;
+}
+.video-hero .featured-hero-prods .featured-prods {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+.video-hero .featured-hero-prods .featured-prods li {
+  display: inline;
+  margin: 0 auto;
+  padding: 0;
+}
+.video-hero .featured-hero-prods .featured-prods li img {
+  border: 1px solid #67c5a9;
+  width: 65%;
+  margin-bottom: 7%;
+}
+.video-hero .featured-hero-prods .btn-primary {
+  margin: 2% auto 0;
+  border: 2px solid #e85c41;
+  background-color: transparent;
+  color: #e85c41;
+  font-size: 16px;
+  transition: background-color 300ms ease-out;
+}
+.video-hero .featured-hero-prods:hover .btn-primary {
+  background-color: #e85c41;
+  color: #fff;
+}
+.video-hero .hero-call-to-action {
+  color: #fff;
+  font-family: "Quicksand";
+  padding: 0.5% 0.4% 0.5% 0.5%;
+  font-size: 130%;
+  width: auto;
+  float: left;
+  margin-top: -6%;
+  position: relative;
+}
+.video-hero .hero-call-to-action .backlay {
+  position: absolute;
+  background-color: #5d5d5e;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  opacity: 0.65;
+}
+.video-hero .hero-call-to-action .content {
+  z-index: 1;
+  position: relative;
+}
+.video-hero .hero-call-to-action .content .btn-lg {
+  padding: 9px 15px;
+}
+
 .bundler .left-panel {
   width: 100%;
   float: left;
