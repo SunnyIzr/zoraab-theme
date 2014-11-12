@@ -10,6 +10,12 @@ $(document).ready(function(){
         heroAddSizeEffect();
         networkHatMailSignupFix();
     })
+  } else{
+    height = ($('video').height()*1.125) + 'px'
+    console.log('height is')
+    console.log(height)
+    $('.featured-hero-prods').css('height',height)
+    resizeSideFeatureOnVideo();
   }
 })
 
@@ -90,6 +96,15 @@ var networkHatMailSignupFix = function(){
   $('.submit-overlay').click(function(){
     $('#submitEmail').click()
   })
+}
+
+var resizeSideFeatureOnVideo = function(){
+  //resize side feature based on video size
+  $(window).resize(function(){
+    height = $('video').height() + 'px'
+    $('.featured-hero-prods').css('height',height)
+  })
+  
 }
 
 

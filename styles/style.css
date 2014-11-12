@@ -4,7 +4,6 @@
 }
 .video-hero .featured-hero-prods {
   width: 17%;
-  height: 585px;
   background-color: #ebebeb;
   float: right;
   text-align: center;
@@ -117,6 +116,40 @@
   padding: 9px 15px;
 }
 
+@media (max-width: 1200px) {
+  .video-hero .featured-hero-prods h2 {
+    font-size: 100%;
+  }
+}
+@media (max-width: 992px) {
+  .video-hero .featured-hero-prods h2 {
+    font-size: 85%;
+  }
+  .video-hero .featured-hero-prods .btn-primary {
+    font-size: 14px;
+    padding: 5px 7px;
+  }
+}
+@media (max-width: 768px) {
+  .video-hero video {
+    width: 100%;
+  }
+  .video-hero .featured-hero-prods {
+    display: none;
+  }
+  .video-hero .hero-call-to-action {
+    font-size: 100%;
+    text-align: center;
+    width: 100%;
+    margin-top: 0;
+  }
+  .video-hero .hero-call-to-action .backlay {
+    opacity: 1.0;
+  }
+  .video-hero .hero-call-to-action .content .btn-lg {
+    font-size: 100%;
+  }
+}
 .bundler .left-panel {
   width: 100%;
   float: left;
