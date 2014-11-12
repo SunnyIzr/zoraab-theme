@@ -1,5 +1,15 @@
 {
-  "current": "Slate",
+  "current": {
+    "use_logo": false,
+    "checkout_use_header_image": false,
+    "checkout_banner_background_color": "#ffffff",
+    "checkout_logo": "checkout_logo.png",
+    "checkout_headline": "",
+    "checkout_accent_color": "#67c5a9",
+    "checkout_button_color": "#e85c41",
+    "checkout_call_to_action_color": "#e85c41",
+    "customer_layout": "theme"
+  },
   "presets": {
     "Slate": {
       "use_logo": false,
