@@ -10,6 +10,9 @@ $plain-text-font: 'PT Sans';
 $serif-font: 'Playfair Display';
 $fun-font: 'Quicksand';
 
+
+@import 'nifty_modals';
+
 @import 'notifications_default';
 
 @import 'notifications_bar';

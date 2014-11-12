@@ -81,12 +81,15 @@
                 {% include 'nav' %}
               </header>
               {{ content_for_layout }}
+              {% include 'sale_popup' %}
+              <div class="md-overlay"></div>
               {% include 'footer' %}
             </div>
           </div>
           {% include 'free_shipping' %}
         </div>
             
+        
         <div class='cart-canvas'>
           {% include 'cart' %}
 
@@ -100,7 +103,6 @@
         </div>
         
       </div>
-
       <!-- AdRoll Smart Pixel -->
       <script type="text/javascript">
         adroll_adv_id = "AQIM3RVGLNHZDEISYOQDG5";
