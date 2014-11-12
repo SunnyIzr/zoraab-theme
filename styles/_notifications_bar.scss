@@ -1,6 +1,6 @@
 /* To bar notifications */
 .ns-box.ns-bar {
-  top: 0;
+  top: 24px;
   left: 0;
   width: 100%;
 }
@@ -15,7 +15,7 @@
 
 .ns-bar .ns-close::before,
 .ns-bar .ns-close::after {
-  background: #b7b5b3;
+  background: #fff;
 }
 
 [class^="ns-effect-"].ns-bar.ns-hide,
@@ -28,7 +28,7 @@
 
 /* Slide on top */
 .ns-effect-slidetop {
-  box-shadow: inset 4.5em 0 rgba(0,0,0,0.6);
+  // box-shadow: inset 4.5em 0 rgba(0,0,0,0.6);
 }
 
 .ns-effect-slidetop .icon {
@@ -50,7 +50,7 @@
 .ns-effect-slidetop .ns-close::before,
 .ns-effect-slidetop .ns-close::after {
   width: 2px;
-  background: #14151b;
+  background: #fff;
 }
 
 .ns-effect-slidetop .ns-close:hover::before,
@@ -202,4 +202,20 @@
 @keyframes animFade {
   0% { opacity: 0; }
   100% { opacity: 1; }
+}
+
+.normal-body{
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+
+.normal-body.show{
+  margin-top: 65px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }

@@ -66,7 +66,7 @@
     type : 'error',
     // if the user doesn´t close the notification then we remove it 
     // after the following time
-    ttl : 6000,
+    ttl : 99999999999,
     // callbacks
     onClose : function() { return false; },
     onOpen : function() { return false; }
@@ -80,7 +80,8 @@
     // create HTML structure
     this.ntf = document.createElement( 'div' );
     this.ntf.className = 'ns-box ns-' + this.options.layout + ' ns-effect-' + this.options.effect + ' ns-type-' + this.options.type;
-    var strinner = '<div class="ns-box-inner">';
+    var strinner = '<div class="ns-bg"></div>'
+    strinner += '<div class="ns-box-inner">';
     strinner += this.options.message;
     strinner += '</div>';
     strinner += '<span class="ns-close"></span></div>';
@@ -150,6 +151,7 @@
     else {
       onEndAnimationFn();
     }
+    $('.normal-body').removeClass('show')
   }
 
   /**
