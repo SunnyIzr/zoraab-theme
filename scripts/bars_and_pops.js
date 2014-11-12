@@ -1,7 +1,7 @@
 $(document).ready(function(){
   setTimeout(function(){
     loadNotificationBar()
-  }, 2000)
+  }, 3500)
 })
 
 var loadNotificationBar = function(){

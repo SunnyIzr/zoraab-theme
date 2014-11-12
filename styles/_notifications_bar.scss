@@ -89,8 +89,10 @@
 .ns-effect-slidetop.ns-hide {
   -webkit-animation-name: animSlideTop;
   animation-name: animSlideTop;
-  -webkit-animation-duration: 0.3s;
-  animation-duration: 0.3s;
+  // -webkit-animation-duration: 0.3s;
+  // animation-duration: 0.3s;
+  -webkit-animation-duration: 1.0s;
+  animation-duration: 1.0s;
 }
 
 @-webkit-keyframes animSlideTop {
@@ -205,17 +207,17 @@
 }
 
 .normal-body{
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 
 .normal-body.show{
-  margin-top: 65px;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  margin-top: 50px;
+  -webkit-transition: all 1.0s ease-in-out;
+  -moz-transition: all 1.0s ease-in-out;
+  -o-transition: all 1.0s ease-in-out;
+  transition: all 1.0s ease-in-out;
 }
