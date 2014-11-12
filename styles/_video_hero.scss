@@ -13,14 +13,43 @@
     h2{
      font-family: $fun-font;
      color: $accent-color;
-     border-top: 1px solid $accent-color; 
-     border-bottom: 1px solid $accent-color;
+     // border-top: 1px solid $accent-color; 
+     // border-bottom: 1px solid $accent-color;
      font-size: 125%;
      font-weight: normal;
      width: 80%;
      margin: 5% auto 7%;
      line-height: 140%;
      padding: 5% 0 4%;
+    }
+    h2::before, h2::after{
+      position: absolute;
+      right: 2.5%;
+      width: 12%;
+      height: 2px;
+      background: $accent-color;
+      content: '';
+      opacity: 0;
+      -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+      -moz-transition: opacity 0.3s, -moz-transform 0.3s;
+      transition: opacity 0.3s, transform 0.3s;
+      -webkit-transform: translateY(-15px);
+      -moz-transform: translateY(-15px);
+      transform: translateY(-15px);
+    }
+    h2::before{
+      top: 15%;
+      // top: 0;
+      -webkit-transform: translateY(-15px);
+      -moz-transform: translateY(-15px);
+      transform: translateY(-15px);
+    }
+    h2::after{
+      top: 28%;
+      // bottom: 0;
+      -webkit-transform: translateY(15px);
+      -moz-transform: translateY(15px);
+      transform: translateY(15px);
     }
     .featured-prods{
       margin: 0;
@@ -51,6 +80,18 @@
     .btn-primary{
       background-color: $emphasis-color;
       color: #fff;
+    }
+    h2::before{
+      opacity: 1;
+      -webkit-transform: translateY(0px);
+      -moz-transform: translateY(0px);
+      transform: translateY(0px);
+    }
+    h2::after{
+      opacity: 1;
+      -webkit-transform: translateY(0px);
+      -moz-transform: translateY(0px);
+      transform: translateY(0px);
     }
   }
   .hero-call-to-action{
