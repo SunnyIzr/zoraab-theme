@@ -2,17 +2,19 @@
   <video autoplay loop alt='Cool Socks For Men and Colorful Socks' poster="{{ 'hero_poster.png' | asset_url }}" id="bgvid">
     <source src="{{ 'hero.mp4' | asset_url }}" type="video/mp4">
   </video>
-  <div class='featured-hero-prods'>
-    <h2>SUBSCRIBE TO OUR MONTHLY BOX OF FUN</h2>
-    <ul class='featured-prods'>
-      {% assign products = 'bowtie,boxers,corn,mos' | split: ',' %}
-      {% for prod in products %}
-      {% assign prod_file = prod | append: '.jpg' %}
-      <li><img src="{{ prod_file | asset_url }}"></li>
-      {% endfor %}
-    </ul>
-    <a href='/pages/sock-subscription' class='btn btn-primary btn-lg'> LEARN MORE </a>
-  </div>
+  <a href='/pages/sock-subscription'>
+    <div class='featured-hero-prods'>
+      <h2>SUBSCRIBE TO OUR MONTHLY BOX OF FUN</h2>
+      <ul class='featured-prods'>
+        {% assign products = 'bowtie,boxers,corn,mos' | split: ',' %}
+        {% for prod in products %}
+        {% assign prod_file = prod | append: '.jpg' %}
+        <li><img src="{{ prod_file | asset_url }}"></li>
+        {% endfor %}
+      </ul>
+      <a href='/pages/sock-subscription' class='btn btn-primary btn-lg'> LEARN MORE </a>
+    </div>
+  </a>
   <div class='hero-call-to-action'>
     <div class='content'>
       It's time to spice things up! &nbsp;<a href='/collections/mens-socks' class='btn btn-info btn-lg'>SHOP NOW</a>

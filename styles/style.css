@@ -10,6 +10,9 @@
   text-align: center;
   cursor: pointer;
 }
+.video-hero .featured-hero-prods a {
+  text-decoration: none;
+}
 .video-hero .featured-hero-prods h2 {
   font-family: "Quicksand";
   color: #67c5a9;
