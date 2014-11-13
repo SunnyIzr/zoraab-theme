@@ -3,6 +3,9 @@
     width: 83%;
     float: left;
   }
+  .video-hero-img{
+    display: none;
+  }
   .featured-hero-prods{
     a{
       text-decoration: none;
@@ -177,7 +180,11 @@
 @media (max-width: 768px) {
   .video-hero{
     video{
+      display: none;
+    }
+    .video-hero-img{
       width: 100%;
+      display: inline;
     }
     .featured-hero-prods{
       display: none;

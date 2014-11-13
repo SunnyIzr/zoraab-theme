@@ -1263,6 +1263,9 @@ perspective effects (not including the modals and the overlay).
   width: 83%;
   float: left;
 }
+.video-hero .video-hero-img {
+  display: none;
+}
 .video-hero .featured-hero-prods {
   width: 17%;
   background-color: #ebebeb;
@@ -1356,7 +1359,11 @@ perspective effects (not including the modals and the overlay).
 }
 @media (max-width: 768px) {
   .video-hero video {
+    display: none;
+  }
+  .video-hero .video-hero-img {
     width: 100%;
+    display: inline;
   }
   .video-hero .featured-hero-prods {
     display: none;
