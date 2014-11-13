@@ -27,9 +27,8 @@ perspective effects (not including the modals and the overlay).
   position: fixed;
   top: 50%;
   left: 50%;
-  width: 50%;
-  max-width: 630px;
-  min-width: 320px;
+  width: 100%;
+  max-width: 590px;
   height: auto;
   z-index: 2000;
   visibility: hidden;
@@ -76,14 +75,6 @@ perspective effects (not including the modals and the overlay).
 }
 
 .md-content h3 {
-  margin: 0;
-  padding: 0.4em;
-  text-align: center;
-  font-size: 2.4em;
-  font-weight: 300;
-  opacity: 0.8;
-  background: rgba(0,0,0,0.1);
-  border-radius: 3px 3px 0 0;
 }
 
 .md-content > div {
@@ -732,3 +723,58 @@ perspective effects (not including the modals and the overlay).
 @media screen and (max-width: 32em) {
   body { font-size: 75%; }
 }
+
+
+
+//Custom Popup CSS
+
+#snow-popup{
+}
+
+.md-content{
+  .close-btn{
+    opacity: 0.8;
+    svg{
+      position: absolute;
+      right: 1%;
+      top: -3%;
+      width: 12%;
+      cursor: pointer;
+      path{
+        fill: #fff;
+      }
+    }
+    svg:hover{
+      path{
+        fill: $accent-color;
+      }
+    }
+  }
+  .body{
+     opacity: 0.8; 
+     width: 65%;
+     margin: 0 auto;
+    .backlay{
+      width: 70%;
+      height: 100%;
+      background-color: #fff;
+      position: absolute;
+      left: 15%;
+      top: 0;
+      opacity: 0.9;
+    }
+    .content{
+      text-align: center;
+      position: relative;
+      color: $primary-color;
+      h3{
+        margin: 0 auto;
+        color: $accent-color;
+      }
+      .btn{
+        margin-top: 20px;
+      }
+    }
+  }
+}
+

@@ -96,9 +96,8 @@ perspective effects (not including the modals and the overlay).
   position: fixed;
   top: 50%;
   left: 50%;
-  width: 50%;
-  max-width: 630px;
-  min-width: 320px;
+  width: 100%;
+  max-width: 590px;
   height: auto;
   z-index: 2000;
   visibility: hidden;
@@ -142,17 +141,6 @@ perspective effects (not including the modals and the overlay).
   position: relative;
   border-radius: 3px;
   margin: 0 auto;
-}
-
-.md-content h3 {
-  margin: 0;
-  padding: 0.4em;
-  text-align: center;
-  font-size: 2.4em;
-  font-weight: 300;
-  opacity: 0.8;
-  background: rgba(0, 0, 0, 0.1);
-  border-radius: 3px 3px 0 0;
 }
 
 .md-content > div {
@@ -844,6 +832,49 @@ perspective effects (not including the modals and the overlay).
     font-size: 75%;
   }
 }
+.md-content .close-btn {
+  opacity: 0.8;
+}
+.md-content .close-btn svg {
+  position: absolute;
+  right: 1%;
+  top: -3%;
+  width: 12%;
+  cursor: pointer;
+}
+.md-content .close-btn svg path {
+  fill: #fff;
+}
+.md-content .close-btn svg:hover path {
+  fill: #67c5a9;
+}
+.md-content .body {
+  opacity: 0.8;
+  width: 65%;
+  margin: 0 auto;
+}
+.md-content .body .backlay {
+  width: 70%;
+  height: 100%;
+  background-color: #fff;
+  position: absolute;
+  left: 15%;
+  top: 0;
+  opacity: 0.9;
+}
+.md-content .body .content {
+  text-align: center;
+  position: relative;
+  color: #404041;
+}
+.md-content .body .content h3 {
+  margin: 0 auto;
+  color: #67c5a9;
+}
+.md-content .body .content .btn {
+  margin-top: 20px;
+}
+
 /* Common, default styles for the notification box */
 .ns-box {
   position: fixed;

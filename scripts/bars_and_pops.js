@@ -1,8 +1,9 @@
 $(document).ready(function(){
   setTimeout(function(){
-    loadNotificationBar()
-  }, 3500)
-  // revealSaleModal()
+    // loadNotificationBar()
+        revealSaleModal()
+  }, 500)
+  closeModalBtn();
 })
 
 var loadNotificationBar = function(){
@@ -23,9 +24,12 @@ var loadNotificationBar = function(){
 }
 
 var revealSaleModal = function(){
-  $('.md-effect-1').addClass('md-show')
+  $('#hiddenModalBtn').click()
 }
 
-var hideSaelModal = function(){
-  $('.md-effect-1').removeClass('md-show')
+var closeModalBtn = function(){
+  $('#closeModalBtn').click(function(e){
+    e.preventDefault();
+    $('.md-show').removeClass('md-show')
+  })
 }

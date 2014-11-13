@@ -12,8 +12,6 @@ $(document).ready(function(){
     })
   } else{
     height = ($('video').height()*1.125) + 'px'
-    console.log('height is')
-    console.log(height)
     $('.featured-hero-prods').css('height',height)
     resizeSideFeatureOnVideo();
   }
