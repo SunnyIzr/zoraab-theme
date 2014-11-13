@@ -1,8 +1,10 @@
 $(document).ready(function(){
   setTimeout(function(){
     // loadNotificationBar()
+  }, 3500)
+  setTimeout(function(){
         revealSaleModal()
-  }, 500)
+  }, 750)
   closeModalBtn();
 })
 

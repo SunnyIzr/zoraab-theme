@@ -55,9 +55,9 @@ perspective effects (not including the modals and the overlay).
   z-index: 1000;
   opacity: 0;
   background: rgba(255,255,255,0.8);
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 0.8s;
+  -moz-transition: all 0.8s;
+  transition: all 0.8s;
 }
 
 .md-show ~ .md-overlay {
@@ -113,9 +113,9 @@ perspective effects (not including the modals and the overlay).
   -ms-transform: scale(0.7);
   transform: scale(0.7);
   opacity: 0;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 0.8s;
+  -moz-transition: all 0.8s;
+  transition: all 0.8s;
 }
 
 .md-show.md-effect-1 .md-content {
