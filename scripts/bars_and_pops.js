@@ -1,6 +1,6 @@
 $(document).ready(function(){
-  // loadBarOnLoad()
-  loadPopupOnLoad()
+  loadBarOnLoad()
+  // loadPopupOnLoad()
   closeModalBtn();
 })
 

@@ -1,9 +1,7 @@
 <div id='indexHero' class='video-hero'>
   <img alt='Cool Socks For Men and Colorful Socks' src="{{ 'hero_poster.png' | asset_url }}" class='video-hero-img'>
-  
-  <video alt='Cool Socks For Men and Colorful Socks' poster="{{ 'hero_poster.png' | asset_url }}" id="bgvid" class='hidden-xs'>
-  
-  <!-- <video alt='Cool Socks For Men and Colorful Socks' poster="{{ 'hero.mp4' | asset_url }}" id="bgvid" class='hidden-xs'> -->
+  <video autoplay alt='Cool Socks For Men and Colorful Socks' poster="{{ 'hero_poster1.png' | asset_url }}" id="bgvid" class='hidden-xs'>
+    <source src="{{ 'hero.webm' | asset_url }}" type="video/webm">
     <source src="{{ 'hero.mp4' | asset_url }}" type="video/mp4">
   </video>
   <a href='/pages/sock-subscription'>
