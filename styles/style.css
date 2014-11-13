@@ -13473,6 +13473,12 @@ input.btn {
   padding: 0 0.5%;
   font-family: "Source Sans Pro";
 }
+.network_hat .main-links .ship-li {
+  margin-left: 15%;
+}
+.network_hat .main-links .bundle-li {
+  margin-right: 15%;
+}
 .network_hat .main-links li {
   font-size: 12px;
   display: inline-block;

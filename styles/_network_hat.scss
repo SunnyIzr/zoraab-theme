@@ -19,8 +19,15 @@
   .main-links{
     list-style: none;
     text-align: left;
+    
     padding: 0 0.5%;
     font-family: $number-font;
+    .ship-li{
+      margin-left: 15%;
+    }
+    .bundle-li{
+      margin-right: 15%;
+    }
     li{
       font-size: 12px;
       display: inline-block;
