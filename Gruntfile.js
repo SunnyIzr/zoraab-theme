@@ -16,6 +16,11 @@ module.exports = function(grunt) {
       files: 'images/*',
       tasks: ['copy:images']
     },
+    videos: {
+      files: 'videos/*',
+      tasks: ['copy:videos']
+    }
+    ,
     fonts: {
       files: 'fonts/*',
       tasks: ['copy:fonts']
@@ -50,6 +55,14 @@ module.exports = function(grunt) {
     images: {
       expand: true,
       cwd: 'images/',
+      src: '**',
+      dest: 'deploy/assets/',
+      flatten: true,
+      filter: 'isFile'
+    },
+    videos: {
+      expand: true,
+      cwd: 'videos/',
       src: '**',
       dest: 'deploy/assets/',
       flatten: true,
