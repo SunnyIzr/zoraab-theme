@@ -58,8 +58,8 @@ var closeModalBtn = function(){
 var setCookie = function(){
   var now = new Date();
   var time = now.getTime();
-  // time += 18000 * 1000;
-  time += 120 * 1000
+  time += 18000 * 1000;
+  // time += 120 * 1000
   now.setTime(time);
   console.log("zoraabpopup=true; " + now.toUTCString() + ";")
   document.cookie = "zoraabpopup=true; expires=" + now.toUTCString() + "; path=/"
