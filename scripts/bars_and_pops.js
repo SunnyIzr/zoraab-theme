@@ -2,6 +2,7 @@ $(document).ready(function(){
   setTimeout(function(){
     loadNotificationBar()
   }, 3500)
+  // revealSaleModal()
 })
 
 var loadNotificationBar = function(){
@@ -19,4 +20,12 @@ var loadNotificationBar = function(){
   // show the notification
   notification.show();
   $('.normal-body').addClass('show')
+}
+
+var revealSaleModal = function(){
+  $('.md-effect-1').addClass('md-show')
+}
+
+var hideSaelModal = function(){
+  $('.md-effect-1').removeClass('md-show')
 }
