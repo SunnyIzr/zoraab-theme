@@ -1,4 +1,17 @@
 #subscription{
+  .top-hero{
+    img{
+      width: 100%;
+    }
+  }
+  .mid-copy{
+    text-align: center;
+    margin: 10px 0 25px;
+    h2{
+      margin: 0 auto;
+      font-weight: 400;
+    }
+  }
   .sub-plans{
     list-style: none;
     margin: 0;
@@ -14,6 +27,7 @@
       text-align: center;
       cursor: pointer;
       transition: background-color 300ms ease-out;
+      vertical-align: top;
       .price-heading{
         transition: background-color 300ms ease-out;
         color: #fff;
