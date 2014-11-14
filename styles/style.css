@@ -13639,6 +13639,9 @@ input.btn {
   .network_hat .main-links li {
     width: 70% !important;
   }
+  .network_hat .main-links .ship-li {
+    margin: 0;
+  }
 }
 @media (max-width: 768px) {
   .network_hat {
