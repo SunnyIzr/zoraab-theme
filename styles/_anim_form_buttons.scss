@@ -186,3 +186,11 @@
     font-size: 80%;
   }
 }
+
+
+// CUstom CSS
+
+.ac-custom input[type="checkbox"]:checked + label,
+.ac-custom input[type="radio"]:checked + label {
+  color: #7bebc9;
+} 

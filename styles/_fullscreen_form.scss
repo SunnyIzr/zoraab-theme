@@ -1350,7 +1350,7 @@ div.cs-skin-boxes:focus > span {
     margin-bottom: 60px;
     margin-left: -25px;
   }
-  .who-question,.style-question,.quantity-question{
+  .who-question,.style-question,.quantity-question,.payment-question{
     ul{
       li{
         padding-top: 0.5em;
@@ -1368,7 +1368,7 @@ div.cs-skin-boxes:focus > span {
         padding: 0;
         display: inline-block;
         width: 30%;
-        margin: 30px 9px 0;
+        margin: 35px 9px 0;
         label{
           margin: 0;
           padding: 0;
@@ -1406,15 +1406,16 @@ div.cs-skin-boxes:focus > span {
             font-size: 30px;
           }
           .price-footer{
-            width: 100%;
-            background-color: $faded-color;
+            width: 90%;
+            border-top: 1px solid #fff;
             font-size: 28px;
             font-weight: 300;
             padding: 10px 0;
             font-family: $fun-font;
-            margin-bottom: 0;
+            margin: 0 auto;
           }
-        }   
+        }
+
       }
     }
   }
