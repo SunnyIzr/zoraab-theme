@@ -86,7 +86,7 @@
 }
 
 /* General SVG and path styles */
-.ac-custom svg {
+.ac-custom svg.anim-svg {
   position: absolute;
   width: 40px;
   height: 40px;
@@ -96,7 +96,7 @@
   pointer-events: none;
 }
 
-.ac-custom svg path {
+.ac-custom svg.anim-svg path {
   stroke: #fdfcd3;
   stroke-width: 13px;
   stroke-linecap: round;
@@ -121,24 +121,24 @@
   border: none;
 }
 
-.ac-circle svg {
+.ac-circle svg.anim-svg {
   width: 70px;
   height: 70px;
   margin-top: -35px;
   left: -10px;
 }
 
-.ac-circle svg path {
+.ac-circle svg.anim-svg path {
   stroke-width: 5px;
 }
 
 /* Box Fill */
-.ac-boxfill svg path {
+.ac-boxfill svg.anim-svg path {
   stroke-width: 8px;
 }
 
 /* Swirl */
-.ac-swirl svg path {
+.ac-swirl svg.anim-svg path {
   stroke-width: 8px;
 }
 
@@ -164,7 +164,7 @@
   display: none;
 }
 
-.ac-list svg {
+.ac-list svg.anim-svg {
   width: 100%;
   height: 80px;
   left: 0;
@@ -172,7 +172,7 @@
   margin-top: 0px;
 }
 
-.ac-list svg path {
+.ac-list svg.anim-svg path {
   stroke-width: 4px;
 }
 
@@ -1597,9 +1597,66 @@ div.cs-skin-boxes:focus > span {
   margin-bottom: 60px;
   margin-left: -25px;
 }
-#socksOnly .who-question ul li, #socksOnly .style-question ul li {
+#socksOnly .who-question ul li, #socksOnly .style-question ul li, #socksOnly .quantity-question ul li {
   padding-top: 0.5em;
   padding-bottom: 0.5em;
+}
+#socksOnly .quantity-question ul {
+  list-style: none;
+  width: 125%;
+  text-align: center;
+}
+#socksOnly .quantity-question ul li {
+  padding: 0;
+  display: inline-block;
+  width: 30%;
+  margin: 30px 9px 0;
+}
+#socksOnly .quantity-question ul li label {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+#socksOnly .quantity-question ul li label::before {
+  position: absolute;
+  top: -34px;
+  left: 50%;
+  margin-left: -25px;
+}
+#socksOnly .quantity-question ul li svg.anim-svg {
+  position: absolute;
+  top: -34px;
+  left: 50%;
+  margin-left: -20px;
+}
+#socksOnly .quantity-question ul li .quantity-box {
+  border: 1px solid #fff;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 0;
+  text-align: center;
+}
+#socksOnly .quantity-question ul li .quantity-box .sock-icons {
+  margin-top: 25px;
+  text-align: center;
+}
+#socksOnly .quantity-question ul li .quantity-box .sock-icons img {
+  width: 80%;
+  margin: 0 auto;
+}
+#socksOnly .quantity-question ul li .quantity-box h4 {
+  margin: 25px auto;
+  font-weight: 300;
+  font-size: 30px;
+}
+#socksOnly .quantity-question ul li .quantity-box .price-footer {
+  width: 100%;
+  background-color: #b8b8b8;
+  font-size: 28px;
+  font-weight: 300;
+  padding: 10px 0;
+  font-family: "Quicksand";
+  margin-bottom: 0;
 }
 #socksOnly .style-list {
   list-style: none;

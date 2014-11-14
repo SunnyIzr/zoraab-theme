@@ -31,7 +31,7 @@ if( document.createElement('svg').getAttributeNS ) {
 
   function createSVGEl( def ) {
     var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-    svg.setAttributeNS(null, 'class', 'fs-anim-lower')
+    svg.setAttributeNS(null, 'class', 'fs-anim-lower anim-svg') 
     if( def ) {
       svg.setAttributeNS( null, 'viewBox', def.viewBox );
       svg.setAttributeNS( null, 'preserveAspectRatio', def.preserveAspectRatio );

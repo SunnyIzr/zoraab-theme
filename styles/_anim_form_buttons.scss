@@ -89,7 +89,7 @@
 
 /* General SVG and path styles */
 
-.ac-custom svg {
+.ac-custom svg.anim-svg {
   position: absolute;
   width: 40px;
   height: 40px;
@@ -99,7 +99,7 @@
   pointer-events: none;
 }
 
-.ac-custom svg path {
+.ac-custom svg.anim-svg path {
   stroke: #fdfcd3;
   stroke-width: 13px;
   stroke-linecap: round;
@@ -125,24 +125,24 @@
   border: none;
 }
 
-.ac-circle svg {
+.ac-circle svg.anim-svg {
   width: 70px;
   height: 70px;
   margin-top: -35px;
   left: -10px;
 }
 
-.ac-circle svg path {
+.ac-circle svg.anim-svg path {
   stroke-width: 5px;
 } 
 
 /* Box Fill */
-.ac-boxfill svg path {
+.ac-boxfill svg.anim-svg path {
   stroke-width: 8px;
 } 
 
 /* Swirl */
-.ac-swirl svg path {
+.ac-swirl svg.anim-svg path {
   stroke-width: 8px;
 }
 
@@ -168,7 +168,7 @@
   display: none;
 }
 
-.ac-list svg {
+.ac-list svg.anim-svg {
   width: 100%;
   height: 80px;
   left: 0;
@@ -176,7 +176,7 @@
   margin-top: 0px;
 }
 
-.ac-list svg path {
+.ac-list svg.anim-svg path {
   stroke-width: 4px;
 }
 

@@ -1350,7 +1350,7 @@ div.cs-skin-boxes:focus > span {
     margin-bottom: 60px;
     margin-left: -25px;
   }
-  .who-question, .style-question{
+  .who-question,.style-question,.quantity-question{
     ul{
       li{
         padding-top: 0.5em;
@@ -1358,6 +1358,65 @@ div.cs-skin-boxes:focus > span {
       }
     }
     
+  }
+  .quantity-question{
+    ul{
+      list-style: none;
+      width: 125%;
+      text-align: center;
+      li{
+        padding: 0;
+        display: inline-block;
+        width: 30%;
+        margin: 30px 9px 0;
+        label{
+          margin: 0;
+          padding: 0;
+          width: 100%;
+        }
+        label::before{
+          position: absolute;
+          top: -34px;
+          left: 50%;
+          margin-left: -25px;
+        }
+        svg.anim-svg{
+          position: absolute;
+          top: -34px;
+          left: 50%;
+          margin-left: -20px;
+        }
+        .quantity-box{
+          border: 1px solid #fff;
+          width: 100%;
+          height: 100%;
+          padding-bottom: 0;
+          .sock-icons{
+            margin-top: 25px;
+            text-align: center;
+            img{
+              width: 80%;
+              margin: 0 auto;
+            }
+          }
+          text-align: center;
+          h4{
+            margin: 25px auto;
+            font-weight: 300;
+            font-size: 30px;
+          }
+          .price-footer{
+            width: 100%;
+            background-color: $faded-color;
+            font-size: 28px;
+            font-weight: 300;
+            padding: 10px 0;
+            font-family: $fun-font;
+            margin-bottom: 0;
+          }
+        }   
+      }
+    }
   }
   .style-list{
     list-style: none;
