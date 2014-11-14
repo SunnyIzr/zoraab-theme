@@ -71,7 +71,7 @@
   transition: opacity 0.3s;
 }
 
-.ac-radio label::before {
+.ac-radio label.radioBtn::before {
   border-radius: 50%;
 }
 
@@ -1576,6 +1576,11 @@ div.cs-skin-boxes:focus > span {
   color: #fff;
 }
 
+.fs-form-full {
+  top: 15%;
+  left: -7%;
+}
+
 #socksOnly {
   opacity: 0.0;
   width: 100%;
@@ -1587,9 +1592,12 @@ div.cs-skin-boxes:focus > span {
   transition: opacity 300ms ease-out;
 }
 #socksOnly h3 {
-  font-size: 35px;
+  font-size: 50px;
+  font-weight: 300;
+  margin-bottom: 60px;
+  margin-left: -25px;
 }
-#socksOnly .who-question ul li {
+#socksOnly .who-question ul li, #socksOnly .style-question ul li {
   padding-top: 0.5em;
   padding-bottom: 0.5em;
 }

@@ -1329,6 +1329,12 @@ div.cs-skin-boxes:focus > span {
 
 // CUSTOM CSS
 
+.fs-form-full{
+  top: 15%;
+  left: -7%;
+}
+
+
 #socksOnly{
   opacity: 0.0;
   width: 100%;
@@ -1339,9 +1345,12 @@ div.cs-skin-boxes:focus > span {
   z-index:-50;
   transition: opacity 300ms ease-out;
   h3{
-    font-size: 35px;
+    font-size: 50px;
+    font-weight: 300;
+    margin-bottom: 60px;
+    margin-left: -25px;
   }
-  .who-question{
+  .who-question, .style-question{
     ul{
       li{
         padding-top: 0.5em;
