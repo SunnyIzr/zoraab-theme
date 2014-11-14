@@ -2,6 +2,22 @@
   <div class='top-hero'>
     {{ 'sub2-hero.jpg' | asset_url | img_tag }}
   </div>
+  <ul class='featured-sub-products'>
+    <a href='#' class='arrows'><i class="fa fa-chevron-left"></i></a>
+    {% assign collection = collections.subfeat.products %}
+    {% for product in collection %}
+    <li class='group1'>
+      <img src='{{ product.featured_image.src | product_img_url: "large" }}'>
+    </li>
+    {% endfor %}
+    {% assign collection = collections.subfeat2.products %}
+    {% for product in collection %}
+    <li class='group2'>
+      <img src='{{ product.featured_image.src | product_img_url: "large" }}'>
+    </li>
+    {% endfor %}
+    <a href='#' class='arrows'><i class="fa fa-chevron-right"></i></a>
+  </ul>
   <div class='mid-copy'>
     <p>Discover the latest and greatest in fashion and fun all from the comfort of home.</p>
     <h2>Pick your box:</h2>

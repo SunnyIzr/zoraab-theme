@@ -1,6 +1,34 @@
 #subscription .top-hero img {
   width: 100%;
 }
+#subscription .arrows {
+  font-size: 30px;
+}
+#subscription a.arrows {
+  color: #b8b8b8;
+}
+#subscription a.arrows:hover {
+  color: #67c5a9;
+}
+#subscription .featured-sub-products {
+  list-style: none;
+  width: 100%;
+  text-align: center;
+  padding: 0;
+  border-bottom: 1px solid #b8b8b8;
+}
+#subscription .featured-sub-products li {
+  display: inline-block;
+  margin: 0 30px;
+  max-width: 250px;
+  width: 20%;
+}
+#subscription .featured-sub-products li img {
+  width: 100%;
+}
+#subscription .featured-sub-products .group2 {
+  display: none;
+}
 #subscription .mid-copy {
   text-align: center;
   margin: 10px 0 25px;

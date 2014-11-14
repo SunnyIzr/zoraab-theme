@@ -4,6 +4,37 @@
       width: 100%;
     }
   }
+  .arrows{
+    font-size: 30px;
+  }
+  a.arrows{
+    color: $faded-color;
+  }
+  a.arrows:hover{
+    color: $accent-color;
+  }
+  .featured-sub-products{
+    list-style: none;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    border-bottom: 1px solid $faded-color;
+    li{
+      display: inline-block;
+      margin: 0 30px;
+      max-width: 250px;
+      width: 20%;
+      img{
+        width: 100%;
+      }
+    }
+    .group1{
+      
+    }
+    .group2{
+      display: none;
+    }
+  }
   .mid-copy{
     text-align: center;
     margin: 10px 0 25px;
