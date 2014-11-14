@@ -3,6 +3,7 @@ SubscriptionController = {
     this.activateFullForm()
     this.singlePlanSelect()
     this.launchSubForm()
+    this.finalSockQuestion()
   },
   activateFullForm: function(){
     (function() {
@@ -35,6 +36,11 @@ SubscriptionController = {
     $('.launch-sub-form').click(function(e){
       e.preventDefault();
       SubscriptionView.revealForm(SubscriptionModel.planSelection)
+    })
+  },
+  finalSockQuestion: function(){
+    $('input[name="q6"]').change(function(e){
+      $('.checkout-sub-btn a').addClass('active')
     })
   }
 }

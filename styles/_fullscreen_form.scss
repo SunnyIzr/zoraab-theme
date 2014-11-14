@@ -1335,7 +1335,7 @@ div.cs-skin-boxes:focus > span {
 }
 
 
-#socksOnly{
+.subscription-form{
   opacity: 0.0;
   width: 100%;
   height: 100%;
@@ -1357,7 +1357,25 @@ div.cs-skin-boxes:focus > span {
         padding-bottom: 0.5em;
       }
     }
-    
+  }
+  .payment-question{
+    .checkout-sub-btn{
+      .btn{
+        font-size: 30px;
+        padding: 20px 35px;
+        margin-top: 35px;
+      }
+      .btn-info{
+        background-color: transparent;
+        border: 2px solid $emphasis-color;
+        transition: all 300ms ease-in;
+        color: $emphasis-color;
+      }
+      .btn-info.active{
+        background-color: $emphasis-color;
+        color: #fff;
+      }
+    }
   }
   .quantity-question{
     ul{
