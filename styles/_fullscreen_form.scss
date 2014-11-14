@@ -52,14 +52,14 @@
   width: 100%;
   height: 100%;
   background: #fffed8;
-  color: #3b3f45;
+  color: $accent-color;
   font-size: 1.2em;
 }
 
 .fs-form-overview .fs-fields::before {
   display: block;
   margin-bottom: 2.5em;
-  color: #3b3f45;
+  color: $accent-color;
   content: 'Review & Submit';
   font-weight: 700;
   font-size: 1.85em;
@@ -244,7 +244,7 @@ button.fs-continue,
   border: none;
   border-bottom: 2px solid rgba(0,0,0,0.2);
   background-color: transparent;
-  color: #fffed8;
+  color: #fff;
   text-overflow: ellipsis;
   font-weight: bold;
   font-size: 1.5em;
@@ -268,7 +268,7 @@ button.fs-continue,
 }
 
 .fs-fields input:focus {
-  background-color: #3b3f45; /* Fixes chrome bug with placeholder */
+  background-color: $accent-color; /* Fixes chrome bug with placeholder */
 }
 
 .fs-form-overview .fs-fields input:focus {
@@ -1060,7 +1060,7 @@ div.cs-skin-boxes:focus > span {
   top: 0;
   left: 0;
   overflow: auto;
-  background: #3b3f45;
+  background: $accent-color;
   font-size: 12px;
   opacity: 0;
   -webkit-transition: opacity 0.3s, visibility 0s 0.3s;
@@ -1338,6 +1338,19 @@ div.cs-skin-boxes:focus > span {
   left: 0;
   z-index:-50;
   transition: opacity 300ms ease-out;
+  h3{
+    font-size: 35px;
+  }
+  .who-question{
+    ul{
+      li{
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+      }
+    }
+    
+  }
+  
 }
 
 #socksOnly.active{
@@ -1346,5 +1359,5 @@ div.cs-skin-boxes:focus > span {
 }
 
 .fs-form-wrap{
-  background-color: #3b3f45;
+  background-color: $accent-color;
 }

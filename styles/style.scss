@@ -10,6 +10,8 @@ $plain-text-font: 'PT Sans';
 $serif-font: 'Playfair Display';
 $fun-font: 'Quicksand';
 
+@import 'anim_form_buttons';
+
 @import 'fullscreen_form';
 
 @import 'subscription';

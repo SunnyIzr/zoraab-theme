@@ -1,3 +1,187 @@
+*,
+*:after,
+*::before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.ac-custom {
+  padding: 0 3em;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.ac-custom h2 {
+  font-size: 3em;
+  font-weight: 300;
+  padding: 0 0 0.5em;
+  margin: 0 0 30px;
+}
+
+.ac-custom ul,
+.ac-custom ol {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.ac-custom li {
+  margin: 0 auto;
+  padding: 2em 0;
+  position: relative;
+}
+
+.ac-custom label {
+  display: inline-block;
+  position: relative;
+  padding: 0 0 0 80px;
+  vertical-align: top;
+  cursor: pointer;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.ac-custom input[type="checkbox"],
+.ac-custom input[type="radio"],
+.ac-custom label::before {
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  left: 0;
+  margin-top: -25px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.ac-custom input[type="checkbox"],
+.ac-custom input[type="radio"] {
+  opacity: 0;
+  -webkit-appearance: none;
+  display: inline-block;
+  vertical-align: middle;
+  z-index: 100;
+}
+
+.ac-custom label::before {
+  content: '';
+  border: 4px solid #fff;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.ac-radio label::before {
+  border-radius: 50%;
+}
+
+.ac-custom input[type="checkbox"]:checked + label,
+.ac-custom input[type="radio"]:checked + label {
+  color: #7bebc9;
+}
+
+.ac-custom input[type="checkbox"]:checked + label::before,
+.ac-custom input[type="radio"]:checked + label::before {
+  opacity: 0.8;
+}
+
+/* General SVG and path styles */
+.ac-custom svg {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  margin-top: -20px;
+  left: 5px;
+  pointer-events: none;
+}
+
+.ac-custom svg path {
+  stroke: #fdfcd3;
+  stroke-width: 13px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+/* Specific input, SVG and path styles */
+/* Circle */
+.ac-circle input[type="checkbox"],
+.ac-circle input[type="radio"],
+.ac-circle label::before {
+  width: 30px;
+  height: 30px;
+  margin-top: -15px;
+  left: 10px;
+  position: absolute;
+}
+
+.ac-circle label::before {
+  background-color: #fff;
+  border: none;
+}
+
+.ac-circle svg {
+  width: 70px;
+  height: 70px;
+  margin-top: -35px;
+  left: -10px;
+}
+
+.ac-circle svg path {
+  stroke-width: 5px;
+}
+
+/* Box Fill */
+.ac-boxfill svg path {
+  stroke-width: 8px;
+}
+
+/* Swirl */
+.ac-swirl svg path {
+  stroke-width: 8px;
+}
+
+/* List */
+.ac-list ol {
+  list-style: decimal;
+  list-style-position: inside;
+}
+
+.ac-list ol li {
+  font-size: 2em;
+  padding: 1em 1em 0 2em;
+  text-indent: -40px;
+}
+
+.ac-list ol li label {
+  font-size: 1em;
+  text-indent: 0;
+  padding-left: 30px;
+}
+
+.ac-list label::before {
+  display: none;
+}
+
+.ac-list svg {
+  width: 100%;
+  height: 80px;
+  left: 0;
+  top: 1.2em;
+  margin-top: 0px;
+}
+
+.ac-list svg path {
+  stroke-width: 4px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 50em) {
+  section {
+    font-size: 80%;
+  }
+}
 /* Main form wrapper */
 .fs-form-wrap {
   position: relative;
@@ -52,14 +236,14 @@
   width: 100%;
   height: 100%;
   background: #fffed8;
-  color: #3b3f45;
+  color: #67c5a9;
   font-size: 1.2em;
 }
 
 .fs-form-overview .fs-fields::before {
   display: block;
   margin-bottom: 2.5em;
-  color: #3b3f45;
+  color: #67c5a9;
   content: 'Review & Submit';
   font-weight: 700;
   font-size: 1.85em;
@@ -255,7 +439,7 @@ button.fs-continue,
   border: none;
   border-bottom: 2px solid rgba(0, 0, 0, 0.2);
   background-color: transparent;
-  color: #fffed8;
+  color: #fff;
   text-overflow: ellipsis;
   font-weight: bold;
   font-size: 1.5em;
@@ -280,7 +464,7 @@ button.fs-continue,
 }
 
 .fs-fields input:focus {
-  background-color: #3b3f45;
+  background-color: #67c5a9;
   /* Fixes chrome bug with placeholder */
 }
 
@@ -1124,7 +1308,7 @@ div.cs-skin-boxes:focus > span {
   top: 0;
   left: 0;
   overflow: auto;
-  background: #3b3f45;
+  background: #67c5a9;
   font-size: 12px;
   opacity: 0;
   -webkit-transition: opacity 0.3s, visibility 0s 0.3s;
@@ -1402,6 +1586,13 @@ div.cs-skin-boxes:focus > span {
   z-index: -50;
   transition: opacity 300ms ease-out;
 }
+#socksOnly h3 {
+  font-size: 35px;
+}
+#socksOnly .who-question ul li {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
 
 #socksOnly.active {
   z-index: 99999999;
@@ -1409,7 +1600,7 @@ div.cs-skin-boxes:focus > span {
 }
 
 .fs-form-wrap {
-  background-color: #3b3f45;
+  background-color: #67c5a9;
 }
 
 #subscription .top-hero img {
