@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  loadBarOnLoad()
+  // loadBarOnLoad()
   // loadPopupOnLoad()
   // closeModalBtn();
 })
