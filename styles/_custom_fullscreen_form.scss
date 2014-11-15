@@ -47,6 +47,41 @@
       }
     }
   }
+  .who-question{
+    width: 120% !important;
+    h3{
+      width: 100%;
+    }
+    ul{
+      width: 40%;
+      margin: 0;
+      float: left;
+      border-right: 1px solid transparent;
+      transition: border-color 300ms ease-in;
+    }
+    .gift-options{
+      width: 50%;
+      margin: 0;
+      height: 300px;
+      float: right;
+      z-index: -100;
+      opacity: 0.0;
+      transition: opacity 300ms ease-in;
+      input{
+        font-size: 30px;
+        margin-bottom: 25px;
+      }
+    }
+  }
+  .who-question.gifted{
+    ul{
+      border-color: #fff;
+    }
+    .gift-options{
+      z-index: inherit;
+      opacity: 1.0
+    }
+  }
   .quantity-question{
     ul{
       list-style: none;
