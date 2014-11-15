@@ -372,18 +372,18 @@ button.fs-continue,
 }
 
 /* Labels & info */
-.fs-fields > li label {
+.fs-fields > li h3 {
   position: relative;
 }
 
-.fs-fields > li label.fs-field-label {
+.fs-fields > li h3.fs-field-label {
   display: inline-block;
   padding: 0 5px 1em 0;
   font-weight: 700;
   pointer-events: none;
 }
 
-.fs-form-full .fs-fields > li label[data-info]::after {
+.fs-form-full .fs-fields > li h3[data-info]::after {
   position: relative;
   display: inline-block;
   margin-left: 10px;
@@ -404,7 +404,7 @@ button.fs-continue,
   pointer-events: auto;
 }
 
-.fs-form-full .fs-fields > li label[data-info]::before {
+.fs-form-full .fs-fields > li h3[data-info]::before {
   position: absolute;
   bottom: 100%;
   left: 0;
@@ -421,13 +421,13 @@ button.fs-continue,
   pointer-events: none;
 }
 
-.fs-form-full .fs-fields > li label[data-info]:hover::before {
+.fs-form-full .fs-fields > li h3[data-info]:hover::before {
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 
-.fs-form-full .fs-fields > li label:hover ~ .fs-info,
+.fs-form-full .fs-fields > li h3:hover ~ .fs-info,
 .fs-form-full .fs-fields > li .fs-info:hover {
   opacity: 1;
   -webkit-transform: translateY(0);
@@ -1601,6 +1601,7 @@ div.cs-skin-boxes:focus > span {
   font-weight: 300;
   margin-bottom: 60px;
   margin-left: -25px;
+  padding: 0 5px 0em 0 !important;
 }
 .subscription-form .who-question ul li, .subscription-form .style-question ul li, .subscription-form .quantity-question ul li, .subscription-form .payment-question ul li {
   padding-top: 0.5em;
@@ -1745,6 +1746,21 @@ div.cs-skin-boxes:focus > span {
   font-weight: 400;
   font-size: 18px;
   letter-spacing: 0px;
+}
+.subscription-form .fs-continue {
+  border-radius: 0px;
+  border-color: #fff;
+  color: #fff;
+  transition: all ease-in 300ms;
+}
+.subscription-form .fs-continue:hover {
+  border-color: #e85c41;
+  background-color: #e85c41;
+  color: #fff;
+}
+.subscription-form .fs-message-error {
+  top: 12%;
+  left: 49%;
 }
 
 #socksOnly.active {
