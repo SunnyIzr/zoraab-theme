@@ -5,6 +5,7 @@ SubscriptionController = {
     this.launchSubForm()
     this.finalSockQuestion()
     this.giftChecked();
+    this.sockPlanChecked();
   },
   activateFullForm: function(){
     (function() {
@@ -49,6 +50,12 @@ SubscriptionController = {
       if ( $('#q3b').is(':checked') ){
         $(this).parent().parent().parent().addClass('gifted')
       }
+    })
+  },
+  sockPlanChecked: function(){
+    $('input[name="q5"]').change(function(e){
+      $('.quantity-question .active').removeClass('active')
+      $(this).parent().addClass('active')
     })
   }
 }

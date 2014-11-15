@@ -114,6 +114,7 @@
           width: 100%;
           height: 100%;
           padding-bottom: 0;
+          transition: all 300ms ease-in;
           .sock-icons{
             margin-top: 25px;
             text-align: center;
@@ -121,12 +122,23 @@
               width: 80%;
               margin: 0 auto;
             }
+            svg.icon-sock{
+              -ms-transform:rotate(-23deg); /* IE 9 */
+              -webkit-transform:rotate(-23deg); /* Chrome, Safari, Opera */
+              transform:rotate(-23deg); /* Standard syntax */
+              width: 60px;
+              path{
+                fill: #fff;
+                transition: fill 300ms ease-in;
+              }
+            }
           }
           text-align: center;
           h4{
             margin: 25px auto;
             font-weight: 300;
             font-size: 30px;
+            transition: color 300ms ease-in;
           }
           .price-footer{
             width: 90%;
@@ -136,9 +148,56 @@
             padding: 10px 0;
             font-family: $fun-font;
             margin: 0 auto;
+            transition: all 300ms ease-in;
           }
         }
-
+      }
+      li:hover{
+        .quantity-box{
+          border-color: $emphasis-color;
+          h4{
+            color: $emphasis-color;
+          }
+          .price-footer{
+            border-color: $emphasis-color;
+            color: $emphasis-color
+          }
+          .sock-icons{
+            svg{
+              path{
+                fill: $emphasis-color;
+              }
+            }
+          }
+        }
+      }
+      li.active{
+        .quantity-box{
+          background-color: $emphasis-color;
+          border-color: $emphasis-color;
+          h4{
+            color: #fff;
+          }
+          .price-footer{
+            color: #fff;
+            border-color: #fff;
+          }
+          .sock-icons{
+            svg{
+              path{
+                fill: #fff;
+              }
+            }
+          }
+        }
+      }
+      
+      .plan-5{
+        .sock-icons{
+          svg{
+            margin: 0 -15px;
+          }
+        }
       }
     }
   }

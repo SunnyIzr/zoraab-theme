@@ -1688,6 +1688,7 @@ div.cs-skin-boxes:focus > span {
   width: 100%;
   height: 100%;
   padding-bottom: 0;
+  transition: all 300ms ease-in;
   text-align: center;
 }
 .subscription-form .quantity-question ul li .quantity-box .sock-icons {
@@ -1698,10 +1699,24 @@ div.cs-skin-boxes:focus > span {
   width: 80%;
   margin: 0 auto;
 }
+.subscription-form .quantity-question ul li .quantity-box .sock-icons svg.icon-sock {
+  -ms-transform: rotate(-23deg);
+  /* IE 9 */
+  -webkit-transform: rotate(-23deg);
+  /* Chrome, Safari, Opera */
+  transform: rotate(-23deg);
+  /* Standard syntax */
+  width: 60px;
+}
+.subscription-form .quantity-question ul li .quantity-box .sock-icons svg.icon-sock path {
+  fill: #fff;
+  transition: fill 300ms ease-in;
+}
 .subscription-form .quantity-question ul li .quantity-box h4 {
   margin: 25px auto;
   font-weight: 300;
   font-size: 30px;
+  transition: color 300ms ease-in;
 }
 .subscription-form .quantity-question ul li .quantity-box .price-footer {
   width: 90%;
@@ -1711,6 +1726,37 @@ div.cs-skin-boxes:focus > span {
   padding: 10px 0;
   font-family: "Quicksand";
   margin: 0 auto;
+  transition: all 300ms ease-in;
+}
+.subscription-form .quantity-question ul li:hover .quantity-box {
+  border-color: #e85c41;
+}
+.subscription-form .quantity-question ul li:hover .quantity-box h4 {
+  color: #e85c41;
+}
+.subscription-form .quantity-question ul li:hover .quantity-box .price-footer {
+  border-color: #e85c41;
+  color: #e85c41;
+}
+.subscription-form .quantity-question ul li:hover .quantity-box .sock-icons svg path {
+  fill: #e85c41;
+}
+.subscription-form .quantity-question ul li.active .quantity-box {
+  background-color: #e85c41;
+  border-color: #e85c41;
+}
+.subscription-form .quantity-question ul li.active .quantity-box h4 {
+  color: #fff;
+}
+.subscription-form .quantity-question ul li.active .quantity-box .price-footer {
+  color: #fff;
+  border-color: #fff;
+}
+.subscription-form .quantity-question ul li.active .quantity-box .sock-icons svg path {
+  fill: #fff;
+}
+.subscription-form .quantity-question ul .plan-5 .sock-icons svg {
+  margin: 0 -15px;
 }
 .subscription-form .style-list {
   list-style: none;
