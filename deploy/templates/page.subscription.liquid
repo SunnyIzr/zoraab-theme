@@ -90,7 +90,7 @@
         </div>
         <form id="myform" class="fs-form fs-form-full ac-custom ac-radio ac-fill ac-checkbox ac-boxfill" autocomplete="off">
           <ol class="fs-fields">
-            <li>
+<!--             <li>
               <h3 class="fs-field-label fs-anim-upper" for="q1">What's your name?</h3>
               <input class="fs-anim-lower" id="q1" name="q1" type="text" placeholder="Ronald McDonald" required/>
             </li>
@@ -135,7 +135,7 @@
                   </li>
                 {% endfor %}
               </ul>
-            </li>
+            </li> -->
             <li class='quantity-question'>
               <h3 class="fs-field-label fs-anim-upper" for="q5">How many pairs of socks?</h3>
                 <ul>
@@ -149,7 +149,8 @@
                     <label class='radioBtn fs-anim-lower' for="q5-{{i}}">
                       <div class='quantity-box'>
                         <div class='sock-icons'>
-                          <img src='{{ "sock_plans-3.png" | asset_url }}'>
+                          <!-- <img src='{{ "sock_plans-3.png" | asset_url }}'> -->
+                          {% include 'icon_sock' %}
                         </div>
                         <h4>{{ plans[i] }} pair{%if i > 0 %}s{%endif%}</h4>
                         <h5 class='price-footer'>${{ prices[i] }} / month</h5>

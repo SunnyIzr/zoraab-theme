@@ -78,7 +78,7 @@ if( document.createElement('svg').getAttributeNS ) {
   function draw( el, type ) {
     var paths = [], pathDef, 
       animDef,
-      svg = el.parentNode.querySelector( 'svg' );
+      svg = el.parentNode.querySelector( 'svg.anim-svg' );
 
     switch( type ) {
       case 'cross': pathDef = pathDefs.cross; animDef = animDefs.cross; break;
@@ -123,12 +123,12 @@ if( document.createElement('svg').getAttributeNS ) {
   }
 
   function reset( el ) {
-    Array.prototype.slice.call( el.parentNode.querySelectorAll( 'svg > path' ) ).forEach( function( el ) { el.parentNode.removeChild( el ); } );
+    Array.prototype.slice.call( el.parentNode.querySelectorAll( 'svg.anim-svg > path' ) ).forEach( function( el ) { el.parentNode.removeChild( el ); } );
   }
 
   function resetRadio( el ) {
     Array.prototype.slice.call( document.querySelectorAll( 'input[type="radio"][name="' + el.getAttribute( 'name' ) + '"]' ) ).forEach( function( el ) { 
-      var path = el.parentNode.querySelector( 'svg > path' );
+      var path = el.parentNode.querySelector( 'svg.anim-svg > path' );
       if( path ) {
         path.parentNode.removeChild( path );
       }
