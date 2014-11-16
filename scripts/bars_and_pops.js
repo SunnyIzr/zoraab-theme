@@ -1,7 +1,9 @@
 $(document).ready(function(){
+  seeMoreDetails();
+  hideMoreDetails();
+  closeModalBtn();
   // loadBarOnLoad()
   // loadPopupOnLoad()
-  // closeModalBtn();
 })
 
 
@@ -74,4 +76,22 @@ function getCookie(cname) {
         if (c.indexOf(name) != -1) return c.substring(name.length,c.length);
     }
     return "";
+}
+
+var seeMoreDetails = function(){
+  $(document).on('click','.show-more-details', function(e){
+    e.preventDefault();
+    myEl = $(this).parent().parent()
+    myEl.html('')
+    myEl.append($('#addlDetails').html())
+  })
+}
+
+var hideMoreDetails = function(){
+  $(document).on('click','.hide-more-details', function(e){
+    e.preventDefault();
+    myEl = $(this).parent().parent().parent()
+    myEl.html('')
+    myEl.html($('#saleBarHeadline').html())
+  })
 }

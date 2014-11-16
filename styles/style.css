@@ -3299,17 +3299,22 @@ perspective effects (not including the modals and the overlay).
 .ns-box-inner .num {
   font-family: "Quicksand";
 }
-
-#addlDetails p {
+.ns-box-inner .left-section p, .ns-box-inner .right-section p {
   font-size: 13px;
 }
-#addlDetails strong {
+.ns-box-inner .left-section strong, .ns-box-inner .right-section strong {
   font-size: 15px;
   font-weight: 500;
 }
-#addlDetails .offer-details {
-  margin-top: 15px;
-  font-size: 11px;
+.ns-box-inner .offer-details {
+  margin-top: 10px;
+  font-size: 10px;
+}
+.ns-box-inner .offer-details a {
+  font-size: 14px;
+}
+.ns-box-inner .offer-details .expiration {
+  width: 100%;
 }
 
 .video-hero video {

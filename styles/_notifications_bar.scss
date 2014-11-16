@@ -231,23 +231,23 @@
   .num{
     font-family: $fun-font;
   }
-}
-
-#addlDetails{
-  p{
-    font-size: 13px;
-  }
-  strong{
-    font-size: 15px;
-    font-weight: 500;
+  .left-section,.right-section{
+    p{
+      font-size: 13px;
+    }
+    strong{
+      font-size: 15px;
+      font-weight: 500;
+    }
   }
   .offer-details{
-    margin-top: 15px;
-    font-size: 11px;
+      margin-top: 10px;
+      font-size: 10px;
+      a{
+        font-size: 14px;
+      }
+      .expiration{
+        width: 100%;
+      }
   }
 }
-
-
-
-
-
