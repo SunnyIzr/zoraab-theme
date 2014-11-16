@@ -25,7 +25,7 @@ var loadPopupOnLoad = function(){
 var loadNotificationBar = function(){
   // create the notification
   window.notification = new NotificationFx({
-    message : '<p>Save money on your purchases. Shop now. <a href="#">See details.</a></p>',
+    message : $('#saleBar').html(),
     layout : 'bar',
     effect : 'slidetop',
     type : 'notice', // notice, warning or error

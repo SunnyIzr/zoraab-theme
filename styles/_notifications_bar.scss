@@ -224,3 +224,30 @@
   -o-transition: all 1.0s ease-in-out;
   transition: all 1.0s ease-in-out;
 }
+
+// CUSTOM CSS
+
+.ns-box-inner{
+  .num{
+    font-family: $fun-font;
+  }
+}
+
+#addlDetails{
+  p{
+    font-size: 13px;
+  }
+  strong{
+    font-size: 15px;
+    font-weight: 500;
+  }
+  .offer-details{
+    margin-top: 15px;
+    font-size: 11px;
+  }
+}
+
+
+
+
+
