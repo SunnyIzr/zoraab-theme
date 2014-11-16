@@ -3316,6 +3316,15 @@ perspective effects (not including the modals and the overlay).
 .ns-box-inner .offer-details .expiration {
   width: 100%;
 }
+.ns-box-inner a:hover {
+  color: #f3a395;
+  text-decoration: none;
+}
+
+.ns-effect-slidetop .ns-close:hover::before,
+.ns-effect-slidetop .ns-close:hover::after {
+  background: #f3a395;
+}
 
 .video-hero video {
   width: 83%;

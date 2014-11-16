@@ -8,7 +8,8 @@ SubscriptionController = {
     this.sockPlanChecked();
   },
   activateFullForm: function(){
-    (function() {
+    if ($('.featured-sub-products').size() > 0) {
+     (function() {
         var formWrap = document.getElementById( 'fs-form-wrap' );
 
         [].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {  
@@ -25,7 +26,8 @@ SubscriptionController = {
             classie.add( document.body, 'overview' ); // for demo purposes only
           }
         } );
-      })();
+      })(); 
+    }
   },
   singlePlanSelect: function(){
     $('.single-plan').click(function(e){
