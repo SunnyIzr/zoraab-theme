@@ -127,7 +127,13 @@
     }
   }
 }
-
+.product-quickview{
+  .gift-card{
+    img{
+      max-height: 360px !important;
+    }
+  }
+}
 .product-only{
   .info{
     width: 130%;

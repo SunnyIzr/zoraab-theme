@@ -5848,6 +5848,10 @@ ul.off-canvas-list li a:hover {
   text-align: left;
 }
 
+.product-quickview .gift-card img {
+  max-height: 360px !important;
+}
+
 .product-only .info {
   width: 130%;
 }
