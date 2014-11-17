@@ -3299,12 +3299,25 @@ perspective effects (not including the modals and the overlay).
 .ns-box-inner .num {
   font-family: "Quicksand";
 }
+.ns-box-inner .left-section, .ns-box-inner .right-section {
+  margin-bottom: 15px;
+}
 .ns-box-inner .left-section p, .ns-box-inner .right-section p {
   font-size: 13px;
 }
 .ns-box-inner .left-section strong, .ns-box-inner .right-section strong {
-  font-size: 15px;
-  font-weight: 500;
+  font-size: 18px;
+  font-weight: 600;
+}
+.ns-box-inner .left-section {
+  float: left;
+  text-align: left;
+  margin-left: 35px;
+}
+.ns-box-inner .right-section {
+  float: right;
+  text-align: right;
+  margin-right: 35px;
 }
 .ns-box-inner .offer-details {
   margin-top: 10px;
@@ -3326,6 +3339,48 @@ perspective effects (not including the modals and the overlay).
   background: #f3a395;
 }
 
+@media (max-width: 1200px) {
+  .ns-box {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .left-section p, .right-section p {
+    padding-left: 26px;
+    padding-right: 26px;
+    font-size: 12px;
+  }
+  .left-section strong, .right-section strong {
+    font-size: 16px;
+  }
+
+  .ns-box-inner .left-section {
+    margin-left: 10px;
+  }
+  .ns-box-inner .right-section {
+    margin-right: 10px;
+  }
+}
+@media (max-width: 992px) {
+  .ns-box-inner .left-section, .ns-box-inner .right-section {
+    text-align: center;
+    width: 100%;
+  }
+  .ns-box-inner .left-section p, .ns-box-inner .right-section p {
+    font-size: 12px;
+    text-align: left;
+    margin: 0 auto;
+  }
+  .ns-box-inner .left-section strong, .ns-box-inner .right-section strong {
+    font-size: 16px;
+  }
+  .ns-box-inner .left-section {
+    margin-left: 0;
+  }
+  .ns-box-inner .right-section {
+    margin-right: 0px;
+  }
+}
 .video-hero video {
   width: 83%;
   float: left;

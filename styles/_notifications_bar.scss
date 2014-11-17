@@ -232,13 +232,24 @@
     font-family: $fun-font;
   }
   .left-section,.right-section{
+    margin-bottom: 15px;
     p{
       font-size: 13px;
     }
     strong{
-      font-size: 15px;
-      font-weight: 500;
+      font-size: 18px;
+      font-weight: 600;
     }
+  }
+  .left-section{
+    float: left;
+    text-align: left;
+    margin-left: 35px;
+  }
+  .right-section{
+    float: right;
+    text-align: right;
+    margin-right: 35px;
   }
   .offer-details{
       margin-top: 10px;
@@ -260,5 +271,70 @@
 .ns-effect-slidetop .ns-close:hover::after {
   background: #f3a395;
 }
+
+
+// MEDIUM DESKTOPS
+@media (max-width: 1200px) { 
+  .ns-box{
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .left-section, .right-section{
+    p{
+      padding-left: 26px;
+      padding-right: 26px;
+      font-size: 12px;
+    }
+    strong{
+      font-size: 16px;
+    }
+  }
+  .ns-box-inner{
+    .left-section{
+      margin-left: 10px;
+    }
+    .right-section{
+      margin-right: 10px;
+    }
+  }
+
+} 
+
+// TABLETS
+@media (max-width: 992px) {
+  .ns-box-inner{
+    .left-section,.right-section{
+      text-align: center;
+      width: 100%;
+      p{
+        font-size: 12px;
+        text-align: left;
+        margin: 0 auto;
+      }
+      strong{
+        font-size: 16px;
+      }
+    }
+    .left-section{
+      margin-left: 0;
+    }
+    .right-section{
+      margin-right: 0px;
+    }
+    .offer-details{
+    }
+  }
+} 
+
+// SMALL PHONES
+@media (max-width: 768px) {
+
+
+  
+} 
+
+// IPHONE
+@media (max-width: 450px) {
+} 
 
 
