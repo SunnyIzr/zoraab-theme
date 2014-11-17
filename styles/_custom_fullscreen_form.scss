@@ -271,13 +271,13 @@
   }
   .fs-continue{
     border-radius: 0px;
-    border-color: #fff;
-    color: #fff;
+    border-color: #58a890;
+    color: #58a890;
     transition: all ease-in 300ms;
   }
   .fs-continue:hover{
-    border-color: $emphasis-color;
-    background-color: $emphasis-color;
+    border-color: #fff;
+    background-color: transparent;
     color: #fff;
   }
   .fs-message-error{

@@ -51,6 +51,8 @@ SubscriptionController = {
     $('input[name="q3"]').change(function(e){
       if ( $('#q3b').is(':checked') ){
         $(this).parent().parent().parent().addClass('gifted')
+      } else{
+        $(this).parent().parent().parent().removeClass('gifted')
       }
     })
   },
