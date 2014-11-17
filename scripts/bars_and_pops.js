@@ -2,7 +2,8 @@ $(document).ready(function(){
   seeMoreDetails();
   hideMoreDetails();
   closeModalBtn();
-  // loadBarOnLoad()
+  loadBarOnLoad()
+  saleLinkToBar();
   // loadPopupOnLoad()
 })
 
@@ -13,6 +14,15 @@ var loadBarOnLoad = function(){
       loadNotificationBar()
     }
   }, 3500)
+}
+
+var saleLinkToBar = function(){
+  $('.sale-nav-link').click(function(e){
+    e.preventDefault();
+    if ($('.ns-box').size() == 0) {
+      loadNotificationBar();
+    }
+  })
 }
 
 var loadPopupOnLoad = function(){
