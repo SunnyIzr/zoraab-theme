@@ -226,6 +226,7 @@
    * jumps to the next field
    */
   FForm.prototype._nextField = function( backto ) {
+    SubscriptionSummary.popSubSummary();
     if( this.isLastStep || !this._validade() || this.isAnimating ) {
       return false;
     }

@@ -9,6 +9,7 @@ SubscriptionController = {
     this.subTermChecked();
     // this.hideLastContinueBtn();
     this.closeForm();
+    this.updateUpfronts();
   },
   activateFullForm: function(){
     if ($('.featured-sub-products').size() > 0) {
@@ -55,14 +56,14 @@ SubscriptionController = {
     })
   },
   sockPlanChecked: function(){
-    $('input[name="q5"]').change(function(e){
+    $('input[name="sockNum"]').change(function(e){
       $('.quantity-question .active').removeClass('active')
       $(this).parent().addClass('active')
     })
   },
   subFreqOptChecked: function(){
-    $('input[name="q6"]').change(function(e){
-      if ( $('#q6b').is(':checked') ){
+    $('input[name="payment"]').change(function(e){
+      if ( $('#once').is(':checked') ){
         $(this).parent().parent().parent().addClass('paying-once')
       } else{
         $(this).parent().parent().parent().removeClass('paying-once')
@@ -70,7 +71,7 @@ SubscriptionController = {
     })
   },
   subTermChecked: function(){
-    $('input[name="q7"]').change(function(e){
+    $('input[name="term"]').change(function(e){
       $('.payment-options .active').removeClass('active')
       $(this).parent().addClass('active')
     })
@@ -91,6 +92,26 @@ SubscriptionController = {
       $(form).css('transition-property','all')
       $(form).removeClass('active')
     })
+  },
+  updateUpfronts: function(){
+    $('input[name="sockNum"]').change(function(){
+      sockPlan = parseInt($('input[name="sockNum"]:checked').val())
+      if ( sockPlan == 2 ) {
+        $('.price-plan-3').html(60)
+        $('.price-plan-9').html(180)
+        $('.price-plan-1').html(240)
+      }
+      if ( sockPlan == 3 ) {
+        $('.price-plan-3').html(87)
+        $('.price-plan-9').html(261)
+        $('.price-plan-1').html(348)
+      }
+      if ( sockPlan == 5 ) {
+        $('.price-plan-3').html(135)
+        $('.price-plan-9').html(405)
+        $('.price-plan-1').html(540)
+      }
+    })
   }
 }
 
@@ -110,3 +131,84 @@ SubscriptionView = {
     $(form).addClass('active')
   }
 }
+
+
+
+SubscriptionSummary = {
+  popSubSummary: function(){
+    this.getSubName();
+    this.getStyles();
+    this.getSockPlan();
+    this.getPmtPlan();
+  },
+  getSubName: function(){
+    firstName = $('#q1').val().split(' ')[0]
+    $('.subscriberName').html(firstName)
+  },
+  getStyles: function(){
+    $.each($('input[name="style[]"]:checked'),function(k,v){
+      style = $(v).val()
+      $('#summ'+style).removeClass('hide')
+    })
+  },
+  getSockPlan: function(){
+    sockPlan = $('input[name="sockNum"]:checked').val()
+    $('.number-of-socks').html(sockPlan)
+    sockIcon = $($('.icon-sock')[0]).clone()
+    $('.acc-icons').html('')
+    for (i = 0; i < parseInt(sockPlan); i++){
+      $('.acc-icons').append(sockIcon.clone())
+    }
+    if (sockPlan == '5'){
+      $('.acc-icons').addClass('plan-5')
+    }
+  },
+  getPmtPlan: function(){
+    pmtFreq = $('input[name="payment"]:checked').val()
+    if (pmtFreq == 'monthly'){
+      $('.monthlyPmt').removeClass('hide')
+      SubscriptionSummary.calcMonthlyPrice();
+    } 
+    if (pmtFreq == 'once'){
+      $('.upfrontPmt').removeClass('hide')
+      SubscriptionSummary.calcUpfrontPrice();
+    }
+  },
+  calcMonthlyPrice: function(){
+    sockPlan = parseInt($('input[name="sockNum"]:checked').val())
+    if (sockPlan == 2) { $('.finalPrice').html(20)}
+    if (sockPlan == 3) { $('.finalPrice').html(29)}
+    if (sockPlan == 5) { $('.finalPrice').html(45)}
+  },
+  calcUpfrontPrice: function(){
+    sockPlan = parseInt($('input[name="sockNum"]:checked').val())
+    term = $('input[name="term"]:checked').val()
+    if ( sockPlan == 2) {
+      if (term == '3months') { $('.finalPrice').html(60)}
+      if (term == '9months') { $('.finalPrice').html(180)}
+      if (term == '1year') { $('.finalPrice').html(240)}
+    }
+    if ( sockPlan == 3) {
+      if (term == '3months') { $('.finalPrice').html(87)}
+      if (term == '9months') { $('.finalPrice').html(261)}
+      if (term == '1year') { $('.finalPrice').html(348)}
+    }
+    if ( sockPlan == 5) {
+      if (term == '3months') { $('.finalPrice').html(135)}
+      if (term == '9months') { $('.finalPrice').html(405)}
+      if (term == '1year') { $('.finalPrice').html(540)}
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+

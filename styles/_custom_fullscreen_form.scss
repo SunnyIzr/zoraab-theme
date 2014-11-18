@@ -447,6 +447,11 @@
               }
             }
           }
+          .acc-icons.plan-5{
+            svg{
+              margin: 0 -12px;
+            }
+          }
           h5{
             font-family: $fun-font;
             margin: 0 auto;
@@ -475,13 +480,20 @@
         font-size: 22px;
         font-weight: 400;
         font-family: $fun-font;
+        .cancel-anytime{
+          font-size: 19px;
+          font-style: italic;
+        }
       }
       .subtotal-amt{
         font-size: 50px;
         font-weight: 400;
-        margin-top: 100px;
+        margin-top: 75px;
         .num{
           font-family: $fun-font;
+        }
+        .per-month{
+          font-size: 25px;
         }
       }
     }

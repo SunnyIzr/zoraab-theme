@@ -1994,6 +1994,9 @@ div.cs-skin-boxes:focus > span {
 .subscription-form .order-summary-page .sub-order-summary .chosen-box .quantity-box .acc-icons .icon-sock path {
   fill: #fff;
 }
+.subscription-form .order-summary-page .sub-order-summary .chosen-box .quantity-box .acc-icons.plan-5 svg {
+  margin: 0 -12px;
+}
 .subscription-form .order-summary-page .sub-order-summary .chosen-box .quantity-box h5 {
   font-family: "Quicksand";
   margin: 0 auto;
@@ -2017,13 +2020,20 @@ div.cs-skin-boxes:focus > span {
   font-weight: 400;
   font-family: "Quicksand";
 }
+.subscription-form .order-summary-page .payment-summary h5 .cancel-anytime {
+  font-size: 19px;
+  font-style: italic;
+}
 .subscription-form .order-summary-page .payment-summary .subtotal-amt {
   font-size: 50px;
   font-weight: 400;
-  margin-top: 100px;
+  margin-top: 75px;
 }
 .subscription-form .order-summary-page .payment-summary .subtotal-amt .num {
   font-family: "Quicksand";
+}
+.subscription-form .order-summary-page .payment-summary .subtotal-amt .per-month {
+  font-size: 25px;
 }
 .subscription-form .order-summary-page .sub-checkout-btn {
   width: 100%;
