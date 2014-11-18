@@ -6,6 +6,8 @@ SubscriptionController = {
     this.finalSockQuestion()
     this.giftChecked();
     this.sockPlanChecked();
+    this.subFreqOptChecked();
+    this.subTermChecked();
   },
   activateFullForm: function(){
     if ($('.featured-sub-products').size() > 0) {
@@ -59,6 +61,21 @@ SubscriptionController = {
   sockPlanChecked: function(){
     $('input[name="q5"]').change(function(e){
       $('.quantity-question .active').removeClass('active')
+      $(this).parent().addClass('active')
+    })
+  },
+  subFreqOptChecked: function(){
+    $('input[name="q6"]').change(function(e){
+      if ( $('#q6b').is(':checked') ){
+        $(this).parent().parent().parent().addClass('paying-once')
+      } else{
+        $(this).parent().parent().parent().removeClass('paying-once')
+      }
+    })
+  },
+  subTermChecked: function(){
+    $('input[name="q7"]').change(function(e){
+      $('.payment-options .active').removeClass('active')
       $(this).parent().addClass('active')
     })
   }

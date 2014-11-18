@@ -29,6 +29,90 @@
     }
   }
   .payment-question{
+    width: 120% !important;
+    ul.freq-options{
+      width: 40%;
+      border-right: 1px solid transparent;
+      text-align: left;
+      margin: 0;
+      float:left;
+      transition: border-color 300ms ease-in;
+    }
+    .payment-options{
+      float: right;
+      text-align: left;
+      width: 49%;
+      z-index: -100;
+      opacity: 0.0;
+      transition: opacity 300ms ease-in;
+      ul{
+        padding: 0;
+        li{
+          display: inline-block;
+          width: 30%;
+          label{
+            margin: 0;
+            padding: 0;
+            width: 100%;
+          }
+          label::before{
+            display: none;
+          }
+          svg.anim-svg{
+            display: none;
+          }
+          .time-box{
+            list-style: none;
+            border: 1px solid #346355;
+            width: 100%;
+            height: 100%;
+            padding-bottom: 0;
+            transition: all 300ms ease-in;
+            text-align: center;
+            h4{
+              margin: 10px auto 5px;
+              font-weight: 400;
+              font-size: 30px;
+              transition: all 300ms ease-in;
+              font-family: $fun-font;
+              color: #346355;
+            }
+            h5{
+              margin-top: 5px;
+              transition: all 300ms ease-in;
+              color: #346355;
+            }
+            .price-footer{
+              width: 90%;
+              border-top: 1px solid #346355;
+              color: #346355;
+              font-size: 28px;
+              font-weight: 400;
+              padding: 10px 0;
+              font-family: $fun-font;
+              margin: 0 auto;
+              transition: all 300ms ease-in;
+            }
+          }
+        }
+        li.active{
+          .time-box{
+            background-color: #58a890;
+            border-color: #58a890;
+            h4{
+              color: #fff;
+            }
+            h5{
+              color: #fff;
+            }
+            .price-footer{
+              border-color: #fff;
+            }
+          }
+        }
+      }
+        
+    }
     .checkout-sub-btn{
       .btn{
         font-size: 30px;
@@ -45,6 +129,15 @@
         background-color: $emphasis-color;
         color: #fff;
       }
+    }
+  }
+  .payment-question.paying-once{
+    ul.freq-options{
+      border-color: #fff;
+    }
+    .payment-options{
+      z-index: inherit;
+      opacity: 1.0
     }
   }
   .who-question{

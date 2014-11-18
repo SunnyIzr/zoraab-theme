@@ -90,7 +90,7 @@
         </div>
         <form id="myform" class="fs-form fs-form-full ac-custom ac-radio ac-fill ac-checkbox ac-boxfill" autocomplete="off">
           <ol class="fs-fields">
-            <li>
+<!--             <li>
               <h3 class="fs-field-label fs-anim-upper" for="q1">What's your name?</h3>
               <input class="fs-anim-lower" id="q1" name="q1" type="text" placeholder="Ronald McDonald" required/>
             </li>
@@ -156,16 +156,32 @@
                   </li>
                 {% endfor %}
                 </ul>   
-            </li>
+            </li> -->
             <li class='payment-question'>
               <h3 class="fs-field-label fs-anim-upper" for="q6" >How often do you want to pay?</h3>
+              <ul class='freq-options'>
+                <li><input id="q6a" class='fs-anim-lower' name="q6" type="radio"><label class='radioBtn fs-anim-lower' for="q6a">Monthly</label></li>
+                <li><input class='fs-anim-lower' id="q6b" name="q6" type="radio"><label class='radioBtn fs-anim-lower' for="q6b">Once</label></li>
+              </ul>
+              <div class='payment-options'>
                 <ul>
-                  <li><input id="q6a" class='fs-anim-lower' name="q6" type="radio"><label class='radioBtn fs-anim-lower' for="q6a">Monthly</label></li>
-                  <li><input class='fs-anim-lower' id="q6b" name="q6" type="radio"><label class='radioBtn fs-anim-lower' for="q6b">Once</label></li>
-                </ul> 
-                <div class='checkout-sub-btn'>
-                  <a href='#' class='btn btn-info btn-lg fs-anim-lower'>CHECKOUT</a>
-                </div>
+                  {% assign counts = '3,9,1' | split: ',' %}
+                  {% assign times = 'months,months,year' | split: ',' %}
+                  {% assign prices = '60,180,240' | split: ',' %}
+                  {% for i in (0..2) %}
+                  <li>
+                    <input id="q7-{{i}}" class='fs-anim-lower' name="q7" type="radio">
+                    <label class='radioBtn fs-anim-lower' for="q7-{{i}}">
+                      <div class='time-box'>
+                        <h4 class='price-num'>{{ counts[i] }}</h4>
+                        <h5>{{ times[i] }}</h5>
+                        <h5 class='price-footer'>${{ prices[i] }}</h5>
+                      </div>
+                    </label>
+                  </li>
+                  {% endfor %}
+                </ul>
+              </div> 
             </li>
           </ol><!-- /fs-fields -->
           <button class="fs-submit" type="submit">Send answers</button>

@@ -1608,6 +1608,89 @@ div.cs-skin-boxes:focus > span {
   padding-top: 0.5em;
   padding-bottom: 0.5em;
 }
+.subscription-form .payment-question {
+  width: 120% !important;
+}
+.subscription-form .payment-question ul.freq-options {
+  width: 40%;
+  border-right: 1px solid transparent;
+  text-align: left;
+  margin: 0;
+  float: left;
+  transition: border-color 300ms ease-in;
+}
+.subscription-form .payment-question .payment-options {
+  float: right;
+  text-align: left;
+  width: 49%;
+  z-index: -100;
+  opacity: 0.0;
+  transition: opacity 300ms ease-in;
+}
+.subscription-form .payment-question .payment-options ul {
+  padding: 0;
+}
+.subscription-form .payment-question .payment-options ul li {
+  display: inline-block;
+  width: 30%;
+}
+.subscription-form .payment-question .payment-options ul li label {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.subscription-form .payment-question .payment-options ul li label::before {
+  display: none;
+}
+.subscription-form .payment-question .payment-options ul li svg.anim-svg {
+  display: none;
+}
+.subscription-form .payment-question .payment-options ul li .time-box {
+  list-style: none;
+  border: 1px solid #346355;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 0;
+  transition: all 300ms ease-in;
+  text-align: center;
+}
+.subscription-form .payment-question .payment-options ul li .time-box h4 {
+  margin: 10px auto 5px;
+  font-weight: 400;
+  font-size: 30px;
+  transition: all 300ms ease-in;
+  font-family: "Quicksand";
+  color: #346355;
+}
+.subscription-form .payment-question .payment-options ul li .time-box h5 {
+  margin-top: 5px;
+  transition: all 300ms ease-in;
+  color: #346355;
+}
+.subscription-form .payment-question .payment-options ul li .time-box .price-footer {
+  width: 90%;
+  border-top: 1px solid #346355;
+  color: #346355;
+  font-size: 28px;
+  font-weight: 400;
+  padding: 10px 0;
+  font-family: "Quicksand";
+  margin: 0 auto;
+  transition: all 300ms ease-in;
+}
+.subscription-form .payment-question .payment-options ul li.active .time-box {
+  background-color: #58a890;
+  border-color: #58a890;
+}
+.subscription-form .payment-question .payment-options ul li.active .time-box h4 {
+  color: #fff;
+}
+.subscription-form .payment-question .payment-options ul li.active .time-box h5 {
+  color: #fff;
+}
+.subscription-form .payment-question .payment-options ul li.active .time-box .price-footer {
+  border-color: #fff;
+}
 .subscription-form .payment-question .checkout-sub-btn .btn {
   font-size: 30px;
   padding: 20px 35px;
@@ -1622,6 +1705,13 @@ div.cs-skin-boxes:focus > span {
 .subscription-form .payment-question .checkout-sub-btn .btn-info.active {
   background-color: #e85c41;
   color: #fff;
+}
+.subscription-form .payment-question.paying-once ul.freq-options {
+  border-color: #fff;
+}
+.subscription-form .payment-question.paying-once .payment-options {
+  z-index: inherit;
+  opacity: 1;
 }
 .subscription-form .who-question {
   width: 120% !important;
