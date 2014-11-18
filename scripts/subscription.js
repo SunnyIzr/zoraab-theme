@@ -3,11 +3,11 @@ SubscriptionController = {
     this.activateFullForm()
     this.singlePlanSelect()
     this.launchSubForm()
-    this.finalSockQuestion()
     this.giftChecked();
     this.sockPlanChecked();
     this.subFreqOptChecked();
     this.subTermChecked();
+    this.hideLastContinueBtn();
   },
   activateFullForm: function(){
     if ($('.featured-sub-products').size() > 0) {
@@ -44,11 +44,6 @@ SubscriptionController = {
       SubscriptionView.revealForm(SubscriptionModel.planSelection)
     })
   },
-  finalSockQuestion: function(){
-    $('input[name="q6"]').change(function(e){
-      $('.checkout-sub-btn a').addClass('active')
-    })
-  },
   giftChecked: function(){
     $('input[name="q3"]').change(function(e){
       if ( $('#q3b').is(':checked') ){
@@ -77,6 +72,15 @@ SubscriptionController = {
     $('input[name="q7"]').change(function(e){
       $('.payment-options .active').removeClass('active')
       $(this).parent().addClass('active')
+    })
+  },
+  hideLastContinueBtn: function(){
+    $('.fs-continue').click(function(e){
+      console.log('running')
+      console.log($('.order-summary-page').css('visibility'))
+      if ( $('.order-summary-page').css('visibility') == 'visible') {
+        $('.fs-controls').hide();
+      }
     })
   }
 }

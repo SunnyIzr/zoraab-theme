@@ -1945,6 +1945,89 @@ div.cs-skin-boxes:focus > span {
   top: 12%;
   left: 49%;
 }
+.subscription-form .order-summary-page {
+  width: 122% !important;
+  height: 600px;
+}
+.subscription-form .order-summary-page h4 {
+  font-size: 28px;
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+.subscription-form .order-summary-page .order-summary-wrapper {
+  margin-left: -5%;
+}
+.subscription-form .order-summary-page .sub-order-summary {
+  width: 60%;
+  border-right: 1px solid #fff;
+  float: left;
+}
+.subscription-form .order-summary-page .sub-order-summary .chosen-box {
+  float: left;
+  width: 50%;
+  padding-left: 15px;
+}
+.subscription-form .order-summary-page .sub-order-summary .chosen-box .quantity-box {
+  padding: 15px 10px 25px;
+  width: 90%;
+  background-color: #e85c41;
+  color: #fff;
+  text-align: center;
+}
+.subscription-form .order-summary-page .sub-order-summary .chosen-box .quantity-box .acc-icons .icon-sock {
+  -ms-transform: rotate(-23deg);
+  /* IE 9 */
+  -webkit-transform: rotate(-23deg);
+  /* Chrome, Safari, Opera */
+  transform: rotate(-23deg);
+  /* Standard syntax */
+  width: 60px;
+}
+.subscription-form .order-summary-page .sub-order-summary .chosen-box .quantity-box .acc-icons .icon-sock path {
+  fill: #fff;
+}
+.subscription-form .order-summary-page .sub-order-summary .chosen-box .quantity-box h5 {
+  font-family: "Quicksand";
+  margin: 0 auto;
+  font-weight: 400;
+  font-size: 30px;
+}
+.subscription-form .order-summary-page .sub-order-summary .chosen-style {
+  float: right;
+  width: 50%;
+}
+.subscription-form .order-summary-page .sub-order-summary .chosen-style .style-icons svg path, .subscription-form .order-summary-page .sub-order-summary .chosen-style .style-icons svg rect, .subscription-form .order-summary-page .sub-order-summary .chosen-style .style-icons svg line, .subscription-form .order-summary-page .sub-order-summary .chosen-style .style-icons svg polygon, .subscription-form .order-summary-page .sub-order-summary .chosen-style .style-icons svg polyline, .subscription-form .order-summary-page .sub-order-summary .chosen-style .style-icons svg circle {
+  fill: #346355;
+}
+.subscription-form .order-summary-page .payment-summary {
+  width: 36%;
+  padding-right: 25px;
+  float: right;
+}
+.subscription-form .order-summary-page .payment-summary h5 {
+  font-size: 22px;
+  font-weight: 400;
+  font-family: "Quicksand";
+}
+.subscription-form .order-summary-page .payment-summary .subtotal-amt {
+  font-size: 50px;
+  font-weight: 400;
+  margin-top: 100px;
+}
+.subscription-form .order-summary-page .payment-summary .subtotal-amt .num {
+  font-family: "Quicksand";
+}
+.subscription-form .order-summary-page .sub-checkout-btn {
+  width: 100%;
+  margin: 0 auto;
+  float: left;
+  text-align: center;
+}
+.subscription-form .order-summary-page .sub-checkout-btn .btn {
+  margin: 45px auto 0;
+  font-size: 22px;
+  padding: 18px 35px;
+}
 
 #socksOnly.active {
   z-index: 99999999;

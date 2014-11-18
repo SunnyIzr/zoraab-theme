@@ -395,6 +395,93 @@
     left: 49%;
   }
   
+  .order-summary-page{
+    width: 122% !important;
+    height: 600px;
+    h4{
+      font-size: 28px;
+      font-weight: 300;
+      margin-bottom: 15px;
+    }
+    .order-summary-wrapper{
+      margin-left: -5%;
+    }
+    .sub-order-summary{
+      width: 60%;
+      border-right: 1px solid #fff;
+      float: left;
+      .chosen-box{
+        float: left;
+        width: 50%;
+        padding-left: 15px;
+        .quantity-box{
+          padding: 15px 10px 25px;
+          width: 90%;
+          background-color: $emphasis-color;
+          color: #fff;
+          text-align: center;
+          .acc-icons{
+            .icon-sock{
+              -ms-transform:rotate(-23deg); /* IE 9 */
+              -webkit-transform:rotate(-23deg); /* Chrome, Safari, Opera */
+              transform:rotate(-23deg); /* Standard syntax */
+              width: 60px;
+              path{
+                fill: #fff;
+              }
+            }
+          }
+          h5{
+            font-family: $fun-font;
+            margin: 0 auto;
+            font-weight: 400;
+            font-size: 30px;
+          }
+        }
+      }
+      .chosen-style{
+        float: right;
+        width: 50%;
+        .style-icons{
+          svg{
+            path, rect, line, polygon, polyline, circle{
+              fill: #346355;
+            }
+          }
+        }
+      }
+    }
+    .payment-summary{
+      width: 36%;
+      padding-right: 25px;
+      float: right;
+      h5{
+        font-size: 22px;
+        font-weight: 400;
+        font-family: $fun-font;
+      }
+      .subtotal-amt{
+        font-size: 50px;
+        font-weight: 400;
+        margin-top: 100px;
+        .num{
+          font-family: $fun-font;
+        }
+      }
+    }
+    .sub-checkout-btn{
+      width: 100%;
+      margin: 0 auto;
+      float: left;
+      text-align: center;
+      .btn{
+        margin: 45px auto 0;
+        font-size: 22px;
+        padding: 18px 35px;
+      }
+    }
+  }
+  
 }
 
 #socksOnly.active{

@@ -183,6 +183,39 @@
                 </ul>
               </div> 
             </li>
+            <li class='order-summary-page'>
+              <h3 class="fs-field-label fs-anim-upper">Okay Ronald you signed up for:</h3>
+              <div class='order-summary-wrapper'>
+                <div class='sub-order-summary'>
+                  <div class='chosen-box'>
+                    <h4>BOX</h4>
+                    <div class='quantity-box'>
+                      <div class='acc-icons'>
+                        {% include 'icon_sock' %}
+                      </div>
+                      <h5>2 pairs<br/>/<br/>month</h5>
+                    </div>
+                  </div>
+                  <div class='chosen-style'>
+                    <h4>STYLE</h4>
+                    <div class='style-icons'>
+                      {% include 'icon_stripes' %}
+                      {% include 'icon_polkadots' %}
+                    </div>
+                  </div>
+                </div>
+                <div class='payment-summary'>
+                  <h4>PAYMENT</h4>
+                  <h5>Pay Once - 3 months</h5>
+                  <h4 class='subtotal-amt'>
+                    Total: <span class='num'>$60</span>
+                  </h4>
+                </div>
+                <div class='sub-checkout-btn'>
+                  <a href='#' class='btn btn-lg btn-info'>PAY NOW</a>
+                </div>
+              </div>
+            </li>
           </ol><!-- /fs-fields -->
           <button class="fs-submit" type="submit">Send answers</button>
         </form><!-- /fs-form -->
