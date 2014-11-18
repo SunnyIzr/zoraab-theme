@@ -7,7 +7,7 @@ SubscriptionController = {
     this.sockPlanChecked();
     this.subFreqOptChecked();
     this.subTermChecked();
-    this.hideLastContinueBtn();
+    // this.hideLastContinueBtn();
     this.closeForm();
   },
   activateFullForm: function(){

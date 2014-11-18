@@ -82,19 +82,19 @@
             width: 100%;
             height: 100%;
             padding-bottom: 0;
-            transition: all 300ms ease-in;
+            transition: background-color 300ms, border-color 300ms, ease-in;
             text-align: center;
             h4{
               margin: 10px auto 5px;
               font-weight: 400;
               font-size: 30px;
-              transition: all 300ms ease-in;
+              transition: color 300ms ease-in;
               font-family: $fun-font;
               color: #346355;
             }
             h5{
               margin-top: 5px;
-              transition: all 300ms ease-in;
+              transition: color 300ms ease-in;
               color: #346355;
             }
             .price-footer{
@@ -106,7 +106,7 @@
               padding: 10px 0;
               font-family: $fun-font;
               margin: 0 auto;
-              transition: all 300ms ease-in;
+              transition: border-color 300ms, color 300ms, ease-in;
             }
           }
         }
@@ -221,7 +221,7 @@
           width: 100%;
           height: 100%;
           padding-bottom: 0;
-          transition: all 300ms ease-in;
+          transition: border-color 300ms, background-color 300ms, ease-in;
           .sock-icons{
             margin-top: 25px;
             text-align: center;
@@ -242,6 +242,7 @@
           }
           text-align: center;
           h4{
+            color: #346355;
             margin: 25px auto;
             font-weight: 300;
             font-size: 30px;
@@ -256,7 +257,7 @@
             padding: 10px 0;
             font-family: $fun-font;
             margin: 0 auto;
-            transition: all 300ms ease-in;
+            transition: border-color 300ms, color 300ms, ease-in;
           }
         }
       }
