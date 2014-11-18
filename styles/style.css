@@ -1656,6 +1656,9 @@ div.cs-skin-boxes:focus > span {
   z-index: inherit;
   opacity: 1;
 }
+.subscription-form .style-question ul {
+  margin-left: -5%;
+}
 .subscription-form .quantity-question ul {
   list-style: none;
   width: 125%;
@@ -1665,7 +1668,7 @@ div.cs-skin-boxes:focus > span {
   padding: 0;
   display: inline-block;
   width: 30%;
-  margin: 35px 9px 0;
+  margin: 0 9px 0;
 }
 .subscription-form .quantity-question ul li label {
   margin: 0;
@@ -1673,19 +1676,13 @@ div.cs-skin-boxes:focus > span {
   width: 100%;
 }
 .subscription-form .quantity-question ul li label::before {
-  position: absolute;
-  top: -34px;
-  left: 50%;
-  margin-left: -25px;
+  display: none;
 }
 .subscription-form .quantity-question ul li svg.anim-svg {
-  position: absolute;
-  top: -34px;
-  left: 50%;
-  margin-left: -20px;
+  display: none;
 }
 .subscription-form .quantity-question ul li .quantity-box {
-  border: 1px solid #fff;
+  border: 1px solid #346355;
   width: 100%;
   height: 100%;
   padding-bottom: 0;
@@ -1710,7 +1707,7 @@ div.cs-skin-boxes:focus > span {
   width: 60px;
 }
 .subscription-form .quantity-question ul li .quantity-box .sock-icons svg.icon-sock path {
-  fill: #fff;
+  fill: #346355;
   transition: fill 300ms ease-in;
 }
 .subscription-form .quantity-question ul li .quantity-box h4 {
@@ -1721,26 +1718,28 @@ div.cs-skin-boxes:focus > span {
 }
 .subscription-form .quantity-question ul li .quantity-box .price-footer {
   width: 90%;
-  border-top: 1px solid #fff;
+  border-top: 1px solid #346355;
+  color: #346355;
   font-size: 28px;
-  font-weight: 300;
+  font-weight: 400;
   padding: 10px 0;
   font-family: "Quicksand";
   margin: 0 auto;
   transition: all 300ms ease-in;
 }
 .subscription-form .quantity-question ul li:hover .quantity-box {
-  border-color: #e85c41;
+  border-color: #58a890;
+  background-color: #58a890;
 }
 .subscription-form .quantity-question ul li:hover .quantity-box h4 {
-  color: #e85c41;
+  color: #fff;
 }
 .subscription-form .quantity-question ul li:hover .quantity-box .price-footer {
-  border-color: #e85c41;
-  color: #e85c41;
+  border-color: #fff;
+  color: white;
 }
-.subscription-form .quantity-question ul li:hover .quantity-box .sock-icons svg.anim-svg path {
-  fill: #e85c41;
+.subscription-form .quantity-question ul li:hover .quantity-box .sock-icons svg path {
+  fill: #fff;
 }
 .subscription-form .quantity-question ul li.active .quantity-box {
   background-color: #e85c41;
@@ -1753,10 +1752,10 @@ div.cs-skin-boxes:focus > span {
   color: #fff;
   border-color: #fff;
 }
-.subscription-form .quantity-question ul li.active .quantity-box .sock-icons svg.anim-svg path {
+.subscription-form .quantity-question ul li.active .quantity-box .sock-icons svg path {
   fill: #fff;
 }
-.subscription-form .quantity-question ul .plan-5 .sock-icons svg.anim-svg {
+.subscription-form .quantity-question ul .plan-5 .sock-icons svg {
   margin: 0 -15px;
 }
 .subscription-form .style-list {
