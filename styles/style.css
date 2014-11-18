@@ -1597,6 +1597,13 @@ div.cs-skin-boxes:focus > span {
   z-index: -50;
   transition: opacity 300ms ease-out;
 }
+.subscription-form .close-form svg path {
+  fill: #346355;
+  transition: fill 300ms ease-in;
+}
+.subscription-form .close-form:hover svg path {
+  fill: white;
+}
 .subscription-form h3 {
   font-size: 50px;
   font-weight: 300;
@@ -2029,7 +2036,7 @@ div.cs-skin-boxes:focus > span {
   padding: 18px 35px;
 }
 
-#socksOnly.active {
+.subscription-form.active {
   z-index: 99999999;
   opacity: 1.0;
 }

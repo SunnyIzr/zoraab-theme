@@ -13,6 +13,21 @@
   left: 0;
   z-index:-50;
   transition: opacity 300ms ease-out;
+  .close-form{
+    svg{
+      path{
+        fill: #346355;
+        transition: fill 300ms ease-in;
+      }
+    }
+  }
+  .close-form:hover{
+    svg{
+      path{
+        fill: #fff
+      }
+    }
+  }
   h3{
     font-size: 50px;
     font-weight: 300;
@@ -484,7 +499,7 @@
   
 }
 
-#socksOnly.active{
+.subscription-form.active{
   z-index: 99999999;
   opacity: 1.0;
 }

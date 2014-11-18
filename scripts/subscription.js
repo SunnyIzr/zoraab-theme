@@ -8,6 +8,7 @@ SubscriptionController = {
     this.subFreqOptChecked();
     this.subTermChecked();
     this.hideLastContinueBtn();
+    this.closeForm();
   },
   activateFullForm: function(){
     if ($('.featured-sub-products').size() > 0) {
@@ -82,6 +83,14 @@ SubscriptionController = {
         $('.fs-controls').hide();
       }
     })
+  },
+  closeForm: function(){
+    $('.close-form').click(function(e){
+      e.preventDefault();
+      form = $(this).data('target')
+      $(form).css('transition-property','all')
+      $(form).removeClass('active')
+    })
   }
 }
 
@@ -97,6 +106,7 @@ SubscriptionView = {
     $('.launch-sub-form').addClass('active')
   },
   revealForm: function(form){
+    $(form).css('transition-property','opacity')
     $(form).addClass('active')
   }
 }
