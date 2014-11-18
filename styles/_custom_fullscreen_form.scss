@@ -163,7 +163,7 @@
             color: $emphasis-color
           }
           .sock-icons{
-            svg{
+            svg.anim-svg{
               path{
                 fill: $emphasis-color;
               }
@@ -183,7 +183,7 @@
             border-color: #fff;
           }
           .sock-icons{
-            svg{
+            svg.anim-svg{
               path{
                 fill: #fff;
               }
@@ -194,7 +194,7 @@
       
       .plan-5{
         .sock-icons{
-          svg{
+          svg.anim-svg{
             margin: 0 -15px;
           }
         }
@@ -223,7 +223,7 @@
       left: 50%;
       margin-left: -25px;
     }
-    svg{
+    svg.anim-svg{
       position: absolute;
       top:-16px;
       left: 50%;
@@ -232,41 +232,57 @@
   }
   .style-pic{
     position: relative;
-    width: 100%;
+    width: 100px;
+    margin: 0 auto;
+    height:177px;
     img{
       width: 100%;
     }
-    .style-desc{
-      opacity: 0.0;
+    svg{
+      path, rect, line, polygon, polyline, circle{
+        fill: #346355;
+        transition: fill 300ms ease-in;
+      }
+    }
+    
+  }
+  .argyle{
+    svg{
+      -ms-transform:rotate(90deg); /* IE 9 */
+      -webkit-transform:rotate(90deg); /* Chrome, Safari, Opera */
+      transform:rotate(90deg); /* Standard syntax */
+      float: right;
       position: absolute;
-      height: 100%;
-      width: 100%;
-      -webkit-transition: opacity 100ms ease-in-out;
-      -moz-transition: opacity 100ms ease-in-out;
-      -o-transition: opacity 100ms ease-in-out;
-      -ms-transition: opacity 100ms ease-in-out;
-      transition: opacity 100ms ease-in-out;
-      .overlay{
-        position: absolute;
-        background-color: white;
-        opacity: 0.8;
-        height: 100%;
-        width: 100%;
-      }
-      .style-name{
-        position: absolute;
-        margin: 0 auto;
-        text-align: center;
-        width: 100%;
-        height: 100%;
-        padding: 20% 0;
-        h4{
-          color:$primary-color;
-          font-weight: 400;
-          font-size: 18px;
-          letter-spacing: 0px;
-        }
-      }
+      right: -55px;
+      top: 50px;
+      clear: both;
+    }
+  }
+  .argyle > svg:first-child{
+    float: left;
+    position: absolute;
+    left: -55px;
+    top: 50px;
+    clear: both;
+  }
+  .polkadots{
+    padding-top: 55px;
+    svg{
+      margin-top: -43px;
+    }
+  }
+  .mustache{
+    padding-top: 15px;
+    svg{
+      display: block;
+      margin-top: 4px;
+    }
+  }
+  .stripes{
+    overflow: hidden;
+    padding-top: 47px;
+    svg{
+      margin-top:-33px;
     }
   }
   .fs-continue{
@@ -295,3 +311,14 @@
 .fs-form-wrap{
   background-color: $accent-color;
 }
+
+.ac-custom input[type="checkbox"]:checked + label {
+  .style-pic{
+    svg{
+      path, rect, line, polygon, polyline, circle{
+        fill: #fff;
+      }
+    }
+  }
+  
+} 

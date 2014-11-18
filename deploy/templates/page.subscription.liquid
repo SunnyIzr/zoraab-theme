@@ -98,7 +98,7 @@
               <h3 class="fs-field-label fs-anim-upper" for="q2" data-info="We won't send you spam, we promise...">What's your email address?</h3>
               <input class="fs-anim-lower" id="q2" name="q2" type="email" placeholder="ronald@mcdonalds.com" required/>
             </li> -->
-            <li class='who-question'>
+<!--             <li class='who-question'>
               <h3 class="fs-field-label fs-anim-upper" for="q3">Who is this for?</h3>
                 <ul>
                   <li><input id="q3a" class='fs-anim-lower' name="q3" type="radio"><label class='radioBtn fs-anim-lower' for="q3a">ME</label></li>
@@ -108,30 +108,27 @@
                   <input class="fs-anim-lower" id="q3c" name="q3c" type="text" placeholder="Recipient's Name"/>
                   <textarea class="fs-anim-lower" id="q3d" name="q3d" placeholder="Special gift message..."></textarea>
                 </div>      
-            </li>
+            </li> -->
             <li class='style-question'>
               <h3 class="fs-field-label fs-anim-upper" for='q4'>Pick your sock style:</h3>
               <ul class='style-list'>
-                {% assign indices = '0,1,2,3' | split: ','%}
                 {% assign styles = 'casual,business,fashion,wild' | split: ',' %}
-                {% assign style_titles = 'Laid Back,Strictly Business,Fashion Statement,Walk on the Wild Side' | split: ',' %}
-                {% for index in indices %}
-                {% assign i = index | times:1 %}
+                {% assign style_titles = 'Laid Back,Strictly<br/>Business,Fashion Statement,Walk on the<br/>Wild Side' | split: ',' %}
+                {% assign patterns = 'stripes,argyle,polkadots,mustache' | split: ',' %}
+                {% assign pattern_counts = '2,2,2,5' | split: ',' %}
+                {% for i in (0..3) %}
+                {% assign n = pattern_counts[i] | times: 1 %}
                   <li>
                     <input id="{{ 'q4-' | append: i}}" name="{{ 'q4-' | append: i}}" type="checkbox" class='style' name='style[]' value='{{ styles[i] }}'>
                     <label class='fs-anim-lower' for="{{ 'q4-' | append: i}}">
-                    <div class='style-pic'>
-                      <div class='style-desc'>
-                        <div class='overlay'>
-                        </div>
-                        <div class="style-name">
-                          <h4>{{ style_titles[i] }}</h4>
-                        </div>
+                      <div class='style-pic {{patterns[i]}}'>
+                        {% assign icon = patterns[i] | prepend: 'icon_' %}
+                        {% for num in (1..n) %}
+                          {% include icon %}
+                        {% endfor %}
                       </div>
+                      <h4>{{ style_titles[i] }}</h4>
                     </label>
-                      {% assign img = styles[i] | prepend: 'sub_' | append: '.jpg' %}
-                      <img src="{{ img | asset_url }}" class='img-responsive'>
-                    </div>
                   </li>
                 {% endfor %}
               </ul>
