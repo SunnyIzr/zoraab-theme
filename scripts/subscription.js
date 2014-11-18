@@ -171,6 +171,7 @@ SubscriptionSummary = {
     } 
     if (pmtFreq == 'once'){
       $('.upfrontPmt').removeClass('hide')
+      SubscriptionSummary.updateSubTerm();
       SubscriptionSummary.calcUpfrontPrice();
     }
   },
@@ -179,6 +180,12 @@ SubscriptionSummary = {
     if (sockPlan == 2) { $('.finalPrice').html(20)}
     if (sockPlan == 3) { $('.finalPrice').html(29)}
     if (sockPlan == 5) { $('.finalPrice').html(45)}
+  },
+  updateSubTerm: function(){
+    term = $('input[name="term"]:checked').val()
+    if (term == '3months') {$('.num-of-months').html('3 months')}
+    if (term == '9months') {$('.num-of-months').html('9 months')}
+    if (term == '1year') {$('.num-of-months').html('1 year')}
   },
   calcUpfrontPrice: function(){
     sockPlan = parseInt($('input[name="sockNum"]:checked').val())
