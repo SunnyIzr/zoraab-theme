@@ -59,6 +59,7 @@
       cursor: pointer;
       transition: background-color 300ms ease-out;
       vertical-align: top;
+      position: relative;
       .price-heading{
         transition: background-color 300ms ease-out;
         color: #fff;
@@ -90,6 +91,9 @@
       }
       .cancel{
         font-style: italic;
+        position: absolute;
+        bottom: 15px;
+        width: 100%;
       }
       svg{
         path,polygon{
@@ -162,7 +166,7 @@
 @media (max-width: 1200px) {
   #subscription{
     .sub-plans{
-      li{
+      .single-plan{
         margin: 0 10px;
         width: 22%;
       }
@@ -174,9 +178,27 @@
 @media (max-width: 992px) { 
   #subscription{
     .sub-plans{
-      li{
-        margin: 0 7px;
-        width: 22%;
+      .single-plan{
+        margin: 0 2px;
+        width: 24%;
+        .icon-sock{
+          width: 45px;
+        }
+        .icon-boxers-heart{
+        }
+        .icon-surprise{
+        }
+        .icon-bowtie{
+          margin-left: -5px;
+          margin-right: -5px;
+          width: 65px;
+        }
+        .sox-and-boxers-free-ship{
+          margin-top: -16px;
+        }
+        ul{
+          width: 100%;
+        }
       }
     }
   }
@@ -185,10 +207,28 @@
 // SMALL PHONES
 @media (max-width: 768px) {
   #subscription{
-    .sub-plans{
+    .featured-sub-products{
       li{
+        margin: 0 15px;
+      }
+    }
+    .sub-plans{
+      .single-plan{
         margin: 0 0 15px;
         width: 100%;
+        min-height: 380px;
+        .icon-surprise{
+          width: 50px;
+        }
+        .icon-boxers-heart{
+          width: 55px;
+        }
+        p{
+          margin: 5px auto;
+        }
+        .make-full-width{
+          width: 100%;
+        }
       }
     }
   }

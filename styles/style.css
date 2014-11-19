@@ -2310,6 +2310,7 @@ div.cs-skin-boxes:focus > span {
   cursor: pointer;
   transition: background-color 300ms ease-out;
   vertical-align: top;
+  position: relative;
 }
 #subscription .sub-plans .single-plan .price-heading {
   transition: background-color 300ms ease-out;
@@ -2342,6 +2343,9 @@ div.cs-skin-boxes:focus > span {
 }
 #subscription .sub-plans .single-plan .cancel {
   font-style: italic;
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
 }
 #subscription .sub-plans .single-plan svg path, #subscription .sub-plans .single-plan svg polygon {
   fill: #404041;
@@ -2400,20 +2404,50 @@ div.cs-skin-boxes:focus > span {
 }
 
 @media (max-width: 1200px) {
-  #subscription .sub-plans li {
+  #subscription .sub-plans .single-plan {
     margin: 0 10px;
     width: 22%;
   }
 }
 @media (max-width: 992px) {
-  #subscription .sub-plans li {
-    margin: 0 7px;
-    width: 22%;
+  #subscription .sub-plans .single-plan {
+    margin: 0 2px;
+    width: 24%;
+  }
+  #subscription .sub-plans .single-plan .icon-sock {
+    width: 45px;
+  }
+  #subscription .sub-plans .single-plan .icon-bowtie {
+    margin-left: -5px;
+    margin-right: -5px;
+    width: 65px;
+  }
+  #subscription .sub-plans .single-plan .sox-and-boxers-free-ship {
+    margin-top: -16px;
+  }
+  #subscription .sub-plans .single-plan ul {
+    width: 100%;
   }
 }
 @media (max-width: 768px) {
-  #subscription .sub-plans li {
+  #subscription .featured-sub-products li {
+    margin: 0 15px;
+  }
+  #subscription .sub-plans .single-plan {
     margin: 0 0 15px;
+    width: 100%;
+    min-height: 380px;
+  }
+  #subscription .sub-plans .single-plan .icon-surprise {
+    width: 50px;
+  }
+  #subscription .sub-plans .single-plan .icon-boxers-heart {
+    width: 55px;
+  }
+  #subscription .sub-plans .single-plan p {
+    margin: 5px auto;
+  }
+  #subscription .sub-plans .single-plan .make-full-width {
     width: 100%;
   }
 }
