@@ -5,14 +5,6 @@
 
 
 .subscription-form{
-  .fs-form-wrap{
-    .fs-title{
-      padding: 10px;
-    }
-    .fs-form{
-      width: 85%;
-    }
-  }
   opacity: 0.0;
   width: 100%;
   height: 100%;
@@ -21,6 +13,14 @@
   left: 0;
   z-index:-50;
   transition: opacity 300ms ease-out;
+  .fs-form-wrap{
+    .fs-title{
+      padding: 10px;
+    }
+    .fs-form{
+      width: 85%;
+    }
+  }
   .close-form{
     svg{
       path{
@@ -36,6 +36,22 @@
       }
     }
   }
+    
+  .fs-continue{
+    border-radius: 0px;
+    border-color: #58a890;
+    color: #58a890;
+    transition: all ease-in 300ms;
+  }
+  .fs-continue:hover{
+    border-color: #fff;
+    background-color: transparent;
+    color: #fff;
+  }
+  .fs-message-error{
+    top: 12%;
+    left: 49%;
+  }
   h3{
     font-size: 50px;
     font-weight: 300;
@@ -49,118 +65,6 @@
         padding-top: 0.5em;
         padding-bottom: 0.5em;
       }
-    }
-  }
-  .payment-question{
-    width: 120% !important;
-    ul.freq-options{
-      width: 40%;
-      border-right: 1px solid transparent;
-      text-align: left;
-      margin: 0;
-      float:left;
-      transition: border-color 300ms ease-in;
-    }
-    .payment-options{
-      float: right;
-      text-align: left;
-      width: 54%;
-      z-index: -100;
-      opacity: 0.0;
-      transition: opacity 300ms ease-in;
-      ul{
-        padding: 0;
-        li{
-          display: inline-block;
-          width: 31%;
-          label{
-            margin: 0;
-            padding: 0;
-            width: 100%;
-          }
-          label::before{
-            display: none;
-          }
-          svg.anim-svg{
-            display: none;
-          }
-          .time-box{
-            list-style: none;
-            border: 1px solid #346355;
-            width: 100%;
-            height: 100%;
-            padding-bottom: 0;
-            transition: background-color 300ms, border-color 300ms, ease-in;
-            text-align: center;
-            h4{
-              margin: 10px auto 5px;
-              font-weight: 400;
-              font-size: 30px;
-              transition: color 300ms ease-in;
-              font-family: $fun-font;
-              color: #346355;
-            }
-            h5{
-              margin-top: 5px;
-              transition: color 300ms ease-in;
-              color: #346355;
-            }
-            .price-footer{
-              width: 90%;
-              border-top: 1px solid #346355;
-              color: #346355;
-              font-size: 28px;
-              font-weight: 400;
-              padding: 10px 0;
-              font-family: $fun-font;
-              margin: 0 auto;
-              transition: border-color 300ms, color 300ms, ease-in;
-            }
-          }
-        }
-        li.active{
-          .time-box{
-            background-color: #58a890;
-            border-color: #58a890;
-            h4{
-              color: #fff;
-            }
-            h5{
-              color: #fff;
-            }
-            .price-footer{
-              border-color: #fff;
-            }
-          }
-        }
-      }
-        
-    }
-    .checkout-sub-btn{
-      .btn{
-        font-size: 30px;
-        padding: 20px 35px;
-        margin-top: 35px;
-      }
-      .btn-info{
-        background-color: transparent;
-        border: 2px solid $emphasis-color;
-        transition: all 300ms ease-in;
-        color: $emphasis-color;
-      }
-      .btn-info.active{
-        background-color: $emphasis-color;
-        color: #fff;
-      }
-    }
-  }
-  .payment-question.paying-once{
-    ul.freq-options{
-      border-color: #fff;
-    }
-    .payment-options{
-      z-index: inherit;
-      opacity: 1.0
     }
   }
   .who-question{
@@ -201,6 +105,89 @@
   .style-question{
     ul{
       margin-left: -5%;
+    }
+    .style-list{
+      list-style: none;
+      padding: 0;
+      width: 117%;
+      text-align: center;
+      li{
+        display: inline-block;
+        width: 20%;
+        margin: 30px 10px 0;
+        img{
+          border: 1px solid $faded-color;
+        }
+      }
+      label{
+        padding: 0;
+      }
+      label:before{
+        position: absolute;
+        top: -34px;
+        left: 50%;
+        margin-left: -25px;
+      }
+      svg.anim-svg{
+        position: absolute;
+        top:-16px;
+        left: 50%;
+        margin-left: -20px;
+      }
+      .style-pic{
+        position: relative;
+        width: 100px;
+        margin: 0 auto;
+        height:177px;
+        img{
+          width: 100%;
+        }
+        svg{
+          path, rect, line, polygon, polyline, circle{
+            fill: #346355;
+            transition: fill 300ms ease-in;
+          }
+        } 
+      }
+       .argyle{
+        svg{
+          -ms-transform:rotate(90deg); /* IE 9 */
+          -webkit-transform:rotate(90deg); /* Chrome, Safari, Opera */
+          transform:rotate(90deg); /* Standard syntax */
+          float: right;
+          position: absolute;
+          right: -55px;
+          top: 50px;
+          clear: both;
+        }
+      }
+      .argyle > svg:first-child{
+        float: left;
+        position: absolute;
+        left: -55px;
+        top: 50px;
+        clear: both;
+      }
+      .polkadots{
+        padding-top: 55px;
+        svg{
+          margin-top: -43px;
+        }
+      }
+      .mustache{
+        padding-top: 15px;
+        svg{
+          display: block;
+          margin-top: 4px;
+        }
+      }
+      .stripes{
+        overflow: hidden;
+        padding-top: 47px;
+        svg{
+          margin-top:-33px;
+        }
+      }
     }
   }
   .quantity-question{
@@ -320,106 +307,118 @@
       }
     }
   }
-  .style-list{
-    list-style: none;
-    padding: 0;
-    width: 117%;
-    text-align: center;
-    li{
-      display: inline-block;
-      width: 20%;
-      margin: 30px 10px 0;
-      img{
-        border: 1px solid $faded-color;
-      }
+  .payment-question{
+    width: 120% !important;
+    ul.freq-options{
+      width: 40%;
+      border-right: 1px solid transparent;
+      text-align: left;
+      margin: 0;
+      float:left;
+      transition: border-color 300ms ease-in;
     }
-    label{
-      padding: 0;
-    }
-    label:before{
-      position: absolute;
-      top: -34px;
-      left: 50%;
-      margin-left: -25px;
-    }
-    svg.anim-svg{
-      position: absolute;
-      top:-16px;
-      left: 50%;
-      margin-left: -20px;
-    }
-  }
-  .style-pic{
-    position: relative;
-    width: 100px;
-    margin: 0 auto;
-    height:177px;
-    img{
-      width: 100%;
-    }
-    svg{
-      path, rect, line, polygon, polyline, circle{
-        fill: #346355;
-        transition: fill 300ms ease-in;
-      }
-    }
-    
-  }
-  .argyle{
-    svg{
-      -ms-transform:rotate(90deg); /* IE 9 */
-      -webkit-transform:rotate(90deg); /* Chrome, Safari, Opera */
-      transform:rotate(90deg); /* Standard syntax */
+    .payment-options{
       float: right;
-      position: absolute;
-      right: -55px;
-      top: 50px;
-      clear: both;
+      text-align: left;
+      width: 54%;
+      z-index: -100;
+      opacity: 0.0;
+      transition: opacity 300ms ease-in;
+      ul{
+        padding: 0;
+        li{
+          display: inline-block;
+          width: 31%;
+          label{
+            margin: 0;
+            padding: 0;
+            width: 100%;
+          }
+          label::before{
+            display: none;
+          }
+          svg.anim-svg{
+            display: none;
+          }
+          .time-box{
+            list-style: none;
+            border: 1px solid #346355;
+            width: 100%;
+            height: 100%;
+            padding-bottom: 0;
+            transition: background-color 300ms, border-color 300ms, ease-in;
+            text-align: center;
+            h4{
+              margin: 10px auto 5px;
+              font-weight: 400;
+              font-size: 30px;
+              transition: color 300ms ease-in;
+              font-family: $fun-font;
+              color: #346355;
+            }
+            h5{
+              margin-top: 5px;
+              transition: color 300ms ease-in;
+              color: #346355;
+            }
+            .price-footer{
+              width: 90%;
+              border-top: 1px solid #346355;
+              color: #346355;
+              font-size: 28px;
+              font-weight: 400;
+              padding: 10px 0;
+              font-family: $fun-font;
+              margin: 0 auto;
+              transition: border-color 300ms, color 300ms, ease-in;
+            }
+          }
+        }
+        li.active{
+          .time-box{
+            background-color: #58a890;
+            border-color: #58a890;
+            h4{
+              color: #fff;
+            }
+            h5{
+              color: #fff;
+            }
+            .price-footer{
+              border-color: #fff;
+            }
+          }
+        }
+      }
+        
+    }
+    .checkout-sub-btn{
+      .btn{
+        font-size: 30px;
+        padding: 20px 35px;
+        margin-top: 35px;
+      }
+      .btn-info{
+        background-color: transparent;
+        border: 2px solid $emphasis-color;
+        transition: all 300ms ease-in;
+        color: $emphasis-color;
+      }
+      .btn-info.active{
+        background-color: $emphasis-color;
+        color: #fff;
+      }
     }
   }
-  .argyle > svg:first-child{
-    float: left;
-    position: absolute;
-    left: -55px;
-    top: 50px;
-    clear: both;
-  }
-  .polkadots{
-    padding-top: 55px;
-    svg{
-      margin-top: -43px;
+  .payment-question.paying-once{
+    ul.freq-options{
+      border-color: #fff;
+    }
+    .payment-options{
+      z-index: inherit;
+      opacity: 1.0
     }
   }
-  .mustache{
-    padding-top: 15px;
-    svg{
-      display: block;
-      margin-top: 4px;
-    }
-  }
-  .stripes{
-    overflow: hidden;
-    padding-top: 47px;
-    svg{
-      margin-top:-33px;
-    }
-  }
-  .fs-continue{
-    border-radius: 0px;
-    border-color: #58a890;
-    color: #58a890;
-    transition: all ease-in 300ms;
-  }
-  .fs-continue:hover{
-    border-color: #fff;
-    background-color: transparent;
-    color: #fff;
-  }
-  .fs-message-error{
-    top: 12%;
-    left: 49%;
-  }
-  
   .order-summary-page{
     width: 122% !important;
     height: 600px;

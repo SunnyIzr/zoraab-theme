@@ -84,144 +84,15 @@
   </div>
 </div>
 
-<div id='socksOnly' class='subscription-form active'>
-      <div class="fs-form-wrap" id="fs-form-wrap">
-        <div class="fs-title">
-          <a href='#' class='close-form' data-target='#socksOnly'>{% include 'icon_close' %}</a>
-        </div>
-        <form id="myform" class="fs-form fs-form-full ac-custom ac-radio ac-fill ac-checkbox ac-boxfill" autocomplete="off">
-          <ol class="fs-fields">
-            <li>
-              <h3 class="fs-field-label fs-anim-upper" for="q1">What's your name?</h3>
-              <input class="fs-anim-lower" id="q1" name="q1" type="text" placeholder="Ronald McDonald" required/>
-            </li>
-            <li>
-              <h3 class="fs-field-label fs-anim-upper" for="q2" data-info="We won't send you spam, we promise...">What's your email address?</h3>
-              <input class="fs-anim-lower" id="q2" name="q2" type="email" placeholder="ronald@mcdonalds.com" required/>
-            </li>
-            <li class='who-question'>
-              <h3 class="fs-field-label fs-anim-upper" for="q3">Who is this for?</h3>
-                <ul class='fs-anim-lower'>
-                  <li><input id="q3a" class='fs-anim-lower' name="q3" type="radio"><label class='radioBtn fs-anim-lower' for="q3a">ME</label></li>
-                  <li><input class='fs-anim-lower' id="q3b" name="q3" type="radio"><label class='radioBtn fs-anim-lower' for="q3b">GIFT</label></li>
-                </ul>
-                <div class='gift-options'>
-                  <input class="fs-anim-lower" id="q3c" name="q3c" type="text" placeholder="Recipient's Name"/>
-                  <textarea class="fs-anim-lower" id="q3d" name="q3d" placeholder="Special gift message..."></textarea>
-                </div>      
-            </li>
-            <li class='style-question'>
-              <h3 class="fs-field-label fs-anim-upper" for='q4'>Pick your sock style:</h3>
-              <ul class='style-list'>
-                {% assign styles = 'casual,business,fashion,wild' | split: ',' %}
-                {% assign style_titles = 'Laid Back,Strictly<br/>Business,Fashion Statement,Walk on the<br/>Wild Side' | split: ',' %}
-                {% assign patterns = 'stripes,argyle,polkadots,mustache' | split: ',' %}
-                {% assign pattern_counts = '2,2,2,5' | split: ',' %}
-                {% for i in (0..3) %}
-                {% assign n = pattern_counts[i] | times: 1 %}
-                  <li>
-                    <input id="{{ 'q4-' | append: i}}" type="checkbox" class='style' name='style[]' value='{{ styles[i] }}'>
-                    <label class='fs-anim-lower' for="{{ 'q4-' | append: i}}">
-                      <div class='style-pic {{patterns[i]}}'>
-                        {% assign icon = patterns[i] | prepend: 'icon_' %}
-                        {% for num in (1..n) %}
-                          {% include icon %}
-                        {% endfor %}
-                      </div>
-                      <h4>{{ style_titles[i] }}</h4>
-                    </label>
-                  </li>
-                {% endfor %}
-              </ul>
-            </li>
-            <li class='quantity-question'>
-              <h3 class="fs-field-label fs-anim-upper">How many pairs of socks?</h3>
-                <ul>
-                {% assign plans = '2,3,5' | split: ',' %}
-                {% assign prices = '20,29,45' | split: ','%}
-                {% for i in (0..2) %}
-                  <li class='plan-{{plans[i]}} fs-anim-lower'>
-                    <input id="sockNum-{{plans[i]}}" class='' name="sockNum" type="radio" value='{{plans[i]}}'>
-                    <label class='radioBtn' for="sockNum-{{plans[i]}}">
-                      <div class='quantity-box'>
-                        <div class='sock-icons'>
-                          {% assign num = plans[i] | times: 1 %}
-                          {% for n in (1..num) %}
-                            {% include 'icon_sock' %}
-                          {% endfor %}
-                        </div>
-                        <h4>{{ plans[i] }} pairs</h4>
-                        <h5 class='price-footer'>${{ prices[i] }} / month</h5>
-                      </div>
-                    </label>
-                  </li>
-                {% endfor %}
-                </ul>   
-            </li>
-            <li class='payment-question'>
-              <h3 class="fs-field-label fs-anim-upper">How often do you want to pay?</h3>
-              <ul class='freq-options fs-anim-lower'>
-                <li><input id="monthly" class='fs-anim-lower' name="payment" type="radio" value='monthly'><label class='radioBtn fs-anim-lower' for="monthly">Monthly</label></li>
-                <li><input class='fs-anim-lower' id="once" name="payment" type="radio" value='once'><label class='radioBtn fs-anim-lower' for="once">Once</label></li>
-              </ul>
-              <div class='payment-options'>
-                <ul>
-                  {% assign counts = '3,9,1' | split: ',' %}
-                  {% assign times = 'months,months,year' | split: ',' %}
-                  {% assign prices = '60,180,240' | split: ',' %}
-                  {% for i in (0..2) %}
-                  <li>
-                    <input id="{{counts[i]}}{{times[i]}}" class='fs-anim-lower' name="term" type="radio" value='{{counts[i]}}{{times[i]}}'>
-                    <label class='radioBtn fs-anim-lower' for="{{counts[i]}}{{times[i]}}">
-                      <div class='time-box'>
-                        <h4 class='price-num'>{{ counts[i] }}</h4>
-                        <h5>{{ times[i] }}</h5>
-                        <h5 class='price-footer'>$<span class='price-plan-{{ counts[i] }}'>{{ prices[i] }}</span></h5>
-                      </div>
-                    </label>
-                  </li>
-                  {% endfor %}
-                </ul>
-              </div> 
-            </li>
-            <li class='order-summary-page'>
-              <h3 class="fs-field-label fs-anim-upper">Okay <span class='subscriberName'></span> you signed up for:</h3>
-              <div class='order-summary-wrapper fs-anim-lower'>
-                <div class='sub-order-summary'>
-                  <div class='chosen-box'>
-                    <h4>BOX</h4>
-                    <div class='quantity-box'>
-                      <div class='acc-icons'>
-                      </div>
-                      <h5><span class='number-of-socks'>2</span> pairs<br/>/<br/>month</h5>
-                    </div>
-                  </div>
-                  <div class='chosen-style'>
-                    <h4>STYLE</h4>
-                    <div class='style-icons'>
-                      <span id='summcasual' class='hide'>{% include 'icon_stripes' %}</span>
-                      <span id='summfashion' class='hide'>{% include 'icon_polkadots' %}</span>
-                      <span id='summwild' class='hide'>{% include 'icon_mustache' %}</span>
-                      <span id='summbusiness' class='hide'>{% include 'icon_argyle' %}</span>
-                    </div>
-                  </div>
-                </div>
-                <div class='payment-summary'>
-                  <h4>PAYMENT</h4>
-                  <h5 class='upfrontPmt hide'>Pay Once - <span class='num-of-months'>3 months</span></h5>
-                  <h5 class='monthlyPmt hide'>Pay Monthly</br/><span class='cancel-anytime'>Cancel Anytime</span></h5>
-                  <h4 class='subtotal-amt'>
-                    Total:<br/>
-                    <span class='num'>$<span class='finalPrice'></span></span><span class='per-month monthlyPmt hide'>/ month</span>
-                  </h4>
-                </div>
-                <div class='sub-checkout-btn'>
-                  <a href='#' class='btn btn-lg btn-info'>PAY NOW</a>
-                </div>
-              </div>
-            </li>
-          </ol><!-- /fs-fields -->
-          <button class="fs-submit" type="submit">Send answers</button>
-        </form><!-- /fs-form -->
-      </div><!-- /fs-form-wrap -->
+<div id='socksOnly' class='subscription-form'>
+  {% include 'sub_full_form' with 'socksOnly' %}
+</div>
+<div id='socksAndBoxers' class='subscription-form'>
+  {% include 'sub_full_form' with 'socksAndBoxers' %}
+</div>
+<div id='accsOnly' class='subscription-form'>
+  {% include 'sub_full_form' with 'accsOnly' %}
+</div>
+<div id='starterKit' class='subscription-form'>
+  {% include 'sub_full_form' with 'starterKit' %}
 </div>

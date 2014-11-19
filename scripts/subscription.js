@@ -13,7 +13,61 @@ SubscriptionController = {
   activateFullForm: function(){
     if ($('.featured-sub-products').size() > 0) {
      (function() {
-        var formWrap = document.getElementById( 'fs-form-wrap' );
+        var formWrap = document.getElementById( 'fs-form-wrap-socksOnly' );
+
+        [].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {  
+          new SelectFx( el, {
+            stickyPlaceholder: false,
+            onChange: function(val){
+              document.querySelector('span.cs-placeholder').style.backgroundColor = val;
+            }
+          });
+        } );
+
+        new FForm( formWrap, {
+          onReview : function() {
+            classie.add( document.body, 'overview' ); // for demo purposes only
+          }
+        } );
+      })(); 
+      (function() {
+        var formWrap = document.getElementById( 'fs-form-wrap-socksAndBoxers' );
+
+        [].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {  
+          new SelectFx( el, {
+            stickyPlaceholder: false,
+            onChange: function(val){
+              document.querySelector('span.cs-placeholder').style.backgroundColor = val;
+            }
+          });
+        } );
+
+        new FForm( formWrap, {
+          onReview : function() {
+            classie.add( document.body, 'overview' ); // for demo purposes only
+          }
+        } );
+      })();
+      (function() {
+        var formWrap = document.getElementById( 'fs-form-wrap-accsOnly' );
+
+        [].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {  
+          new SelectFx( el, {
+            stickyPlaceholder: false,
+            onChange: function(val){
+              document.querySelector('span.cs-placeholder').style.backgroundColor = val;
+            }
+          });
+        } );
+
+        new FForm( formWrap, {
+          onReview : function() {
+            classie.add( document.body, 'overview' ); // for demo purposes only
+          }
+        } );
+      })();
+      (function() {
+        var formWrap = document.getElementById( 'fs-form-wrap-starterKit' );
 
         [].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {  
           new SelectFx( el, {
