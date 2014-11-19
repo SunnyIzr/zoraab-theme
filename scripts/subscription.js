@@ -7,7 +7,6 @@ SubscriptionController = {
     this.sockPlanChecked();
     this.subFreqOptChecked();
     this.subTermChecked();
-    // this.hideLastContinueBtn();
     this.closeForm();
     this.updateUpfronts();
   },
@@ -76,15 +75,6 @@ SubscriptionController = {
       $(this).parent().addClass('active')
     })
   },
-  hideLastContinueBtn: function(){
-    $('.fs-continue').click(function(e){
-      console.log('running')
-      console.log($('.order-summary-page').css('visibility'))
-      if ( $('.order-summary-page').css('visibility') == 'visible') {
-        $('.fs-controls').hide();
-      }
-    })
-  },
   closeForm: function(){
     $('.close-form').click(function(e){
       e.preventDefault();
@@ -140,6 +130,7 @@ SubscriptionSummary = {
     this.getStyles();
     this.getSockPlan();
     this.getPmtPlan();
+    this.hideLastContinueBtn();
   },
   getSubName: function(){
     firstName = $('#q1').val().split(' ')[0]
@@ -205,7 +196,14 @@ SubscriptionSummary = {
       if (term == '9months') { $('.finalPrice').html(405)}
       if (term == '1year') { $('.finalPrice').html(540)}
     }
-  }
+  },
+  hideLastContinueBtn: function(){
+    $('.fs-continue').click(function(e){
+      if ( $('.order-summary-page').css('visibility') == 'visible') {
+        $('.fs-controls').hide();
+      }
+    })
+  },
 }
 
 

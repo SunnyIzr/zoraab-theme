@@ -5,6 +5,14 @@
 
 
 .subscription-form{
+  .fs-form-wrap{
+    .fs-title{
+      padding: 10px;
+    }
+    .fs-form{
+      width: 85%;
+    }
+  }
   opacity: 0.0;
   width: 100%;
   height: 100%;
@@ -56,7 +64,7 @@
     .payment-options{
       float: right;
       text-align: left;
-      width: 49%;
+      width: 54%;
       z-index: -100;
       opacity: 0.0;
       transition: opacity 300ms ease-in;
@@ -200,6 +208,7 @@
       list-style: none;
       width: 125%;
       text-align: center;
+      margin-left: -25px;
       li{
         padding: 0;
         display: inline-block;
@@ -531,3 +540,274 @@
   }
   
 } 
+
+
+
+// MEDIUM DESKTOPS
+@media (max-width: 1200px) {
+
+} 
+
+// TABLETS
+@media (max-width: 992px) { 
+  .subscription-form{
+    h3{
+      margin-left: -10px;
+      font-size: 35px;
+    }
+    input{
+      font-size: 35px;
+    }
+    .fs-form-wrap{
+      .fs-form{
+        width: 100%;
+      }
+    }
+    .basic-questions{}
+    .who-question{
+      .gift-options{
+        margin-right: 7%;
+      }
+    }
+    .style-question{}
+    .quantity-question{
+      ul{
+        margin-left: -40px;
+        li{
+          width: 29%;
+        }
+      }
+    }
+    .payment-question{
+      h3{
+        width: 100%;
+      }
+      .payment-options{
+        margin-right: 4%;
+      }
+    }
+    .order-summary-page{
+      .sub-order-summary{
+        .chosen-box{
+          .quantity-box{
+            .acc-icons{
+              svg{
+                margin: 0 -10px;
+              }
+            }
+            .acc-icons.plan-5{
+              svg{
+                margin: 0 -15px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+} 
+
+// SMALL PHONES
+@media (max-width: 768px) {
+  .subscription-form{
+    .fs-message-error{
+      top: 14%;
+      left: -24px;
+      font-size: 15px;
+      height: 10px;
+    }
+    h3{
+      font-size: 27px;
+      margin-bottom: 40px;
+    }
+    input{
+      font-size: 27px;
+    }
+    label{
+      font-size: 27px;
+    }
+    .ac-custom{
+      label{
+        padding: 0 0 0 55px;
+      }
+      label::before{
+        width: 40px;
+        height: 40px;
+        margin-top: -20px;
+      }
+      svg.anim-svg{
+        width: 35px;
+        height: 35px;
+        margin-top: -22px;
+        left: 4px;
+      }
+    }
+    .fs-form-wrap{
+      .fs-title{
+        padding: 0;
+        svg{
+          width:18%;
+        }
+      }
+      .fs-form{
+        width: 80%;
+        float: left;
+      }
+      .fs-form-full{
+        left: 4%;
+      }
+      .ac-custom{
+        padding: 0;
+      }
+    }
+    .basic-questions{}
+    .who-question{
+      ul{
+        width: 100%;
+      }
+      .gift-options{
+        width: 75%;
+        float: left;
+        height: 100px;
+        input{
+          font-size: 27px;
+        }
+        textarea{
+          font-size: 24px;
+        }
+      }
+    }
+    .who-question.gifted{
+      ul{
+        border-color: transparent;
+      }
+      textarea{
+        display: none;
+      }
+    }
+    .style-question{
+      .style-list{
+        text-align: left;
+        width: 100%;
+        padding-left: 35px;
+        li{
+          width: 100%;
+          padding: 0;
+          margin: 0;
+          input{
+            margin-top: -50px;
+          }
+          label{
+            padding: 0;
+          }
+          label::before{
+            top: 0;
+            left: 0;
+            margin-left: 0;
+          }
+          svg.anim-svg{
+            width: 30px;
+            height: 30px;
+            margin-top: 1px;
+            left: 25px;
+          }
+          .style-pic{
+            display: none;
+          }
+          h4{
+            margin-left: 57px;
+            margin-top:-10px;
+            br{
+              display: none;
+            }
+          }
+        }
+      }
+    }
+    .quantity-question{
+      ul{
+        li{
+          margin: 0 3px;
+          width: 23%;
+          .quantity-box{
+            h4{
+              font-size: 18px;
+            }
+            .price-footer{
+              font-size: 18px;
+            }
+          }
+          .icon-sock{
+            display: none;
+          }
+        }
+      }
+    }
+    .payment-question{
+      .freq-options{
+        width: 100%;
+      }
+      .payment-options{
+        width: 85%;
+        left: 2%;
+        float: left;
+      }
+    }
+    .payment-question.paying-once{
+      ul.freq-options{
+        border-color: transparent;
+      }
+    }
+    .order-summary-page{
+      .order-summary-wrapper{
+        margin-top: -40px;
+      }
+      .sub-order-summary{
+        width: 100%;
+        h4{
+          font-size: 22px;
+        }
+        .chosen-box{
+          width: 75%;
+          margin-bottom: 20px;
+          .quantity-box{
+            padding: 0;
+            background-color: transparent;
+            text-align: left;
+            svg{
+              display: none;
+            }
+            h5{
+              font-size: 18px;
+              br{
+                display: none;
+              }
+            }
+          }
+        }
+        .chosen-style{
+          width: 75%;
+          float: left;
+          padding-left: 15px;
+          display: none;
+        }
+      }
+      .payment-summary{
+        width: 75%;
+        float: left;
+        padding-left: 15px;
+        h4{
+          font-size: 22px;
+        }
+        .subtotal-amt{
+          margin-top: 25px;
+          font-size: 35px;
+        }
+      }
+    }
+  }
+} 
+
+// IPHONE
+@media (max-width: 450px) {
+}

@@ -1065,30 +1065,6 @@ input[type=text]::-ms-clear {
 
 /* Adjust form for smaller screens */
 @media screen and (max-width: 52.5em) {
-  body {
-    min-height: 500px;
-  }
-
-  .fs-form-wrap {
-    font-size: 70%;
-  }
-
-  .fs-form {
-    top: 6em;
-    right: 2em;
-    left: 0;
-    padding: 0 3.75em 0 1em;
-    width: auto;
-    font-size: 2em;
-  }
-
-  .fs-form.fs-form-overview {
-    top: 0;
-    right: 0;
-    padding: 1.5em 1em 8em 1em;
-    font-size: 1.5em;
-  }
-
   .fs-title {
     padding: 20px;
   }
@@ -1596,6 +1572,12 @@ div.cs-skin-boxes:focus > span {
   z-index: -50;
   transition: opacity 300ms ease-out;
 }
+.subscription-form .fs-form-wrap .fs-title {
+  padding: 10px;
+}
+.subscription-form .fs-form-wrap .fs-form {
+  width: 85%;
+}
 .subscription-form .close-form svg path {
   fill: #346355;
   transition: fill 300ms ease-in;
@@ -1628,7 +1610,7 @@ div.cs-skin-boxes:focus > span {
 .subscription-form .payment-question .payment-options {
   float: right;
   text-align: left;
-  width: 49%;
+  width: 54%;
   z-index: -100;
   opacity: 0.0;
   transition: opacity 300ms ease-in;
@@ -1759,6 +1741,7 @@ div.cs-skin-boxes:focus > span {
   list-style: none;
   width: 125%;
   text-align: center;
+  margin-left: -25px;
 }
 .subscription-form .quantity-question ul li {
   padding: 0;
@@ -2059,6 +2042,213 @@ div.cs-skin-boxes:focus > span {
   fill: #fff;
 }
 
+@media (max-width: 992px) {
+  .subscription-form h3 {
+    margin-left: -10px;
+    font-size: 35px;
+  }
+  .subscription-form input {
+    font-size: 35px;
+  }
+  .subscription-form .fs-form-wrap .fs-form {
+    width: 100%;
+  }
+  .subscription-form .who-question .gift-options {
+    margin-right: 7%;
+  }
+  .subscription-form .quantity-question ul {
+    margin-left: -40px;
+  }
+  .subscription-form .quantity-question ul li {
+    width: 29%;
+  }
+  .subscription-form .payment-question h3 {
+    width: 100%;
+  }
+  .subscription-form .payment-question .payment-options {
+    margin-right: 4%;
+  }
+  .subscription-form .order-summary-page .sub-order-summary .chosen-box .quantity-box .acc-icons svg {
+    margin: 0 -10px;
+  }
+  .subscription-form .order-summary-page .sub-order-summary .chosen-box .quantity-box .acc-icons.plan-5 svg {
+    margin: 0 -15px;
+  }
+}
+@media (max-width: 768px) {
+  .subscription-form .fs-message-error {
+    top: 14%;
+    left: -24px;
+    font-size: 15px;
+    height: 10px;
+  }
+  .subscription-form h3 {
+    font-size: 27px;
+    margin-bottom: 40px;
+  }
+  .subscription-form input {
+    font-size: 27px;
+  }
+  .subscription-form label {
+    font-size: 27px;
+  }
+  .subscription-form .ac-custom label {
+    padding: 0 0 0 55px;
+  }
+  .subscription-form .ac-custom label::before {
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+  }
+  .subscription-form .ac-custom svg.anim-svg {
+    width: 35px;
+    height: 35px;
+    margin-top: -22px;
+    left: 4px;
+  }
+  .subscription-form .fs-form-wrap .fs-title {
+    padding: 0;
+  }
+  .subscription-form .fs-form-wrap .fs-title svg {
+    width: 18%;
+  }
+  .subscription-form .fs-form-wrap .fs-form {
+    width: 80%;
+    float: left;
+  }
+  .subscription-form .fs-form-wrap .fs-form-full {
+    left: 4%;
+  }
+  .subscription-form .fs-form-wrap .ac-custom {
+    padding: 0;
+  }
+  .subscription-form .who-question ul {
+    width: 100%;
+  }
+  .subscription-form .who-question .gift-options {
+    width: 75%;
+    float: left;
+    height: 100px;
+  }
+  .subscription-form .who-question .gift-options input {
+    font-size: 27px;
+  }
+  .subscription-form .who-question .gift-options textarea {
+    font-size: 24px;
+  }
+  .subscription-form .who-question.gifted ul {
+    border-color: transparent;
+  }
+  .subscription-form .who-question.gifted textarea {
+    display: none;
+  }
+  .subscription-form .style-question .style-list {
+    text-align: left;
+    width: 100%;
+    padding-left: 35px;
+  }
+  .subscription-form .style-question .style-list li {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .subscription-form .style-question .style-list li input {
+    margin-top: -50px;
+  }
+  .subscription-form .style-question .style-list li label {
+    padding: 0;
+  }
+  .subscription-form .style-question .style-list li label::before {
+    top: 0;
+    left: 0;
+    margin-left: 0;
+  }
+  .subscription-form .style-question .style-list li svg.anim-svg {
+    width: 30px;
+    height: 30px;
+    margin-top: 1px;
+    left: 25px;
+  }
+  .subscription-form .style-question .style-list li .style-pic {
+    display: none;
+  }
+  .subscription-form .style-question .style-list li h4 {
+    margin-left: 57px;
+    margin-top: -10px;
+  }
+  .subscription-form .style-question .style-list li h4 br {
+    display: none;
+  }
+  .subscription-form .quantity-question ul li {
+    margin: 0 3px;
+    width: 23%;
+  }
+  .subscription-form .quantity-question ul li .quantity-box h4 {
+    font-size: 18px;
+  }
+  .subscription-form .quantity-question ul li .quantity-box .price-footer {
+    font-size: 18px;
+  }
+  .subscription-form .quantity-question ul li .icon-sock {
+    display: none;
+  }
+  .subscription-form .payment-question .freq-options {
+    width: 100%;
+  }
+  .subscription-form .payment-question .payment-options {
+    width: 85%;
+    left: 2%;
+    float: left;
+  }
+  .subscription-form .payment-question.paying-once ul.freq-options {
+    border-color: transparent;
+  }
+  .subscription-form .order-summary-page .order-summary-wrapper {
+    margin-top: -40px;
+  }
+  .subscription-form .order-summary-page .sub-order-summary {
+    width: 100%;
+  }
+  .subscription-form .order-summary-page .sub-order-summary h4 {
+    font-size: 22px;
+  }
+  .subscription-form .order-summary-page .sub-order-summary .chosen-box {
+    width: 75%;
+    margin-bottom: 20px;
+  }
+  .subscription-form .order-summary-page .sub-order-summary .chosen-box .quantity-box {
+    padding: 0;
+    background-color: transparent;
+    text-align: left;
+  }
+  .subscription-form .order-summary-page .sub-order-summary .chosen-box .quantity-box svg {
+    display: none;
+  }
+  .subscription-form .order-summary-page .sub-order-summary .chosen-box .quantity-box h5 {
+    font-size: 18px;
+  }
+  .subscription-form .order-summary-page .sub-order-summary .chosen-box .quantity-box h5 br {
+    display: none;
+  }
+  .subscription-form .order-summary-page .sub-order-summary .chosen-style {
+    width: 75%;
+    float: left;
+    padding-left: 15px;
+    display: none;
+  }
+  .subscription-form .order-summary-page .payment-summary {
+    width: 75%;
+    float: left;
+    padding-left: 15px;
+  }
+  .subscription-form .order-summary-page .payment-summary h4 {
+    font-size: 22px;
+  }
+  .subscription-form .order-summary-page .payment-summary .subtotal-amt {
+    margin-top: 25px;
+    font-size: 35px;
+  }
+}
 #subscription .top-hero img {
   width: 100%;
 }
