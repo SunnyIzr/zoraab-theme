@@ -187,8 +187,10 @@ SubscriptionSummary = {
     this.hideLastContinueBtn();
   },
   getSubName: function(){
-    firstName = $('#q1').val().split(' ')[0]
-    $('.subscriberName').html(firstName)
+    $.each($('input[name="name"]'),function(k,v){
+      firstName = $(v).val().split(' ')[0]
+      $($(v).data('target')).html(firstName)
+    })
   },
   getStyles: function(){
     $.each($('input[name="style[]"]:checked'),function(k,v){
