@@ -6,11 +6,12 @@
     <ol class="fs-fields">
       <li>
         <h3 class="fs-field-label fs-anim-upper">What's your name?</h3>
+        <input type="hidden" name="sub_type" value="{{sub_full_form}}">
         <input class="fs-anim-lower" id="name-{{ sub_full_form }}" name="name" type="text" placeholder="Ronald McDonald" data-target='#subscriberName-{{sub_full_form}}' required/>
       </li>
       <li>
         <h3 class="fs-field-label fs-anim-upper" for="q2" data-info="We won't send you spam, we promise...">What's your email address?</h3>
-        <input class="fs-anim-lower" id="q2" name="q2" type="email" placeholder="ronald@mcdonalds.com" required/>
+        <input class="fs-anim-lower" id="q2" name="email" type="email" placeholder="ronald@mcdonalds.com" required/>
       </li>
       <li class='who-question'>
         <h3 class="fs-field-label fs-anim-upper">Who is this for?</h3>
@@ -19,8 +20,8 @@
             <li><input class='fs-anim-lower' id="recipient-gift-{{sub_full_form}}" name="recipient" type="radio"value='gift'><label class='radioBtn fs-anim-lower' for="recipient-gift-{{sub_full_form}}">GIFT</label></li>
           </ul>
           <div class='gift-options'>
-            <input class="fs-anim-lower" id="q3c" name="q3c" type="text" placeholder="Recipient's Name"/>
-            <textarea class="fs-anim-lower" id="q3d" name="q3d" placeholder="Special gift message..."></textarea>
+            <input class="fs-anim-lower" id="q3c" name="recipient_name" type="text" placeholder="Recipient's Name"/>
+            <textarea class="fs-anim-lower" id="q3d" name="gift_note" placeholder="Special gift message..."></textarea>
           </div>      
       </li>
       {% if sub_full_form == 'socksOnly' %}
@@ -55,7 +56,7 @@
           {% assign prices = '20,29,45' | split: ','%}
           {% for i in (0..2) %}
             <li class='plan-{{plans[i]}} fs-anim-lower'>
-              <input id="sockNum-{{plans[i]}}" class='' name="sockNum" type="radio" value='{{plans[i]}}'>
+              <input id="sockNum-{{plans[i]}}" class='' name="qty" type="radio" value='{{plans[i]}}'>
               <label class='radioBtn' for="sockNum-{{plans[i]}}">
                 <div class='quantity-box'>
                   <div class='sock-icons'>
@@ -137,7 +138,8 @@
             </h4>
           </div>
           <div class='sub-checkout-btn'>
-            <a href='#' class='btn btn-lg btn-info'>PAY NOW</a>
+            <a href='#' class='submit-sub-form btn btn-lg btn-info' data-target='#formFor-{{ sub_full_form }}' />PAY NOW</a>
+            <!-- <input type='submit' value='PAY NOW' class='btn btn-lg btn-info' /> -->
           </div>
         </div>
       </li>

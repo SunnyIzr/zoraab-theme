@@ -9,6 +9,7 @@ SubscriptionController = {
     this.subTermChecked();
     this.closeForm();
     this.updateUpfronts();
+    this.submitForm();
   },
   activateFullForm: function(){
     if ($('.featured-sub-products').size() > 0) {
@@ -109,7 +110,7 @@ SubscriptionController = {
     })
   },
   sockPlanChecked: function(){
-    $('input[name="sockNum"]').change(function(e){
+    $('input[name="qty"]').change(function(e){
       $('.quantity-question .active').removeClass('active')
       $(this).parent().addClass('active')
     })
@@ -138,8 +139,8 @@ SubscriptionController = {
     })
   },
   updateUpfronts: function(){
-    $('input[name="sockNum"]').change(function(){
-      sockPlan = parseInt($('input[name="sockNum"]:checked').val())
+    $('input[name="qty"]').change(function(){
+      sockPlan = parseInt($('input[name="qty"]:checked').val())
       if ( sockPlan == 2 ) {
         $('.price-plan-3').html(60)
         $('.price-plan-9').html(180)
@@ -155,6 +156,21 @@ SubscriptionController = {
         $('.price-plan-9').html(405)
         $('.price-plan-1').html(540)
       }
+    })
+  },
+  submitForm: function(){
+    $('.submit-sub-form').click(function(e){
+      e.preventDefault();
+      console.log('running')
+      $form = $($(this).data('target'))
+      console.log($form)
+      url = $form.attr('action')
+      console.log(url)
+      data = $form.serialize()
+      $.post(url, data, function(res) {
+        console.log('running ajax')
+        window.location=res.url
+      })
     })
   }
 }
@@ -199,7 +215,7 @@ SubscriptionSummary = {
     })
   },
   getSockPlan: function(){
-    sockPlan = $('input[name="sockNum"]:checked').val()
+    sockPlan = $('input[name="qty"]:checked').val()
     $('.number-of-socks').html(sockPlan)
     sockIcon = $($('.icon-sock')[0]).clone()
     $('.acc-icons').html('')
@@ -223,7 +239,7 @@ SubscriptionSummary = {
     }
   },
   calcMonthlyPrice: function(){
-    sockPlan = parseInt($('input[name="sockNum"]:checked').val())
+    sockPlan = parseInt($('input[name="qty"]:checked').val())
     if (sockPlan == 2) { $('.finalPrice').html(20)}
     if (sockPlan == 3) { $('.finalPrice').html(29)}
     if (sockPlan == 5) { $('.finalPrice').html(45)}
@@ -235,7 +251,7 @@ SubscriptionSummary = {
     if (term == '1year') {$('.num-of-months').html('1 year')}
   },
   calcUpfrontPrice: function(){
-    sockPlan = parseInt($('input[name="sockNum"]:checked').val())
+    sockPlan = parseInt($('input[name="qty"]:checked').val())
     term = $('input[name="term"]:checked').val()
     if ( sockPlan == 2) {
       if (term == '3months') { $('.finalPrice').html(60)}
