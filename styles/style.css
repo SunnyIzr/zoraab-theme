@@ -2343,6 +2343,10 @@ div.cs-skin-boxes:focus > span {
 #subscription .sub-plans .single-plan .cancel {
   font-style: italic;
 }
+#subscription .sub-plans .single-plan svg path, #subscription .sub-plans .single-plan svg polygon {
+  fill: #404041;
+  transition: fill 300ms ease-out;
+}
 #subscription .sub-plans .single-plan .icon-sock {
   -ms-transform: rotate(-23deg);
   /* IE 9 */
@@ -2352,9 +2356,15 @@ div.cs-skin-boxes:focus > span {
   /* Standard syntax */
   width: 60px;
 }
-#subscription .sub-plans .single-plan .icon-sock path {
-  fill: #404041;
-  transition: fill 300ms ease-out;
+#subscription .sub-plans .single-plan .icon-boxers-heart {
+  width: 29%;
+}
+#subscription .sub-plans .single-plan .icon-surprise {
+  width: 29%;
+}
+#subscription .sub-plans .single-plan .icon-bowtie {
+  margin-left: -17px;
+  margin-right: -17px;
 }
 #subscription .sub-plans .single-plan ul {
   margin: 0 auto;
@@ -2371,7 +2381,7 @@ div.cs-skin-boxes:focus > span {
 #subscription .sub-plans li:hover h4, #subscription .sub-plans li.active h4 {
   border-top-color: #e85c41;
 }
-#subscription .sub-plans li:hover .icon-sock path, #subscription .sub-plans li.active .icon-sock path {
+#subscription .sub-plans li:hover svg path, #subscription .sub-plans li:hover svg polygon, #subscription .sub-plans li.active svg path, #subscription .sub-plans li.active svg polygon {
   fill: #e85c41;
 }
 #subscription .final-button {
