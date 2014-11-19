@@ -100,8 +100,8 @@ SubscriptionController = {
     })
   },
   giftChecked: function(){
-    $('input[name="q3"]').change(function(e){
-      if ( $('#q3b').is(':checked') ){
+    $('input[name="recipient"]').change(function(e){
+      if ( $(this).val() == 'gift' ){
         $(this).parent().parent().parent().addClass('gifted')
       } else{
         $(this).parent().parent().parent().removeClass('gifted')
@@ -116,7 +116,7 @@ SubscriptionController = {
   },
   subFreqOptChecked: function(){
     $('input[name="payment"]').change(function(e){
-      if ( $('#once').is(':checked') ){
+      if ( $(this).val() == 'once' ){
         $(this).parent().parent().parent().addClass('paying-once')
       } else{
         $(this).parent().parent().parent().removeClass('paying-once')

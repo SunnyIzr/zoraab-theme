@@ -469,6 +469,7 @@
         }
       }
       .chosen-style{
+        display:none;
         float: right;
         width: 50%;
         .style-icons{
@@ -519,7 +520,6 @@
   }
   
 }
-
 .subscription-form.active{
   z-index: 99999999;
   opacity: 1.0;
@@ -527,6 +527,16 @@
 
 .fs-form-wrap{
   background-color: $accent-color;
+}
+
+#socksOnly{
+  .order-summary-page{
+    .sub-order-summary{
+      .chosen-style{
+        display: inherit;
+      }
+    }
+  }
 }
 
 .ac-custom input[type="checkbox"]:checked + label {

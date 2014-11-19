@@ -1986,6 +1986,7 @@ div.cs-skin-boxes:focus > span {
   font-size: 30px;
 }
 .subscription-form .order-summary-page .sub-order-summary .chosen-style {
+  display: none;
   float: right;
   width: 50%;
 }
@@ -2036,6 +2037,10 @@ div.cs-skin-boxes:focus > span {
 
 .fs-form-wrap {
   background-color: #67c5a9;
+}
+
+#socksOnly .order-summary-page .sub-order-summary .chosen-style {
+  display: inherit;
 }
 
 .ac-custom input[type="checkbox"]:checked + label .style-pic svg path, .ac-custom input[type="checkbox"]:checked + label .style-pic svg rect, .ac-custom input[type="checkbox"]:checked + label .style-pic svg line, .ac-custom input[type="checkbox"]:checked + label .style-pic svg polygon, .ac-custom input[type="checkbox"]:checked + label .style-pic svg polyline, .ac-custom input[type="checkbox"]:checked + label .style-pic svg circle {
