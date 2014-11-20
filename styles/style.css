@@ -1563,6 +1563,7 @@ div.cs-skin-boxes:focus > span {
 }
 
 .subscription-form {
+  background-color: #67c5a9;
   opacity: 0.0;
   width: 100%;
   height: 100%;
@@ -1571,6 +1572,7 @@ div.cs-skin-boxes:focus > span {
   left: 0;
   z-index: -50;
   transition: opacity 300ms ease-out;
+  overflow-y: scroll;
 }
 .subscription-form .fs-form-wrap .fs-title {
   padding: 10px;

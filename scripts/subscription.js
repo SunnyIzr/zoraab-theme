@@ -271,9 +271,12 @@ SubscriptionSummary = {
   },
   hideLastContinueBtn: function(){
     $('.fs-continue').click(function(e){
-      if ( $('.order-summary-page').css('visibility') == 'visible') {
-        $('.fs-controls').hide();
-      }
+      $.each($('.order-summary-page'),function(k,v){
+        if ( $(v).css('visibility') == 'visible') {
+          formEl = $(v).data('form')
+          $(formEl + ' .fs-continue').hide();
+        }
+      })
     })
   },
 }
