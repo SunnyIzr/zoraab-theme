@@ -2,7 +2,6 @@ SubscriptionController = {
   init: function(){
     this.activateFullForm()
     this.singlePlanSelect()
-    this.launchSubForm()
     this.giftChecked();
     this.sockPlanChecked();
     this.subFreqOptChecked();
@@ -90,14 +89,8 @@ SubscriptionController = {
   singlePlanSelect: function(){
     $('.single-plan').click(function(e){
       e.preventDefault();
-      SubscriptionView.selectPlan(this)
-      SubscriptionModel.planSelection = $(this).data('target')
-    })
-  },
-  launchSubForm: function(){
-    $('.launch-sub-form').click(function(e){
-      e.preventDefault();
-      SubscriptionView.revealForm(SubscriptionModel.planSelection)
+      subForm = $(this).data('target')
+      SubscriptionView.revealForm(subForm)
     })
   },
   giftChecked: function(){
@@ -175,17 +168,7 @@ SubscriptionController = {
   }
 }
 
-SubscriptionModel = {
-  planSelection: null
-  
-}
-
 SubscriptionView = {
-  selectPlan: function(el){
-    $('li.active').removeClass('active')
-    $(el).addClass('active')
-    $('.launch-sub-form').addClass('active')
-  },
   revealForm: function(form){
     $(form).css('transition-property','opacity')
     $(form).addClass('active')
