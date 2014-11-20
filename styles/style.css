@@ -1979,6 +1979,20 @@ div.cs-skin-boxes:focus > span {
 .subscription-form .order-summary-page .sub-order-summary .chosen-box .quantity-box .acc-icons.plan-5 svg {
   margin: 0 -12px;
 }
+.subscription-form .order-summary-page .sub-order-summary .chosen-box .quantity-box .accs-summ svg {
+  width: 60px;
+}
+.subscription-form .order-summary-page .sub-order-summary .chosen-box .quantity-box .accs-summ svg path, .subscription-form .order-summary-page .sub-order-summary .chosen-box .quantity-box .accs-summ svg polygon {
+  fill: #fff;
+}
+.subscription-form .order-summary-page .sub-order-summary .chosen-box .quantity-box .accs-summ .icon-sock {
+  -ms-transform: rotate(-23deg);
+  /* IE 9 */
+  -webkit-transform: rotate(-23deg);
+  /* Chrome, Safari, Opera */
+  transform: rotate(-23deg);
+  /* Standard syntax */
+}
 .subscription-form .order-summary-page .sub-order-summary .chosen-box .quantity-box h5 {
   font-family: "Quicksand";
   margin: 0 auto;
@@ -1989,6 +2003,14 @@ div.cs-skin-boxes:focus > span {
   display: none;
   float: right;
   width: 50%;
+}
+.subscription-form .order-summary-page .sub-order-summary .chosen-style .icon-argyle {
+  width: 100px;
+  height: 100px;
+}
+.subscription-form .order-summary-page .sub-order-summary .chosen-style .icon-mustache {
+  width: 100px;
+  height: 100px;
 }
 .subscription-form .order-summary-page .sub-order-summary .chosen-style .style-icons svg path, .subscription-form .order-summary-page .sub-order-summary .chosen-style .style-icons svg rect, .subscription-form .order-summary-page .sub-order-summary .chosen-style .style-icons svg line, .subscription-form .order-summary-page .sub-order-summary .chosen-style .style-icons svg polygon, .subscription-form .order-summary-page .sub-order-summary .chosen-style .style-icons svg polyline, .subscription-form .order-summary-page .sub-order-summary .chosen-style .style-icons svg circle {
   fill: #346355;
@@ -2123,6 +2145,7 @@ div.cs-skin-boxes:focus > span {
   }
   .subscription-form .fs-form-wrap .fs-form-full {
     left: 4%;
+    top: 9%;
   }
   .subscription-form .fs-form-wrap .ac-custom {
     padding: 0;

@@ -226,6 +226,9 @@ SubscriptionSummary = {
     if (sockPlan == 2) { $('.finalPrice').html(20)}
     if (sockPlan == 3) { $('.finalPrice').html(29)}
     if (sockPlan == 5) { $('.finalPrice').html(45)}
+    $('#socksAndBoxers .finalPrice').html(28)
+    $('#accsOnly .finalPrice').html(28)
+    $('#starterKit .finalPrice').html(14)
   },
   updateSubTerm: function(){
     term = $('input[name="term"]:checked').val()
@@ -251,6 +254,20 @@ SubscriptionSummary = {
       if (term == '9months') { $('.finalPrice').html(405)}
       if (term == '1year') { $('.finalPrice').html(540)}
     }
+    sbTerm = $('#socksAndBoxers input[name="term"]:checked').val()
+    if (sbTerm == '3months') { $('#socksAndBoxers .finalPrice').html(84)}
+    if (sbTerm == '9months') { $('#socksAndBoxers .finalPrice').html(252)}
+    if (sbTerm == '1year') { $('#socksAndBoxers .finalPrice').html(336)}
+      
+    acTerm = $('#accsOnly input[name="term"]:checked').val()
+    if (acTerm == '3months') { $('#accsOnly .finalPrice').html(84)}
+    if (acTerm == '9months') { $('#accsOnly .finalPrice').html(252)}
+    if (acTerm == '1year') { $('#accsOnly .finalPrice').html(336)}
+      
+    skTerm = $('#starterKit input[name="term"]:checked').val()
+    if (skTerm == '3months') { $('#starterKit .finalPrice').html(42)}
+    if (skTerm == '9months') { $('#starterKit .finalPrice').html(126)}
+    if (skTerm == '1year') { $('#starterKit .finalPrice').html(168)}
   },
   hideLastContinueBtn: function(){
     $('.fs-continue').click(function(e){

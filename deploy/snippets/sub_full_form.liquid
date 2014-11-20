@@ -113,9 +113,29 @@
             <div class='chosen-box'>
               <h4>BOX</h4>
               <div class='quantity-box'>
-                <div class='acc-icons'>
-                </div>
-                <h5><span class='number-of-socks'>2</span> pairs<br/>/<br/>month</h5>
+                {% if sub_full_form == 'socksOnly' %}
+                  <div class='acc-icons'></div>
+                  <h5><span class='number-of-socks'>2</span> pairs<br/>/<br/>month</h5>
+                {% endif %}
+                {% if sub_full_form =='socksAndBoxers' %}
+                  <div class='accs-summ'>
+                    {% include 'icon_boxers_heart' %}
+                    {% include 'icon_sock' %}
+                  </div>
+                  <h5><span class='number-of-socks'>socks+boxers<br/>/<br/>month</h5>
+                {% elsif sub_full_form == 'accsOnly' %}
+                  <div class='accs-summ'>
+                    {% include 'icon_surprise' %}
+                    {% include 'icon_bowties' %}
+                    {% include 'icon_sock' %}
+                  </div>
+                  <h5><span class='number-of-socks'>accessories<br/>/<br/>month</h5>
+                {% elsif sub_full_form == 'starterKit' %}
+                  <div class='accs-summ'>
+                    {% include 'icon_surprise' %}
+                  </div>
+                  <h5><span class='number-of-socks'>starer kit<br/>/<br/>month</h5>
+                {% endif %}
               </div>
             </div>
             <div class='chosen-style'>

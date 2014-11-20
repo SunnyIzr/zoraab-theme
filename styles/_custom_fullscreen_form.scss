@@ -460,6 +460,19 @@
               margin: 0 -12px;
             }
           }
+          .accs-summ{
+            svg{
+              width: 60px;
+              path,polygon{
+                fill: #fff;
+              }
+            }
+            .icon-sock{
+              -ms-transform:rotate(-23deg); /* IE 9 */
+              -webkit-transform:rotate(-23deg); /* Chrome, Safari, Opera */
+              transform:rotate(-23deg); /* Standard syntax */
+            }
+          }
           h5{
             font-family: $fun-font;
             margin: 0 auto;
@@ -472,6 +485,14 @@
         display:none;
         float: right;
         width: 50%;
+        .icon-argyle{
+          width: 100px;
+          height: 100px;
+        }
+        .icon-mustache{
+          width: 100px;
+          height: 100px;
+        }
         .style-icons{
           svg{
             path, rect, line, polygon, polyline, circle{
@@ -664,6 +685,7 @@
       }
       .fs-form-full{
         left: 4%;
+        top: 9%;
       }
       .ac-custom{
         padding: 0;
