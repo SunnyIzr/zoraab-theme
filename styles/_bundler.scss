@@ -11,13 +11,14 @@
   .right-panel{
     background-color: #fff;
     position:absolute;
-    right: 0;
+    left: 59%;
     width: 40%;
     float: right;
     border: none;
     text-align: center;
     padding-top: 10px;
     margin-top: 1px;
+    max-width: 620px;
     h1{
       margin: 0 auto;
       width: 100%;
@@ -80,6 +81,16 @@
 }
 
 
+// EDGE
+@media (max-width: 1600px) { 
+  .bundler{
+    .right-panel{
+      left: 60%;
+    }
+  }
+} 
+
+
 // MEDIUM DESKTOPS
 @media (max-width: 1200px) { 
   .bundler{
@@ -111,6 +122,7 @@
     .right-panel{
       position: static;
       width: 100%;
+      max-width: inherit;
       h1{
         max-width: 100%;
         font-size: 26px
