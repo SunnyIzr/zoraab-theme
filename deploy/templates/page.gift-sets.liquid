@@ -1,0 +1,42 @@
+<div class='gift-set-hero'>
+  <img src='{{ "giftset_collection_hero.jpg" | asset_url}}'>
+</div>
+
+<ul id='gift-set-list'>
+  {% assign sorted_collections = collections | sort: 'handle' %}
+  {% assign giftset_products = collections.giftsets.products %}
+  {% for giftset_collection in sorted_collections %}
+    {% if giftset_collection.handle contains 'hol' %}
+    <li class='gift-set'>
+      <ul class='gift-set-products'>
+        <li class='giftset-title'>
+          <h4>{{ giftset_collection.title }}</h4>
+          <div class='price visible-xs'>$34</div>
+        </li>
+        <li class='empty-box'>
+          <img src='{{ "whitebox.jpg" | asset_url}}'>
+        </li>
+      {% for product in giftset_collection.products %}
+        <li class='gift-prod-img'><img src='{{ product.featured_image.src | product_img_url: 'medium' }}'></li>
+      {% endfor %}
+      {% for giftset in giftset_products %}
+      {% if giftset.handle == giftset_collection.handle %}
+      <li class='price-cta'>
+        <div class='price'>$34</div>
+        <form action="/cart/add" method="post" enctype="multipart/form-data">
+          <input min="1" type="number" id="quantity" class='hide product-quantity' name="quantity" value="1" />
+          <select name="id" class="product-select hidden">
+            {% for variant in giftset.variants %}
+              <option value="{{ variant.id }}">{{ variant.title }} - {{ variant.price | money }}</option>
+            {% endfor %}
+          </select>
+        <div class='cta'><input type="submit" value="+ CART" class="add btn btn-lg btn-info right-off-canvas-toggle" /></div>
+      </form>
+      </li>
+      {% endif %}
+      {% endfor %}
+      </ul>
+    </li>
+    {% endif %}
+  {% endfor %}
+</ul>

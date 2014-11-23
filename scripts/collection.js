@@ -51,4 +51,11 @@ var filterChevron = function() {
   })
 }
 
+var giftSetLiElHeight = function(){
+  $.each($('.gift-set-products .gift-prod-img'),function(k,v){
+    imgWidth = $(this).find('img').css('width')
+    $(this).css('height',imgWidth)
+  })
+}
+
 

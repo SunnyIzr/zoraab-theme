@@ -1,3 +1,104 @@
+#gift-sets .gift-set-hero img {
+  width: 100%;
+}
+#gift-sets #gift-set-list {
+  text-align: center;
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#gift-sets #gift-set-list .gift-set {
+  text-align: center;
+  padding: 0;
+  margin: 25px 0;
+  border-bottom: 1px solid #b8b8b8;
+}
+#gift-sets #gift-set-list .gift-set .gift-set-products {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+#gift-sets #gift-set-list .gift-set .gift-set-products li {
+  padding: 0;
+  margin: 5px 1%;
+  display: inline-block;
+  vertical-align: top;
+  width: 14%;
+}
+#gift-sets #gift-set-list .gift-set .gift-set-products li img {
+  width: 100%;
+}
+#gift-sets #gift-set-list .gift-set .gift-set-products .giftset-title {
+  text-align: left;
+  width: 10%;
+}
+#gift-sets #gift-set-list .gift-set .gift-set-products .giftset-title h4 {
+  width: 150px;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-top: 45%;
+}
+#gift-sets #gift-set-list .gift-set .gift-set-products .empty-box {
+  margin: 5px 2%;
+}
+#gift-sets #gift-set-list .gift-set .gift-set-products .empty-box img {
+  width: 100%;
+}
+#gift-sets #gift-set-list .gift-set .gift-set-products .price-cta {
+  text-align: center;
+}
+#gift-sets #gift-set-list .gift-set .gift-set-products .price-cta .price {
+  font-size: 30px;
+  font-family: "Quicksand";
+  margin-bottom: 25px;
+  margin-top: 10px;
+}
+#gift-sets #gift-set-list .gift-set .gift-set-products .price-cta .cta .btn {
+  padding: 10px 25px;
+}
+
+@media (max-width: 768px) {
+  #gift-sets #gift-set-list .gift-set {
+    border-bottom: none;
+  }
+  #gift-sets #gift-set-list .gift-set .gift-set-products li {
+    width: 45%;
+    margin: 0;
+    border: 1px solid #b8b8b8;
+    border-top: none;
+  }
+  #gift-sets #gift-set-list .gift-set .gift-set-products .giftset-title {
+    width: 90.5%;
+    padding: 22px 10px;
+    border-top: 1px solid #b8b8b8;
+  }
+  #gift-sets #gift-set-list .gift-set .gift-set-products .giftset-title h4 {
+    margin-top: 0;
+    float: left;
+    font-size: 25px;
+  }
+  #gift-sets #gift-set-list .gift-set .gift-set-products .giftset-title .price {
+    font-family: "Quicksand";
+    float: right;
+    font-size: 30px;
+    margin-top: -8px;
+  }
+  #gift-sets #gift-set-list .gift-set .gift-set-products .empty-box {
+    margin: 0;
+  }
+  #gift-sets #gift-set-list .gift-set .gift-set-products .price-cta {
+    width: 90.5%;
+    border: none;
+  }
+  #gift-sets #gift-set-list .gift-set .gift-set-products .price-cta .price {
+    display: none;
+  }
+  #gift-sets #gift-set-list .gift-set .gift-set-products .price-cta .cta .btn {
+    width: 100%;
+    padding: 17px 0;
+  }
+}
 *,
 *:after,
 *::before {
@@ -3987,13 +4088,14 @@ perspective effects (not including the modals and the overlay).
 .bundler .right-panel {
   background-color: #fff;
   position: absolute;
-  right: 0;
+  left: 59%;
   width: 40%;
   float: right;
   border: none;
   text-align: center;
   padding-top: 10px;
   margin-top: 1px;
+  max-width: 620px;
 }
 .bundler .right-panel h1 {
   margin: 0 auto;
@@ -4054,6 +4156,11 @@ perspective effects (not including the modals and the overlay).
   max-width: 300px;
 }
 
+@media (max-width: 1600px) {
+  .bundler .right-panel {
+    left: 60%;
+  }
+}
 @media (max-width: 1200px) {
   .bundler .right-panel {
     padding-top: 3px;
@@ -4077,6 +4184,7 @@ perspective effects (not including the modals and the overlay).
   .bundler .right-panel {
     position: static;
     width: 100%;
+    max-width: inherit;
   }
   .bundler .right-panel h1 {
     max-width: 100%;
