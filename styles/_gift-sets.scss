@@ -135,10 +135,17 @@
         border-bottom: none;
         .gift-set-products{
           li{
-            width:45%;
+            width:45.5%;
             margin:0;
             border: 1px solid $faded-color;
             border-top: none;
+          }
+          li:nth-of-type(2),li:nth-of-type(4){
+            margin-right: -2.5px;
+            
+          }
+          li:nth-of-type(3),li:nth-of-type(5){
+            margin-left: -2.5px
           }
           .giftset-title{
             width: 90.5%;

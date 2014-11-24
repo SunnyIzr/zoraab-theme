@@ -106,10 +106,16 @@
     border-bottom: none;
   }
   #gift-sets #gift-set-list .gift-set .gift-set-products li {
-    width: 45%;
+    width: 45.5%;
     margin: 0;
     border: 1px solid #b8b8b8;
     border-top: none;
+  }
+  #gift-sets #gift-set-list .gift-set .gift-set-products li:nth-of-type(2), #gift-sets #gift-set-list .gift-set .gift-set-products li:nth-of-type(4) {
+    margin-right: -2.5px;
+  }
+  #gift-sets #gift-set-list .gift-set .gift-set-products li:nth-of-type(3), #gift-sets #gift-set-list .gift-set .gift-set-products li:nth-of-type(5) {
+    margin-left: -2.5px;
   }
   #gift-sets #gift-set-list .gift-set .gift-set-products .giftset-title {
     width: 90.5%;
