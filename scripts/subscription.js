@@ -173,6 +173,7 @@ SubscriptionController = {
       form = window[$(this).data('target')]
       prevSection = form.current - 1
       form._nextField(prevSection)
+      SubscriptionSummary.showBackBtn()
       
     })
   }
