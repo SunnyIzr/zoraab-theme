@@ -194,7 +194,7 @@ SubscriptionController = {
       form = window[$(this).data('target')]
       setTimeout(function(){
         form._nextField()
-      },900)
+      },800)
     })
   },
   termInput: function(){
@@ -340,13 +340,11 @@ SubscriptionSummary = {
     if (skTerm == '1year') { $('#starterKit .finalPrice').html(168)}
   },
   hideLastContinueBtn: function(){
-    $('.fs-continue').click(function(e){
-      $.each($('.order-summary-page'),function(k,v){
-        if ( $(v).css('visibility') == 'visible') {
-          formEl = $(v).data('form')
-          $(formEl + ' .fs-continue').hide();
-        }
-      })
+    $.each($('.order-summary-page'),function(k,v){
+      if ( $(v).css('visibility') == 'visible') {
+        formEl = $(v).data('form')
+        $(formEl + ' .fs-continue').hide();
+      }
     })
   },
 }
