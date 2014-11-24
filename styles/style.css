@@ -755,10 +755,6 @@ button.fs-continue,
 }
 
 /* Hide placeholder when focused in Webkit browsers */
-.fs-fields input:focus::-webkit-input-placeholder {
-  color: transparent;
-}
-
 /* Dot navigation */
 .fs-nav-dots {
   position: absolute;

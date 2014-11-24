@@ -96,10 +96,12 @@ SubscriptionController = {
       e.preventDefault();
       subForm = $(this).data('target')
       SubscriptionView.revealForm(subForm)
+      SubscriptionFocus.init()
     })
   },
   giftChecked: function(){
     $('input[name="recipient"]').change(function(e){
+      SubscriptionFocus.init()
       if ( $(this).val() == 'gift' ){
         $(this).parent().parent().parent().addClass('gifted')
       } else{
@@ -186,6 +188,7 @@ SubscriptionController = {
       form = window[$(this).data('target')]
       setTimeout(function(){
         form._nextField()
+        SubscriptionSummary.hideLastContinueBtn()
       },300)
     })
   },
@@ -194,6 +197,7 @@ SubscriptionController = {
       form = window[$(this).data('target')]
       setTimeout(function(){
         form._nextField()
+        SubscriptionSummary.hideLastContinueBtn()
       },800)
     })
   },
@@ -241,6 +245,7 @@ SubscriptionSummary = {
     this.hideLastContinueBtn();
     this.showBackBtn();
     this.inactivateContinueBtn();
+    SubscriptionFocus.init();
   },
   showBackBtn: function(){
     $('.back-btn').each(function(){
@@ -346,5 +351,38 @@ SubscriptionSummary = {
         $(formEl + ' .fs-continue').hide();
       }
     })
+  }
+}
+
+var SubscriptionFocus = {
+  init: function(){
+    setTimeout(function(){
+      SubscriptionFocus.focusName()
+      SubscriptionFocus.focusEmail()
+      SubscriptionFocus.focusGiftRecipient()
+    },500)
   },
+  focusName: function(){
+    $('.subscription-form').each(function(){
+      if ( $(this).css('opacity') == '1' ){
+        if ( $(this).find('.name-question').css('visibility') == 'visible' ){
+          $(this).find('input').focus()
+        }
+      }
+    })
+  },
+  focusEmail: function(){
+    $('.email-question').each(function(){
+      if ( $(this).css('visibility') == 'visible' ){
+        $(this).find('input').focus()
+      }
+    })
+  },
+  focusGiftRecipient: function(){
+    $('.gift-options').each(function(){
+      if ( $(this).css('opacity') == '1' ){
+        $(this).find('input').focus()
+      }
+    })
+  }
 }
