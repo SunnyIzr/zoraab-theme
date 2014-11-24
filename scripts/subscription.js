@@ -9,6 +9,7 @@ SubscriptionController = {
     this.closeForm();
     this.updateUpfronts();
     this.submitForm();
+    this.backBtn();
   },
   activateFullForm: function(){
     if ($('.featured-sub-products').size() > 0) {
@@ -24,7 +25,7 @@ SubscriptionController = {
           });
         } );
 
-        new FForm( formWrap, {
+        window.socksOnlyForm = new FForm( formWrap, {
           onReview : function() {
             classie.add( document.body, 'overview' ); // for demo purposes only
           }
@@ -42,7 +43,7 @@ SubscriptionController = {
           });
         } );
 
-        new FForm( formWrap, {
+        window.socksAndBoxersForm = new FForm( formWrap, {
           onReview : function() {
             classie.add( document.body, 'overview' ); // for demo purposes only
           }
@@ -60,7 +61,7 @@ SubscriptionController = {
           });
         } );
 
-        new FForm( formWrap, {
+        window.accsOnlyForm = new FForm( formWrap, {
           onReview : function() {
             classie.add( document.body, 'overview' ); // for demo purposes only
           }
@@ -78,7 +79,7 @@ SubscriptionController = {
           });
         } );
 
-        new FForm( formWrap, {
+        window.starterKitForm = new FForm( formWrap, {
           onReview : function() {
             classie.add( document.body, 'overview' ); // for demo purposes only
           }
@@ -165,6 +166,15 @@ SubscriptionController = {
         window.location=res.url
       })
     })
+  },
+  backBtn: function(){
+    $('.back-btn').click(function(e){
+      e.preventDefault();
+      form = window[$(this).data('target')]
+      prevSection = form.current - 1
+      form._nextField(prevSection)
+      
+    })
   }
 }
 
@@ -184,6 +194,18 @@ SubscriptionSummary = {
     this.getSockPlan();
     this.getPmtPlan();
     this.hideLastContinueBtn();
+    this.showBackBtn();
+  },
+  showBackBtn: function(){
+    $('.back-btn').each(function(){
+      form = window[$(this).data('target')]
+      if (form.current > 0){
+        $(this).show()
+      } else if (form.current == 0){
+        $(this).hide()
+      }
+    })
+    
   },
   getSubName: function(){
     $.each($('input[name="name"]'),function(k,v){

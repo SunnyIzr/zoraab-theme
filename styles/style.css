@@ -1170,10 +1170,6 @@ input[type=text]::-ms-clear {
     padding: 20px;
   }
 
-  .fs-numbers {
-    margin: 20px;
-  }
-
   .fs-nav-dots {
     right: 25px;
   }
@@ -1677,9 +1673,13 @@ div.cs-skin-boxes:focus > span {
 }
 .subscription-form .fs-form-wrap .fs-title {
   padding: 10px;
+  text-align: right;
 }
 .subscription-form .fs-form-wrap .fs-form {
   width: 85%;
+}
+.subscription-form .fs-numbers {
+  right: 85px;
 }
 .subscription-form .close-form svg path {
   fill: #346355;
@@ -1687,6 +1687,21 @@ div.cs-skin-boxes:focus > span {
 }
 .subscription-form .close-form:hover svg path {
   fill: white;
+}
+.subscription-form .back-btn {
+  float: left;
+  cursor: pointer;
+  display: none;
+}
+.subscription-form .back-btn svg {
+  margin-left: -15px;
+}
+.subscription-form .back-btn svg polygon {
+  fill: #346355;
+  transition: fill 300ms ease-in;
+}
+.subscription-form .back-btn:hover svg polygon {
+  fill: #fff;
 }
 .subscription-form .fs-continue {
   border-radius: 0px;
@@ -1964,6 +1979,9 @@ div.cs-skin-boxes:focus > span {
   padding: 0;
   width: 100%;
 }
+.subscription-form .payment-question .payment-options ul li label em {
+  font-size: 10px;
+}
 .subscription-form .payment-question .payment-options ul li label::before {
   display: none;
 }
@@ -2212,6 +2230,11 @@ div.cs-skin-boxes:focus > span {
     font-size: 15px;
     height: 10px;
   }
+  .subscription-form .fs-numbers {
+    right: 10%;
+    top: -1%;
+    font-size: 1.8em;
+  }
   .subscription-form h3 {
     font-size: 27px;
     margin-bottom: 40px;
@@ -2429,7 +2452,7 @@ div.cs-skin-boxes:focus > span {
   display: inline-block;
   margin: 0 2%;
   padding: 0;
-  width: 20%;
+  width: 27%;
   min-height: 470px;
   background: #f7f7f7;
   text-align: center;
@@ -2537,8 +2560,8 @@ div.cs-skin-boxes:focus > span {
 }
 @media (max-width: 992px) {
   #subscription .sub-plans .single-plan {
-    margin: 0 2px;
-    width: 24%;
+    margin: 0 10px;
+    width: 30%;
   }
   #subscription .sub-plans .single-plan .icon-sock {
     width: 45px;
@@ -2575,6 +2598,18 @@ div.cs-skin-boxes:focus > span {
   }
   #subscription .sub-plans .single-plan .make-full-width {
     width: 100%;
+  }
+  #subscription .sub-plans li:hover, #subscription .sub-plans li:active {
+    background: #f7f7f7;
+  }
+  #subscription .sub-plans li:hover .price-heading, #subscription .sub-plans li:active .price-heading {
+    background: #d7d7d7;
+  }
+  #subscription .sub-plans li:hover h4, #subscription .sub-plans li:active h4 {
+    border-top-color: #404041;
+  }
+  #subscription .sub-plans li:hover svg path, #subscription .sub-plans li:hover svg polygon, #subscription .sub-plans li:active svg path, #subscription .sub-plans li:active svg polygon {
+    fill: #404041;
   }
 }
 #snow-popup {

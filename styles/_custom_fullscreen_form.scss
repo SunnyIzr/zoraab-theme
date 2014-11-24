@@ -18,10 +18,14 @@
   .fs-form-wrap{
     .fs-title{
       padding: 10px;
+      text-align: right;
     }
     .fs-form{
       width: 85%;
     }
+  }
+  .fs-numbers{
+    right: 85px;
   }
   .close-form{
     svg{
@@ -35,6 +39,25 @@
     svg{
       path{
         fill: #fff
+      }
+    }
+  }
+  .back-btn{
+    float: left;
+    cursor: pointer;
+    display: none;
+    svg{
+      margin-left: -15px;
+      polygon{
+        fill: #346355;
+        transition: fill 300ms ease-in;
+      }
+    }
+  }
+  .back-btn:hover{
+    svg{
+      polygon{
+        fill: #fff;
       }
     }
   }
@@ -335,6 +358,9 @@
             margin: 0;
             padding: 0;
             width: 100%;
+            em{
+              font-size: 10px;
+            }
           }
           label::before{
             display: none;
@@ -647,6 +673,11 @@
       left: -24px;
       font-size: 15px;
       height: 10px;
+    }
+    .fs-numbers{
+      right: 10%;
+      top: -1%;
+      font-size: 1.8em;
     }
     h3{
       font-size: 27px;

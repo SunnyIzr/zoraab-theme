@@ -52,7 +52,7 @@
       display: inline-block;
       margin: 0 2%;
       padding: 0;
-      width: 20%;
+      width: 27%;
       min-height: 470px;
       background: #f7f7f7;
       text-align: center;
@@ -179,8 +179,8 @@
   #subscription{
     .sub-plans{
       .single-plan{
-        margin: 0 2px;
-        width: 24%;
+        margin: 0 10px;
+        width: 30%;
         .icon-sock{
           width: 45px;
         }
@@ -228,6 +228,20 @@
         }
         .make-full-width{
           width: 100%;
+        }
+      }
+      li:hover, li:active{
+        background: #f7f7f7;
+        .price-heading{
+          background: #d7d7d7;
+        }
+        h4{
+          border-top-color: $primary-color;
+        }
+        svg{
+          path,polygon{
+            fill: $primary-color;
+          }
         }
       }
     }

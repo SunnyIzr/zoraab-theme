@@ -1,5 +1,6 @@
 <div class="fs-form-wrap" id="fs-form-wrap-{{sub_full_form}}">
   <div class="fs-title">
+    <div class='back-btn' data-target="{{sub_full_form}}Form">{% include 'icon_back' %}</div>
     <a href='#' class='close-form' data-target='#{{sub_full_form}}'>{% include 'icon_close' %}</a>
   </div>
   <form id='formFor-{{sub_full_form}}'class="fs-form fs-form-full ac-custom ac-radio ac-fill ac-checkbox ac-boxfill" autocomplete="off" action='http://zoraab-users.herokuapp.com/new' method='post'>
@@ -75,10 +76,10 @@
       </li>
       {% endif %}
       <li class='payment-question'>
-        <h3 class="fs-field-label fs-anim-upper">How often do you want to pay?</h3>
+        <h3 class="fs-field-label fs-anim-upper">Which plan do you like best?</h3>
         <ul class='freq-options fs-anim-lower'>
-          <li><input id="monthly-{{sub_full_from}}" class='fs-anim-lower' name="payment" type="radio" value='monthly'><label class='radioBtn fs-anim-lower' for="monthly-{{sub_full_from}}">Monthly</label></li>
-          <li><input class='fs-anim-lower' id="once-{{sub_full_from}}" name="payment" type="radio" value='once'><label class='radioBtn fs-anim-lower' for="once-{{sub_full_from}}">Once</label></li>
+          <li><input id="monthly-{{sub_full_from}}" class='fs-anim-lower' name="payment" type="radio" value='monthly'><label class='radioBtn fs-anim-lower' for="monthly-{{sub_full_from}}">Pay As You Go</label></li>
+          <li><input class='fs-anim-lower' id="once-{{sub_full_from}}" name="payment" type="radio" value='once'><label class='radioBtn fs-anim-lower' for="once-{{sub_full_from}}">Upfront</label></li>
         </ul>
         <div class='payment-options'>
           <ul>
@@ -158,7 +159,7 @@
             </h4>
           </div>
           <div class='sub-checkout-btn'>
-            <a href='#' class='submit-sub-form btn btn-lg btn-info' data-target='#formFor-{{ sub_full_form }}' />PAY NOW</a>
+            <a href='#' class='submit-sub-form btn btn-lg btn-info' data-target='#formFor-{{ sub_full_form }}' />CHECKOUT</a>
             <!-- <input type='submit' value='PAY NOW' class='btn btn-lg btn-info' /> -->
           </div>
         </div>
