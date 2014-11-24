@@ -1709,9 +1709,19 @@ div.cs-skin-boxes:focus > span {
   color: #58a890;
   transition: all ease-in 300ms;
 }
+.subscription-form .fs-continue::after {
+  transition: color ease-in 300ms;
+}
 .subscription-form .fs-continue:hover {
   border-color: #fff;
   background-color: transparent;
+  color: #fff;
+}
+.subscription-form .fs-continue.active {
+  border-color: #fff;
+  color: #fff;
+}
+.subscription-form .fs-continue.active::after {
   color: #fff;
 }
 .subscription-form .fs-message-error {

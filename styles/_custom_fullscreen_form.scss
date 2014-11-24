@@ -68,9 +68,19 @@
     color: #58a890;
     transition: all ease-in 300ms;
   }
+  .fs-continue::after{
+    transition: color ease-in 300ms; 
+  }
   .fs-continue:hover{
     border-color: #fff;
     background-color: transparent;
+    color: #fff;
+  }
+  .fs-continue.active{
+    border-color: #fff;
+    color: #fff;
+  }
+  .fs-continue.active::after{
     color: #fff;
   }
   .fs-message-error{

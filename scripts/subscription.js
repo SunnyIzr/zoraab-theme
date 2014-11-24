@@ -10,6 +10,10 @@ SubscriptionController = {
     this.updateUpfronts();
     this.submitForm();
     this.backBtn();
+    this.termOption();
+    this.termOptionLong();
+    this.termInput();
+    this.termInputLong();
   },
   activateFullForm: function(){
     if ($('.featured-sub-products').size() > 0) {
@@ -176,6 +180,46 @@ SubscriptionController = {
       SubscriptionSummary.showBackBtn()
       
     })
+  },
+  termOption: function(){
+    $('.termOption').click(function(){
+      form = window[$(this).data('target')]
+      setTimeout(function(){
+        form._nextField()
+      },300)
+    })
+  },
+  termOptionLong: function(){
+    $('.termOptionLong').click(function(){
+      form = window[$(this).data('target')]
+      setTimeout(function(){
+        form._nextField()
+      },900)
+    })
+  },
+  termInput: function(){
+    $('.termInput').keyup(function(e){
+      form = $(this).data('form')
+      if (e.keyCode != 13) {
+        if ($(this).val().length > 0){
+          $(form).find('.fs-continue').addClass('active')  
+        } else {
+          $(form).find('.fs-continue').removeClass('active')
+        }
+      } else {
+        $(form).find('.fs-continue').removeClass('active')
+      }
+    })
+  },
+  termInputLong: function(){
+    $('.termInputLong').click(function(){
+      form = $(this).data('form')
+      if ( $('.termInputLong').is(':checked') ) {
+        $(form).find('.fs-continue').addClass('active') 
+      } else {
+        $(form).find('.fs-continue').removeClass('active')
+      }
+    })
   }
 }
 
@@ -196,6 +240,7 @@ SubscriptionSummary = {
     this.getPmtPlan();
     this.hideLastContinueBtn();
     this.showBackBtn();
+    this.inactivateContinueBtn();
   },
   showBackBtn: function(){
     $('.back-btn').each(function(){
@@ -206,7 +251,9 @@ SubscriptionSummary = {
         $(this).hide()
       }
     })
-    
+  },
+  inactivateContinueBtn: function(){
+    $('.fs-continue').removeClass('active')
   },
   getSubName: function(){
     $.each($('input[name="name"]'),function(k,v){
@@ -303,15 +350,3 @@ SubscriptionSummary = {
     })
   },
 }
-
-
-
-
-
-
-
-
-
-
-
-
