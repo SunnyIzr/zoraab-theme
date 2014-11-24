@@ -1,5 +1,24 @@
+#gift-sets .gift-set-hero {
+  position: relative;
+}
 #gift-sets .gift-set-hero img {
+  position: relative;
+  top: 0;
   width: 100%;
+}
+#gift-sets .gift-set-hero h2 {
+  top: 0;
+  position: absolute;
+  color: #fff;
+  width: 50%;
+  text-align: center;
+  font-weight: 500;
+}
+#gift-sets .gift-set-hero .left-copy {
+  left: 8%;
+}
+#gift-sets .gift-set-hero .right-copy {
+  left: 41%;
 }
 #gift-sets #gift-set-list {
   text-align: center;
@@ -58,7 +77,31 @@
   padding: 10px 25px;
 }
 
+@media (max-width: 1200px) {
+  #gift-sets .gift-set-hero h2 {
+    font-size: 26px;
+  }
+}
+@media (max-width: 992px) {
+  #gift-sets .gift-set-hero h2 {
+    font-size: 20px;
+  }
+}
 @media (max-width: 768px) {
+  #gift-sets .gift-set-hero img {
+    left: -22%;
+    width: 305%;
+  }
+  #gift-sets .gift-set-hero h2 {
+    font-size: 28px;
+  }
+  #gift-sets .gift-set-hero .left-copy {
+    display: none;
+  }
+  #gift-sets .gift-set-hero .right-copy {
+    left: 50%;
+    top: 50%;
+  }
   #gift-sets #gift-set-list .gift-set {
     border-bottom: none;
   }

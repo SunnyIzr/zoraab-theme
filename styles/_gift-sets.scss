@@ -1,7 +1,24 @@
 #gift-sets{
   .gift-set-hero{
+    position: relative;
     img{
+      position: relative;
+      top: 0;
       width: 100%;
+    }
+    h2{
+      top: 0;
+      position: absolute;
+      color: #fff;
+      width: 50%;
+      text-align: center;
+      font-weight: 500;
+    }
+    .left-copy{
+      left: 8%;
+    }
+    .right-copy{
+      left: 41%;
     }
   }
   #gift-set-list{
@@ -65,9 +82,54 @@
   }
 }
 
+
+// MEDIUM DESKTOPS
+@media (max-width: 1200px) { 
+  #gift-sets{
+    .gift-set-hero{
+      h2{
+        font-size: 26px;
+      }
+    }
+  }
+} 
+
+// TABLETS
+@media (max-width: 992px) {
+  #gift-sets{
+    .gift-set-hero{
+      img{
+      }
+      h2{
+        font-size: 20px;
+      }
+      .left-copy{
+      }
+      .right-copy{
+      }
+    }
+  }
+} 
+
 // SMALL PHONES
 @media (max-width: 768px) {
   #gift-sets{
+    .gift-set-hero{
+      img{
+        left: -22%;
+        width: 305%;
+      }
+      h2{
+        font-size: 28px;
+      }
+      .left-copy{
+        display: none;
+      }
+      .right-copy{
+        left: 50%;
+        top: 50%;        
+      }
+    }
     #gift-set-list{
       .gift-set{
         border-bottom: none;
