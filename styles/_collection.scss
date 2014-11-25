@@ -98,6 +98,18 @@
               margin: 10% 0;
               font-weight: 400;
             }
+            .sold-out-item{
+              margin-top: -25px;
+              h2{
+                font-size: 18px;
+                color: $emphasis-color;
+                font-weight: 400;
+                margin-top: 5px;
+              }
+              path{
+                fill: $emphasis-color
+              }
+            }
           }
         }
         .img-wrapper{

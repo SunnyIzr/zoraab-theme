@@ -4,6 +4,7 @@ $(document).ready(function(){
   svgIcon()
   svgCloseIcon()
   filterChevron()
+  productVariantSoldOut()
 })
 
 
@@ -55,6 +56,29 @@ var giftSetLiElHeight = function(){
   $.each($('.gift-set-products .gift-prod-img'),function(k,v){
     imgWidth = $(this).find('img').css('width')
     $(this).css('height',imgWidth)
+  })
+}
+
+var productVariantSoldOut = function(){
+  $('.product-select').change(function(){
+    varId = $(this).val()
+    handle = $(this).data('handle')
+    url = '/products/' + handle + '.js'
+    $.getJSON(url, function(res){
+      $(res.variants).each(function(){
+        if ( this.id == varId ) {
+          window.selectEl = $('div[data-select-handle="'+handle+'"]')
+          console.log('found selected var')
+          
+          
+          if ( this.inventory_quantity < 1) {
+            $(selectEl).addClass('current-var-sold-out')
+          } else{
+            $(selectEl).removeClass('current-var-sold-out')
+          }
+        }
+      })
+    })
   })
 }
 

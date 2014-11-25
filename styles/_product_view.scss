@@ -93,6 +93,19 @@
         margin-top: 30px;
       }
     }
+    .sold-out-item{
+      color: $emphasis-color;
+      fill: $emphasis-color;
+      display: none;
+    }
+    .current-var-sold-out{
+      .sold-out-item{
+        display: inherit;
+      }
+      input[type="submit"]{
+        display: none;
+      }
+    }
     .qty{
       margin: 15px 0px;
     }
