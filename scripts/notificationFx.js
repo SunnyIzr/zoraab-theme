@@ -50,7 +50,8 @@
   NotificationFx.prototype.options = {
     // element to which the notification will be appended
     // defaults to the document.body
-    wrapper : document.body,
+    // wrapper : document.body,
+    wrapper : document.getElementsByClassName('off-canvas-wrap')[0],
     // the message
     message : 'yo!',
     // layout type: growl|attached|bar|other
