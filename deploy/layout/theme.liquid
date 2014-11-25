@@ -59,7 +59,7 @@
 
 
       <div class="off-canvas-wrap" data-offcanvas>
-        
+        {% include 'network_hat' %}
         <div class="inner-wrap">
           <div class='normal-body'>
             <div class="container-fluid">
@@ -80,18 +80,16 @@
         
         <div class='cart-canvas'>
           {% include 'cart' %}
-
-
-          {{ 'script.min.js'  | asset_url | script_tag }}
-          {{ 'fullscreenForm.js'  | asset_url | script_tag }}
-
-          <script>
-            $(document).foundation();
-          </script>
           <a class="exit-off-canvas"></a>
         </div>
         
       </div>
+      {{ 'script.min.js'  | asset_url | script_tag }}
+      {{ 'fullscreenForm.js'  | asset_url | script_tag }}
+      <script>
+        $(document).foundation();
+      </script>
+      
       <!-- AdRoll Smart Pixel -->
       <script type="text/javascript">
         adroll_adv_id = "AQIM3RVGLNHZDEISYOQDG5";

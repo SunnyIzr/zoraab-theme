@@ -27,6 +27,13 @@ p aside {
   -o-transition: -o-transform 500ms ease;
   transition: transform 500ms ease; 
 }
+.network_hat{
+  -webkit-transition: -webkit-transform 500ms ease;
+  -moz-transition: -moz-transform 500ms ease;
+  -ms-transition: -ms-transform 500ms ease;
+  -o-transition: -o-transform 500ms ease;
+  transition: transform 500ms ease; 
+}
 .inner-wrap:before, .inner-wrap:after {
   content: " ";
   display: table; 
@@ -88,6 +95,14 @@ ul.off-canvas-list li a:hover {
 }
 
 .move-left > .inner-wrap {
+  -ms-transform: translate(-48.10rem, 0);
+  -webkit-transform: translate3d(-48.10rem, 0, 0);
+  -moz-transform: translate3d(-48.10rem, 0, 0);
+  -ms-transform: translate3d(-48.10rem, 0, 0);
+  -o-transform: translate3d(-48.10rem, 0, 0);
+  transform: translate3d(-48.10rem, 0, 0); 
+}
+.move-left > .network_hat {
   -ms-transform: translate(-48.10rem, 0);
   -webkit-transform: translate3d(-48.10rem, 0, 0);
   -moz-transform: translate3d(-48.10rem, 0, 0);
