@@ -172,7 +172,7 @@ $(function() {
   function addItemToCart(item){
     var img = item.image
     var price = "$"+(item.price/100).toFixed(2)
-    var title = item.title
+    var title = item.product_title
     var url = item.url
     var qty = item.quantity
     $('#container').prepend(
