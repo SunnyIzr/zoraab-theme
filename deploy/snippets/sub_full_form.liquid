@@ -6,7 +6,7 @@
   <form id='formFor-{{sub_full_form}}'class="fs-form fs-form-full ac-custom ac-radio ac-fill ac-checkbox ac-boxfill" autocomplete="off" action='http://zoraab-users.herokuapp.com/new' method='post'>
     <ol class="fs-fields">
       <li class='name-question'>
-        <h3 class="fs-field-label fs-anim-upper">What's your name?</h3>
+        <h3 class="fs-field-label fs-anim-upper" data-info='We aspire to be the kind of place where everybody knows your name.'>What's your name?</h3>
         <input type="hidden" name="sub_type" value="{{sub_full_form}}">
         <input class="fs-anim-lower termInput" id="name-{{ sub_full_form }}" name="name" type="text" placeholder="Ronald McDonald" data-target='.subscriberName-{{sub_full_form}}' data-form='#{{sub_full_form}}' required/>
       </li>
