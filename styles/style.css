@@ -3957,6 +3957,10 @@ perspective effects (not including the modals and the overlay).
   transition: all 1.0s ease-in-out;
 }
 
+.ns-bg {
+  z-index: -5;
+}
+
 .ns-box-inner .num {
   font-family: "Quicksand";
 }
