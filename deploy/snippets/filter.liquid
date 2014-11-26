@@ -28,7 +28,7 @@
           {% assign svg_snippet = tag | handleize | prepend: 'icon_' %}
           {% capture svg %} {% include svg_snippet %} {% endcapture %}        
           <a href='/{{tag | handleize}}' class='select-filter' id='{{tag | handleize}}'>
-            <li {% if tag == 'Pocket Squares'%} class='last'{%elsif tag == 'Bowties'%} second {%elsif tag == 'All Socks'%} class='first' {% endif %}>
+            <li class='{% if tag == 'Pocket Squares'%}last {%elsif tag == "Bowties" %} second {% elsif tag == "All Socks" %} first {% endif %}'>
               <div class='{% if current_tags contains tag %} selected-svg-icon {% endif %} svg-icon'>
                 {{svg}}
               </div>

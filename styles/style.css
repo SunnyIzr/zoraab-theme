@@ -6114,6 +6114,18 @@ ul.off-canvas-list li a:hover {
 .filter #filter ul.filter-list .accessory-list {
   width: 27%;
 }
+.filter #filter ul.filter-list .accessory-list .accessory #ties li .svg-icon {
+  overflow: hidden;
+}
+.filter #filter ul.filter-list .accessory-list .accessory #bowties li {
+  margin-right: -3%;
+  margin-left: 10%;
+  height: 100%;
+  overflow: hidden;
+}
+.filter #filter ul.filter-list .accessory-list .accessory #bowties li .svg-icon {
+  margin-left: -30px;
+}
 .filter #filter ul.filter-list .style-list {
   width: 10%;
 }
@@ -6305,9 +6317,6 @@ ul.off-canvas-list li a:hover {
 .filter .accessory .last {
   margin-right: 0;
   margin-left: -2px;
-}
-.filter .accessory .second {
-  margin-right: 6%;
 }
 .filter .accessory .first {
   margin-left: -25px;

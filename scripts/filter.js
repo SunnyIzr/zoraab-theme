@@ -43,7 +43,7 @@ var noFilters = function(url) {
 }
 
 var tagSelected = function(url,tag){
-      return url.search(tag) >= 0
+  // return url.search(tag) >= 0
   //Function giving a false positive for ties when bowties is selected
   if (tag == 'ties' && url.search('bowties') >= 0){
     return false

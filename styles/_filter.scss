@@ -73,6 +73,26 @@
       }
       .accessory-list{
         width: 27%;
+        .accessory{
+          #ties{
+            li{
+              .svg-icon{
+                overflow:hidden;
+              }
+            }
+          }
+          #bowties{
+            li{
+              margin-right: -3%;
+              margin-left: 10%;
+              height: 100%;
+              overflow: hidden;
+              .svg-icon{
+                margin-left: -30px;
+              }
+            }
+          }
+        }
       }
       .style-list{
         width: 10%;
@@ -249,9 +269,6 @@
     .last{
       margin-right: 0;
       margin-left: -2px;
-    }
-    .second{
-      margin-right: 6%
     }
     .first{
       margin-left: -25px;
