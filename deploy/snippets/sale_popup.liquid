@@ -1,5 +1,13 @@
 <div class="md-modal md-effect-1" id="modal-1">
-  <div class="md-content">
+  <div class="md-content holiday-popp">
+  <div class='close-btn'>
+      <a href='#' id='closeModalBtn'>{% include 'icon_close' %}</a>
+    </div>
+  <div class='holiday-popup'>
+    <img src='{{ "Popup.jpg" | asset_url }}'>
+  </div>
+  <button class="md-close btn btn-md btn-primary">Thanks!</button>
+  {% comment %}
     <div id='snow-popup'></div>
     <div class='close-btn'>
       <a href='#' id='closeModalBtn'>{% include 'icon_close' %}</a>
@@ -13,5 +21,6 @@
         <button class="md-close btn btn-md btn-primary">Thanks!</button>
       </div>
     </div>
+  {% endcomment %}
   </div>
 </div>

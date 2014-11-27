@@ -728,9 +728,54 @@ perspective effects (not including the modals and the overlay).
 
 //Custom Popup CSS
 
+.holiday-popup{
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  overflow: hidden;
+  img{
+    padding: 15px;
+    background: #fff;
+    max-width: 450px;
+    margin-top: -75px;
+    width: 100%;
+  }
+}
+
+.md-modal{
+  text-align: center;
+  
+}
+
 #snow-popup{
 }
 
+.md-content.holiday-popp{
+  background: transparent;
+  top: -30px;
+    .close-btn{
+    opacity: 0.8;
+    svg{
+      position: absolute;
+      right: 1%;
+      top: -3%;
+      width: 12%;
+      cursor: pointer;
+      path{
+        fill: $primary-color;
+      }
+    }
+    svg:hover{
+      path{
+        fill: $accent-color;
+      }
+    }
+  }
+  .btn{
+    margin-top: -20px;
+    
+  }
+}
 .md-content{
   .close-btn{
     opacity: 0.8;

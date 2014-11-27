@@ -3499,6 +3499,48 @@ perspective effects (not including the modals and the overlay).
     font-size: 75%;
   }
 }
+.holiday-popup {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  overflow: hidden;
+}
+.holiday-popup img {
+  padding: 15px;
+  background: #fff;
+  max-width: 450px;
+  margin-top: -75px;
+  width: 100%;
+}
+
+.md-modal {
+  text-align: center;
+}
+
+.md-content.holiday-popp {
+  background: transparent;
+  top: -30px;
+}
+.md-content.holiday-popp .close-btn {
+  opacity: 0.8;
+}
+.md-content.holiday-popp .close-btn svg {
+  position: absolute;
+  right: 1%;
+  top: -3%;
+  width: 12%;
+  cursor: pointer;
+}
+.md-content.holiday-popp .close-btn svg path {
+  fill: #404041;
+}
+.md-content.holiday-popp .close-btn svg:hover path {
+  fill: #67c5a9;
+}
+.md-content.holiday-popp .btn {
+  margin-top: -20px;
+}
+
 .md-content .close-btn {
   opacity: 0.8;
 }
