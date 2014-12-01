@@ -13,7 +13,7 @@
       <ul class='gift-set-products'>
         <li class='giftset-title'>
           <h4>{{ giftset_collection.title }}</h4>
-          <div class='price visible-xs'>$34</div>
+          <div class='price visible-xs'>$29</div>
         </li>
         <li class='empty-box'>
           <img src='{{ "whitebox_tissue.jpg" | asset_url}}'>
@@ -24,7 +24,7 @@
       {% for giftset in giftset_products %}
       {% if giftset.handle == giftset_collection.handle %}
       <li class='price-cta'>
-        <div class='price'>$34</div>
+        <div class='price'>$29</div>
         <form action="/cart/add" method="post" enctype="multipart/form-data">
           <input min="1" type="number" id="quantity" class='hide product-quantity' name="quantity" value="1" />
           <select name="id" class="product-select hidden">

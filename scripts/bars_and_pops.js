@@ -2,9 +2,10 @@ $(document).ready(function(){
   seeMoreDetails();
   hideMoreDetails();
   closeModalBtn();
-  loadBarOnLoad()
-  saleLinkToBar();
-  // loadPopupOnLoad()
+  // loadBarOnLoad()
+  // saleLinkToBar();
+  loadPopupOnLoad()
+  saleLinkToPopUp();
 })
 
 
@@ -22,6 +23,13 @@ var saleLinkToBar = function(){
     if ($('.ns-box').size() == 0) {
       loadNotificationBar();
     }
+  })
+}
+
+var saleLinkToPopUp = function(){
+  $('.sale-nav-link').click(function(e){
+    e.preventDefault();
+    revealSaleModal();
   })
 }
 
