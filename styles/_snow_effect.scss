@@ -1,3 +1,11 @@
+.snow-close{
+  svg{
+    path{
+      fill: #fff !important;
+    }
+  }
+}
+
 #snow-popup{
   background: #346cae;
   background-image: url('./s1.png'), url('./s2.png'), url('./s3.png');

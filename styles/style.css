@@ -2665,6 +2665,10 @@ div.cs-skin-boxes:focus > span {
     fill: #404041;
   }
 }
+.snow-close svg path {
+  fill: #fff !important;
+}
+
 #snow-popup {
   background: #346cae;
   background-image: url("./s1.png"), url("./s2.png"), url("./s3.png");
@@ -16580,4 +16584,8 @@ input.btn {
 
 .number {
   font-family: "Source Sans Pro";
+}
+
+.new-number {
+  font-family: "Quicksand";
 }

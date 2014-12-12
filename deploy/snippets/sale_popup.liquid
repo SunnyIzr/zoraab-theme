@@ -1,5 +1,6 @@
 <div class="md-modal md-effect-1" id="modal-1">
   <div class="md-content holiday-popp">
+  {% comment %}
   <div class='close-btn'>
       <a href='#' id='closeModalBtn'>{% include 'icon_close' %}</a>
     </div>
@@ -7,20 +8,23 @@
     <img src='{{ "Popup.jpg" | asset_url }}'>
   </div>
   <button class="md-close btn btn-md btn-primary">Thanks!</button>
-  {% comment %}
+  {% endcomment %}
     <div id='snow-popup'></div>
-    <div class='close-btn'>
+    <div class='snow-close close-btn'>
       <a href='#' id='closeModalBtn'>{% include 'icon_close' %}</a>
     </div>
     <div class='body'>
       <div class='backlay'></div>
       <div class='content'>
         <h3>Happy Holidays</h3>
-        <p>This is a modal window. You can do the following things with it:</p>
-        <p>Mrs. Hughes shared, “No. Just when it seemed he was the only solution to her father's problems, she was rescued.” England summoned the cutlery. Mrs. Levinson had a letter. Mr. Crawley decreed, “To make that work you'd have to be a good liar. Are you a good liar?” Countess of Grantham asked.”</p>
+        <h5>FREE Shipping on ALL Orders</h5>
+        <div>
+          <p><strong>$<span class='new-number'>10</span></strong> off purchases over $<span class='new-number'>50</span> - MERRY<span class='new-number'>10</span></p>
+          <p><strong>$<span class='new-number'>15</span></strong> off purchases over $<span class='new-number'>80</span> - MERRY<span class='new-number'>15</span></p>
+          <p><strong>$<span class='new-number'>25</span></strong> off purchases over $<span class='new-number'>125</span> - MERRY<span class='new-number'>25</span></p>
+        </div>
         <button class="md-close btn btn-md btn-primary">Thanks!</button>
       </div>
     </div>
-  {% endcomment %}
   </div>
 </div>
