@@ -552,10 +552,13 @@
   text-align: center;
   img{
   }
+  .modal-body{
+    padding-top:10px;
+  }
   .modal-content{
     width: 50%;
     margin: 0 auto;
-    height: 500px;
+    height: 575px;
     padding: 0 30px;
     border: 1px $faded-color solid;
     .ship-icon{

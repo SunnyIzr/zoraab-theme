@@ -15781,10 +15781,13 @@ input.btn {
   margin: 0 auto;
   text-align: center;
 }
+.shipping-modal .modal-body {
+  padding-top: 10px;
+}
 .shipping-modal .modal-content {
   width: 50%;
   margin: 0 auto;
-  height: 500px;
+  height: 575px;
   padding: 0 30px;
   border: 1px #b8b8b8 solid;
 }
