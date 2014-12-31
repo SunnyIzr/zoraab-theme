@@ -40,7 +40,7 @@
           {% include 'icon_cart_mobile' %}
         </button>
         <a href='/' class='navbar-brand'>
-          {{ 'logo_santa.png' | asset_url | img_tag }}
+          {{ 'logo.png' | asset_url | img_tag }}
         </a>
       </div>
       
@@ -51,7 +51,9 @@
           <li><a href="/pages/sock-subscription">SUBSCRIPTION</a></li>
           <li><a href="/pages/gift-sets">GIFT SETS</a></li>
           <li><a href="/products/gift-card">GIFT CARDS</a></li>
+          {% comment %}
           <li><a style='color:#fd0000' class='sale-nav-link' href="#">SALE! Save up to <span style='font-family:"Quicksand"'>35%</span>!</a></li>
+          {% endcomment %}
         </ul>
         
         <form class="navbar-form navbar-right hidden-xs" method='get' action='/search'>
