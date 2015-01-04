@@ -14,6 +14,7 @@ SubscriptionController = {
     this.termOptionLong();
     this.termInput();
     this.termInputLong();
+    this.subSizeSelect();
   },
   activateFullForm: function(){
     if ($('.featured-sub-products').size() > 0) {
@@ -97,6 +98,14 @@ SubscriptionController = {
       subForm = $(this).data('target')
       SubscriptionView.revealForm(subForm)
       SubscriptionFocus.init()
+    })
+  },
+  subSizeSelect: function(){
+    $('.boxer-size').click(function(){
+      $('.boxer-size.selected').removeClass('selected')
+      $(this).addClass('selected')
+      newSize = $(this).data('size-target')
+      $('#subSize').val(newSize)
     })
   },
   giftChecked: function(){

@@ -23,9 +23,27 @@
           <div class='gift-options'>
             <input class="fs-anim-lower termInput" id="q3c" name="recipient_name" type="text" placeholder="Recipient's Name" data-form='#{{sub_full_form}}'/>
             <textarea class="fs-anim-lower" id="q3d" name="gift_note" placeholder="Gift message here is included with their first package. Write away!"></textarea>
-          </div>      
+          </div>
       </li>
-      {% if sub_full_form == 'socksOnly' %}
+      {% if sub_full_form == 'socksAndBoxers' %}
+      <li class='size-question'>
+        <h3 class="fs-field-label fs-anim-upper" for='q4'>What size boxer briefs?</h3>
+        <input type="hidden" name="size" id="subSize" />
+        <div class='boxer-sizes'>
+          {% assign sizes = 'small,medium,large,x large' | split: ',' %}
+          {% assign sizeAbbrs = 'S,M,L,XL' | split: ',' %}
+          {% for i in (0..3) %}
+          <div class='fs-anim-lower boxer-size termOption' data-target='{{sub_full_form}}Form' data-size-target='{{ sizeAbbrs[i]}}'>
+            {% include 'icon_boxers_heart' %}
+            <div class='size-text'>
+              {{ sizes[i] }}
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </li>
+      {% endif %}
+      {% if sub_full_form == 'socksOnly' or sub_full_form == 'socksAndBoxers' %}
       <li class='style-question'>
         <h3 class="fs-field-label fs-anim-upper" for='q4' data-info="Customize your sock experience with as much or as little variety as possible.">Pick your sock style:</h3>
         <ul class='style-list'>
@@ -36,8 +54,8 @@
           {% for i in (0..3) %}
           {% assign n = pattern_counts[i] | times: 1 %}
             <li>
-              <input id="{{ 'q4-' | append: i}}" type="checkbox" class='style termInputLong' name='style[]' value='{{ styles[i] }}' data-form='#{{sub_full_form}}'>
-              <label class='fs-anim-lower termInputLong' for="{{ 'q4-' | append: i}}" data-form='#{{sub_full_form}}'>
+              <input id="{{sub_full_form}}-{{ 'q4-' | append: i}}" type="checkbox" class='style termInputLong' name='style[]' value='{{ styles[i] }}' data-form='#{{sub_full_form}}'>
+              <label class='fs-anim-lower termInputLong' for="{{sub_full_form}}-{{ 'q4-' | append: i}}" data-form='#{{sub_full_form}}'>
                 <div class='style-pic {{patterns[i]}}'>
                   {% assign icon = patterns[i] | prepend: 'icon_' %}
                   {% for num in (1..n) %}
@@ -50,6 +68,7 @@
           {% endfor %}
         </ul>
       </li>
+      {% if sub_full_form == 'socksOnly' %}
       <li class='quantity-question'>
         <h3 class="fs-field-label fs-anim-upper" data-info='Are we talking sock drawer spice up or total overhaul? If it’s the latter we suggest 5 pairs a month! P.S. No more laundry, woo hoo!'>How many pairs of socks?</h3>
           <ul>
@@ -74,6 +93,7 @@
           {% endfor %}
           </ul>   
       </li>
+      {% endif %}
       {% endif %}
       <li class='payment-question'>
         <h3 class="fs-field-label fs-anim-upper" data-info='Don’t worry, you can cancel anytime. We just want to know whether to charge you upfront one time or monthly.'>Which plan do you like best?</h3>

@@ -226,6 +226,65 @@
       }
     }
   }
+  .size-question{
+    .boxer-sizes{
+      .boxer-size{
+        float: left;
+        width: 32%;
+        border: 1px solid #346355;
+        margin-bottom: 5%;
+        margin-right: 5%;
+        padding-top: 16px;
+        cursor: pointer;
+        transition: all 300ms ease-in;
+        svg{
+          width: 100%;
+          path{
+            fill: #346355;
+            transition: all 300ms ease-in;
+          }
+        }
+        .size-text{
+          text-transform: uppercase;
+          text-align: center;
+          color: #346355;
+          border-top: 1px solid #346355;
+          width: 90%;
+          margin: 0 auto;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          font-size: 20px;
+          transition: all 300ms ease-in;
+        }
+      }
+      .boxer-size:hover{
+        border-color: #58a890;
+        background-color: #58a890;
+        svg{
+          path{
+            fill: #fff;
+          }
+        }
+        .size-text{
+          border-color: #fff;
+          color: #fff;
+        }
+      }
+      .boxer-size.selected{
+        border-color: $emphasis-color;
+        background-color: $emphasis-color;
+        svg{
+          path{
+            fill: #fff;
+          }
+        }
+        .size-text{
+          border-color: #fff;
+          color: #fff;
+        }
+      }
+    }
+  }
   .quantity-question{
     ul{
       list-style: none;
