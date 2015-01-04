@@ -4,7 +4,7 @@ $(document).ready(function(){
   closeModalBtn();
   // loadBarOnLoad()
   // saleLinkToBar();
-  loadPopupOnLoad()
+  // loadPopupOnLoad()
   saleLinkToPopUp();
 })
 
