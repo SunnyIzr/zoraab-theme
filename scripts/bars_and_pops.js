@@ -4,14 +4,14 @@ $(document).ready(function(){
   closeModalBtn();
   // loadBarOnLoad()
   // saleLinkToBar();
-  // loadPopupOnLoad()
+  loadPopupOnLoad()
   saleLinkToPopUp();
 })
 
 
 var loadBarOnLoad = function(){
   setTimeout(function(){
-    if ( getCookie('zoraabpopup') != 'true') {
+    if ( getCookie('zoraabpopupfd') != 'true') {
       loadNotificationBar()
     }
   }, 3500)
@@ -35,7 +35,7 @@ var saleLinkToPopUp = function(){
 
 var loadPopupOnLoad = function(){
   setTimeout(function(){
-    if ( getCookie('zoraabpopup') != 'true' ) {
+    if ( getCookie('zoraabpopupfd') != 'true' ) {
       revealSaleModal()
       
     }
@@ -81,8 +81,8 @@ var setCookie = function(){
   time += 18000 * 1000;
   // time += 120 * 1000
   now.setTime(time);
-  console.log("zoraabpopup=true; " + now.toUTCString() + ";")
-  document.cookie = "zoraabpopup=true; expires=" + now.toUTCString() + "; path=/"
+  console.log("zoraabpopupfd=true; " + now.toUTCString() + ";")
+  document.cookie = "zoraabpopupfd=true; expires=" + now.toUTCString() + "; path=/"
 }
 
 function getCookie(cname) {
